@@ -15,6 +15,7 @@
 #include <list>
 #include <mutex>  // NOLINT
 #include <vector>
+#include <map>
 
 #include "buffer/replacer.h"
 #include "common/config.h"
@@ -44,9 +45,24 @@ class LRUReplacer : public Replacer {
   void Unpin(frame_id_t frame_id) override;
 
   size_t Size() override;
-
  private:
   // TODO(student): implement me!
+  /**
+   * Check if the frame is already in LRUReplacer
+   * @param frame_id
+   * @return true if the frame is already in LRUReplacer
+   */
+  bool IsInReplacer(frame_id_t frame_id);
+  /** Double list to implment LRU  */
+  std::list<frame_id_t> l;
+  /** Hash table used to find item in list*/
+  std::vector<std::list<frame_id_t>::iterator> listiter;
+
+  std::vector<frame_id_t> framevec;
+  /** maxsize of the LRU*/
+  int cap;
+  /** for thread safe*/
+  std::mutex latch_{};  //thread safe lock
 };
 
 }  // namespace bustub

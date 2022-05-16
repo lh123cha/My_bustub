@@ -16,12 +16,13 @@
 #include <string>
 #include "buffer/buffer_pool_manager.h"
 #include "gtest/gtest.h"
+#include "common/logger.h"
 
 namespace bustub {
 
 // NOLINTNEXTLINE
 // Check whether pages containing terminal characters can be recovered
-TEST(BufferPoolManagerInstanceTest, DISABLED_BinaryDataTest) {
+TEST(BufferPoolManagerInstanceTest, BinaryDataTest) {
   const std::string db_name = "test.db";
   const size_t buffer_pool_size = 10;
 
@@ -58,6 +59,7 @@ TEST(BufferPoolManagerInstanceTest, DISABLED_BinaryDataTest) {
     EXPECT_NE(nullptr, bpm->NewPage(&page_id_temp));
   }
 
+  LOG_INFO("buffer pool is full");
   // Scenario: Once the buffer pool is full, we should not be able to create any new pages.
   for (size_t i = buffer_pool_size; i < buffer_pool_size * 2; ++i) {
     EXPECT_EQ(nullptr, bpm->NewPage(&page_id_temp));
@@ -75,6 +77,7 @@ TEST(BufferPoolManagerInstanceTest, DISABLED_BinaryDataTest) {
   // Scenario: We should be able to fetch the data we wrote a while ago.
   page0 = bpm->FetchPage(0);
   EXPECT_EQ(0, memcmp(page0->GetData(), random_binary_data, PAGE_SIZE));
+  LOG_INFO("%d",(int)page0->GetPinCount());
   EXPECT_EQ(true, bpm->UnpinPage(0, true));
 
   // Shutdown the disk manager and remove the temporary file we created.
@@ -86,7 +89,7 @@ TEST(BufferPoolManagerInstanceTest, DISABLED_BinaryDataTest) {
 }
 
 // NOLINTNEXTLINE
-TEST(BufferPoolManagerInstanceTest, DISABLED_SampleTest) {
+TEST(BufferPoolManagerInstanceTest, SampleTest) {
   const std::string db_name = "test.db";
   const size_t buffer_pool_size = 10;
 

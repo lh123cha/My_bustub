@@ -59,6 +59,8 @@ class BufferPoolManagerInstance : public BufferPoolManager {
   Page *GetPages() { return pages_; }
 
  protected:
+
+
   /**
    * Fetch the requested page from the buffer pool.
    * @param page_id id of page to be fetched
@@ -138,11 +140,17 @@ class BufferPoolManagerInstance : public BufferPoolManager {
   LogManager *log_manager_ __attribute__((__unused__));
   /** Page table for keeping track of buffer pool pages. */
   std::unordered_map<page_id_t, frame_id_t> page_table_;
+  /**Frame table for keeping track of pages*/
+  std::unordered_map<frame_id_t,page_id_t> frame_table_;
   /** Replacer to find unpinned pages for replacement. */
   Replacer *replacer_;
   /** List of free pages. */
   std::list<frame_id_t> free_list_;
   /** This latch protects shared data structures. We recommend updating this comment to describe what it protects. */
   std::mutex latch_;
+
+ private:
+  frame_id_t FindFrame(page_id_t page_id);
+  frame_id_t FindUnusedPage();
 };
 }  // namespace bustub
