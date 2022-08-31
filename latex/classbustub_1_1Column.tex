@@ -1,0 +1,180 @@
+\hypertarget{classbustub_1_1Column}{}\doxysection{bustub\+::Column Class Reference}
+\label{classbustub_1_1Column}\index{bustub::Column@{bustub::Column}}
+
+
+{\ttfamily \#include $<$column.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Column\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=205pt]{classbustub_1_1Column__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1Column_a990c4e29beb200fb76925dc7624184fe}{Column}} (std\+::string column\+\_\+name, \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type, const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$expr=nullptr)
+\item 
+\mbox{\hyperlink{classbustub_1_1Column_afd0b930046be672b2f74785c24416a75}{Column}} (std\+::string column\+\_\+name, \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type, uint32\+\_\+t length, const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$expr=nullptr)
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1Column_af8a04fe17d9db9da619c3f470c9b5bcf}{Get\+Name}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1Column_a8ea508626e01e39fc7beaa900f6a3381}{Get\+Length}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1Column_aa79a3330ee9b656b8e34442562ca684d}{Get\+Fixed\+Length}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1Column_a11d3ab47d8704e645e74f1c9360e4138}{Get\+Variable\+Length}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1Column_a5dca6c5698de03d97c63c8e1dc390d75}{Get\+Offset}} () const
+\item 
+\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} \mbox{\hyperlink{classbustub_1_1Column_a93099506af1730031575da170a9f5e97}{Get\+Type}} () const
+\item 
+bool \mbox{\hyperlink{classbustub_1_1Column_a2e9d1d9635068849966fa50cfeee368d}{Is\+Inlined}} () const
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1Column_a4b0c43fbb4578f604140a808621d0ffc}{To\+String}} () const
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ \mbox{\hyperlink{classbustub_1_1Column_a6e77f7a9311c4b0a858b2064b6000ba5}{Get\+Expr}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbustub_1_1Column_ab1b299e6f6af7a63eafdaf19e7facb93}{Schema}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1Column_a990c4e29beb200fb76925dc7624184fe}\label{classbustub_1_1Column_a990c4e29beb200fb76925dc7624184fe}} 
+\index{bustub::Column@{bustub::Column}!Column@{Column}}
+\index{Column@{Column}!bustub::Column@{bustub::Column}}
+\doxysubsubsection{\texorpdfstring{Column()}{Column()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bustub\+::\+Column\+::\+Column (\begin{DoxyParamCaption}\item[{std\+::string}]{column\+\_\+name,  }\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type,  }\item[{const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$}]{expr = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Non-\/variable-\/length constructor for creating a \mbox{\hyperlink{classbustub_1_1Column}{Column}}. 
+\begin{DoxyParams}{Parameters}
+{\em column\+\_\+name} & name of the column \\
+\hline
+{\em type} & type of the column \\
+\hline
+{\em expr} & expression used to create this column \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1Column_afd0b930046be672b2f74785c24416a75}\label{classbustub_1_1Column_afd0b930046be672b2f74785c24416a75}} 
+\index{bustub::Column@{bustub::Column}!Column@{Column}}
+\index{Column@{Column}!bustub::Column@{bustub::Column}}
+\doxysubsubsection{\texorpdfstring{Column()}{Column()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bustub\+::\+Column\+::\+Column (\begin{DoxyParamCaption}\item[{std\+::string}]{column\+\_\+name,  }\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type,  }\item[{uint32\+\_\+t}]{length,  }\item[{const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$}]{expr = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Variable-\/length constructor for creating a \mbox{\hyperlink{classbustub_1_1Column}{Column}}. 
+\begin{DoxyParams}{Parameters}
+{\em column\+\_\+name} & name of the column \\
+\hline
+{\em type} & type of column \\
+\hline
+{\em length} & length of the varlen \\
+\hline
+{\em expr} & expression used to create this column \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Column_a6e77f7a9311c4b0a858b2064b6000ba5}\label{classbustub_1_1Column_a6e77f7a9311c4b0a858b2064b6000ba5}} 
+\index{bustub::Column@{bustub::Column}!GetExpr@{GetExpr}}
+\index{GetExpr@{GetExpr}!bustub::Column@{bustub::Column}}
+\doxysubsubsection{\texorpdfstring{GetExpr()}{GetExpr()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$\ast$ bustub\+::\+Column\+::\+Get\+Expr (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the expression used to create this column 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Column_aa79a3330ee9b656b8e34442562ca684d}\label{classbustub_1_1Column_aa79a3330ee9b656b8e34442562ca684d}} 
+\index{bustub::Column@{bustub::Column}!GetFixedLength@{GetFixedLength}}
+\index{GetFixedLength@{GetFixedLength}!bustub::Column@{bustub::Column}}
+\doxysubsubsection{\texorpdfstring{GetFixedLength()}{GetFixedLength()}}
+{\footnotesize\ttfamily uint32\+\_\+t bustub\+::\+Column\+::\+Get\+Fixed\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+column fixed length 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Column_a8ea508626e01e39fc7beaa900f6a3381}\label{classbustub_1_1Column_a8ea508626e01e39fc7beaa900f6a3381}} 
+\index{bustub::Column@{bustub::Column}!GetLength@{GetLength}}
+\index{GetLength@{GetLength}!bustub::Column@{bustub::Column}}
+\doxysubsubsection{\texorpdfstring{GetLength()}{GetLength()}}
+{\footnotesize\ttfamily uint32\+\_\+t bustub\+::\+Column\+::\+Get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+column length 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Column_af8a04fe17d9db9da619c3f470c9b5bcf}\label{classbustub_1_1Column_af8a04fe17d9db9da619c3f470c9b5bcf}} 
+\index{bustub::Column@{bustub::Column}!GetName@{GetName}}
+\index{GetName@{GetName}!bustub::Column@{bustub::Column}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Column\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+column name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Column_a5dca6c5698de03d97c63c8e1dc390d75}\label{classbustub_1_1Column_a5dca6c5698de03d97c63c8e1dc390d75}} 
+\index{bustub::Column@{bustub::Column}!GetOffset@{GetOffset}}
+\index{GetOffset@{GetOffset}!bustub::Column@{bustub::Column}}
+\doxysubsubsection{\texorpdfstring{GetOffset()}{GetOffset()}}
+{\footnotesize\ttfamily uint32\+\_\+t bustub\+::\+Column\+::\+Get\+Offset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+column\textquotesingle{}s offset in the tuple 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Column_a93099506af1730031575da170a9f5e97}\label{classbustub_1_1Column_a93099506af1730031575da170a9f5e97}} 
+\index{bustub::Column@{bustub::Column}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::Column@{bustub::Column}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} bustub\+::\+Column\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+column type 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Column_a11d3ab47d8704e645e74f1c9360e4138}\label{classbustub_1_1Column_a11d3ab47d8704e645e74f1c9360e4138}} 
+\index{bustub::Column@{bustub::Column}!GetVariableLength@{GetVariableLength}}
+\index{GetVariableLength@{GetVariableLength}!bustub::Column@{bustub::Column}}
+\doxysubsubsection{\texorpdfstring{GetVariableLength()}{GetVariableLength()}}
+{\footnotesize\ttfamily uint32\+\_\+t bustub\+::\+Column\+::\+Get\+Variable\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+column variable length 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Column_a2e9d1d9635068849966fa50cfeee368d}\label{classbustub_1_1Column_a2e9d1d9635068849966fa50cfeee368d}} 
+\index{bustub::Column@{bustub::Column}!IsInlined@{IsInlined}}
+\index{IsInlined@{IsInlined}!bustub::Column@{bustub::Column}}
+\doxysubsubsection{\texorpdfstring{IsInlined()}{IsInlined()}}
+{\footnotesize\ttfamily bool bustub\+::\+Column\+::\+Is\+Inlined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if column is inlined, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Column_a4b0c43fbb4578f604140a808621d0ffc}\label{classbustub_1_1Column_a4b0c43fbb4578f604140a808621d0ffc}} 
+\index{bustub::Column@{bustub::Column}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::Column@{bustub::Column}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Column\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+a string representation of this column 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Column_ab1b299e6f6af7a63eafdaf19e7facb93}\label{classbustub_1_1Column_ab1b299e6f6af7a63eafdaf19e7facb93}} 
+\index{bustub::Column@{bustub::Column}!Schema@{Schema}}
+\index{Schema@{Schema}!bustub::Column@{bustub::Column}}
+\doxysubsubsection{\texorpdfstring{Schema}{Schema}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classbustub_1_1Schema}{Schema}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/catalog/\mbox{\hyperlink{column_8h}{column.\+h}}\item 
+src/catalog/\mbox{\hyperlink{column_8cpp}{column.\+cpp}}\end{DoxyCompactItemize}

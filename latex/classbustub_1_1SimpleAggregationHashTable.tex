@@ -1,0 +1,116 @@
+\hypertarget{classbustub_1_1SimpleAggregationHashTable}{}\doxysection{bustub\+::Simple\+Aggregation\+Hash\+Table Class Reference}
+\label{classbustub_1_1SimpleAggregationHashTable}\index{bustub::SimpleAggregationHashTable@{bustub::SimpleAggregationHashTable}}
+
+
+{\ttfamily \#include $<$aggregation\+\_\+executor.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Simple\+Aggregation\+Hash\+Table\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classbustub_1_1SimpleAggregationHashTable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator}{Iterator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_abf4a8b2e013c0eea60eee8f43844dbde}{Simple\+Aggregation\+Hash\+Table}} (const std\+::vector$<$ const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ $>$ \&agg\+\_\+exprs, const std\+::vector$<$ \mbox{\hyperlink{namespacebustub_a00cf530eb8a8c97e85e5030651b64fff}{Aggregation\+Type}} $>$ \&agg\+\_\+types)
+\item 
+\mbox{\hyperlink{structbustub_1_1AggregateValue}{Aggregate\+Value}} \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_a0552c6909b839ac1d9e80cbbc723c690}{Generate\+Initial\+Aggregate\+Value}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_a9595059ad4fdffad5ce7b9af5e842ee4}{Combine\+Aggregate\+Values}} (\mbox{\hyperlink{structbustub_1_1AggregateValue}{Aggregate\+Value}} $\ast$result, const \mbox{\hyperlink{structbustub_1_1AggregateValue}{Aggregate\+Value}} \&input)
+\item 
+void \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_ab5ae3b479b6bfb7d0380acefacb7e2c0}{Insert\+Combine}} (const \mbox{\hyperlink{structbustub_1_1AggregateKey}{Aggregate\+Key}} \&agg\+\_\+key, const \mbox{\hyperlink{structbustub_1_1AggregateValue}{Aggregate\+Value}} \&agg\+\_\+val)
+\item 
+\mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator}{Iterator}} \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_a157daa73cb09a12a584f90512bd6ed81}{Begin}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator}{Iterator}} \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_a1d8972f37cbcf60e71557069314ad66d}{End}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A simplified hash table that has all the necessary functionality for aggregations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1SimpleAggregationHashTable_abf4a8b2e013c0eea60eee8f43844dbde}\label{classbustub_1_1SimpleAggregationHashTable_abf4a8b2e013c0eea60eee8f43844dbde}} 
+\index{bustub::SimpleAggregationHashTable@{bustub::SimpleAggregationHashTable}!SimpleAggregationHashTable@{SimpleAggregationHashTable}}
+\index{SimpleAggregationHashTable@{SimpleAggregationHashTable}!bustub::SimpleAggregationHashTable@{bustub::SimpleAggregationHashTable}}
+\doxysubsubsection{\texorpdfstring{SimpleAggregationHashTable()}{SimpleAggregationHashTable()}}
+{\footnotesize\ttfamily bustub\+::\+Simple\+Aggregation\+Hash\+Table\+::\+Simple\+Aggregation\+Hash\+Table (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ $>$ \&}]{agg\+\_\+exprs,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{namespacebustub_a00cf530eb8a8c97e85e5030651b64fff}{Aggregation\+Type}} $>$ \&}]{agg\+\_\+types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable}{Simple\+Aggregation\+Hash\+Table}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em agg\+\_\+exprs} & the aggregation expressions \\
+\hline
+{\em agg\+\_\+types} & the types of aggregations \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1SimpleAggregationHashTable_a157daa73cb09a12a584f90512bd6ed81}\label{classbustub_1_1SimpleAggregationHashTable_a157daa73cb09a12a584f90512bd6ed81}} 
+\index{bustub::SimpleAggregationHashTable@{bustub::SimpleAggregationHashTable}!Begin@{Begin}}
+\index{Begin@{Begin}!bustub::SimpleAggregationHashTable@{bustub::SimpleAggregationHashTable}}
+\doxysubsubsection{\texorpdfstring{Begin()}{Begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator}{Iterator}} bustub\+::\+Simple\+Aggregation\+Hash\+Table\+::\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator}{Iterator}} to the start of the hash table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1SimpleAggregationHashTable_a9595059ad4fdffad5ce7b9af5e842ee4}\label{classbustub_1_1SimpleAggregationHashTable_a9595059ad4fdffad5ce7b9af5e842ee4}} 
+\index{bustub::SimpleAggregationHashTable@{bustub::SimpleAggregationHashTable}!CombineAggregateValues@{CombineAggregateValues}}
+\index{CombineAggregateValues@{CombineAggregateValues}!bustub::SimpleAggregationHashTable@{bustub::SimpleAggregationHashTable}}
+\doxysubsubsection{\texorpdfstring{CombineAggregateValues()}{CombineAggregateValues()}}
+{\footnotesize\ttfamily void bustub\+::\+Simple\+Aggregation\+Hash\+Table\+::\+Combine\+Aggregate\+Values (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structbustub_1_1AggregateValue}{Aggregate\+Value}} $\ast$}]{result,  }\item[{const \mbox{\hyperlink{structbustub_1_1AggregateValue}{Aggregate\+Value}} \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Combines the input into the aggregation result. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em result} & The output aggregate value \\
+\hline
+ & {\em input} & The input value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1SimpleAggregationHashTable_a1d8972f37cbcf60e71557069314ad66d}\label{classbustub_1_1SimpleAggregationHashTable_a1d8972f37cbcf60e71557069314ad66d}} 
+\index{bustub::SimpleAggregationHashTable@{bustub::SimpleAggregationHashTable}!End@{End}}
+\index{End@{End}!bustub::SimpleAggregationHashTable@{bustub::SimpleAggregationHashTable}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator}{Iterator}} bustub\+::\+Simple\+Aggregation\+Hash\+Table\+::\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{classbustub_1_1SimpleAggregationHashTable_1_1Iterator}{Iterator}} to the end of the hash table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1SimpleAggregationHashTable_a0552c6909b839ac1d9e80cbbc723c690}\label{classbustub_1_1SimpleAggregationHashTable_a0552c6909b839ac1d9e80cbbc723c690}} 
+\index{bustub::SimpleAggregationHashTable@{bustub::SimpleAggregationHashTable}!GenerateInitialAggregateValue@{GenerateInitialAggregateValue}}
+\index{GenerateInitialAggregateValue@{GenerateInitialAggregateValue}!bustub::SimpleAggregationHashTable@{bustub::SimpleAggregationHashTable}}
+\doxysubsubsection{\texorpdfstring{GenerateInitialAggregateValue()}{GenerateInitialAggregateValue()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structbustub_1_1AggregateValue}{Aggregate\+Value}} bustub\+::\+Simple\+Aggregation\+Hash\+Table\+::\+Generate\+Initial\+Aggregate\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The initial aggregrate value for this aggregation executor 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1SimpleAggregationHashTable_ab5ae3b479b6bfb7d0380acefacb7e2c0}\label{classbustub_1_1SimpleAggregationHashTable_ab5ae3b479b6bfb7d0380acefacb7e2c0}} 
+\index{bustub::SimpleAggregationHashTable@{bustub::SimpleAggregationHashTable}!InsertCombine@{InsertCombine}}
+\index{InsertCombine@{InsertCombine}!bustub::SimpleAggregationHashTable@{bustub::SimpleAggregationHashTable}}
+\doxysubsubsection{\texorpdfstring{InsertCombine()}{InsertCombine()}}
+{\footnotesize\ttfamily void bustub\+::\+Simple\+Aggregation\+Hash\+Table\+::\+Insert\+Combine (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structbustub_1_1AggregateKey}{Aggregate\+Key}} \&}]{agg\+\_\+key,  }\item[{const \mbox{\hyperlink{structbustub_1_1AggregateValue}{Aggregate\+Value}} \&}]{agg\+\_\+val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Inserts a value into the hash table and then combines it with the current aggregation. 
+\begin{DoxyParams}{Parameters}
+{\em agg\+\_\+key} & the key to be inserted \\
+\hline
+{\em agg\+\_\+val} & the value to be inserted \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/\mbox{\hyperlink{aggregation__executor_8h}{aggregation\+\_\+executor.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,160 @@
+\hypertarget{classbustub_1_1AggregationPlanNode}{}\doxysection{bustub\+::Aggregation\+Plan\+Node Class Reference}
+\label{classbustub_1_1AggregationPlanNode}\index{bustub::AggregationPlanNode@{bustub::AggregationPlanNode}}
+
+
+{\ttfamily \#include $<$aggregation\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Aggregation\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classbustub_1_1AggregationPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Aggregation\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{classbustub_1_1AggregationPlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1AggregationPlanNode_a04eaa3a918d43f3ce9dda229766b8430}{Aggregation\+Plan\+Node}} (const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$output\+\_\+schema, const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $\ast$child, const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$having, std\+::vector$<$ const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ $>$ \&\&group\+\_\+bys, std\+::vector$<$ const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ $>$ \&\&aggregates, std\+::vector$<$ \mbox{\hyperlink{namespacebustub_a00cf530eb8a8c97e85e5030651b64fff}{Aggregation\+Type}} $>$ \&\&agg\+\_\+types)
+\item 
+\mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} \mbox{\hyperlink{classbustub_1_1AggregationPlanNode_a91a663686ff6add0e34168dcb597dfb8}{Get\+Type}} () const override
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $\ast$ \mbox{\hyperlink{classbustub_1_1AggregationPlanNode_a2c58f1a3d33c40bc0c4c1c480c7ff37e}{Get\+Child\+Plan}} () const
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ \mbox{\hyperlink{classbustub_1_1AggregationPlanNode_a9c39fa6784873aa405f26ee81d0162ac}{Get\+Having}} () const
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ \mbox{\hyperlink{classbustub_1_1AggregationPlanNode_a3b3d08415d4ae99abd50595bad1d180c}{Get\+Group\+By\+At}} (uint32\+\_\+t idx) const
+\item 
+const std\+::vector$<$ const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ $>$ \& \mbox{\hyperlink{classbustub_1_1AggregationPlanNode_a4d19532565a5edf39f3887e52e66622d}{Get\+Group\+Bys}} () const
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ \mbox{\hyperlink{classbustub_1_1AggregationPlanNode_abab8ac8578f19282afb6897a05f07833}{Get\+Aggregate\+At}} (uint32\+\_\+t idx) const
+\item 
+const std\+::vector$<$ const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ $>$ \& \mbox{\hyperlink{classbustub_1_1AggregationPlanNode_a5d5e3fc21fc50ce44104af7592e979c8}{Get\+Aggregates}} () const
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{namespacebustub_a00cf530eb8a8c97e85e5030651b64fff}{Aggregation\+Type}} $>$ \& \mbox{\hyperlink{classbustub_1_1AggregationPlanNode_a807209b294cf65e5bb7c77ed8e7784e0}{Get\+Aggregate\+Types}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1AggregationPlanNode}{Aggregation\+Plan\+Node}} represents the various S\+QL aggregation functions. For example, C\+O\+U\+N\+T(), S\+U\+M(), M\+I\+N() and M\+A\+X().
+
+N\+O\+TE\+: To simplify this project, \mbox{\hyperlink{classbustub_1_1AggregationPlanNode}{Aggregation\+Plan\+Node}} must always have exactly one child. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1AggregationPlanNode_a04eaa3a918d43f3ce9dda229766b8430}\label{classbustub_1_1AggregationPlanNode_a04eaa3a918d43f3ce9dda229766b8430}} 
+\index{bustub::AggregationPlanNode@{bustub::AggregationPlanNode}!AggregationPlanNode@{AggregationPlanNode}}
+\index{AggregationPlanNode@{AggregationPlanNode}!bustub::AggregationPlanNode@{bustub::AggregationPlanNode}}
+\doxysubsubsection{\texorpdfstring{AggregationPlanNode()}{AggregationPlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Aggregation\+Plan\+Node\+::\+Aggregation\+Plan\+Node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{output\+\_\+schema,  }\item[{const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $\ast$}]{child,  }\item[{const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$}]{having,  }\item[{std\+::vector$<$ const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ $>$ \&\&}]{group\+\_\+bys,  }\item[{std\+::vector$<$ const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ $>$ \&\&}]{aggregates,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespacebustub_a00cf530eb8a8c97e85e5030651b64fff}{Aggregation\+Type}} $>$ \&\&}]{agg\+\_\+types }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1AggregationPlanNode}{Aggregation\+Plan\+Node}}. 
+\begin{DoxyParams}{Parameters}
+{\em output\+\_\+schema} & The output format of this plan node \\
+\hline
+{\em child} & The child plan to aggregate data over \\
+\hline
+{\em having} & The having clause of the aggregation \\
+\hline
+{\em group\+\_\+bys} & The group by clause of the aggregation \\
+\hline
+{\em aggregates} & The expressions that we are aggregating \\
+\hline
+{\em agg\+\_\+types} & The types that we are aggregating \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1AggregationPlanNode_abab8ac8578f19282afb6897a05f07833}\label{classbustub_1_1AggregationPlanNode_abab8ac8578f19282afb6897a05f07833}} 
+\index{bustub::AggregationPlanNode@{bustub::AggregationPlanNode}!GetAggregateAt@{GetAggregateAt}}
+\index{GetAggregateAt@{GetAggregateAt}!bustub::AggregationPlanNode@{bustub::AggregationPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetAggregateAt()}{GetAggregateAt()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$\ast$ bustub\+::\+Aggregation\+Plan\+Node\+::\+Get\+Aggregate\+At (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The idx\textquotesingle{}th aggregate expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AggregationPlanNode_a5d5e3fc21fc50ce44104af7592e979c8}\label{classbustub_1_1AggregationPlanNode_a5d5e3fc21fc50ce44104af7592e979c8}} 
+\index{bustub::AggregationPlanNode@{bustub::AggregationPlanNode}!GetAggregates@{GetAggregates}}
+\index{GetAggregates@{GetAggregates}!bustub::AggregationPlanNode@{bustub::AggregationPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetAggregates()}{GetAggregates()}}
+{\footnotesize\ttfamily const std\+::vector$<$const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$$>$\& bustub\+::\+Aggregation\+Plan\+Node\+::\+Get\+Aggregates (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The aggregate expressions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AggregationPlanNode_a807209b294cf65e5bb7c77ed8e7784e0}\label{classbustub_1_1AggregationPlanNode_a807209b294cf65e5bb7c77ed8e7784e0}} 
+\index{bustub::AggregationPlanNode@{bustub::AggregationPlanNode}!GetAggregateTypes@{GetAggregateTypes}}
+\index{GetAggregateTypes@{GetAggregateTypes}!bustub::AggregationPlanNode@{bustub::AggregationPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetAggregateTypes()}{GetAggregateTypes()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{namespacebustub_a00cf530eb8a8c97e85e5030651b64fff}{Aggregation\+Type}}$>$\& bustub\+::\+Aggregation\+Plan\+Node\+::\+Get\+Aggregate\+Types (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The aggregate types 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AggregationPlanNode_a2c58f1a3d33c40bc0c4c1c480c7ff37e}\label{classbustub_1_1AggregationPlanNode_a2c58f1a3d33c40bc0c4c1c480c7ff37e}} 
+\index{bustub::AggregationPlanNode@{bustub::AggregationPlanNode}!GetChildPlan@{GetChildPlan}}
+\index{GetChildPlan@{GetChildPlan}!bustub::AggregationPlanNode@{bustub::AggregationPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetChildPlan()}{GetChildPlan()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}}$\ast$ bustub\+::\+Aggregation\+Plan\+Node\+::\+Get\+Child\+Plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the child of this aggregation plan node 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AggregationPlanNode_a3b3d08415d4ae99abd50595bad1d180c}\label{classbustub_1_1AggregationPlanNode_a3b3d08415d4ae99abd50595bad1d180c}} 
+\index{bustub::AggregationPlanNode@{bustub::AggregationPlanNode}!GetGroupByAt@{GetGroupByAt}}
+\index{GetGroupByAt@{GetGroupByAt}!bustub::AggregationPlanNode@{bustub::AggregationPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetGroupByAt()}{GetGroupByAt()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$\ast$ bustub\+::\+Aggregation\+Plan\+Node\+::\+Get\+Group\+By\+At (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The idx\textquotesingle{}th group by expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AggregationPlanNode_a4d19532565a5edf39f3887e52e66622d}\label{classbustub_1_1AggregationPlanNode_a4d19532565a5edf39f3887e52e66622d}} 
+\index{bustub::AggregationPlanNode@{bustub::AggregationPlanNode}!GetGroupBys@{GetGroupBys}}
+\index{GetGroupBys@{GetGroupBys}!bustub::AggregationPlanNode@{bustub::AggregationPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetGroupBys()}{GetGroupBys()}}
+{\footnotesize\ttfamily const std\+::vector$<$const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$$>$\& bustub\+::\+Aggregation\+Plan\+Node\+::\+Get\+Group\+Bys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The group by expressions 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AggregationPlanNode_a9c39fa6784873aa405f26ee81d0162ac}\label{classbustub_1_1AggregationPlanNode_a9c39fa6784873aa405f26ee81d0162ac}} 
+\index{bustub::AggregationPlanNode@{bustub::AggregationPlanNode}!GetHaving@{GetHaving}}
+\index{GetHaving@{GetHaving}!bustub::AggregationPlanNode@{bustub::AggregationPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetHaving()}{GetHaving()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$\ast$ bustub\+::\+Aggregation\+Plan\+Node\+::\+Get\+Having (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The having clause 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AggregationPlanNode_a91a663686ff6add0e34168dcb597dfb8}\label{classbustub_1_1AggregationPlanNode_a91a663686ff6add0e34168dcb597dfb8}} 
+\index{bustub::AggregationPlanNode@{bustub::AggregationPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::AggregationPlanNode@{bustub::AggregationPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} bustub\+::\+Aggregation\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a68b80a5e248dfb5dfe0858a4afd8bc93}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/\mbox{\hyperlink{aggregation__plan_8h}{aggregation\+\_\+plan.\+h}}\end{DoxyCompactItemize}

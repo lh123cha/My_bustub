@@ -1,0 +1,197 @@
+\hypertarget{classbustub_1_1Index}{}\doxysection{bustub\+::Index Class Reference}
+\label{classbustub_1_1Index}\index{bustub::Index@{bustub::Index}}
+
+
+{\ttfamily \#include $<$index.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Index\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbustub_1_1Index__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Index\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classbustub_1_1Index__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1Index_a598be92864fa8dc44840d1d3cf5f95da}{Index}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1IndexMetadata}{Index\+Metadata}} $>$ \&\&metadata)
+\item 
+virtual \mbox{\hyperlink{classbustub_1_1Index_a7e97b3ee03404cf357eee0b4d60f703d}{$\sim$\+Index}} ()=default
+\item 
+\mbox{\hyperlink{classbustub_1_1IndexMetadata}{Index\+Metadata}} $\ast$ \mbox{\hyperlink{classbustub_1_1Index_abca5768e2f06e7035366f406f6092feb}{Get\+Metadata}} () const
+\item 
+std\+::uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1Index_a5ff778f19d5015308bcb8aeb02c69aaf}{Get\+Index\+Column\+Count}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{classbustub_1_1Index_a16c10204a9107f24e4d30cd2d433fb60}{Get\+Name}} () const
+\item 
+\mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$ \mbox{\hyperlink{classbustub_1_1Index_a15190c99c2b997517fe811b703b6bb24}{Get\+Key\+Schema}} () const
+\item 
+const std\+::vector$<$ uint32\+\_\+t $>$ \& \mbox{\hyperlink{classbustub_1_1Index_aa3a54e37c510771fb320bdbf65fd6759}{Get\+Key\+Attrs}} () const
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1Index_ac59a73ad175ebf4a80694ca543f9970d}{To\+String}} () const
+\item 
+virtual void \mbox{\hyperlink{classbustub_1_1Index_af4fa33ef3e6af0e65936ceb1eb4928e4}{Insert\+Entry}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&key, \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction)=0
+\item 
+virtual void \mbox{\hyperlink{classbustub_1_1Index_a76ce812b2c134e64915329bbeedad0a8}{Delete\+Entry}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&key, \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction)=0
+\item 
+virtual void \mbox{\hyperlink{classbustub_1_1Index_ac1956eb188c14fe560025ba940cdb302}{Scan\+Key}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&key, std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $>$ $\ast$result, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+class \mbox{\hyperlink{classbustub_1_1Index}{Index}} -\/ \mbox{\hyperlink{classBase}{Base}} class for derived indices of different types
+
+The index structure majorly maintains information on the schema of the schema of the underlying table and the mapping relation between index key and tuple key, and provides an abstracted way for the external world to interact with the underlying index implementation without exposing the actual implementation\textquotesingle{}s interface.
+
+\mbox{\hyperlink{classbustub_1_1Index}{Index}} object also handles predicate scan, in addition to simple insert, delete, predicate insert, point query, and full index scan. Predicate scan only supports conjunction, and may or may not be optimized depending on the type of expressions inside the predicate. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1Index_a598be92864fa8dc44840d1d3cf5f95da}\label{classbustub_1_1Index_a598be92864fa8dc44840d1d3cf5f95da}} 
+\index{bustub::Index@{bustub::Index}!Index@{Index}}
+\index{Index@{Index}!bustub::Index@{bustub::Index}}
+\doxysubsubsection{\texorpdfstring{Index()}{Index()}}
+{\footnotesize\ttfamily bustub\+::\+Index\+::\+Index (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1IndexMetadata}{Index\+Metadata}} $>$ \&\&}]{metadata }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1Index}{Index}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em metdata} & An owning pointer to the index metadata \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1Index_a7e97b3ee03404cf357eee0b4d60f703d}\label{classbustub_1_1Index_a7e97b3ee03404cf357eee0b4d60f703d}} 
+\index{bustub::Index@{bustub::Index}!````~Index@{$\sim$Index}}
+\index{````~Index@{$\sim$Index}!bustub::Index@{bustub::Index}}
+\doxysubsubsection{\texorpdfstring{$\sim$Index()}{~Index()}}
+{\footnotesize\ttfamily virtual bustub\+::\+Index\+::$\sim$\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Index_a76ce812b2c134e64915329bbeedad0a8}\label{classbustub_1_1Index_a76ce812b2c134e64915329bbeedad0a8}} 
+\index{bustub::Index@{bustub::Index}!DeleteEntry@{DeleteEntry}}
+\index{DeleteEntry@{DeleteEntry}!bustub::Index@{bustub::Index}}
+\doxysubsubsection{\texorpdfstring{DeleteEntry()}{DeleteEntry()}}
+{\footnotesize\ttfamily virtual void bustub\+::\+Index\+::\+Delete\+Entry (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{key,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}}}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Delete an index entry by key. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The index key \\
+\hline
+{\em rid} & The \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} associated with the key (unused) \\
+\hline
+{\em transaction} & The transaction context \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1ExtendibleHashTableIndex_a904267f54beb8f837a07e4f56d70278f}{bustub\+::\+Extendible\+Hash\+Table\+Index$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}}, \mbox{\hyperlink{classbustub_1_1LinearProbeHashTableIndex_a3a2f964b6c03b6359d3fad1a68be72ab}{bustub\+::\+Linear\+Probe\+Hash\+Table\+Index$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}}, and \mbox{\hyperlink{classbustub_1_1BPlusTreeIndex_aab7aa8b3e3a81bad6431fc3fd6ffa062}{bustub\+::\+B\+Plus\+Tree\+Index}}.
+
+\mbox{\Hypertarget{classbustub_1_1Index_a5ff778f19d5015308bcb8aeb02c69aaf}\label{classbustub_1_1Index_a5ff778f19d5015308bcb8aeb02c69aaf}} 
+\index{bustub::Index@{bustub::Index}!GetIndexColumnCount@{GetIndexColumnCount}}
+\index{GetIndexColumnCount@{GetIndexColumnCount}!bustub::Index@{bustub::Index}}
+\doxysubsubsection{\texorpdfstring{GetIndexColumnCount()}{GetIndexColumnCount()}}
+{\footnotesize\ttfamily std\+::uint32\+\_\+t bustub\+::\+Index\+::\+Get\+Index\+Column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The number of indexed columns 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Index_aa3a54e37c510771fb320bdbf65fd6759}\label{classbustub_1_1Index_aa3a54e37c510771fb320bdbf65fd6759}} 
+\index{bustub::Index@{bustub::Index}!GetKeyAttrs@{GetKeyAttrs}}
+\index{GetKeyAttrs@{GetKeyAttrs}!bustub::Index@{bustub::Index}}
+\doxysubsubsection{\texorpdfstring{GetKeyAttrs()}{GetKeyAttrs()}}
+{\footnotesize\ttfamily const std\+::vector$<$uint32\+\_\+t$>$\& bustub\+::\+Index\+::\+Get\+Key\+Attrs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The index key attributes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Index_a15190c99c2b997517fe811b703b6bb24}\label{classbustub_1_1Index_a15190c99c2b997517fe811b703b6bb24}} 
+\index{bustub::Index@{bustub::Index}!GetKeySchema@{GetKeySchema}}
+\index{GetKeySchema@{GetKeySchema}!bustub::Index@{bustub::Index}}
+\doxysubsubsection{\texorpdfstring{GetKeySchema()}{GetKeySchema()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Schema}{Schema}}$\ast$ bustub\+::\+Index\+::\+Get\+Key\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The index key schema 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Index_abca5768e2f06e7035366f406f6092feb}\label{classbustub_1_1Index_abca5768e2f06e7035366f406f6092feb}} 
+\index{bustub::Index@{bustub::Index}!GetMetadata@{GetMetadata}}
+\index{GetMetadata@{GetMetadata}!bustub::Index@{bustub::Index}}
+\doxysubsubsection{\texorpdfstring{GetMetadata()}{GetMetadata()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1IndexMetadata}{Index\+Metadata}}$\ast$ bustub\+::\+Index\+::\+Get\+Metadata (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+A non-\/owning pointer to the metadata object associated with the index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Index_a16c10204a9107f24e4d30cd2d433fb60}\label{classbustub_1_1Index_a16c10204a9107f24e4d30cd2d433fb60}} 
+\index{bustub::Index@{bustub::Index}!GetName@{GetName}}
+\index{GetName@{GetName}!bustub::Index@{bustub::Index}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily const std\+::string\& bustub\+::\+Index\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The index name 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Index_af4fa33ef3e6af0e65936ceb1eb4928e4}\label{classbustub_1_1Index_af4fa33ef3e6af0e65936ceb1eb4928e4}} 
+\index{bustub::Index@{bustub::Index}!InsertEntry@{InsertEntry}}
+\index{InsertEntry@{InsertEntry}!bustub::Index@{bustub::Index}}
+\doxysubsubsection{\texorpdfstring{InsertEntry()}{InsertEntry()}}
+{\footnotesize\ttfamily virtual void bustub\+::\+Index\+::\+Insert\+Entry (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{key,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}}}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Insert an entry into the index. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The index key \\
+\hline
+{\em rid} & The \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} associated with the key (unused) \\
+\hline
+{\em transaction} & The transaction context \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1ExtendibleHashTableIndex_a0a6bb5a0a6bb7a9aaec2daa7abc931b3}{bustub\+::\+Extendible\+Hash\+Table\+Index$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}}, \mbox{\hyperlink{classbustub_1_1LinearProbeHashTableIndex_ae4a4343b5fcff0bcf96c5abd16fa5ba1}{bustub\+::\+Linear\+Probe\+Hash\+Table\+Index$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}}, and \mbox{\hyperlink{classbustub_1_1BPlusTreeIndex_a2c514cb3334c793ab2f4d0e6530ab502}{bustub\+::\+B\+Plus\+Tree\+Index}}.
+
+\mbox{\Hypertarget{classbustub_1_1Index_ac1956eb188c14fe560025ba940cdb302}\label{classbustub_1_1Index_ac1956eb188c14fe560025ba940cdb302}} 
+\index{bustub::Index@{bustub::Index}!ScanKey@{ScanKey}}
+\index{ScanKey@{ScanKey}!bustub::Index@{bustub::Index}}
+\doxysubsubsection{\texorpdfstring{ScanKey()}{ScanKey()}}
+{\footnotesize\ttfamily virtual void bustub\+::\+Index\+::\+Scan\+Key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{key,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $>$ $\ast$}]{result,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Search the index for the provided key. 
+\begin{DoxyParams}{Parameters}
+{\em key} & The index key \\
+\hline
+{\em result} & The collection of R\+I\+Ds that is populated with results of the search \\
+\hline
+{\em transaction} & The transaction context \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1ExtendibleHashTableIndex_aa4cbcf5289b10461790a27d4b894f72f}{bustub\+::\+Extendible\+Hash\+Table\+Index$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}}, \mbox{\hyperlink{classbustub_1_1LinearProbeHashTableIndex_a095a43725ae531fa4f537b8cbe1c53ac}{bustub\+::\+Linear\+Probe\+Hash\+Table\+Index$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}}, and \mbox{\hyperlink{classbustub_1_1BPlusTreeIndex_ac59305fd402f1a8804e74762c5f045d0}{bustub\+::\+B\+Plus\+Tree\+Index}}.
+
+\mbox{\Hypertarget{classbustub_1_1Index_ac59a73ad175ebf4a80694ca543f9970d}\label{classbustub_1_1Index_ac59a73ad175ebf4a80694ca543f9970d}} 
+\index{bustub::Index@{bustub::Index}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::Index@{bustub::Index}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Index\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+A string representation for debugging 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/index/\mbox{\hyperlink{index_8h}{index.\+h}}\end{DoxyCompactItemize}

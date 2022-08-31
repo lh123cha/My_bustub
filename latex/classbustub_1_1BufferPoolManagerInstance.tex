@@ -1,0 +1,373 @@
+\hypertarget{classbustub_1_1BufferPoolManagerInstance}{}\doxysection{bustub\+::Buffer\+Pool\+Manager\+Instance Class Reference}
+\label{classbustub_1_1BufferPoolManagerInstance}\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+
+
+{\ttfamily \#include $<$buffer\+\_\+pool\+\_\+manager\+\_\+instance.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Buffer\+Pool\+Manager\+Instance\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{classbustub_1_1BufferPoolManagerInstance__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Buffer\+Pool\+Manager\+Instance\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbustub_1_1BufferPoolManagerInstance__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_af3f83b54c7ac8d706dc9095a4b26f015}{Buffer\+Pool\+Manager\+Instance}} (size\+\_\+t pool\+\_\+size, \mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$disk\+\_\+manager, \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager=nullptr)
+\item 
+\mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a9bb35119fd4f0fec8633ead3ca9c65ff}{Buffer\+Pool\+Manager\+Instance}} (size\+\_\+t pool\+\_\+size, uint32\+\_\+t num\+\_\+instances, uint32\+\_\+t instance\+\_\+index, \mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$disk\+\_\+manager, \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager=nullptr)
+\item 
+\mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_ad90c588e160e646ac1abc329404b33da}{$\sim$\+Buffer\+Pool\+Manager\+Instance}} () override
+\item 
+size\+\_\+t \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a85c9f27cdf20808f38f9f3335cb6b771}{Get\+Pool\+Size}} () override
+\item 
+\mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_ac9ce08816437702e19b6b47896dbafb2}{Get\+Pages}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a03b394acdbcdb847ad61aadd7143a6eb}{Fetch\+Pg\+Imp}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id) override
+\item 
+bool \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a78c7a0b207e6f37b267cac6a5d3cd43a}{Unpin\+Pg\+Imp}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id, bool is\+\_\+dirty) override
+\item 
+bool \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a92b23b88d357e8e89b0b95f925e6dd67}{Flush\+Pg\+Imp}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id) override
+\item 
+\mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_aa286e2adbd48f2b68e6782ce4a866d89}{New\+Pg\+Imp}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} $\ast$page\+\_\+id) override
+\item 
+bool \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a256384e9d22a21adc432ea7f6b9d4298}{Delete\+Pg\+Imp}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id) override
+\item 
+void \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a892663bed7b1ff075f1489d2d0de70ff}{Flush\+All\+Pgs\+Imp}} () override
+\item 
+\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a9e0bdb328ff02e1c8d8a34599e9d6b6e}{Allocate\+Page}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_ae81e58036aa3435f8296ca0f5ccc518b}{Deallocate\+Page}} (\mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_acb47664291511f6e8ca0489537470fc3}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((unused)) \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id)
+\item 
+void \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_ad7e6b2254336d351292fa326dac800c1}{Validate\+Page\+Id}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id) const
+\item 
+\mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$disk\+\_\+manager\+\_\+ \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_acb47664291511f6e8ca0489537470fc3}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((\+\_\+\+\_\+unused\+\_\+\+\_\+))
+\item 
+\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager\+\_\+ \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a387912fc43beb5fc70e556d21ddd20d2}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((\+\_\+\+\_\+unused\+\_\+\+\_\+))
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const size\+\_\+t \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a70978fcac37652cd2c8f9466e9a020e8}{pool\+\_\+size\+\_\+}}
+\item 
+const uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a4b3b59d7bbfe82ee2ef44184f2a5235f}{num\+\_\+instances\+\_\+}} = 1
+\item 
+const uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a27d8ad98ffadf1895c569f86bdde7749}{instance\+\_\+index\+\_\+}} = 0
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} $>$ \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_aec8c5697a47fdfcba57f7c94e7857a5f}{next\+\_\+page\+\_\+id\+\_\+}} = \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a27d8ad98ffadf1895c569f86bdde7749}{instance\+\_\+index\+\_\+}}
+\item 
+\mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a6383bd96c6310f8b451afb8a2617214a}{pages\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}, \mbox{\hyperlink{namespacebustub_a0f35ab53da3f49c3adf60f5174b16a4a}{frame\+\_\+id\+\_\+t}} $>$ \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a1b4f4864a7bfc8bea8645a3ad937b9b8}{page\+\_\+table\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacebustub_a0f35ab53da3f49c3adf60f5174b16a4a}{frame\+\_\+id\+\_\+t}}, \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} $>$ \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a61cc4611148ffe9eac8d00ea4a032ca2}{frame\+\_\+table\+\_\+}}
+\item 
+\mbox{\hyperlink{classbustub_1_1Replacer}{Replacer}} $\ast$ \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_abb3cc4a87d179f19bcd1aa515944dd2a}{replacer\+\_\+}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{namespacebustub_a0f35ab53da3f49c3adf60f5174b16a4a}{frame\+\_\+id\+\_\+t}} $>$ \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a3681899c9689fe312ce3249e5f69b5cf}{free\+\_\+list\+\_\+}}
+\item 
+std\+::mutex \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a37c17d0a23108bbe03ed9d63485a895f}{latch\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} reads disk pages to and from its internal buffer pool. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_af3f83b54c7ac8d706dc9095a4b26f015}\label{classbustub_1_1BufferPoolManagerInstance_af3f83b54c7ac8d706dc9095a4b26f015}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!BufferPoolManagerInstance@{BufferPoolManagerInstance}}
+\index{BufferPoolManagerInstance@{BufferPoolManagerInstance}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{BufferPoolManagerInstance()}{BufferPoolManagerInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::\+Buffer\+Pool\+Manager\+Instance (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pool\+\_\+size,  }\item[{\mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$}]{disk\+\_\+manager,  }\item[{\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$}]{log\+\_\+manager = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Creates a new \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance}{Buffer\+Pool\+Manager\+Instance}}. 
+\begin{DoxyParams}{Parameters}
+{\em pool\+\_\+size} & the size of the buffer pool \\
+\hline
+{\em disk\+\_\+manager} & the disk manager \\
+\hline
+{\em log\+\_\+manager} & the log manager (for testing only\+: nullptr = disable logging) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a9bb35119fd4f0fec8633ead3ca9c65ff}\label{classbustub_1_1BufferPoolManagerInstance_a9bb35119fd4f0fec8633ead3ca9c65ff}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!BufferPoolManagerInstance@{BufferPoolManagerInstance}}
+\index{BufferPoolManagerInstance@{BufferPoolManagerInstance}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{BufferPoolManagerInstance()}{BufferPoolManagerInstance()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::\+Buffer\+Pool\+Manager\+Instance (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{pool\+\_\+size,  }\item[{uint32\+\_\+t}]{num\+\_\+instances,  }\item[{uint32\+\_\+t}]{instance\+\_\+index,  }\item[{\mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$}]{disk\+\_\+manager,  }\item[{\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$}]{log\+\_\+manager = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Creates a new \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance}{Buffer\+Pool\+Manager\+Instance}}. 
+\begin{DoxyParams}{Parameters}
+{\em pool\+\_\+size} & the size of the buffer pool \\
+\hline
+{\em num\+\_\+instances} & total number of B\+P\+Is in parallel B\+PM \\
+\hline
+{\em instance\+\_\+index} & index of this B\+PI in the parallel B\+PM \\
+\hline
+{\em disk\+\_\+manager} & the disk manager \\
+\hline
+{\em log\+\_\+manager} & the log manager (for testing only\+: nullptr = disable logging) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_ad90c588e160e646ac1abc329404b33da}\label{classbustub_1_1BufferPoolManagerInstance_ad90c588e160e646ac1abc329404b33da}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!````~BufferPoolManagerInstance@{$\sim$BufferPoolManagerInstance}}
+\index{````~BufferPoolManagerInstance@{$\sim$BufferPoolManagerInstance}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{$\sim$BufferPoolManagerInstance()}{~BufferPoolManagerInstance()}}
+{\footnotesize\ttfamily bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::$\sim$\+Buffer\+Pool\+Manager\+Instance (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Destroys an existing \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance}{Buffer\+Pool\+Manager\+Instance}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_acb47664291511f6e8ca0489537470fc3}\label{classbustub_1_1BufferPoolManagerInstance_acb47664291511f6e8ca0489537470fc3}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}}$\ast$ disk\+\_\+manager\+\_\+ bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(\+\_\+\+\_\+unused\+\_\+\+\_\+)}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to the disk manager. \mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a387912fc43beb5fc70e556d21ddd20d2}\label{classbustub_1_1BufferPoolManagerInstance_a387912fc43beb5fc70e556d21ddd20d2}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}}$\ast$ log\+\_\+manager\+\_\+ bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::\+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(\+\_\+\+\_\+unused\+\_\+\+\_\+)}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Pointer to the log manager. \mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a9e0bdb328ff02e1c8d8a34599e9d6b6e}\label{classbustub_1_1BufferPoolManagerInstance_a9e0bdb328ff02e1c8d8a34599e9d6b6e}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!AllocatePage@{AllocatePage}}
+\index{AllocatePage@{AllocatePage}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{AllocatePage()}{AllocatePage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::\+Allocate\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Allocate a page on disk.\+∂ \begin{DoxyReturn}{Returns}
+the id of the allocated page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_ae81e58036aa3435f8296ca0f5ccc518b}\label{classbustub_1_1BufferPoolManagerInstance_ae81e58036aa3435f8296ca0f5ccc518b}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!DeallocatePage@{DeallocatePage}}
+\index{DeallocatePage@{DeallocatePage}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{DeallocatePage()}{DeallocatePage()}}
+{\footnotesize\ttfamily void bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::\+Deallocate\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_acb47664291511f6e8ca0489537470fc3}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}((unused)) \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Deallocate a page on disk. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of the page to deallocate \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a256384e9d22a21adc432ea7f6b9d4298}\label{classbustub_1_1BufferPoolManagerInstance_a256384e9d22a21adc432ea7f6b9d4298}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!DeletePgImp@{DeletePgImp}}
+\index{DeletePgImp@{DeletePgImp}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{DeletePgImp()}{DeletePgImp()}}
+{\footnotesize\ttfamily bool bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::\+Delete\+Pg\+Imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Deletes a page from the buffer pool. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of page to be deleted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the page exists but could not be deleted, true if the page didn\textquotesingle{}t exist or deletion succeeded 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a1c30494c0e3b29e1e6aad70cc6e54a0b}{bustub\+::\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a03b394acdbcdb847ad61aadd7143a6eb}\label{classbustub_1_1BufferPoolManagerInstance_a03b394acdbcdb847ad61aadd7143a6eb}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!FetchPgImp@{FetchPgImp}}
+\index{FetchPgImp@{FetchPgImp}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{FetchPgImp()}{FetchPgImp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::\+Fetch\+Pg\+Imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Fetch the requested page from the buffer pool. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of page to be fetched \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the requested page 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a290e1723d12d509714e15650546b957d}{bustub\+::\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a892663bed7b1ff075f1489d2d0de70ff}\label{classbustub_1_1BufferPoolManagerInstance_a892663bed7b1ff075f1489d2d0de70ff}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!FlushAllPgsImp@{FlushAllPgsImp}}
+\index{FlushAllPgsImp@{FlushAllPgsImp}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{FlushAllPgsImp()}{FlushAllPgsImp()}}
+{\footnotesize\ttfamily void bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::\+Flush\+All\+Pgs\+Imp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Flushes all the pages in the buffer pool to disk. 
+
+Implements \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aa92aa48f53f033bfd7d0db433f2d25af}{bustub\+::\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a92b23b88d357e8e89b0b95f925e6dd67}\label{classbustub_1_1BufferPoolManagerInstance_a92b23b88d357e8e89b0b95f925e6dd67}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!FlushPgImp@{FlushPgImp}}
+\index{FlushPgImp@{FlushPgImp}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{FlushPgImp()}{FlushPgImp()}}
+{\footnotesize\ttfamily bool bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::\+Flush\+Pg\+Imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Flushes the target page to disk. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of page to be flushed, cannot be I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+G\+E\+\_\+\+ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the page could not be found in the page table, true otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1BufferPoolManager_ac8156b2e4371685daad5765896dab8b6}{bustub\+::\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_ac9ce08816437702e19b6b47896dbafb2}\label{classbustub_1_1BufferPoolManagerInstance_ac9ce08816437702e19b6b47896dbafb2}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!GetPages@{GetPages}}
+\index{GetPages@{GetPages}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{GetPages()}{GetPages()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Page}{Page}}$\ast$ bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::\+Get\+Pages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+pointer to all the pages in the buffer pool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a85c9f27cdf20808f38f9f3335cb6b771}\label{classbustub_1_1BufferPoolManagerInstance_a85c9f27cdf20808f38f9f3335cb6b771}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!GetPoolSize@{GetPoolSize}}
+\index{GetPoolSize@{GetPoolSize}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{GetPoolSize()}{GetPoolSize()}}
+{\footnotesize\ttfamily size\+\_\+t bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::\+Get\+Pool\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+size of the buffer pool 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aa803b9c1fe285cad7c688c7e5807200c}{bustub\+::\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_aa286e2adbd48f2b68e6782ce4a866d89}\label{classbustub_1_1BufferPoolManagerInstance_aa286e2adbd48f2b68e6782ce4a866d89}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!NewPgImp@{NewPgImp}}
+\index{NewPgImp@{NewPgImp}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{NewPgImp()}{NewPgImp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::\+New\+Pg\+Imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} $\ast$}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Creates a new page in the buffer pool. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em page\+\_\+id} & id of created page \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nullptr if no new pages could be created, otherwise pointer to new page 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a326ef41dc22371cd4e453f3d606b16ab}{bustub\+::\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a78c7a0b207e6f37b267cac6a5d3cd43a}\label{classbustub_1_1BufferPoolManagerInstance_a78c7a0b207e6f37b267cac6a5d3cd43a}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!UnpinPgImp@{UnpinPgImp}}
+\index{UnpinPgImp@{UnpinPgImp}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{UnpinPgImp()}{UnpinPgImp()}}
+{\footnotesize\ttfamily bool bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::\+Unpin\+Pg\+Imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id,  }\item[{bool}]{is\+\_\+dirty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Unpin the target page from the buffer pool. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of page to be unpinned \\
+\hline
+{\em is\+\_\+dirty} & true if the page should be marked as dirty, false otherwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the page pin count is $<$= 0 before this call, true otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aa8871523e4ae89bad7b56fae79515344}{bustub\+::\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_ad7e6b2254336d351292fa326dac800c1}\label{classbustub_1_1BufferPoolManagerInstance_ad7e6b2254336d351292fa326dac800c1}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!ValidatePageId@{ValidatePageId}}
+\index{ValidatePageId@{ValidatePageId}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{ValidatePageId()}{ValidatePageId()}}
+{\footnotesize\ttfamily void bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::\+Validate\+Page\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+Validate that the page\+\_\+id being used is accessible to this B\+PI. This can be used in all of the functions to validate input data and ensure that a parallel B\+PM is routing requests to the correct B\+PI 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a61cc4611148ffe9eac8d00ea4a032ca2}\label{classbustub_1_1BufferPoolManagerInstance_a61cc4611148ffe9eac8d00ea4a032ca2}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!frame\_table\_@{frame\_table\_}}
+\index{frame\_table\_@{frame\_table\_}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{frame\_table\_}{frame\_table\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespacebustub_a0f35ab53da3f49c3adf60f5174b16a4a}{frame\+\_\+id\+\_\+t}},\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}$>$ bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::frame\+\_\+table\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Frame table for keeping track of pages \mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a3681899c9689fe312ce3249e5f69b5cf}\label{classbustub_1_1BufferPoolManagerInstance_a3681899c9689fe312ce3249e5f69b5cf}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!free\_list\_@{free\_list\_}}
+\index{free\_list\_@{free\_list\_}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{free\_list\_}{free\_list\_}}
+{\footnotesize\ttfamily std\+::list$<$\mbox{\hyperlink{namespacebustub_a0f35ab53da3f49c3adf60f5174b16a4a}{frame\+\_\+id\+\_\+t}}$>$ bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::free\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+List of free pages. \mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a27d8ad98ffadf1895c569f86bdde7749}\label{classbustub_1_1BufferPoolManagerInstance_a27d8ad98ffadf1895c569f86bdde7749}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!instance\_index\_@{instance\_index\_}}
+\index{instance\_index\_@{instance\_index\_}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{instance\_index\_}{instance\_index\_}}
+{\footnotesize\ttfamily const uint32\+\_\+t bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::instance\+\_\+index\+\_\+ = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\hyperlink{classbustub_1_1Index}{Index}} of this B\+PI in the parallel B\+PM (if present, otherwise just 0) \mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a37c17d0a23108bbe03ed9d63485a895f}\label{classbustub_1_1BufferPoolManagerInstance_a37c17d0a23108bbe03ed9d63485a895f}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!latch\_@{latch\_}}
+\index{latch\_@{latch\_}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{latch\_}{latch\_}}
+{\footnotesize\ttfamily std\+::mutex bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::latch\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+This latch protects shared data structures. We recommend updating this comment to describe what it protects. \mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_aec8c5697a47fdfcba57f7c94e7857a5f}\label{classbustub_1_1BufferPoolManagerInstance_aec8c5697a47fdfcba57f7c94e7857a5f}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!next\_page\_id\_@{next\_page\_id\_}}
+\index{next\_page\_id\_@{next\_page\_id\_}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{next\_page\_id\_}{next\_page\_id\_}}
+{\footnotesize\ttfamily std\+::atomic$<$\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}$>$ bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::next\+\_\+page\+\_\+id\+\_\+ = \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a27d8ad98ffadf1895c569f86bdde7749}{instance\+\_\+index\+\_\+}}\hspace{0.3cm}{\ttfamily [protected]}}
+
+Each B\+PI maintains its own counter for page\+\_\+ids to hand out, must ensure they mod back to its instance\+\_\+index\+\_\+ \mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a4b3b59d7bbfe82ee2ef44184f2a5235f}\label{classbustub_1_1BufferPoolManagerInstance_a4b3b59d7bbfe82ee2ef44184f2a5235f}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!num\_instances\_@{num\_instances\_}}
+\index{num\_instances\_@{num\_instances\_}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{num\_instances\_}{num\_instances\_}}
+{\footnotesize\ttfamily const uint32\+\_\+t bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::num\+\_\+instances\+\_\+ = 1\hspace{0.3cm}{\ttfamily [protected]}}
+
+How many instances are in the parallel B\+PM (if present, otherwise just 1 B\+PI) \mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a1b4f4864a7bfc8bea8645a3ad937b9b8}\label{classbustub_1_1BufferPoolManagerInstance_a1b4f4864a7bfc8bea8645a3ad937b9b8}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!page\_table\_@{page\_table\_}}
+\index{page\_table\_@{page\_table\_}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{page\_table\_}{page\_table\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}, \mbox{\hyperlink{namespacebustub_a0f35ab53da3f49c3adf60f5174b16a4a}{frame\+\_\+id\+\_\+t}}$>$ bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::page\+\_\+table\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\hyperlink{classbustub_1_1Page}{Page}} table for keeping track of buffer pool pages. \mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a6383bd96c6310f8b451afb8a2617214a}\label{classbustub_1_1BufferPoolManagerInstance_a6383bd96c6310f8b451afb8a2617214a}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!pages\_@{pages\_}}
+\index{pages\_@{pages\_}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{pages\_}{pages\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Page}{Page}}$\ast$ bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::pages\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Array of buffer pool pages. \mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_a70978fcac37652cd2c8f9466e9a020e8}\label{classbustub_1_1BufferPoolManagerInstance_a70978fcac37652cd2c8f9466e9a020e8}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!pool\_size\_@{pool\_size\_}}
+\index{pool\_size\_@{pool\_size\_}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{pool\_size\_}{pool\_size\_}}
+{\footnotesize\ttfamily const size\+\_\+t bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::pool\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+Number of pages in the buffer pool. \mbox{\Hypertarget{classbustub_1_1BufferPoolManagerInstance_abb3cc4a87d179f19bcd1aa515944dd2a}\label{classbustub_1_1BufferPoolManagerInstance_abb3cc4a87d179f19bcd1aa515944dd2a}} 
+\index{bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}!replacer\_@{replacer\_}}
+\index{replacer\_@{replacer\_}!bustub::BufferPoolManagerInstance@{bustub::BufferPoolManagerInstance}}
+\doxysubsubsection{\texorpdfstring{replacer\_}{replacer\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Replacer}{Replacer}}$\ast$ bustub\+::\+Buffer\+Pool\+Manager\+Instance\+::replacer\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\hyperlink{classbustub_1_1Replacer}{Replacer}} to find unpinned pages for replacement. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/buffer/\mbox{\hyperlink{buffer__pool__manager__instance_8h}{buffer\+\_\+pool\+\_\+manager\+\_\+instance.\+h}}\item 
+src/buffer/\mbox{\hyperlink{buffer__pool__manager__instance_8cpp}{buffer\+\_\+pool\+\_\+manager\+\_\+instance.\+cpp}}\end{DoxyCompactItemize}

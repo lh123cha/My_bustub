@@ -1,0 +1,124 @@
+\hypertarget{classbustub_1_1HashTable}{}\doxysection{bustub\+::Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$ Class Template Reference}
+\label{classbustub_1_1HashTable}\index{bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+
+
+{\ttfamily \#include $<$hash\+\_\+table.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{classbustub_1_1HashTable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classbustub_1_1HashTable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classbustub_1_1HashTable_ac4c7944bce149193947ff913d5ea86fb}{$\sim$\+Hash\+Table}} ()=default
+\item 
+virtual bool \mbox{\hyperlink{classbustub_1_1HashTable_aa210942f79353b8ce4f234937177f1ef}{Insert}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key, const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&\mbox{\hyperlink{gmock-spec-builders__test_8cc_ac4f474c82e82cbb89ca7c36dd52be0ed}{value}})=0
+\item 
+virtual bool \mbox{\hyperlink{classbustub_1_1HashTable_afe270f191a766e41e891730a6d587ad7}{Remove}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key, const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&\mbox{\hyperlink{gmock-spec-builders__test_8cc_ac4f474c82e82cbb89ca7c36dd52be0ed}{value}})=0
+\item 
+virtual bool \mbox{\hyperlink{classbustub_1_1HashTable_a1b5ffceaf3a1d1e2ce161d9f806277a7}{Get\+Value}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key, std\+::vector$<$ \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$ $\ast$result)=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1HashTable_ac4c7944bce149193947ff913d5ea86fb}\label{classbustub_1_1HashTable_ac4c7944bce149193947ff913d5ea86fb}} 
+\index{bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$}!````~HashTable@{$\sim$HashTable}}
+\index{````~HashTable@{$\sim$HashTable}!bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$HashTable()}{~HashTable()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+virtual \mbox{\hyperlink{classbustub_1_1HashTable}{bustub\+::\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::$\sim$\mbox{\hyperlink{classbustub_1_1HashTable}{Hash\+Table}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1HashTable_a1b5ffceaf3a1d1e2ce161d9f806277a7}\label{classbustub_1_1HashTable_a1b5ffceaf3a1d1e2ce161d9f806277a7}} 
+\index{bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+virtual bool \mbox{\hyperlink{classbustub_1_1HashTable}{bustub\+::\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Get\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction,  }\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$ $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Performs a point query on the hash table. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em transaction} & the current transaction \\
+\hline
+ & {\em key} & the key to look up \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & the value(s) associated with a given key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value(s) associated with the given key 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable_a1bf7ce14f5e1a077a3bb449dd6c1de51}{bustub\+::\+Linear\+Probe\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}}, and \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable_a1bf7ce14f5e1a077a3bb449dd6c1de51}{bustub\+::\+Linear\+Probe\+Hash\+Table$<$ bustub\+::\+Generic\+Key, bustub\+::\+R\+I\+D, Key\+Comparator $>$}}.
+
+\mbox{\Hypertarget{classbustub_1_1HashTable_aa210942f79353b8ce4f234937177f1ef}\label{classbustub_1_1HashTable_aa210942f79353b8ce4f234937177f1ef}} 
+\index{bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$}!Insert@{Insert}}
+\index{Insert@{Insert}!bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+virtual bool \mbox{\hyperlink{classbustub_1_1HashTable}{bustub\+::\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction,  }\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key,  }\item[{const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Inserts a key-\/value pair into the hash table. 
+\begin{DoxyParams}{Parameters}
+{\em transaction} & the current transaction \\
+\hline
+{\em key} & the key to create \\
+\hline
+{\em value} & the value to be associated with the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if insert succeeded, false otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable_a87d4774ff24636060446bf39247db613}{bustub\+::\+Linear\+Probe\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}}, and \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable_a87d4774ff24636060446bf39247db613}{bustub\+::\+Linear\+Probe\+Hash\+Table$<$ bustub\+::\+Generic\+Key, bustub\+::\+R\+I\+D, Key\+Comparator $>$}}.
+
+\mbox{\Hypertarget{classbustub_1_1HashTable_afe270f191a766e41e891730a6d587ad7}\label{classbustub_1_1HashTable_afe270f191a766e41e891730a6d587ad7}} 
+\index{bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::HashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+virtual bool \mbox{\hyperlink{classbustub_1_1HashTable}{bustub\+::\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction,  }\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key,  }\item[{const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Deletes the associated value for the given key. 
+\begin{DoxyParams}{Parameters}
+{\em transaction} & the current transaction \\
+\hline
+{\em key} & the key to delete \\
+\hline
+{\em value} & the value to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if remove succeeded, false otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable_aa43cbc91f63b0c39e16e4d94eb9e9d54}{bustub\+::\+Linear\+Probe\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}}, and \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable_aa43cbc91f63b0c39e16e4d94eb9e9d54}{bustub\+::\+Linear\+Probe\+Hash\+Table$<$ bustub\+::\+Generic\+Key, bustub\+::\+R\+I\+D, Key\+Comparator $>$}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/container/hash/\mbox{\hyperlink{hash__table_8h}{hash\+\_\+table.\+h}}\end{DoxyCompactItemize}

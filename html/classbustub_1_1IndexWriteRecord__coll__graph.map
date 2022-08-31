@@ -1,0 +1,9 @@
+<map id="bustub::IndexWriteRecord" name="bustub::IndexWriteRecord">
+<area shape="rect" id="node1" title=" " alt="" coords="139,792,329,899"/>
+<area shape="rect" id="node2" href="$classbustub_1_1RID.html" title=" " alt="" coords="5,505,132,700"/>
+<area shape="rect" id="node3" href="$classbustub_1_1Catalog.html" title=" " alt="" coords="157,505,311,700"/>
+<area shape="rect" id="node4" href="$structbustub_1_1TableInfo.html" title=" " alt="" coords="87,307,221,413"/>
+<area shape="rect" id="node5" href="$classbustub_1_1Schema.html" title=" " alt="" coords="129,5,337,229"/>
+<area shape="rect" id="node6" href="$structbustub_1_1IndexInfo.html" title=" " alt="" coords="247,292,381,428"/>
+<area shape="rect" id="node7" href="$classbustub_1_1Tuple.html" title=" " alt="" coords="336,491,489,715"/>
+</map>

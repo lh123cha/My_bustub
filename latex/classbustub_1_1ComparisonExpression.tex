@@ -1,0 +1,114 @@
+\hypertarget{classbustub_1_1ComparisonExpression}{}\doxysection{bustub\+::Comparison\+Expression Class Reference}
+\label{classbustub_1_1ComparisonExpression}\index{bustub::ComparisonExpression@{bustub::ComparisonExpression}}
+
+
+{\ttfamily \#include $<$comparison\+\_\+expression.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Comparison\+Expression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classbustub_1_1ComparisonExpression__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Comparison\+Expression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=247pt]{classbustub_1_1ComparisonExpression__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1ComparisonExpression_afd339182b9d928494356e9e9f927f0d7}{Comparison\+Expression}} (const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$left, const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$right, \mbox{\hyperlink{namespacebustub_a314657f14ab5ad66e4a32d3e91cd3a9b}{Comparison\+Type}} comp\+\_\+type)
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1ComparisonExpression_ae4593aba1bca6fc4d2cd2cc074d50445}{Evaluate}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$schema) const override
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1ComparisonExpression_a5a4fe166a615358628780c4aa649680f}{Evaluate\+Join}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$left\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$left\+\_\+schema, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$right\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$right\+\_\+schema) const override
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1ComparisonExpression_a47de9e75528d5ca3218fc46d71bc3db9}{Evaluate\+Aggregate}} (const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ \&group\+\_\+bys, const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ \&aggregates) const override
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1ComparisonExpression}{Comparison\+Expression}} represents two expressions being compared. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1ComparisonExpression_afd339182b9d928494356e9e9f927f0d7}\label{classbustub_1_1ComparisonExpression_afd339182b9d928494356e9e9f927f0d7}} 
+\index{bustub::ComparisonExpression@{bustub::ComparisonExpression}!ComparisonExpression@{ComparisonExpression}}
+\index{ComparisonExpression@{ComparisonExpression}!bustub::ComparisonExpression@{bustub::ComparisonExpression}}
+\doxysubsubsection{\texorpdfstring{ComparisonExpression()}{ComparisonExpression()}}
+{\footnotesize\ttfamily bustub\+::\+Comparison\+Expression\+::\+Comparison\+Expression (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$}]{right,  }\item[{\mbox{\hyperlink{namespacebustub_a314657f14ab5ad66e4a32d3e91cd3a9b}{Comparison\+Type}}}]{comp\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new comparison expression representing (left comp\+\_\+type right). 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ComparisonExpression_ae4593aba1bca6fc4d2cd2cc074d50445}\label{classbustub_1_1ComparisonExpression_ae4593aba1bca6fc4d2cd2cc074d50445}} 
+\index{bustub::ComparisonExpression@{bustub::ComparisonExpression}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!bustub::ComparisonExpression@{bustub::ComparisonExpression}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Comparison\+Expression\+::\+Evaluate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{schema }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating the tuple with the given schema 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExpression_a20ce852bd02a5e8c1fc9b8707421747c}{bustub\+::\+Abstract\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1ComparisonExpression_a47de9e75528d5ca3218fc46d71bc3db9}\label{classbustub_1_1ComparisonExpression_a47de9e75528d5ca3218fc46d71bc3db9}} 
+\index{bustub::ComparisonExpression@{bustub::ComparisonExpression}!EvaluateAggregate@{EvaluateAggregate}}
+\index{EvaluateAggregate@{EvaluateAggregate}!bustub::ComparisonExpression@{bustub::ComparisonExpression}}
+\doxysubsubsection{\texorpdfstring{EvaluateAggregate()}{EvaluateAggregate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Comparison\+Expression\+::\+Evaluate\+Aggregate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ \&}]{group\+\_\+bys,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ \&}]{aggregates }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns the value obtained by evaluating the aggregates. 
+\begin{DoxyParams}{Parameters}
+{\em group\+\_\+bys} & The group by values \\
+\hline
+{\em aggregates} & The aggregate values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value obtained by checking the aggregates and group-\/bys 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExpression_a0b82b02ed6b714e77a0395da6d2f4254}{bustub\+::\+Abstract\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1ComparisonExpression_a5a4fe166a615358628780c4aa649680f}\label{classbustub_1_1ComparisonExpression_a5a4fe166a615358628780c4aa649680f}} 
+\index{bustub::ComparisonExpression@{bustub::ComparisonExpression}!EvaluateJoin@{EvaluateJoin}}
+\index{EvaluateJoin@{EvaluateJoin}!bustub::ComparisonExpression@{bustub::ComparisonExpression}}
+\doxysubsubsection{\texorpdfstring{EvaluateJoin()}{EvaluateJoin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Comparison\+Expression\+::\+Evaluate\+Join (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{left\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{left\+\_\+schema,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{right\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{right\+\_\+schema }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns the value obtained by evaluating a J\+O\+IN. 
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+tuple} & The left tuple \\
+\hline
+{\em left\+\_\+schema} & The left tuple\textquotesingle{}s schema \\
+\hline
+{\em right\+\_\+tuple} & The right tuple \\
+\hline
+{\em right\+\_\+schema} & The right tuple\textquotesingle{}s schema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating a J\+O\+IN on the left and right 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExpression_a5b672f7f2b84194fcdf3ff7b52f6d985}{bustub\+::\+Abstract\+Expression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/expressions/\mbox{\hyperlink{comparison__expression_8h}{comparison\+\_\+expression.\+h}}\end{DoxyCompactItemize}

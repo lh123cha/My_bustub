@@ -1,0 +1,278 @@
+\hypertarget{classbustub_1_1Transaction}{}\doxysection{bustub\+::Transaction Class Reference}
+\label{classbustub_1_1Transaction}\index{bustub::Transaction@{bustub::Transaction}}
+
+
+{\ttfamily \#include $<$transaction.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Transaction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{classbustub_1_1Transaction__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1Transaction_a28e9466588ff92f30f1699db79926d1f}{Transaction}} (\mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}} txn\+\_\+id, \mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5}{Isolation\+Level}} isolation\+\_\+level=\mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5aa4b37efaa1a6b533614ed81660dbf912}{Isolation\+Level\+::\+R\+E\+P\+E\+A\+T\+A\+B\+L\+E\+\_\+\+R\+E\+AD}})
+\item 
+\mbox{\hyperlink{classbustub_1_1Transaction_a2ab0d2d2b2af598c72444f877e589299}{$\sim$\+Transaction}} ()=default
+\item 
+\mbox{\hyperlink{classbustub_1_1Transaction_a4bdedef75c39b7574b50291c7524ca11}{D\+I\+S\+A\+L\+L\+O\+W\+\_\+\+C\+O\+PY}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}})
+\item 
+std\+::thread\+::id \mbox{\hyperlink{classbustub_1_1Transaction_a5a87c3574b1bcd54b6d16fcd83fcfcf1}{Get\+Thread\+Id}} () const
+\item 
+\mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1Transaction_ad30ce1a623728bb953ab64302c9980d0}{Get\+Transaction\+Id}} () const
+\item 
+\mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5}{Isolation\+Level}} \mbox{\hyperlink{classbustub_1_1Transaction_a100094714e13f9ce019e867e2bb752e4}{Get\+Isolation\+Level}} () const
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::deque$<$ \mbox{\hyperlink{classbustub_1_1TableWriteRecord}{Table\+Write\+Record}} $>$ $>$ \mbox{\hyperlink{classbustub_1_1Transaction_a1346ecc6a6aa2e724480a51a9512c4a6}{Get\+Write\+Set}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::deque$<$ \mbox{\hyperlink{classbustub_1_1IndexWriteRecord}{Index\+Write\+Record}} $>$ $>$ \mbox{\hyperlink{classbustub_1_1Transaction_aaa3ea09a3d67c24588b3e76d76016d38}{Get\+Index\+Write\+Set}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::deque$<$ \mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ $>$ $>$ \mbox{\hyperlink{classbustub_1_1Transaction_a7b262820b93376f683475b84cb3d171d}{Get\+Page\+Set}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1Transaction_a390e0bd71d4aabec9ac3ced5bfd5783a}{Append\+Table\+Write\+Record}} (const \mbox{\hyperlink{classbustub_1_1TableWriteRecord}{Table\+Write\+Record}} \&write\+\_\+record)
+\item 
+void \mbox{\hyperlink{classbustub_1_1Transaction_ad15ea926fe7d27e7b9b4ee32a6295662}{Append\+Table\+Write\+Record}} (const \mbox{\hyperlink{classbustub_1_1IndexWriteRecord}{Index\+Write\+Record}} \&write\+\_\+record)
+\item 
+void \mbox{\hyperlink{classbustub_1_1Transaction_a0abb42496c37ad0f17891adbd31044f0}{Add\+Into\+Page\+Set}} (\mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$page)
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} $>$ $>$ \mbox{\hyperlink{classbustub_1_1Transaction_a0651d7cb7b38ff348503d10bbbdc3e43}{Get\+Deleted\+Page\+Set}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1Transaction_a566882a46c5776a73b35163246d86137}{Add\+Into\+Deleted\+Page\+Set}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id)
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $>$ $>$ \mbox{\hyperlink{classbustub_1_1Transaction_a660fe95da17e2cb91adbd0093a56dcf6}{Get\+Shared\+Lock\+Set}} ()
+\item 
+std\+::shared\+\_\+ptr$<$ std\+::unordered\+\_\+set$<$ \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $>$ $>$ \mbox{\hyperlink{classbustub_1_1Transaction_a96492ac49ef14a06a2fc213135fef848}{Get\+Exclusive\+Lock\+Set}} ()
+\item 
+bool \mbox{\hyperlink{classbustub_1_1Transaction_a17dc46d5400d52734f24f5ae8f9c184a}{Is\+Shared\+Locked}} (const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&rid)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1Transaction_a7362744c2c061f7f8732d5476ec971ad}{Is\+Exclusive\+Locked}} (const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&rid)
+\item 
+\mbox{\hyperlink{namespacebustub_ae58cece0a05d5cfc7ec83fc4a9161e20}{Transaction\+State}} \mbox{\hyperlink{classbustub_1_1Transaction_a3a63bf5fd5c24a33121fc0a5c434792e}{Get\+State}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1Transaction_acb83d7f742cc82273aca365eb07511f3}{Set\+State}} (\mbox{\hyperlink{namespacebustub_ae58cece0a05d5cfc7ec83fc4a9161e20}{Transaction\+State}} state)
+\item 
+\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} \mbox{\hyperlink{classbustub_1_1Transaction_ab03797e599bc450b05bb39b942c7e7bc}{Get\+Prev\+L\+SN}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1Transaction_a3696b0bb3e56c39a90f2efeabf65cb69}{Set\+Prev\+L\+SN}} (\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} prev\+\_\+lsn)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} tracks information related to a transaction. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a28e9466588ff92f30f1699db79926d1f}\label{classbustub_1_1Transaction_a28e9466588ff92f30f1699db79926d1f}} 
+\index{bustub::Transaction@{bustub::Transaction}!Transaction@{Transaction}}
+\index{Transaction@{Transaction}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{Transaction()}{Transaction()}}
+{\footnotesize\ttfamily bustub\+::\+Transaction\+::\+Transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}}}]{txn\+\_\+id,  }\item[{\mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5}{Isolation\+Level}}}]{isolation\+\_\+level = {\ttfamily \mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5aa4b37efaa1a6b533614ed81660dbf912}{Isolation\+Level\+::\+R\+E\+P\+E\+A\+T\+A\+B\+L\+E\+\_\+\+R\+E\+AD}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classbustub_1_1Transaction_a2ab0d2d2b2af598c72444f877e589299}\label{classbustub_1_1Transaction_a2ab0d2d2b2af598c72444f877e589299}} 
+\index{bustub::Transaction@{bustub::Transaction}!````~Transaction@{$\sim$Transaction}}
+\index{````~Transaction@{$\sim$Transaction}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{$\sim$Transaction()}{~Transaction()}}
+{\footnotesize\ttfamily bustub\+::\+Transaction\+::$\sim$\+Transaction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a566882a46c5776a73b35163246d86137}\label{classbustub_1_1Transaction_a566882a46c5776a73b35163246d86137}} 
+\index{bustub::Transaction@{bustub::Transaction}!AddIntoDeletedPageSet@{AddIntoDeletedPageSet}}
+\index{AddIntoDeletedPageSet@{AddIntoDeletedPageSet}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{AddIntoDeletedPageSet()}{AddIntoDeletedPageSet()}}
+{\footnotesize\ttfamily void bustub\+::\+Transaction\+::\+Add\+Into\+Deleted\+Page\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds a page to the deleted page set. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of the page to be marked as deleted \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a0abb42496c37ad0f17891adbd31044f0}\label{classbustub_1_1Transaction_a0abb42496c37ad0f17891adbd31044f0}} 
+\index{bustub::Transaction@{bustub::Transaction}!AddIntoPageSet@{AddIntoPageSet}}
+\index{AddIntoPageSet@{AddIntoPageSet}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{AddIntoPageSet()}{AddIntoPageSet()}}
+{\footnotesize\ttfamily void bustub\+::\+Transaction\+::\+Add\+Into\+Page\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$}]{page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds a page into the page set. 
+\begin{DoxyParams}{Parameters}
+{\em page} & page to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1Transaction_ad15ea926fe7d27e7b9b4ee32a6295662}\label{classbustub_1_1Transaction_ad15ea926fe7d27e7b9b4ee32a6295662}} 
+\index{bustub::Transaction@{bustub::Transaction}!AppendTableWriteRecord@{AppendTableWriteRecord}}
+\index{AppendTableWriteRecord@{AppendTableWriteRecord}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{AppendTableWriteRecord()}{AppendTableWriteRecord()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void bustub\+::\+Transaction\+::\+Append\+Table\+Write\+Record (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1IndexWriteRecord}{Index\+Write\+Record}} \&}]{write\+\_\+record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds an index write record into the index write set. 
+\begin{DoxyParams}{Parameters}
+{\em write\+\_\+record} & write record to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a390e0bd71d4aabec9ac3ced5bfd5783a}\label{classbustub_1_1Transaction_a390e0bd71d4aabec9ac3ced5bfd5783a}} 
+\index{bustub::Transaction@{bustub::Transaction}!AppendTableWriteRecord@{AppendTableWriteRecord}}
+\index{AppendTableWriteRecord@{AppendTableWriteRecord}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{AppendTableWriteRecord()}{AppendTableWriteRecord()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void bustub\+::\+Transaction\+::\+Append\+Table\+Write\+Record (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1TableWriteRecord}{Table\+Write\+Record}} \&}]{write\+\_\+record }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Adds a tuple write record into the table write set. 
+\begin{DoxyParams}{Parameters}
+{\em write\+\_\+record} & write record to be added \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a4bdedef75c39b7574b50291c7524ca11}\label{classbustub_1_1Transaction_a4bdedef75c39b7574b50291c7524ca11}} 
+\index{bustub::Transaction@{bustub::Transaction}!DISALLOW\_COPY@{DISALLOW\_COPY}}
+\index{DISALLOW\_COPY@{DISALLOW\_COPY}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY()}{DISALLOW\_COPY()}}
+{\footnotesize\ttfamily bustub\+::\+Transaction\+::\+D\+I\+S\+A\+L\+L\+O\+W\+\_\+\+C\+O\+PY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1Transaction_a0651d7cb7b38ff348503d10bbbdc3e43}\label{classbustub_1_1Transaction_a0651d7cb7b38ff348503d10bbbdc3e43}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetDeletedPageSet@{GetDeletedPageSet}}
+\index{GetDeletedPageSet@{GetDeletedPageSet}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetDeletedPageSet()}{GetDeletedPageSet()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$std\+::unordered\+\_\+set$<$\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}$>$ $>$ bustub\+::\+Transaction\+::\+Get\+Deleted\+Page\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the deleted page set 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a96492ac49ef14a06a2fc213135fef848}\label{classbustub_1_1Transaction_a96492ac49ef14a06a2fc213135fef848}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetExclusiveLockSet@{GetExclusiveLockSet}}
+\index{GetExclusiveLockSet@{GetExclusiveLockSet}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetExclusiveLockSet()}{GetExclusiveLockSet()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$std\+::unordered\+\_\+set$<$\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}}$>$ $>$ bustub\+::\+Transaction\+::\+Get\+Exclusive\+Lock\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the set of resources under an exclusive lock 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_aaa3ea09a3d67c24588b3e76d76016d38}\label{classbustub_1_1Transaction_aaa3ea09a3d67c24588b3e76d76016d38}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetIndexWriteSet@{GetIndexWriteSet}}
+\index{GetIndexWriteSet@{GetIndexWriteSet}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetIndexWriteSet()}{GetIndexWriteSet()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$std\+::deque$<$\mbox{\hyperlink{classbustub_1_1IndexWriteRecord}{Index\+Write\+Record}}$>$ $>$ bustub\+::\+Transaction\+::\+Get\+Index\+Write\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the list of index write records of this transaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a100094714e13f9ce019e867e2bb752e4}\label{classbustub_1_1Transaction_a100094714e13f9ce019e867e2bb752e4}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetIsolationLevel@{GetIsolationLevel}}
+\index{GetIsolationLevel@{GetIsolationLevel}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetIsolationLevel()}{GetIsolationLevel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5}{Isolation\+Level}} bustub\+::\+Transaction\+::\+Get\+Isolation\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the isolation level of this transaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a7b262820b93376f683475b84cb3d171d}\label{classbustub_1_1Transaction_a7b262820b93376f683475b84cb3d171d}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetPageSet@{GetPageSet}}
+\index{GetPageSet@{GetPageSet}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetPageSet()}{GetPageSet()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$std\+::deque$<$\mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$$>$ $>$ bustub\+::\+Transaction\+::\+Get\+Page\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the page set 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_ab03797e599bc450b05bb39b942c7e7bc}\label{classbustub_1_1Transaction_ab03797e599bc450b05bb39b942c7e7bc}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetPrevLSN@{GetPrevLSN}}
+\index{GetPrevLSN@{GetPrevLSN}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetPrevLSN()}{GetPrevLSN()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} bustub\+::\+Transaction\+::\+Get\+Prev\+L\+SN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the previous L\+SN 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a660fe95da17e2cb91adbd0093a56dcf6}\label{classbustub_1_1Transaction_a660fe95da17e2cb91adbd0093a56dcf6}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetSharedLockSet@{GetSharedLockSet}}
+\index{GetSharedLockSet@{GetSharedLockSet}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetSharedLockSet()}{GetSharedLockSet()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$std\+::unordered\+\_\+set$<$\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}}$>$ $>$ bustub\+::\+Transaction\+::\+Get\+Shared\+Lock\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the set of resources under a shared lock 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a3a63bf5fd5c24a33121fc0a5c434792e}\label{classbustub_1_1Transaction_a3a63bf5fd5c24a33121fc0a5c434792e}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetState@{GetState}}
+\index{GetState@{GetState}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetState()}{GetState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_ae58cece0a05d5cfc7ec83fc4a9161e20}{Transaction\+State}} bustub\+::\+Transaction\+::\+Get\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the current state of the transaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a5a87c3574b1bcd54b6d16fcd83fcfcf1}\label{classbustub_1_1Transaction_a5a87c3574b1bcd54b6d16fcd83fcfcf1}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetThreadId@{GetThreadId}}
+\index{GetThreadId@{GetThreadId}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetThreadId()}{GetThreadId()}}
+{\footnotesize\ttfamily std\+::thread\+::id bustub\+::\+Transaction\+::\+Get\+Thread\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the id of the thread running the transaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_ad30ce1a623728bb953ab64302c9980d0}\label{classbustub_1_1Transaction_ad30ce1a623728bb953ab64302c9980d0}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetTransactionId@{GetTransactionId}}
+\index{GetTransactionId@{GetTransactionId}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetTransactionId()}{GetTransactionId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}} bustub\+::\+Transaction\+::\+Get\+Transaction\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the id of this transaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a1346ecc6a6aa2e724480a51a9512c4a6}\label{classbustub_1_1Transaction_a1346ecc6a6aa2e724480a51a9512c4a6}} 
+\index{bustub::Transaction@{bustub::Transaction}!GetWriteSet@{GetWriteSet}}
+\index{GetWriteSet@{GetWriteSet}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{GetWriteSet()}{GetWriteSet()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+ptr$<$std\+::deque$<$\mbox{\hyperlink{classbustub_1_1TableWriteRecord}{Table\+Write\+Record}}$>$ $>$ bustub\+::\+Transaction\+::\+Get\+Write\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the list of table write records of this transaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a7362744c2c061f7f8732d5476ec971ad}\label{classbustub_1_1Transaction_a7362744c2c061f7f8732d5476ec971ad}} 
+\index{bustub::Transaction@{bustub::Transaction}!IsExclusiveLocked@{IsExclusiveLocked}}
+\index{IsExclusiveLocked@{IsExclusiveLocked}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{IsExclusiveLocked()}{IsExclusiveLocked()}}
+{\footnotesize\ttfamily bool bustub\+::\+Transaction\+::\+Is\+Exclusive\+Locked (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&}]{rid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if rid is exclusively locked by this transaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a17dc46d5400d52734f24f5ae8f9c184a}\label{classbustub_1_1Transaction_a17dc46d5400d52734f24f5ae8f9c184a}} 
+\index{bustub::Transaction@{bustub::Transaction}!IsSharedLocked@{IsSharedLocked}}
+\index{IsSharedLocked@{IsSharedLocked}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{IsSharedLocked()}{IsSharedLocked()}}
+{\footnotesize\ttfamily bool bustub\+::\+Transaction\+::\+Is\+Shared\+Locked (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&}]{rid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if rid is shared locked by this transaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Transaction_a3696b0bb3e56c39a90f2efeabf65cb69}\label{classbustub_1_1Transaction_a3696b0bb3e56c39a90f2efeabf65cb69}} 
+\index{bustub::Transaction@{bustub::Transaction}!SetPrevLSN@{SetPrevLSN}}
+\index{SetPrevLSN@{SetPrevLSN}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{SetPrevLSN()}{SetPrevLSN()}}
+{\footnotesize\ttfamily void bustub\+::\+Transaction\+::\+Set\+Prev\+L\+SN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}}}]{prev\+\_\+lsn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the previous L\+SN. 
+\begin{DoxyParams}{Parameters}
+{\em prev\+\_\+lsn} & new previous lsn \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1Transaction_acb83d7f742cc82273aca365eb07511f3}\label{classbustub_1_1Transaction_acb83d7f742cc82273aca365eb07511f3}} 
+\index{bustub::Transaction@{bustub::Transaction}!SetState@{SetState}}
+\index{SetState@{SetState}!bustub::Transaction@{bustub::Transaction}}
+\doxysubsubsection{\texorpdfstring{SetState()}{SetState()}}
+{\footnotesize\ttfamily void bustub\+::\+Transaction\+::\+Set\+State (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_ae58cece0a05d5cfc7ec83fc4a9161e20}{Transaction\+State}}}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the state of the transaction. 
+\begin{DoxyParams}{Parameters}
+{\em state} & new state \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/concurrency/\mbox{\hyperlink{transaction_8h}{transaction.\+h}}\end{DoxyCompactItemize}

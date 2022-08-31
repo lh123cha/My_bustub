@@ -1,0 +1,111 @@
+\hypertarget{classcpplint_1_1CleansedLines}{}\doxysection{cpplint.\+Cleansed\+Lines Class Reference}
+\label{classcpplint_1_1CleansedLines}\index{cpplint.CleansedLines@{cpplint.CleansedLines}}
+
+
+Inheritance diagram for cpplint.\+Cleansed\+Lines\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classcpplint_1_1CleansedLines__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for cpplint.\+Cleansed\+Lines\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classcpplint_1_1CleansedLines__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classcpplint_1_1CleansedLines_ad2bc06d9697e2bbfbc7e6b50878c8c8f}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self, \mbox{\hyperlink{classcpplint_1_1CleansedLines_a9cd74bd010da1610a46322d6821bd06a}{lines}})
+\item 
+def \mbox{\hyperlink{classcpplint_1_1CleansedLines_a26a7eff70493d64d58d16f4a406c7ee9}{Num\+Lines}} (self)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcpplint_1_1CleansedLines_aa4d0a4d5081675c01656a5d86d99e8bd}{elided}}
+\item 
+\mbox{\hyperlink{classcpplint_1_1CleansedLines_a9cd74bd010da1610a46322d6821bd06a}{lines}}
+\item 
+\mbox{\hyperlink{classcpplint_1_1CleansedLines_a9e94ce9e4f682be33c04fe82429c4dfd}{raw\+\_\+lines}}
+\item 
+\mbox{\hyperlink{classcpplint_1_1CleansedLines_a4b42ab48659954fb6e0a4e4eb483a45a}{num\+\_\+lines}}
+\item 
+\mbox{\hyperlink{classcpplint_1_1CleansedLines_a0cc228ba3c00ba590b27a759cf8023ce}{lines\+\_\+without\+\_\+raw\+\_\+strings}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}Holds 4 copies of all lines with different preprocessing applied to them.
+
+1) elided member contains lines without strings and comments.
+2) lines member contains lines without comments.
+3) raw_lines member contains all the lines without processing.
+4) lines_without_raw_strings member is same as raw_lines, but with C++11 raw
+   strings removed.
+All these members are of <type 'list'>, and of the same length.
+\end{DoxyVerb}
+ 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classcpplint_1_1CleansedLines_ad2bc06d9697e2bbfbc7e6b50878c8c8f}\label{classcpplint_1_1CleansedLines_ad2bc06d9697e2bbfbc7e6b50878c8c8f}} 
+\index{cpplint.CleansedLines@{cpplint.CleansedLines}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!cpplint.CleansedLines@{cpplint.CleansedLines}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def cpplint.\+Cleansed\+Lines.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{lines }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classcpplint_1_1CleansedLines_a26a7eff70493d64d58d16f4a406c7ee9}\label{classcpplint_1_1CleansedLines_a26a7eff70493d64d58d16f4a406c7ee9}} 
+\index{cpplint.CleansedLines@{cpplint.CleansedLines}!NumLines@{NumLines}}
+\index{NumLines@{NumLines}!cpplint.CleansedLines@{cpplint.CleansedLines}}
+\doxysubsubsection{\texorpdfstring{NumLines()}{NumLines()}}
+{\footnotesize\ttfamily def cpplint.\+Cleansed\+Lines.\+Num\+Lines (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Returns the number of lines represented.\end{DoxyVerb}
+ 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classcpplint_1_1CleansedLines_aa4d0a4d5081675c01656a5d86d99e8bd}\label{classcpplint_1_1CleansedLines_aa4d0a4d5081675c01656a5d86d99e8bd}} 
+\index{cpplint.CleansedLines@{cpplint.CleansedLines}!elided@{elided}}
+\index{elided@{elided}!cpplint.CleansedLines@{cpplint.CleansedLines}}
+\doxysubsubsection{\texorpdfstring{elided}{elided}}
+{\footnotesize\ttfamily cpplint.\+Cleansed\+Lines.\+elided}
+
+\mbox{\Hypertarget{classcpplint_1_1CleansedLines_a9cd74bd010da1610a46322d6821bd06a}\label{classcpplint_1_1CleansedLines_a9cd74bd010da1610a46322d6821bd06a}} 
+\index{cpplint.CleansedLines@{cpplint.CleansedLines}!lines@{lines}}
+\index{lines@{lines}!cpplint.CleansedLines@{cpplint.CleansedLines}}
+\doxysubsubsection{\texorpdfstring{lines}{lines}}
+{\footnotesize\ttfamily cpplint.\+Cleansed\+Lines.\+lines}
+
+\mbox{\Hypertarget{classcpplint_1_1CleansedLines_a0cc228ba3c00ba590b27a759cf8023ce}\label{classcpplint_1_1CleansedLines_a0cc228ba3c00ba590b27a759cf8023ce}} 
+\index{cpplint.CleansedLines@{cpplint.CleansedLines}!lines\_without\_raw\_strings@{lines\_without\_raw\_strings}}
+\index{lines\_without\_raw\_strings@{lines\_without\_raw\_strings}!cpplint.CleansedLines@{cpplint.CleansedLines}}
+\doxysubsubsection{\texorpdfstring{lines\_without\_raw\_strings}{lines\_without\_raw\_strings}}
+{\footnotesize\ttfamily cpplint.\+Cleansed\+Lines.\+lines\+\_\+without\+\_\+raw\+\_\+strings}
+
+\mbox{\Hypertarget{classcpplint_1_1CleansedLines_a4b42ab48659954fb6e0a4e4eb483a45a}\label{classcpplint_1_1CleansedLines_a4b42ab48659954fb6e0a4e4eb483a45a}} 
+\index{cpplint.CleansedLines@{cpplint.CleansedLines}!num\_lines@{num\_lines}}
+\index{num\_lines@{num\_lines}!cpplint.CleansedLines@{cpplint.CleansedLines}}
+\doxysubsubsection{\texorpdfstring{num\_lines}{num\_lines}}
+{\footnotesize\ttfamily cpplint.\+Cleansed\+Lines.\+num\+\_\+lines}
+
+\mbox{\Hypertarget{classcpplint_1_1CleansedLines_a9e94ce9e4f682be33c04fe82429c4dfd}\label{classcpplint_1_1CleansedLines_a9e94ce9e4f682be33c04fe82429c4dfd}} 
+\index{cpplint.CleansedLines@{cpplint.CleansedLines}!raw\_lines@{raw\_lines}}
+\index{raw\_lines@{raw\_lines}!cpplint.CleansedLines@{cpplint.CleansedLines}}
+\doxysubsubsection{\texorpdfstring{raw\_lines}{raw\_lines}}
+{\footnotesize\ttfamily cpplint.\+Cleansed\+Lines.\+raw\+\_\+lines}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+build\+\_\+support/\mbox{\hyperlink{cpplint_8py}{cpplint.\+py}}\end{DoxyCompactItemize}

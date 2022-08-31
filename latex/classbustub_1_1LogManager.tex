@@ -1,0 +1,106 @@
+\hypertarget{classbustub_1_1LogManager}{}\doxysection{bustub\+::Log\+Manager Class Reference}
+\label{classbustub_1_1LogManager}\index{bustub::LogManager@{bustub::LogManager}}
+
+
+{\ttfamily \#include $<$log\+\_\+manager.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Log\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classbustub_1_1LogManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1LogManager_a977736471c8af225c05910c73c406d1a}{Log\+Manager}} (\mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$disk\+\_\+manager)
+\item 
+\mbox{\hyperlink{classbustub_1_1LogManager_a458fb8788f0a56e48f8c119c54eab3a7}{$\sim$\+Log\+Manager}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1LogManager_aed5cfe542a06ac552fa9af09df523456}{Run\+Flush\+Thread}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1LogManager_a8662153d94b4c02b5993c5966cd5b8be}{Stop\+Flush\+Thread}} ()
+\item 
+\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} \mbox{\hyperlink{classbustub_1_1LogManager_a08d69070337d7327260930e3bc2e7bb0}{Append\+Log\+Record}} (\mbox{\hyperlink{classbustub_1_1LogRecord}{Log\+Record}} $\ast$log\+\_\+record)
+\item 
+\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} \mbox{\hyperlink{classbustub_1_1LogManager_a8cd3fc75ca8c936031edadacc25ea9e1}{Get\+Next\+L\+SN}} ()
+\item 
+\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} \mbox{\hyperlink{classbustub_1_1LogManager_a2400cbcc6aee4c8f4315978a015c727b}{Get\+Persistent\+L\+SN}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1LogManager_a2895715933995bb794729404e4d60ac0}{Set\+Persistent\+L\+SN}} (\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} lsn)
+\item 
+char $\ast$ \mbox{\hyperlink{classbustub_1_1LogManager_acde56e3d425ac1bc72d6043e3efd05be}{Get\+Log\+Buffer}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} maintains a separate thread that is awakened whenever the log buffer is full or whenever a timeout happens. When the thread is awakened, the log buffer\textquotesingle{}s content is written into the disk log file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1LogManager_a977736471c8af225c05910c73c406d1a}\label{classbustub_1_1LogManager_a977736471c8af225c05910c73c406d1a}} 
+\index{bustub::LogManager@{bustub::LogManager}!LogManager@{LogManager}}
+\index{LogManager@{LogManager}!bustub::LogManager@{bustub::LogManager}}
+\doxysubsubsection{\texorpdfstring{LogManager()}{LogManager()}}
+{\footnotesize\ttfamily bustub\+::\+Log\+Manager\+::\+Log\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$}]{disk\+\_\+manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogManager_a458fb8788f0a56e48f8c119c54eab3a7}\label{classbustub_1_1LogManager_a458fb8788f0a56e48f8c119c54eab3a7}} 
+\index{bustub::LogManager@{bustub::LogManager}!````~LogManager@{$\sim$LogManager}}
+\index{````~LogManager@{$\sim$LogManager}!bustub::LogManager@{bustub::LogManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$LogManager()}{~LogManager()}}
+{\footnotesize\ttfamily bustub\+::\+Log\+Manager\+::$\sim$\+Log\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1LogManager_a08d69070337d7327260930e3bc2e7bb0}\label{classbustub_1_1LogManager_a08d69070337d7327260930e3bc2e7bb0}} 
+\index{bustub::LogManager@{bustub::LogManager}!AppendLogRecord@{AppendLogRecord}}
+\index{AppendLogRecord@{AppendLogRecord}!bustub::LogManager@{bustub::LogManager}}
+\doxysubsubsection{\texorpdfstring{AppendLogRecord()}{AppendLogRecord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} bustub\+::\+Log\+Manager\+::\+Append\+Log\+Record (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1LogRecord}{Log\+Record}} $\ast$}]{log\+\_\+record }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1LogManager_acde56e3d425ac1bc72d6043e3efd05be}\label{classbustub_1_1LogManager_acde56e3d425ac1bc72d6043e3efd05be}} 
+\index{bustub::LogManager@{bustub::LogManager}!GetLogBuffer@{GetLogBuffer}}
+\index{GetLogBuffer@{GetLogBuffer}!bustub::LogManager@{bustub::LogManager}}
+\doxysubsubsection{\texorpdfstring{GetLogBuffer()}{GetLogBuffer()}}
+{\footnotesize\ttfamily char$\ast$ bustub\+::\+Log\+Manager\+::\+Get\+Log\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogManager_a8cd3fc75ca8c936031edadacc25ea9e1}\label{classbustub_1_1LogManager_a8cd3fc75ca8c936031edadacc25ea9e1}} 
+\index{bustub::LogManager@{bustub::LogManager}!GetNextLSN@{GetNextLSN}}
+\index{GetNextLSN@{GetNextLSN}!bustub::LogManager@{bustub::LogManager}}
+\doxysubsubsection{\texorpdfstring{GetNextLSN()}{GetNextLSN()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} bustub\+::\+Log\+Manager\+::\+Get\+Next\+L\+SN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogManager_a2400cbcc6aee4c8f4315978a015c727b}\label{classbustub_1_1LogManager_a2400cbcc6aee4c8f4315978a015c727b}} 
+\index{bustub::LogManager@{bustub::LogManager}!GetPersistentLSN@{GetPersistentLSN}}
+\index{GetPersistentLSN@{GetPersistentLSN}!bustub::LogManager@{bustub::LogManager}}
+\doxysubsubsection{\texorpdfstring{GetPersistentLSN()}{GetPersistentLSN()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} bustub\+::\+Log\+Manager\+::\+Get\+Persistent\+L\+SN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogManager_aed5cfe542a06ac552fa9af09df523456}\label{classbustub_1_1LogManager_aed5cfe542a06ac552fa9af09df523456}} 
+\index{bustub::LogManager@{bustub::LogManager}!RunFlushThread@{RunFlushThread}}
+\index{RunFlushThread@{RunFlushThread}!bustub::LogManager@{bustub::LogManager}}
+\doxysubsubsection{\texorpdfstring{RunFlushThread()}{RunFlushThread()}}
+{\footnotesize\ttfamily void bustub\+::\+Log\+Manager\+::\+Run\+Flush\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1LogManager_a2895715933995bb794729404e4d60ac0}\label{classbustub_1_1LogManager_a2895715933995bb794729404e4d60ac0}} 
+\index{bustub::LogManager@{bustub::LogManager}!SetPersistentLSN@{SetPersistentLSN}}
+\index{SetPersistentLSN@{SetPersistentLSN}!bustub::LogManager@{bustub::LogManager}}
+\doxysubsubsection{\texorpdfstring{SetPersistentLSN()}{SetPersistentLSN()}}
+{\footnotesize\ttfamily void bustub\+::\+Log\+Manager\+::\+Set\+Persistent\+L\+SN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}}}]{lsn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogManager_a8662153d94b4c02b5993c5966cd5b8be}\label{classbustub_1_1LogManager_a8662153d94b4c02b5993c5966cd5b8be}} 
+\index{bustub::LogManager@{bustub::LogManager}!StopFlushThread@{StopFlushThread}}
+\index{StopFlushThread@{StopFlushThread}!bustub::LogManager@{bustub::LogManager}}
+\doxysubsubsection{\texorpdfstring{StopFlushThread()}{StopFlushThread()}}
+{\footnotesize\ttfamily void bustub\+::\+Log\+Manager\+::\+Stop\+Flush\+Thread (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/recovery/\mbox{\hyperlink{log__manager_8h}{log\+\_\+manager.\+h}}\item 
+src/recovery/\mbox{\hyperlink{log__manager_8cpp}{log\+\_\+manager.\+cpp}}\end{DoxyCompactItemize}

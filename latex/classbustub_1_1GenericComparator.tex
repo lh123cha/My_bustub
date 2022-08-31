@@ -1,0 +1,63 @@
+\hypertarget{classbustub_1_1GenericComparator}{}\doxysection{bustub\+::Generic\+Comparator$<$ Key\+Size $>$ Class Template Reference}
+\label{classbustub_1_1GenericComparator}\index{bustub::GenericComparator$<$ KeySize $>$@{bustub::GenericComparator$<$ KeySize $>$}}
+
+
+{\ttfamily \#include $<$generic\+\_\+key.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Generic\+Comparator$<$ Key\+Size $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{classbustub_1_1GenericComparator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classbustub_1_1GenericComparator_a654982e159815d032dcd8588d754db81}{operator()}} (const \mbox{\hyperlink{classbustub_1_1GenericKey}{Generic\+Key}}$<$ Key\+Size $>$ \&lhs, const \mbox{\hyperlink{classbustub_1_1GenericKey}{Generic\+Key}}$<$ Key\+Size $>$ \&rhs) const
+\item 
+\mbox{\hyperlink{classbustub_1_1GenericComparator_a71139a4b6ba21a3f988c06d3bdfa082d}{Generic\+Comparator}} (const \mbox{\hyperlink{classbustub_1_1GenericComparator}{Generic\+Comparator}} \&other)
+\item 
+\mbox{\hyperlink{classbustub_1_1GenericComparator_a3485563eb7d5f8ff3aef4e18cef7a989}{Generic\+Comparator}} (\mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$key\+\_\+schema)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$size\+\_\+t Key\+Size$>$\newline
+class bustub\+::\+Generic\+Comparator$<$ Key\+Size $>$}
+
+Function object returns true if lhs $<$ rhs, used for trees 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1GenericComparator_a71139a4b6ba21a3f988c06d3bdfa082d}\label{classbustub_1_1GenericComparator_a71139a4b6ba21a3f988c06d3bdfa082d}} 
+\index{bustub::GenericComparator$<$ KeySize $>$@{bustub::GenericComparator$<$ KeySize $>$}!GenericComparator@{GenericComparator}}
+\index{GenericComparator@{GenericComparator}!bustub::GenericComparator$<$ KeySize $>$@{bustub::GenericComparator$<$ KeySize $>$}}
+\doxysubsubsection{\texorpdfstring{GenericComparator()}{GenericComparator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t Key\+Size$>$ \\
+\mbox{\hyperlink{classbustub_1_1GenericComparator}{bustub\+::\+Generic\+Comparator}}$<$ Key\+Size $>$\+::\mbox{\hyperlink{classbustub_1_1GenericComparator}{Generic\+Comparator}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1GenericComparator}{Generic\+Comparator}}$<$ Key\+Size $>$ \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1GenericComparator_a3485563eb7d5f8ff3aef4e18cef7a989}\label{classbustub_1_1GenericComparator_a3485563eb7d5f8ff3aef4e18cef7a989}} 
+\index{bustub::GenericComparator$<$ KeySize $>$@{bustub::GenericComparator$<$ KeySize $>$}!GenericComparator@{GenericComparator}}
+\index{GenericComparator@{GenericComparator}!bustub::GenericComparator$<$ KeySize $>$@{bustub::GenericComparator$<$ KeySize $>$}}
+\doxysubsubsection{\texorpdfstring{GenericComparator()}{GenericComparator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$size\+\_\+t Key\+Size$>$ \\
+\mbox{\hyperlink{classbustub_1_1GenericComparator}{bustub\+::\+Generic\+Comparator}}$<$ Key\+Size $>$\+::\mbox{\hyperlink{classbustub_1_1GenericComparator}{Generic\+Comparator}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{key\+\_\+schema }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1GenericComparator_a654982e159815d032dcd8588d754db81}\label{classbustub_1_1GenericComparator_a654982e159815d032dcd8588d754db81}} 
+\index{bustub::GenericComparator$<$ KeySize $>$@{bustub::GenericComparator$<$ KeySize $>$}!operator()@{operator()}}
+\index{operator()@{operator()}!bustub::GenericComparator$<$ KeySize $>$@{bustub::GenericComparator$<$ KeySize $>$}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t Key\+Size$>$ \\
+int \mbox{\hyperlink{classbustub_1_1GenericComparator}{bustub\+::\+Generic\+Comparator}}$<$ Key\+Size $>$\+::operator() (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1GenericKey}{Generic\+Key}}$<$ Key\+Size $>$ \&}]{lhs,  }\item[{const \mbox{\hyperlink{classbustub_1_1GenericKey}{Generic\+Key}}$<$ Key\+Size $>$ \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/index/\mbox{\hyperlink{generic__key_8h}{generic\+\_\+key.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,240 @@
+\hypertarget{classbustub_1_1TimestampType}{}\doxysection{bustub\+::Timestamp\+Type Class Reference}
+\label{classbustub_1_1TimestampType}\index{bustub::TimestampType@{bustub::TimestampType}}
+
+
+{\ttfamily \#include $<$timestamp\+\_\+type.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Timestamp\+Type\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classbustub_1_1TimestampType__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Timestamp\+Type\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classbustub_1_1TimestampType__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1TimestampType_a6d931ca07a43e3189ce95d8527ecefff}{$\sim$\+Timestamp\+Type}} () override=default
+\item 
+\mbox{\hyperlink{classbustub_1_1TimestampType_a7923f7e4f007dfc054180231a810753c}{Timestamp\+Type}} ()
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1TimestampType_aa6561c8b8c7a5fac074d8e71ccd1c086}{Compare\+Equals}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1TimestampType_a688c9a2dd61c50263a986a893c210603}{Compare\+Not\+Equals}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1TimestampType_adf3d83f5a4ca39023f3c061dbfe78a91}{Compare\+Less\+Than}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1TimestampType_a454a0890ad87090fc4f23d85463ad20e}{Compare\+Less\+Than\+Equals}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1TimestampType_a1c20b15da5714d7c5f90f30522642524}{Compare\+Greater\+Than}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1TimestampType_acfac9c4f2491fb11a39a97f24253faa3}{Compare\+Greater\+Than\+Equals}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1TimestampType_a644ae93f20ac71f4a4aab95aa2c9245a}{Min}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1TimestampType_af5ac831cfe00ae1a7079d4db00953e3d}{Max}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+bool \mbox{\hyperlink{classbustub_1_1TimestampType_a287e66f5469820ca604199e165f67ebe}{Is\+Inlined}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&val) const override
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1TimestampType_ab3d7850e9ebd36137189230b82a46faf}{To\+String}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&val) const override
+\item 
+void \mbox{\hyperlink{classbustub_1_1TimestampType_ab01eba212dbe2e83523559bf48c50ab0}{Serialize\+To}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&val, char $\ast$storage) const override
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1TimestampType_a3adbd190ccf9a46222aeca16b30bc2dd}{Deserialize\+From}} (const char $\ast$storage) const override
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1TimestampType_abc49925b2d4debaa35c0f38b45285a9c}{Copy}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&val) const override
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1TimestampType_a36827f295f60eda787dffba707309958}{Cast\+As}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&val, \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type\+\_\+id) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr uint64\+\_\+t \mbox{\hyperlink{classbustub_1_1TimestampType_aaef9888d97e70531a8e4395a6ba15e98}{K\+\_\+\+U\+S\+E\+C\+S\+\_\+\+P\+E\+R\+\_\+\+D\+A\+TE}} = 86400000000\+UL
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1TimestampType_a6d931ca07a43e3189ce95d8527ecefff}\label{classbustub_1_1TimestampType_a6d931ca07a43e3189ce95d8527ecefff}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!````~TimestampType@{$\sim$TimestampType}}
+\index{````~TimestampType@{$\sim$TimestampType}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{$\sim$TimestampType()}{~TimestampType()}}
+{\footnotesize\ttfamily bustub\+::\+Timestamp\+Type\+::$\sim$\+Timestamp\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{classbustub_1_1TimestampType_a7923f7e4f007dfc054180231a810753c}\label{classbustub_1_1TimestampType_a7923f7e4f007dfc054180231a810753c}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!TimestampType@{TimestampType}}
+\index{TimestampType@{TimestampType}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{TimestampType()}{TimestampType()}}
+{\footnotesize\ttfamily bustub\+::\+Timestamp\+Type\+::\+Timestamp\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1TimestampType_a36827f295f60eda787dffba707309958}\label{classbustub_1_1TimestampType_a36827f295f60eda787dffba707309958}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!CastAs@{CastAs}}
+\index{CastAs@{CastAs}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{CastAs()}{CastAs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Timestamp\+Type\+::\+Cast\+As (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{val,  }\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type\+\_\+id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a69f7ac61dbfb4e5a94bc618ff5ad6731}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1TimestampType_aa6561c8b8c7a5fac074d8e71ccd1c086}\label{classbustub_1_1TimestampType_aa6561c8b8c7a5fac074d8e71ccd1c086}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!CompareEquals@{CompareEquals}}
+\index{CompareEquals@{CompareEquals}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{CompareEquals()}{CompareEquals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Timestamp\+Type\+::\+Compare\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_aa5f8a70983a7dce95ab294fb9049879c}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1TimestampType_a1c20b15da5714d7c5f90f30522642524}\label{classbustub_1_1TimestampType_a1c20b15da5714d7c5f90f30522642524}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!CompareGreaterThan@{CompareGreaterThan}}
+\index{CompareGreaterThan@{CompareGreaterThan}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{CompareGreaterThan()}{CompareGreaterThan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Timestamp\+Type\+::\+Compare\+Greater\+Than (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a61723cfb05fbe2a565b110cfe87a9a89}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1TimestampType_acfac9c4f2491fb11a39a97f24253faa3}\label{classbustub_1_1TimestampType_acfac9c4f2491fb11a39a97f24253faa3}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!CompareGreaterThanEquals@{CompareGreaterThanEquals}}
+\index{CompareGreaterThanEquals@{CompareGreaterThanEquals}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{CompareGreaterThanEquals()}{CompareGreaterThanEquals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Timestamp\+Type\+::\+Compare\+Greater\+Than\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a9e346e640b268f7644ffe222934b765e}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1TimestampType_adf3d83f5a4ca39023f3c061dbfe78a91}\label{classbustub_1_1TimestampType_adf3d83f5a4ca39023f3c061dbfe78a91}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!CompareLessThan@{CompareLessThan}}
+\index{CompareLessThan@{CompareLessThan}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{CompareLessThan()}{CompareLessThan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Timestamp\+Type\+::\+Compare\+Less\+Than (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a9ccb5310c60947e7e0bd674a5f877c0d}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1TimestampType_a454a0890ad87090fc4f23d85463ad20e}\label{classbustub_1_1TimestampType_a454a0890ad87090fc4f23d85463ad20e}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!CompareLessThanEquals@{CompareLessThanEquals}}
+\index{CompareLessThanEquals@{CompareLessThanEquals}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{CompareLessThanEquals()}{CompareLessThanEquals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Timestamp\+Type\+::\+Compare\+Less\+Than\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_ad0c39bcc196014432ba7cea1daaafd8f}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1TimestampType_a688c9a2dd61c50263a986a893c210603}\label{classbustub_1_1TimestampType_a688c9a2dd61c50263a986a893c210603}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!CompareNotEquals@{CompareNotEquals}}
+\index{CompareNotEquals@{CompareNotEquals}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{CompareNotEquals()}{CompareNotEquals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Timestamp\+Type\+::\+Compare\+Not\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a082e26044241a3ea1de3f361b2635e09}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1TimestampType_abc49925b2d4debaa35c0f38b45285a9c}\label{classbustub_1_1TimestampType_abc49925b2d4debaa35c0f38b45285a9c}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!Copy@{Copy}}
+\index{Copy@{Copy}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Timestamp\+Type\+::\+Copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_adcacecf3ebc390a7e5526eb6945bbb77}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1TimestampType_a3adbd190ccf9a46222aeca16b30bc2dd}\label{classbustub_1_1TimestampType_a3adbd190ccf9a46222aeca16b30bc2dd}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!DeserializeFrom@{DeserializeFrom}}
+\index{DeserializeFrom@{DeserializeFrom}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{DeserializeFrom()}{DeserializeFrom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Timestamp\+Type\+::\+Deserialize\+From (\begin{DoxyParamCaption}\item[{const char $\ast$}]{storage }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a22a9f74d1db61d0975ec7eec91790347}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1TimestampType_a287e66f5469820ca604199e165f67ebe}\label{classbustub_1_1TimestampType_a287e66f5469820ca604199e165f67ebe}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!IsInlined@{IsInlined}}
+\index{IsInlined@{IsInlined}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{IsInlined()}{IsInlined()}}
+{\footnotesize\ttfamily bool bustub\+::\+Timestamp\+Type\+::\+Is\+Inlined (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_ad261f2e9b3d22e65c766d15d7968f5ec}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1TimestampType_af5ac831cfe00ae1a7079d4db00953e3d}\label{classbustub_1_1TimestampType_af5ac831cfe00ae1a7079d4db00953e3d}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!Max@{Max}}
+\index{Max@{Max}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{Max()}{Max()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Timestamp\+Type\+::\+Max (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a72585a463f275dca99f447ae1e7b0b9d}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1TimestampType_a644ae93f20ac71f4a4aab95aa2c9245a}\label{classbustub_1_1TimestampType_a644ae93f20ac71f4a4aab95aa2c9245a}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!Min@{Min}}
+\index{Min@{Min}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{Min()}{Min()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Timestamp\+Type\+::\+Min (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_ae565c0d2fe5f08298c9b25945ef7e56e}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1TimestampType_ab01eba212dbe2e83523559bf48c50ab0}\label{classbustub_1_1TimestampType_ab01eba212dbe2e83523559bf48c50ab0}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!SerializeTo@{SerializeTo}}
+\index{SerializeTo@{SerializeTo}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{SerializeTo()}{SerializeTo()}}
+{\footnotesize\ttfamily void bustub\+::\+Timestamp\+Type\+::\+Serialize\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{val,  }\item[{char $\ast$}]{storage }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a935304a7710685bf3ad18a577821ab47}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1TimestampType_ab3d7850e9ebd36137189230b82a46faf}\label{classbustub_1_1TimestampType_ab3d7850e9ebd36137189230b82a46faf}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Timestamp\+Type\+::\+To\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a9cbf9ee6678b39cfcb0a8ab4d75fb7c1}{bustub\+::\+Type}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1TimestampType_aaef9888d97e70531a8e4395a6ba15e98}\label{classbustub_1_1TimestampType_aaef9888d97e70531a8e4395a6ba15e98}} 
+\index{bustub::TimestampType@{bustub::TimestampType}!K\_USECS\_PER\_DATE@{K\_USECS\_PER\_DATE}}
+\index{K\_USECS\_PER\_DATE@{K\_USECS\_PER\_DATE}!bustub::TimestampType@{bustub::TimestampType}}
+\doxysubsubsection{\texorpdfstring{K\_USECS\_PER\_DATE}{K\_USECS\_PER\_DATE}}
+{\footnotesize\ttfamily constexpr uint64\+\_\+t bustub\+::\+Timestamp\+Type\+::\+K\+\_\+\+U\+S\+E\+C\+S\+\_\+\+P\+E\+R\+\_\+\+D\+A\+TE = 86400000000\+UL\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/type/\mbox{\hyperlink{timestamp__type_8h}{timestamp\+\_\+type.\+h}}\item 
+src/type/\mbox{\hyperlink{timestamp__type_8cpp}{timestamp\+\_\+type.\+cpp}}\end{DoxyCompactItemize}

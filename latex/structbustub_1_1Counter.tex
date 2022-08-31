@@ -1,0 +1,144 @@
+\hypertarget{structbustub_1_1Counter}{}\doxysection{bustub\+::Counter Class Reference}
+\label{structbustub_1_1Counter}\index{bustub::Counter@{bustub::Counter}}
+
+
+{\ttfamily \#include $<$counter.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Counter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{structbustub_1_1Counter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{structbustub_1_1Counter_a32ef67ca1aaa93d2440c41f759db83ff}{Reset}} ()
+\item 
+void \mbox{\hyperlink{structbustub_1_1Counter_a94c6557dc5ec246c02a19f603450fbdd}{Add\+Count}} (\mbox{\hyperlink{namespacebustub_aefe88ae226f304102c289d1472e7f86e}{Func\+Type}} func\+\_\+type)
+\item 
+void \mbox{\hyperlink{structbustub_1_1Counter_a4992e7899d18e6de72794c836565a34e}{Check\+Fetch\+Page}} ()
+\item 
+void \mbox{\hyperlink{structbustub_1_1Counter_a3d327ef1ab5e86ced648fb3d75dd2b07}{Check\+Unpin\+Page}} ()
+\item 
+void \mbox{\hyperlink{structbustub_1_1Counter_ab9fd2b379cf2863589ece0ebed128cd3}{Check\+Flush\+Page}} ()
+\item 
+void \mbox{\hyperlink{structbustub_1_1Counter_a4f5d0815d2cd3ae4366c98f14efdbcfb}{Check\+New\+Page}} ()
+\item 
+void \mbox{\hyperlink{structbustub_1_1Counter_a1b1cdd56041c17594949bf3d66ca897f}{Check\+Delete\+Page}} ()
+\item 
+void \mbox{\hyperlink{structbustub_1_1Counter_a9144c0e8126a47a26ae176b4e3172f79}{Check\+Flush\+All\+Pages}} ()
+\item 
+\mbox{\hyperlink{structbustub_1_1Counter_aaff74ab165f8d2ae872ee59d11905c9d}{Counter}} ()=default
+\item 
+void \mbox{\hyperlink{structbustub_1_1Counter_abbe0bc2226225a591711e54e17a62418}{Add}} (int num)
+\item 
+int \mbox{\hyperlink{structbustub_1_1Counter_a862265d7cbf827af4d0590316e64e316}{Read}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic\+\_\+int \mbox{\hyperlink{structbustub_1_1Counter_a90c18070473605f8f9034c8a99bba293}{counts}} \mbox{[}\mbox{\hyperlink{structbustub_1_1Counter_a6c90acbbcea161a657083473c27fa7b5}{num\+\_\+types}}\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const int \mbox{\hyperlink{structbustub_1_1Counter_a6c90acbbcea161a657083473c27fa7b5}{num\+\_\+types}} = 6
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structbustub_1_1Counter_aaff74ab165f8d2ae872ee59d11905c9d}\label{structbustub_1_1Counter_aaff74ab165f8d2ae872ee59d11905c9d}} 
+\index{bustub::Counter@{bustub::Counter}!Counter@{Counter}}
+\index{Counter@{Counter}!bustub::Counter@{bustub::Counter}}
+\doxysubsubsection{\texorpdfstring{Counter()}{Counter()}}
+{\footnotesize\ttfamily bustub\+::\+Counter\+::\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{structbustub_1_1Counter_abbe0bc2226225a591711e54e17a62418}\label{structbustub_1_1Counter_abbe0bc2226225a591711e54e17a62418}} 
+\index{bustub::Counter@{bustub::Counter}!Add@{Add}}
+\index{Add@{Add}!bustub::Counter@{bustub::Counter}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily void bustub\+::\+Counter\+::\+Add (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbustub_1_1Counter_a94c6557dc5ec246c02a19f603450fbdd}\label{structbustub_1_1Counter_a94c6557dc5ec246c02a19f603450fbdd}} 
+\index{bustub::Counter@{bustub::Counter}!AddCount@{AddCount}}
+\index{AddCount@{AddCount}!bustub::Counter@{bustub::Counter}}
+\doxysubsubsection{\texorpdfstring{AddCount()}{AddCount()}}
+{\footnotesize\ttfamily void bustub\+::\+Counter\+::\+Add\+Count (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_aefe88ae226f304102c289d1472e7f86e}{Func\+Type}}}]{func\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbustub_1_1Counter_a1b1cdd56041c17594949bf3d66ca897f}\label{structbustub_1_1Counter_a1b1cdd56041c17594949bf3d66ca897f}} 
+\index{bustub::Counter@{bustub::Counter}!CheckDeletePage@{CheckDeletePage}}
+\index{CheckDeletePage@{CheckDeletePage}!bustub::Counter@{bustub::Counter}}
+\doxysubsubsection{\texorpdfstring{CheckDeletePage()}{CheckDeletePage()}}
+{\footnotesize\ttfamily void bustub\+::\+Counter\+::\+Check\+Delete\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbustub_1_1Counter_a4992e7899d18e6de72794c836565a34e}\label{structbustub_1_1Counter_a4992e7899d18e6de72794c836565a34e}} 
+\index{bustub::Counter@{bustub::Counter}!CheckFetchPage@{CheckFetchPage}}
+\index{CheckFetchPage@{CheckFetchPage}!bustub::Counter@{bustub::Counter}}
+\doxysubsubsection{\texorpdfstring{CheckFetchPage()}{CheckFetchPage()}}
+{\footnotesize\ttfamily void bustub\+::\+Counter\+::\+Check\+Fetch\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbustub_1_1Counter_a9144c0e8126a47a26ae176b4e3172f79}\label{structbustub_1_1Counter_a9144c0e8126a47a26ae176b4e3172f79}} 
+\index{bustub::Counter@{bustub::Counter}!CheckFlushAllPages@{CheckFlushAllPages}}
+\index{CheckFlushAllPages@{CheckFlushAllPages}!bustub::Counter@{bustub::Counter}}
+\doxysubsubsection{\texorpdfstring{CheckFlushAllPages()}{CheckFlushAllPages()}}
+{\footnotesize\ttfamily void bustub\+::\+Counter\+::\+Check\+Flush\+All\+Pages (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbustub_1_1Counter_ab9fd2b379cf2863589ece0ebed128cd3}\label{structbustub_1_1Counter_ab9fd2b379cf2863589ece0ebed128cd3}} 
+\index{bustub::Counter@{bustub::Counter}!CheckFlushPage@{CheckFlushPage}}
+\index{CheckFlushPage@{CheckFlushPage}!bustub::Counter@{bustub::Counter}}
+\doxysubsubsection{\texorpdfstring{CheckFlushPage()}{CheckFlushPage()}}
+{\footnotesize\ttfamily void bustub\+::\+Counter\+::\+Check\+Flush\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbustub_1_1Counter_a4f5d0815d2cd3ae4366c98f14efdbcfb}\label{structbustub_1_1Counter_a4f5d0815d2cd3ae4366c98f14efdbcfb}} 
+\index{bustub::Counter@{bustub::Counter}!CheckNewPage@{CheckNewPage}}
+\index{CheckNewPage@{CheckNewPage}!bustub::Counter@{bustub::Counter}}
+\doxysubsubsection{\texorpdfstring{CheckNewPage()}{CheckNewPage()}}
+{\footnotesize\ttfamily void bustub\+::\+Counter\+::\+Check\+New\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbustub_1_1Counter_a3d327ef1ab5e86ced648fb3d75dd2b07}\label{structbustub_1_1Counter_a3d327ef1ab5e86ced648fb3d75dd2b07}} 
+\index{bustub::Counter@{bustub::Counter}!CheckUnpinPage@{CheckUnpinPage}}
+\index{CheckUnpinPage@{CheckUnpinPage}!bustub::Counter@{bustub::Counter}}
+\doxysubsubsection{\texorpdfstring{CheckUnpinPage()}{CheckUnpinPage()}}
+{\footnotesize\ttfamily void bustub\+::\+Counter\+::\+Check\+Unpin\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbustub_1_1Counter_a862265d7cbf827af4d0590316e64e316}\label{structbustub_1_1Counter_a862265d7cbf827af4d0590316e64e316}} 
+\index{bustub::Counter@{bustub::Counter}!Read@{Read}}
+\index{Read@{Read}!bustub::Counter@{bustub::Counter}}
+\doxysubsubsection{\texorpdfstring{Read()}{Read()}}
+{\footnotesize\ttfamily int bustub\+::\+Counter\+::\+Read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{structbustub_1_1Counter_a32ef67ca1aaa93d2440c41f759db83ff}\label{structbustub_1_1Counter_a32ef67ca1aaa93d2440c41f759db83ff}} 
+\index{bustub::Counter@{bustub::Counter}!Reset@{Reset}}
+\index{Reset@{Reset}!bustub::Counter@{bustub::Counter}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily void bustub\+::\+Counter\+::\+Reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{structbustub_1_1Counter_a90c18070473605f8f9034c8a99bba293}\label{structbustub_1_1Counter_a90c18070473605f8f9034c8a99bba293}} 
+\index{bustub::Counter@{bustub::Counter}!counts@{counts}}
+\index{counts@{counts}!bustub::Counter@{bustub::Counter}}
+\doxysubsubsection{\texorpdfstring{counts}{counts}}
+{\footnotesize\ttfamily std\+::atomic\+\_\+int bustub\+::\+Counter\+::counts\mbox{[}\mbox{\hyperlink{structbustub_1_1Counter_a6c90acbbcea161a657083473c27fa7b5}{num\+\_\+types}}\mbox{]}}
+
+\mbox{\Hypertarget{structbustub_1_1Counter_a6c90acbbcea161a657083473c27fa7b5}\label{structbustub_1_1Counter_a6c90acbbcea161a657083473c27fa7b5}} 
+\index{bustub::Counter@{bustub::Counter}!num\_types@{num\_types}}
+\index{num\_types@{num\_types}!bustub::Counter@{bustub::Counter}}
+\doxysubsubsection{\texorpdfstring{num\_types}{num\_types}}
+{\footnotesize\ttfamily const int bustub\+::\+Counter\+::num\+\_\+types = 6\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+test/buffer/\mbox{\hyperlink{counter_8h}{counter.\+h}}\item 
+test/common/\mbox{\hyperlink{rwlatch__test_8cpp}{rwlatch\+\_\+test.\+cpp}}\end{DoxyCompactItemize}

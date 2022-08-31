@@ -1,0 +1,49 @@
+\hypertarget{classbustub_1_1ExecutorFactory}{}\doxysection{bustub\+::Executor\+Factory Class Reference}
+\label{classbustub_1_1ExecutorFactory}\index{bustub::ExecutorFactory@{bustub::ExecutorFactory}}
+
+
+{\ttfamily \#include $<$executor\+\_\+factory.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Executor\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{classbustub_1_1ExecutorFactory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \mbox{\hyperlink{classbustub_1_1ExecutorFactory_a4ab139c90106b4a59f549f98d6247c8d}{Create\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $\ast$plan)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1ExecutorFactory}{Executor\+Factory}} creates executors for arbitrary plan nodes. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ExecutorFactory_a4ab139c90106b4a59f549f98d6247c8d}\label{classbustub_1_1ExecutorFactory_a4ab139c90106b4a59f549f98d6247c8d}} 
+\index{bustub::ExecutorFactory@{bustub::ExecutorFactory}!CreateExecutor@{CreateExecutor}}
+\index{CreateExecutor@{CreateExecutor}!bustub::ExecutorFactory@{bustub::ExecutorFactory}}
+\doxysubsubsection{\texorpdfstring{CreateExecutor()}{CreateExecutor()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ bustub\+::\+Executor\+Factory\+::\+Create\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $\ast$}]{plan }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Creates a new executor given the executor context and plan node. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context for the created executor \\
+\hline
+{\em plan} & The plan node that needs to be executed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An executor for the given plan in the provided context 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/\mbox{\hyperlink{executor__factory_8h}{executor\+\_\+factory.\+h}}\item 
+src/execution/\mbox{\hyperlink{executor__factory_8cpp}{executor\+\_\+factory.\+cpp}}\end{DoxyCompactItemize}

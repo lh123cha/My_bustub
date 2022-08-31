@@ -1,0 +1,74 @@
+\hypertarget{classbustub_1_1LogRecovery}{}\doxysection{bustub\+::Log\+Recovery Class Reference}
+\label{classbustub_1_1LogRecovery}\index{bustub::LogRecovery@{bustub::LogRecovery}}
+
+
+{\ttfamily \#include $<$log\+\_\+recovery.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Log\+Recovery\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{classbustub_1_1LogRecovery__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1LogRecovery_a83aee5c47a98ea5b21085537f3d3904e}{Log\+Recovery}} (\mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$disk\+\_\+manager, \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$buffer\+\_\+pool\+\_\+manager)
+\item 
+\mbox{\hyperlink{classbustub_1_1LogRecovery_a7c597352b60f57d2729e0c7e65f21abe}{$\sim$\+Log\+Recovery}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1LogRecovery_a47f36a5019308e5fadcc63a04074e8d1}{Redo}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1LogRecovery_ada7eb68a4804e153449cc107e9656474}{Undo}} ()
+\item 
+bool \mbox{\hyperlink{classbustub_1_1LogRecovery_afa2117aafca28c7775aed49c23b6816a}{Deserialize\+Log\+Record}} (const char $\ast$data, \mbox{\hyperlink{classbustub_1_1LogRecord}{Log\+Record}} $\ast$log\+\_\+record)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Read log file from disk, redo and undo. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1LogRecovery_a83aee5c47a98ea5b21085537f3d3904e}\label{classbustub_1_1LogRecovery_a83aee5c47a98ea5b21085537f3d3904e}} 
+\index{bustub::LogRecovery@{bustub::LogRecovery}!LogRecovery@{LogRecovery}}
+\index{LogRecovery@{LogRecovery}!bustub::LogRecovery@{bustub::LogRecovery}}
+\doxysubsubsection{\texorpdfstring{LogRecovery()}{LogRecovery()}}
+{\footnotesize\ttfamily bustub\+::\+Log\+Recovery\+::\+Log\+Recovery (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$}]{disk\+\_\+manager,  }\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$}]{buffer\+\_\+pool\+\_\+manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecovery_a7c597352b60f57d2729e0c7e65f21abe}\label{classbustub_1_1LogRecovery_a7c597352b60f57d2729e0c7e65f21abe}} 
+\index{bustub::LogRecovery@{bustub::LogRecovery}!````~LogRecovery@{$\sim$LogRecovery}}
+\index{````~LogRecovery@{$\sim$LogRecovery}!bustub::LogRecovery@{bustub::LogRecovery}}
+\doxysubsubsection{\texorpdfstring{$\sim$LogRecovery()}{~LogRecovery()}}
+{\footnotesize\ttfamily bustub\+::\+Log\+Recovery\+::$\sim$\+Log\+Recovery (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1LogRecovery_afa2117aafca28c7775aed49c23b6816a}\label{classbustub_1_1LogRecovery_afa2117aafca28c7775aed49c23b6816a}} 
+\index{bustub::LogRecovery@{bustub::LogRecovery}!DeserializeLogRecord@{DeserializeLogRecord}}
+\index{DeserializeLogRecord@{DeserializeLogRecord}!bustub::LogRecovery@{bustub::LogRecovery}}
+\doxysubsubsection{\texorpdfstring{DeserializeLogRecord()}{DeserializeLogRecord()}}
+{\footnotesize\ttfamily bool bustub\+::\+Log\+Recovery\+::\+Deserialize\+Log\+Record (\begin{DoxyParamCaption}\item[{const char $\ast$}]{data,  }\item[{\mbox{\hyperlink{classbustub_1_1LogRecord}{Log\+Record}} $\ast$}]{log\+\_\+record }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecovery_a47f36a5019308e5fadcc63a04074e8d1}\label{classbustub_1_1LogRecovery_a47f36a5019308e5fadcc63a04074e8d1}} 
+\index{bustub::LogRecovery@{bustub::LogRecovery}!Redo@{Redo}}
+\index{Redo@{Redo}!bustub::LogRecovery@{bustub::LogRecovery}}
+\doxysubsubsection{\texorpdfstring{Redo()}{Redo()}}
+{\footnotesize\ttfamily void bustub\+::\+Log\+Recovery\+::\+Redo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecovery_ada7eb68a4804e153449cc107e9656474}\label{classbustub_1_1LogRecovery_ada7eb68a4804e153449cc107e9656474}} 
+\index{bustub::LogRecovery@{bustub::LogRecovery}!Undo@{Undo}}
+\index{Undo@{Undo}!bustub::LogRecovery@{bustub::LogRecovery}}
+\doxysubsubsection{\texorpdfstring{Undo()}{Undo()}}
+{\footnotesize\ttfamily void bustub\+::\+Log\+Recovery\+::\+Undo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/recovery/\mbox{\hyperlink{log__recovery_8h}{log\+\_\+recovery.\+h}}\item 
+src/recovery/\mbox{\hyperlink{log__recovery_8cpp}{log\+\_\+recovery.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,139 @@
+\hypertarget{classbustub_1_1ColumnValueExpression}{}\doxysection{bustub\+::Column\+Value\+Expression Class Reference}
+\label{classbustub_1_1ColumnValueExpression}\index{bustub::ColumnValueExpression@{bustub::ColumnValueExpression}}
+
+
+{\ttfamily \#include $<$column\+\_\+value\+\_\+expression.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Column\+Value\+Expression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classbustub_1_1ColumnValueExpression__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Column\+Value\+Expression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classbustub_1_1ColumnValueExpression__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1ColumnValueExpression_a5009d815d272e0e6d4f8dd4d9a102b3c}{Column\+Value\+Expression}} (uint32\+\_\+t tuple\+\_\+idx, uint32\+\_\+t col\+\_\+idx, \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} ret\+\_\+type)
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1ColumnValueExpression_ae48653bbd0c7b0addebe1c3b9b16fae9}{Evaluate}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$schema) const override
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1ColumnValueExpression_a69857c12f468f5f54babeea64464f488}{Evaluate\+Join}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$left\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$left\+\_\+schema, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$right\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$right\+\_\+schema) const override
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1ColumnValueExpression_a976239d1f0a570036680600091a8216e}{Evaluate\+Aggregate}} (const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ \&group\+\_\+bys, const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ \&aggregates) const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1ColumnValueExpression_a6bdcd8ffa6982c567deabb3fc32497b5}{Get\+Tuple\+Idx}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1ColumnValueExpression_a1531cc72996b587c6a480b8ca8a32f50}{Get\+Col\+Idx}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1ColumnValueExpression}{Column\+Value\+Expression}} maintains the tuple index and column index relative to a particular schema or join. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1ColumnValueExpression_a5009d815d272e0e6d4f8dd4d9a102b3c}\label{classbustub_1_1ColumnValueExpression_a5009d815d272e0e6d4f8dd4d9a102b3c}} 
+\index{bustub::ColumnValueExpression@{bustub::ColumnValueExpression}!ColumnValueExpression@{ColumnValueExpression}}
+\index{ColumnValueExpression@{ColumnValueExpression}!bustub::ColumnValueExpression@{bustub::ColumnValueExpression}}
+\doxysubsubsection{\texorpdfstring{ColumnValueExpression()}{ColumnValueExpression()}}
+{\footnotesize\ttfamily bustub\+::\+Column\+Value\+Expression\+::\+Column\+Value\+Expression (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{tuple\+\_\+idx,  }\item[{uint32\+\_\+t}]{col\+\_\+idx,  }\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{ret\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\hyperlink{classbustub_1_1ColumnValueExpression}{Column\+Value\+Expression}} is an abstraction around \char`\"{}\+Table.\+member\char`\"{} in terms of indexes. 
+\begin{DoxyParams}{Parameters}
+{\em tuple\+\_\+idx} & \{tuple index 0 = left side of join, tuple index 1 = right side of join\} \\
+\hline
+{\em col\+\_\+idx} & the index of the column in the schema \\
+\hline
+{\em ret\+\_\+type} & the return type of the expression \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ColumnValueExpression_ae48653bbd0c7b0addebe1c3b9b16fae9}\label{classbustub_1_1ColumnValueExpression_ae48653bbd0c7b0addebe1c3b9b16fae9}} 
+\index{bustub::ColumnValueExpression@{bustub::ColumnValueExpression}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!bustub::ColumnValueExpression@{bustub::ColumnValueExpression}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Column\+Value\+Expression\+::\+Evaluate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{schema }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating the tuple with the given schema 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExpression_a20ce852bd02a5e8c1fc9b8707421747c}{bustub\+::\+Abstract\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1ColumnValueExpression_a976239d1f0a570036680600091a8216e}\label{classbustub_1_1ColumnValueExpression_a976239d1f0a570036680600091a8216e}} 
+\index{bustub::ColumnValueExpression@{bustub::ColumnValueExpression}!EvaluateAggregate@{EvaluateAggregate}}
+\index{EvaluateAggregate@{EvaluateAggregate}!bustub::ColumnValueExpression@{bustub::ColumnValueExpression}}
+\doxysubsubsection{\texorpdfstring{EvaluateAggregate()}{EvaluateAggregate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Column\+Value\+Expression\+::\+Evaluate\+Aggregate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ \&}]{group\+\_\+bys,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ \&}]{aggregates }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns the value obtained by evaluating the aggregates. 
+\begin{DoxyParams}{Parameters}
+{\em group\+\_\+bys} & The group by values \\
+\hline
+{\em aggregates} & The aggregate values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value obtained by checking the aggregates and group-\/bys 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExpression_a0b82b02ed6b714e77a0395da6d2f4254}{bustub\+::\+Abstract\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1ColumnValueExpression_a69857c12f468f5f54babeea64464f488}\label{classbustub_1_1ColumnValueExpression_a69857c12f468f5f54babeea64464f488}} 
+\index{bustub::ColumnValueExpression@{bustub::ColumnValueExpression}!EvaluateJoin@{EvaluateJoin}}
+\index{EvaluateJoin@{EvaluateJoin}!bustub::ColumnValueExpression@{bustub::ColumnValueExpression}}
+\doxysubsubsection{\texorpdfstring{EvaluateJoin()}{EvaluateJoin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Column\+Value\+Expression\+::\+Evaluate\+Join (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{left\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{left\+\_\+schema,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{right\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{right\+\_\+schema }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns the value obtained by evaluating a J\+O\+IN. 
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+tuple} & The left tuple \\
+\hline
+{\em left\+\_\+schema} & The left tuple\textquotesingle{}s schema \\
+\hline
+{\em right\+\_\+tuple} & The right tuple \\
+\hline
+{\em right\+\_\+schema} & The right tuple\textquotesingle{}s schema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating a J\+O\+IN on the left and right 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExpression_a5b672f7f2b84194fcdf3ff7b52f6d985}{bustub\+::\+Abstract\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1ColumnValueExpression_a1531cc72996b587c6a480b8ca8a32f50}\label{classbustub_1_1ColumnValueExpression_a1531cc72996b587c6a480b8ca8a32f50}} 
+\index{bustub::ColumnValueExpression@{bustub::ColumnValueExpression}!GetColIdx@{GetColIdx}}
+\index{GetColIdx@{GetColIdx}!bustub::ColumnValueExpression@{bustub::ColumnValueExpression}}
+\doxysubsubsection{\texorpdfstring{GetColIdx()}{GetColIdx()}}
+{\footnotesize\ttfamily uint32\+\_\+t bustub\+::\+Column\+Value\+Expression\+::\+Get\+Col\+Idx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1ColumnValueExpression_a6bdcd8ffa6982c567deabb3fc32497b5}\label{classbustub_1_1ColumnValueExpression_a6bdcd8ffa6982c567deabb3fc32497b5}} 
+\index{bustub::ColumnValueExpression@{bustub::ColumnValueExpression}!GetTupleIdx@{GetTupleIdx}}
+\index{GetTupleIdx@{GetTupleIdx}!bustub::ColumnValueExpression@{bustub::ColumnValueExpression}}
+\doxysubsubsection{\texorpdfstring{GetTupleIdx()}{GetTupleIdx()}}
+{\footnotesize\ttfamily uint32\+\_\+t bustub\+::\+Column\+Value\+Expression\+::\+Get\+Tuple\+Idx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/expressions/\mbox{\hyperlink{column__value__expression_8h}{column\+\_\+value\+\_\+expression.\+h}}\end{DoxyCompactItemize}

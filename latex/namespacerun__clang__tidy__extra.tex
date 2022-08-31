@@ -1,0 +1,21 @@
+\hypertarget{namespacerun__clang__tidy__extra}{}\doxysection{run\+\_\+clang\+\_\+tidy\+\_\+extra Namespace Reference}
+\label{namespacerun__clang__tidy__extra}\index{run\_clang\_tidy\_extra@{run\_clang\_tidy\_extra}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classrun__clang__tidy__extra_1_1CheckConfig}{Check\+Config}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyVerb}A helper class, to suppress execution of clang-tidy.
+
+In clang-tidy-6.0, if the clang-tidy configuration file suppresses ALL checks,
+(e.g. via a .clang-tidy file), clang-tidy will print usage information and
+exit with a return code of 0. Harmless but verbose. In later versions of
+clang-tidy the return code becomes 1, making this a bigger problem.
+
+This helper addresses the problem by suppressing execution according to
+the configuration in this file.
+\end{DoxyVerb}
+ 

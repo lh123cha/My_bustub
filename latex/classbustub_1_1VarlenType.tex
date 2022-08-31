@@ -1,0 +1,250 @@
+\hypertarget{classbustub_1_1VarlenType}{}\doxysection{bustub\+::Varlen\+Type Class Reference}
+\label{classbustub_1_1VarlenType}\index{bustub::VarlenType@{bustub::VarlenType}}
+
+
+{\ttfamily \#include $<$varlen\+\_\+type.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Varlen\+Type\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classbustub_1_1VarlenType__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Varlen\+Type\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classbustub_1_1VarlenType__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1VarlenType_a685b2a2f51805f5ccc243418be93b57e}{Varlen\+Type}} (\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type)
+\item 
+\mbox{\hyperlink{classbustub_1_1VarlenType_acc59df57df6874016b6106633bf6fbad}{$\sim$\+Varlen\+Type}} () override
+\item 
+const char $\ast$ \mbox{\hyperlink{classbustub_1_1VarlenType_acfc7b2f19bc9772433d18e0b86f51e5d}{Get\+Data}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&val) const override
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1VarlenType_ac321c1fdaabd436775d4bc898b4ddd99}{Get\+Length}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&val) const override
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1VarlenType_a7fe2d72a230cd4a7e7c14b53ca9077e8}{Compare\+Equals}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1VarlenType_ad59872e0a0554468acde35c585c483b3}{Compare\+Not\+Equals}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1VarlenType_ac85b2e0521ea6125688628af5875fd6b}{Compare\+Less\+Than}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1VarlenType_a86e35e8d82971f8d8578331308ed50c4}{Compare\+Less\+Than\+Equals}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1VarlenType_a19e2a27c053f169f38c51cfa10f841e8}{Compare\+Greater\+Than}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1VarlenType_a40140e723294920e834c7402bb5f6cb6}{Compare\+Greater\+Than\+Equals}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1VarlenType_adcf2ce805f51d67e1c005874a5276e81}{Min}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1VarlenType_ae6fb0360cf61414f3649716f550ce34c}{Max}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&left, const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&right) const override
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1VarlenType_a10abe982ef7d6faedfc3033fd40905d1}{Cast\+As}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&\mbox{\hyperlink{gmock-spec-builders__test_8cc_ac4f474c82e82cbb89ca7c36dd52be0ed}{value}}, \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type\+\_\+id) const override
+\item 
+bool \mbox{\hyperlink{classbustub_1_1VarlenType_ad7807100b7ea60a3a571cca0e418501c}{Is\+Inlined}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&) const override
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1VarlenType_aaa182329f424552e6b7df99094467bb1}{To\+String}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&val) const override
+\item 
+void \mbox{\hyperlink{classbustub_1_1VarlenType_ae4b1cc7c39700fa704507d25bc4f3ee1}{Serialize\+To}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&val, char $\ast$storage) const override
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1VarlenType_aba65ad8f4b9a4f54f8c794a02f3395bb}{Deserialize\+From}} (const char $\ast$storage) const override
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1VarlenType_ad6940eca840c41e2932f1d9adef658f6}{Copy}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&val) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1VarlenType_a685b2a2f51805f5ccc243418be93b57e}\label{classbustub_1_1VarlenType_a685b2a2f51805f5ccc243418be93b57e}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!VarlenType@{VarlenType}}
+\index{VarlenType@{VarlenType}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{VarlenType()}{VarlenType()}}
+{\footnotesize\ttfamily bustub\+::\+Varlen\+Type\+::\+Varlen\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_acc59df57df6874016b6106633bf6fbad}\label{classbustub_1_1VarlenType_acc59df57df6874016b6106633bf6fbad}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!````~VarlenType@{$\sim$VarlenType}}
+\index{````~VarlenType@{$\sim$VarlenType}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{$\sim$VarlenType()}{~VarlenType()}}
+{\footnotesize\ttfamily bustub\+::\+Varlen\+Type\+::$\sim$\+Varlen\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1VarlenType_a10abe982ef7d6faedfc3033fd40905d1}\label{classbustub_1_1VarlenType_a10abe982ef7d6faedfc3033fd40905d1}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!CastAs@{CastAs}}
+\index{CastAs@{CastAs}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{CastAs()}{CastAs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Varlen\+Type\+::\+Cast\+As (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{value,  }\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type\+\_\+id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a69f7ac61dbfb4e5a94bc618ff5ad6731}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_a7fe2d72a230cd4a7e7c14b53ca9077e8}\label{classbustub_1_1VarlenType_a7fe2d72a230cd4a7e7c14b53ca9077e8}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!CompareEquals@{CompareEquals}}
+\index{CompareEquals@{CompareEquals}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{CompareEquals()}{CompareEquals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Varlen\+Type\+::\+Compare\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_aa5f8a70983a7dce95ab294fb9049879c}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_a19e2a27c053f169f38c51cfa10f841e8}\label{classbustub_1_1VarlenType_a19e2a27c053f169f38c51cfa10f841e8}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!CompareGreaterThan@{CompareGreaterThan}}
+\index{CompareGreaterThan@{CompareGreaterThan}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{CompareGreaterThan()}{CompareGreaterThan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Varlen\+Type\+::\+Compare\+Greater\+Than (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a61723cfb05fbe2a565b110cfe87a9a89}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_a40140e723294920e834c7402bb5f6cb6}\label{classbustub_1_1VarlenType_a40140e723294920e834c7402bb5f6cb6}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!CompareGreaterThanEquals@{CompareGreaterThanEquals}}
+\index{CompareGreaterThanEquals@{CompareGreaterThanEquals}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{CompareGreaterThanEquals()}{CompareGreaterThanEquals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Varlen\+Type\+::\+Compare\+Greater\+Than\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a9e346e640b268f7644ffe222934b765e}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_ac85b2e0521ea6125688628af5875fd6b}\label{classbustub_1_1VarlenType_ac85b2e0521ea6125688628af5875fd6b}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!CompareLessThan@{CompareLessThan}}
+\index{CompareLessThan@{CompareLessThan}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{CompareLessThan()}{CompareLessThan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Varlen\+Type\+::\+Compare\+Less\+Than (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a9ccb5310c60947e7e0bd674a5f877c0d}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_a86e35e8d82971f8d8578331308ed50c4}\label{classbustub_1_1VarlenType_a86e35e8d82971f8d8578331308ed50c4}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!CompareLessThanEquals@{CompareLessThanEquals}}
+\index{CompareLessThanEquals@{CompareLessThanEquals}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{CompareLessThanEquals()}{CompareLessThanEquals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Varlen\+Type\+::\+Compare\+Less\+Than\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_ad0c39bcc196014432ba7cea1daaafd8f}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_ad59872e0a0554468acde35c585c483b3}\label{classbustub_1_1VarlenType_ad59872e0a0554468acde35c585c483b3}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!CompareNotEquals@{CompareNotEquals}}
+\index{CompareNotEquals@{CompareNotEquals}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{CompareNotEquals()}{CompareNotEquals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Varlen\+Type\+::\+Compare\+Not\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a082e26044241a3ea1de3f361b2635e09}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_ad6940eca840c41e2932f1d9adef658f6}\label{classbustub_1_1VarlenType_ad6940eca840c41e2932f1d9adef658f6}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!Copy@{Copy}}
+\index{Copy@{Copy}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Varlen\+Type\+::\+Copy (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_adcacecf3ebc390a7e5526eb6945bbb77}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_aba65ad8f4b9a4f54f8c794a02f3395bb}\label{classbustub_1_1VarlenType_aba65ad8f4b9a4f54f8c794a02f3395bb}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!DeserializeFrom@{DeserializeFrom}}
+\index{DeserializeFrom@{DeserializeFrom}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{DeserializeFrom()}{DeserializeFrom()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Varlen\+Type\+::\+Deserialize\+From (\begin{DoxyParamCaption}\item[{const char $\ast$}]{storage }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a22a9f74d1db61d0975ec7eec91790347}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_acfc7b2f19bc9772433d18e0b86f51e5d}\label{classbustub_1_1VarlenType_acfc7b2f19bc9772433d18e0b86f51e5d}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!GetData@{GetData}}
+\index{GetData@{GetData}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{GetData()}{GetData()}}
+{\footnotesize\ttfamily const char $\ast$ bustub\+::\+Varlen\+Type\+::\+Get\+Data (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a1a655fd2342c8dac79f65186dc080e33}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_ac321c1fdaabd436775d4bc898b4ddd99}\label{classbustub_1_1VarlenType_ac321c1fdaabd436775d4bc898b4ddd99}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!GetLength@{GetLength}}
+\index{GetLength@{GetLength}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{GetLength()}{GetLength()}}
+{\footnotesize\ttfamily uint32\+\_\+t bustub\+::\+Varlen\+Type\+::\+Get\+Length (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a752106080366c6f944dad97d8168e817}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_ad7807100b7ea60a3a571cca0e418501c}\label{classbustub_1_1VarlenType_ad7807100b7ea60a3a571cca0e418501c}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!IsInlined@{IsInlined}}
+\index{IsInlined@{IsInlined}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{IsInlined()}{IsInlined()}}
+{\footnotesize\ttfamily bool bustub\+::\+Varlen\+Type\+::\+Is\+Inlined (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_ad261f2e9b3d22e65c766d15d7968f5ec}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_ae6fb0360cf61414f3649716f550ce34c}\label{classbustub_1_1VarlenType_ae6fb0360cf61414f3649716f550ce34c}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!Max@{Max}}
+\index{Max@{Max}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{Max()}{Max()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Varlen\+Type\+::\+Max (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a72585a463f275dca99f447ae1e7b0b9d}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_adcf2ce805f51d67e1c005874a5276e81}\label{classbustub_1_1VarlenType_adcf2ce805f51d67e1c005874a5276e81}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!Min@{Min}}
+\index{Min@{Min}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{Min()}{Min()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Varlen\+Type\+::\+Min (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{left,  }\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{right }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_ae565c0d2fe5f08298c9b25945ef7e56e}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_ae4b1cc7c39700fa704507d25bc4f3ee1}\label{classbustub_1_1VarlenType_ae4b1cc7c39700fa704507d25bc4f3ee1}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!SerializeTo@{SerializeTo}}
+\index{SerializeTo@{SerializeTo}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{SerializeTo()}{SerializeTo()}}
+{\footnotesize\ttfamily void bustub\+::\+Varlen\+Type\+::\+Serialize\+To (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{val,  }\item[{char $\ast$}]{storage }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a935304a7710685bf3ad18a577821ab47}{bustub\+::\+Type}}.
+
+\mbox{\Hypertarget{classbustub_1_1VarlenType_aaa182329f424552e6b7df99094467bb1}\label{classbustub_1_1VarlenType_aaa182329f424552e6b7df99094467bb1}} 
+\index{bustub::VarlenType@{bustub::VarlenType}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::VarlenType@{bustub::VarlenType}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Varlen\+Type\+::\+To\+String (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classbustub_1_1Type_a9cbf9ee6678b39cfcb0a8ab4d75fb7c1}{bustub\+::\+Type}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/type/\mbox{\hyperlink{varlen__type_8h}{varlen\+\_\+type.\+h}}\item 
+src/type/\mbox{\hyperlink{varlen__type_8cpp}{varlen\+\_\+type.\+cpp}}\end{DoxyCompactItemize}

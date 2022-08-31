@@ -1,0 +1,353 @@
+\hypertarget{classbustub_1_1ExtendibleHashTable}{}\doxysection{bustub\+::Extendible\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$ Class Template Reference}
+\label{classbustub_1_1ExtendibleHashTable}\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+
+
+{\ttfamily \#include $<$extendible\+\_\+hash\+\_\+table.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Extendible\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbustub_1_1ExtendibleHashTable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_a7ff61a61730f6e0952d73c018f93b4e1}{Extendible\+Hash\+Table}} (const std\+::string \&name, \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$buffer\+\_\+pool\+\_\+manager, const Key\+Comparator \&comparator, \mbox{\hyperlink{classbustub_1_1HashFunction}{Hash\+Function}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} $>$ hash\+\_\+fn)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_a53804a4547481146ac5379ae606469dd}{Insert}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key, const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&\mbox{\hyperlink{gmock-spec-builders__test_8cc_ac4f474c82e82cbb89ca7c36dd52be0ed}{value}})
+\item 
+bool \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_ad211ddfebedc0faa0961369f0d7fad19}{Remove}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key, const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&\mbox{\hyperlink{gmock-spec-builders__test_8cc_ac4f474c82e82cbb89ca7c36dd52be0ed}{value}})
+\item 
+bool \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_ab9256a62cebfad532331a89dc10dfed3}{Get\+Value}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key, std\+::vector$<$ \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$ $\ast$result)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_a397f0678cc2395b375ebe663a76db495}{Get\+Global\+Depth}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_acef78329e6ec7aec2d6144bb73cab2ae}{Verify\+Integrity}} ()
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_a2874a1071a68bb356564ce0b5b5a03d2}{Hash}} (\mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} key)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_aa8ef078a711f29e5179a146d56953f49}{Key\+To\+Directory\+Index}} (\mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} key, \mbox{\hyperlink{classbustub_1_1HashTableDirectoryPage}{Hash\+Table\+Directory\+Page}} $\ast$dir\+\_\+page)
+\item 
+\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_aa4bac6ae109852b71770c7d75f8ab85d}{Key\+To\+Page\+Id}} (\mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} key, \mbox{\hyperlink{classbustub_1_1HashTableDirectoryPage}{Hash\+Table\+Directory\+Page}} $\ast$dir\+\_\+page)
+\item 
+\mbox{\hyperlink{classbustub_1_1HashTableDirectoryPage}{Hash\+Table\+Directory\+Page}} $\ast$ \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_a4189d41a59054dbd5398eb1e4303f85e}{Fetch\+Directory\+Page}} ()
+\item 
+std\+::pair$<$ \mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$, \mbox{\hyperlink{hash__table__page__defs_8h_a6100d50b66f0da5c241d2aba0f71305f}{H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+T\+Y\+PE}} $\ast$ $>$ \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_ae3b89e11b94aed1b01878b0f8728d79c}{Fetch\+Bucket\+Page}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} bucket\+\_\+page\+\_\+id)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_ada14ecf67289b7c6433802cdd51522d5}{Split\+Insert}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key, const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&\mbox{\hyperlink{gmock-spec-builders__test_8cc_ac4f474c82e82cbb89ca7c36dd52be0ed}{value}})
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_ab66a8035d0dc3cfd8708399aef6aafa1}{Merge}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key, const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&\mbox{\hyperlink{gmock-spec-builders__test_8cc_ac4f474c82e82cbb89ca7c36dd52be0ed}{value}})
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_a57e0f19b7154a3d0513274781b659097}{Pow}} (uint32\+\_\+t base, uint32\+\_\+t power) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_a367620def012df7db6bc279e4d5b766a}{directory\+\_\+page\+\_\+id\+\_\+}}
+\item 
+\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$ \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_a4788362e02f23a7b1f105802695afd03}{buffer\+\_\+pool\+\_\+manager\+\_\+}}
+\item 
+Key\+Comparator \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_aed919310cb0d440853815ed22d0f90c5}{comparator\+\_\+}}
+\item 
+\mbox{\hyperlink{classbustub_1_1ReaderWriterLatch}{Reader\+Writer\+Latch}} \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_aadf2b8663079ee10243a27cbfc94afb7}{table\+\_\+latch\+\_\+}}
+\item 
+\mbox{\hyperlink{classbustub_1_1HashFunction}{Hash\+Function}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} $>$ \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable_a8365586e28117aa20f368f84a8a4a7af}{hash\+\_\+fn\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Key\+Type, typename Value\+Type, typename Key\+Comparator$>$\newline
+class bustub\+::\+Extendible\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}
+
+Implementation of extendible hash table that is backed by a buffer pool manager. Non-\/unique keys are supported. Supports insert and delete. The table grows/shrinks dynamically as buckets become full/empty. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_a7ff61a61730f6e0952d73c018f93b4e1}\label{classbustub_1_1ExtendibleHashTable_a7ff61a61730f6e0952d73c018f93b4e1}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!ExtendibleHashTable@{ExtendibleHashTable}}
+\index{ExtendibleHashTable@{ExtendibleHashTable}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{ExtendibleHashTable()}{ExtendibleHashTable()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+\mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::\mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{Extendible\+Hash\+Table}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$}]{buffer\+\_\+pool\+\_\+manager,  }\item[{const Key\+Comparator \&}]{comparator,  }\item[{\mbox{\hyperlink{classbustub_1_1HashFunction}{Hash\+Function}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} $>$}]{hash\+\_\+fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Creates a new \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{Extendible\+Hash\+Table}}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer\+\_\+pool\+\_\+manager} & buffer pool manager to be used \\
+\hline
+{\em comparator} & comparator for keys \\
+\hline
+{\em hash\+\_\+fn} & the hash function \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_ae3b89e11b94aed1b01878b0f8728d79c}\label{classbustub_1_1ExtendibleHashTable_ae3b89e11b94aed1b01878b0f8728d79c}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!FetchBucketPage@{FetchBucketPage}}
+\index{FetchBucketPage@{FetchBucketPage}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{FetchBucketPage()}{FetchBucketPage()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+std\+::pair$<$\mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$, \mbox{\hyperlink{hash__table__page__defs_8h_a6100d50b66f0da5c241d2aba0f71305f}{H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+T\+Y\+PE}} $\ast$$>$ \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Fetch\+Bucket\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{bucket\+\_\+page\+\_\+id }\end{DoxyParamCaption})}
+
+Fetches the a bucket page from the buffer pool manager using the bucket\textquotesingle{}s page\+\_\+id.
+
+
+\begin{DoxyParams}{Parameters}
+{\em bucket\+\_\+page\+\_\+id} & the page\+\_\+id to fetch \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a pair contains a pointer to page and a pointer to bucket page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_a4189d41a59054dbd5398eb1e4303f85e}\label{classbustub_1_1ExtendibleHashTable_a4189d41a59054dbd5398eb1e4303f85e}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!FetchDirectoryPage@{FetchDirectoryPage}}
+\index{FetchDirectoryPage@{FetchDirectoryPage}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{FetchDirectoryPage()}{FetchDirectoryPage()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+\mbox{\hyperlink{classbustub_1_1HashTableDirectoryPage}{Hash\+Table\+Directory\+Page}}$\ast$ \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Fetch\+Directory\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Fetches the directory page from the buffer pool manager.
+
+\begin{DoxyReturn}{Returns}
+a pointer to the directory page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_a397f0678cc2395b375ebe663a76db495}\label{classbustub_1_1ExtendibleHashTable_a397f0678cc2395b375ebe663a76db495}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!GetGlobalDepth@{GetGlobalDepth}}
+\index{GetGlobalDepth@{GetGlobalDepth}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{GetGlobalDepth()}{GetGlobalDepth()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Get\+Global\+Depth (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Returns the global depth. Do not touch. \mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_ab9256a62cebfad532331a89dc10dfed3}\label{classbustub_1_1ExtendibleHashTable_ab9256a62cebfad532331a89dc10dfed3}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+bool \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Get\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction,  }\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$ $\ast$}]{result }\end{DoxyParamCaption})}
+
+Performs a point query on the hash table.
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em transaction} & the current transaction \\
+\hline
+ & {\em key} & the key to look up \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & the value(s) associated with a given key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value(s) associated with the given key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_a2874a1071a68bb356564ce0b5b5a03d2}\label{classbustub_1_1ExtendibleHashTable_a2874a1071a68bb356564ce0b5b5a03d2}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!Hash@{Hash}}
+\index{Hash@{Hash}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Hash()}{Hash()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Hash (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Hash -\/ simple helper to downcast Murmur\+Hash\textquotesingle{}s 64-\/bit hash to 32-\/bit for extendible hashing.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to hash \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the downcasted 32-\/bit hash 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_a53804a4547481146ac5379ae606469dd}\label{classbustub_1_1ExtendibleHashTable_a53804a4547481146ac5379ae606469dd}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!Insert@{Insert}}
+\index{Insert@{Insert}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+bool \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction,  }\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key,  }\item[{const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&}]{value }\end{DoxyParamCaption})}
+
+Inserts a key-\/value pair into the hash table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em transaction} & the current transaction \\
+\hline
+{\em key} & the key to create \\
+\hline
+{\em value} & the value to be associated with the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if insert succeeded, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_aa8ef078a711f29e5179a146d56953f49}\label{classbustub_1_1ExtendibleHashTable_aa8ef078a711f29e5179a146d56953f49}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!KeyToDirectoryIndex@{KeyToDirectoryIndex}}
+\index{KeyToDirectoryIndex@{KeyToDirectoryIndex}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{KeyToDirectoryIndex()}{KeyToDirectoryIndex()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Key\+To\+Directory\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}}]{key,  }\item[{\mbox{\hyperlink{classbustub_1_1HashTableDirectoryPage}{Hash\+Table\+Directory\+Page}} $\ast$}]{dir\+\_\+page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Key\+To\+Directory\+Index -\/ maps a key to a directory index
+
+In Extendible Hashing we map a key to a directory index using the following hash + mask function.
+
+Directory\+Index = Hash(key) \& G\+L\+O\+B\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK
+
+where G\+L\+O\+B\+A\+L\+\_\+\+D\+E\+P\+T\+H\+\_\+\+M\+A\+SK is a mask with exactly G\+L\+O\+B\+A\+L\+\_\+\+D\+E\+P\+TH 1\textquotesingle{}s from L\+SB upwards. For example, global depth 3 corresponds to 0x00000007 in a 32-\/bit representation.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key to use for lookup \\
+\hline
+{\em dir\+\_\+page} & to use for lookup of global depth \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the directory index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_aa4bac6ae109852b71770c7d75f8ab85d}\label{classbustub_1_1ExtendibleHashTable_aa4bac6ae109852b71770c7d75f8ab85d}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!KeyToPageId@{KeyToPageId}}
+\index{KeyToPageId@{KeyToPageId}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{KeyToPageId()}{KeyToPageId()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Key\+To\+Page\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}}]{key,  }\item[{\mbox{\hyperlink{classbustub_1_1HashTableDirectoryPage}{Hash\+Table\+Directory\+Page}} $\ast$}]{dir\+\_\+page }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Get the bucket page\+\_\+id corresponding to a key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & the key for lookup \\
+\hline
+{\em dir\+\_\+page} & a pointer to the hash table\textquotesingle{}s directory page \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the bucket page\+\_\+id corresponding to the input key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_ab66a8035d0dc3cfd8708399aef6aafa1}\label{classbustub_1_1ExtendibleHashTable_ab66a8035d0dc3cfd8708399aef6aafa1}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!Merge@{Merge}}
+\index{Merge@{Merge}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Merge()}{Merge()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Merge (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction,  }\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key,  }\item[{const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&}]{value }\end{DoxyParamCaption})}
+
+Optionally merges an empty bucket into it\textquotesingle{}s pair. This is called by Remove, if Remove makes a bucket empty.
+
+There are three conditions under which we skip the merge\+:
+\begin{DoxyEnumerate}
+\item The bucket is no longer empty.
+\item The bucket has local depth 0.
+\item The bucket\textquotesingle{}s local depth doesn\textquotesingle{}t match its split image\textquotesingle{}s local depth.
+\end{DoxyEnumerate}
+
+
+\begin{DoxyParams}{Parameters}
+{\em transaction} & a pointer to the current transaction \\
+\hline
+{\em key} & the key that was removed \\
+\hline
+{\em value} & the value that was removed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_a57e0f19b7154a3d0513274781b659097}\label{classbustub_1_1ExtendibleHashTable_a57e0f19b7154a3d0513274781b659097}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!Pow@{Pow}}
+\index{Pow@{Pow}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Pow()}{Pow()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Pow (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{base,  }\item[{uint32\+\_\+t}]{power }\end{DoxyParamCaption}) const}
+
+Pow function for uint32\+\_\+t \mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_ad211ddfebedc0faa0961369f0d7fad19}\label{classbustub_1_1ExtendibleHashTable_ad211ddfebedc0faa0961369f0d7fad19}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+bool \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction,  }\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key,  }\item[{const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&}]{value }\end{DoxyParamCaption})}
+
+Deletes the associated value for the given key.
+
+
+\begin{DoxyParams}{Parameters}
+{\em transaction} & the current transaction \\
+\hline
+{\em key} & the key to delete \\
+\hline
+{\em value} & the value to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if remove succeeded, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_ada14ecf67289b7c6433802cdd51522d5}\label{classbustub_1_1ExtendibleHashTable_ada14ecf67289b7c6433802cdd51522d5}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!SplitInsert@{SplitInsert}}
+\index{SplitInsert@{SplitInsert}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{SplitInsert()}{SplitInsert()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+bool \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Split\+Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction,  }\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key,  }\item[{const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&}]{value }\end{DoxyParamCaption})}
+
+Performs insertion with an optional bucket splitting.
+
+
+\begin{DoxyParams}{Parameters}
+{\em transaction} & a pointer to the current transaction \\
+\hline
+{\em key} & the key to insert \\
+\hline
+{\em value} & the value to insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+whether or not the insertion was successful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_acef78329e6ec7aec2d6144bb73cab2ae}\label{classbustub_1_1ExtendibleHashTable_acef78329e6ec7aec2d6144bb73cab2ae}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!VerifyIntegrity@{VerifyIntegrity}}
+\index{VerifyIntegrity@{VerifyIntegrity}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{VerifyIntegrity()}{VerifyIntegrity()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+void \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Verify\+Integrity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Helper function to verify the integrity of the extendible hash table\textquotesingle{}s directory. Do not touch. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_a4788362e02f23a7b1f105802695afd03}\label{classbustub_1_1ExtendibleHashTable_a4788362e02f23a7b1f105802695afd03}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!buffer\_pool\_manager\_@{buffer\_pool\_manager\_}}
+\index{buffer\_pool\_manager\_@{buffer\_pool\_manager\_}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{buffer\_pool\_manager\_}{buffer\_pool\_manager\_}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}}$\ast$ \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::buffer\+\_\+pool\+\_\+manager\+\_\+}
+
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_aed919310cb0d440853815ed22d0f90c5}\label{classbustub_1_1ExtendibleHashTable_aed919310cb0d440853815ed22d0f90c5}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!comparator\_@{comparator\_}}
+\index{comparator\_@{comparator\_}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{comparator\_}{comparator\_}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+Key\+Comparator \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::comparator\+\_\+}
+
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_a367620def012df7db6bc279e4d5b766a}\label{classbustub_1_1ExtendibleHashTable_a367620def012df7db6bc279e4d5b766a}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!directory\_page\_id\_@{directory\_page\_id\_}}
+\index{directory\_page\_id\_@{directory\_page\_id\_}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{directory\_page\_id\_}{directory\_page\_id\_}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::directory\+\_\+page\+\_\+id\+\_\+}
+
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_a8365586e28117aa20f368f84a8a4a7af}\label{classbustub_1_1ExtendibleHashTable_a8365586e28117aa20f368f84a8a4a7af}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!hash\_fn\_@{hash\_fn\_}}
+\index{hash\_fn\_@{hash\_fn\_}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{hash\_fn\_}{hash\_fn\_}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+\mbox{\hyperlink{classbustub_1_1HashFunction}{Hash\+Function}}$<$\mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}$>$ \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::hash\+\_\+fn\+\_\+}
+
+\mbox{\Hypertarget{classbustub_1_1ExtendibleHashTable_aadf2b8663079ee10243a27cbfc94afb7}\label{classbustub_1_1ExtendibleHashTable_aadf2b8663079ee10243a27cbfc94afb7}} 
+\index{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}!table\_latch\_@{table\_latch\_}}
+\index{table\_latch\_@{table\_latch\_}!bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::ExtendibleHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{table\_latch\_}{table\_latch\_}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+\mbox{\hyperlink{classbustub_1_1ReaderWriterLatch}{Reader\+Writer\+Latch}} \mbox{\hyperlink{classbustub_1_1ExtendibleHashTable}{bustub\+::\+Extendible\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::table\+\_\+latch\+\_\+}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/container/hash/\mbox{\hyperlink{extendible__hash__table_8h}{extendible\+\_\+hash\+\_\+table.\+h}}\end{DoxyCompactItemize}

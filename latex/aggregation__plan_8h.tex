@@ -1,0 +1,50 @@
+\hypertarget{aggregation__plan_8h}{}\doxysection{src/include/execution/plans/aggregation\+\_\+plan.h File Reference}
+\label{aggregation__plan_8h}\index{src/include/execution/plans/aggregation\_plan.h@{src/include/execution/plans/aggregation\_plan.h}}
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}common/util/hash\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}execution/plans/abstract\+\_\+plan.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}storage/table/tuple.\+h\char`\"{}}\newline
+Include dependency graph for aggregation\+\_\+plan.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{aggregation__plan_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{aggregation__plan_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbustub_1_1AggregationPlanNode}{bustub\+::\+Aggregation\+Plan\+Node}}
+\item 
+struct \mbox{\hyperlink{structbustub_1_1AggregateKey}{bustub\+::\+Aggregate\+Key}}
+\item 
+struct \mbox{\hyperlink{structbustub_1_1AggregateValue}{bustub\+::\+Aggregate\+Value}}
+\item 
+struct \mbox{\hyperlink{structstd_1_1hash_3_01bustub_1_1AggregateKey_01_4}{std\+::hash$<$ bustub\+::\+Aggregate\+Key $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacebustub}{bustub}}
+\item 
+ \mbox{\hyperlink{namespacestd}{std}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacebustub_a00cf530eb8a8c97e85e5030651b64fff}{bustub\+::\+Aggregation\+Type}} \{ \mbox{\hyperlink{namespacebustub_a00cf530eb8a8c97e85e5030651b64fffa8680b6686c29f5bfdad5ce95bcec6cc5}{bustub\+::\+Aggregation\+Type\+::\+Count\+Aggregate}}, 
+\mbox{\hyperlink{namespacebustub_a00cf530eb8a8c97e85e5030651b64fffad1debde475bd10120fc7c9bec94c2b8e}{bustub\+::\+Aggregation\+Type\+::\+Sum\+Aggregate}}, 
+\mbox{\hyperlink{namespacebustub_a00cf530eb8a8c97e85e5030651b64fffae4fc8446a8df86a42a1efdc33d760e26}{bustub\+::\+Aggregation\+Type\+::\+Min\+Aggregate}}, 
+\mbox{\hyperlink{namespacebustub_a00cf530eb8a8c97e85e5030651b64fffa4cca396904429e99393b99aa650d3456}{bustub\+::\+Aggregation\+Type\+::\+Max\+Aggregate}}
+ \}
+\end{DoxyCompactItemize}

@@ -1,0 +1,217 @@
+\hypertarget{classbustub_1_1ParallelBufferPoolManager}{}\doxysection{bustub\+::Parallel\+Buffer\+Pool\+Manager Class Reference}
+\label{classbustub_1_1ParallelBufferPoolManager}\index{bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}}
+
+
+{\ttfamily \#include $<$parallel\+\_\+buffer\+\_\+pool\+\_\+manager.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Parallel\+Buffer\+Pool\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classbustub_1_1ParallelBufferPoolManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Parallel\+Buffer\+Pool\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classbustub_1_1ParallelBufferPoolManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_a8652907daa660dafeaa0eb3eb8e4b9a1}{Parallel\+Buffer\+Pool\+Manager}} (size\+\_\+t num\+\_\+instances, size\+\_\+t pool\+\_\+size, \mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$disk\+\_\+manager, \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager=nullptr)
+\item 
+\mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_ab029d37a3426823951f72ce37503f45f}{$\sim$\+Parallel\+Buffer\+Pool\+Manager}} () override
+\item 
+size\+\_\+t \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_a9b250f8c86bf4e48fcada7414cfd4e5d}{Get\+Pool\+Size}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$ \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_a30d25a5441baacb13b52f6b60d3bfbff}{Get\+Buffer\+Pool\+Manager}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id)
+\item 
+\mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_a93d88163dc2378d5e161e9f2370e500f}{Fetch\+Pg\+Imp}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id) override
+\item 
+bool \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_a39cba8710ae8dd4aad37c76a6abf3887}{Unpin\+Pg\+Imp}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id, bool is\+\_\+dirty) override
+\item 
+bool \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_a1e2effcd377cd25f0a6affda0c6306bf}{Flush\+Pg\+Imp}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id) override
+\item 
+\mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_ae8963fe7a8bc9041ef15e00d3ee3d501}{New\+Pg\+Imp}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} $\ast$page\+\_\+id) override
+\item 
+bool \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_a23b3f455c262812b5f8d76cbb2df6e21}{Delete\+Pg\+Imp}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id) override
+\item 
+void \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_a2521b43ed78ec4eb59ddcfe9bae70901}{Flush\+All\+Pgs\+Imp}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1ParallelBufferPoolManager_a8652907daa660dafeaa0eb3eb8e4b9a1}\label{classbustub_1_1ParallelBufferPoolManager_a8652907daa660dafeaa0eb3eb8e4b9a1}} 
+\index{bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}!ParallelBufferPoolManager@{ParallelBufferPoolManager}}
+\index{ParallelBufferPoolManager@{ParallelBufferPoolManager}!bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{ParallelBufferPoolManager()}{ParallelBufferPoolManager()}}
+{\footnotesize\ttfamily bustub\+::\+Parallel\+Buffer\+Pool\+Manager\+::\+Parallel\+Buffer\+Pool\+Manager (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{num\+\_\+instances,  }\item[{size\+\_\+t}]{pool\+\_\+size,  }\item[{\mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} $\ast$}]{disk\+\_\+manager,  }\item[{\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$}]{log\+\_\+manager = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+Creates a new \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager}{Parallel\+Buffer\+Pool\+Manager}}. 
+\begin{DoxyParams}{Parameters}
+{\em num\+\_\+instances} & the number of individual Buffer\+Pool\+Manager\+Instances to store \\
+\hline
+{\em pool\+\_\+size} & the pool size of each \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance}{Buffer\+Pool\+Manager\+Instance}} \\
+\hline
+{\em disk\+\_\+manager} & the disk manager \\
+\hline
+{\em log\+\_\+manager} & the log manager (for testing only\+: nullptr = disable logging) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1ParallelBufferPoolManager_ab029d37a3426823951f72ce37503f45f}\label{classbustub_1_1ParallelBufferPoolManager_ab029d37a3426823951f72ce37503f45f}} 
+\index{bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}!````~ParallelBufferPoolManager@{$\sim$ParallelBufferPoolManager}}
+\index{````~ParallelBufferPoolManager@{$\sim$ParallelBufferPoolManager}!bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$ParallelBufferPoolManager()}{~ParallelBufferPoolManager()}}
+{\footnotesize\ttfamily bustub\+::\+Parallel\+Buffer\+Pool\+Manager\+::$\sim$\+Parallel\+Buffer\+Pool\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Destroys an existing \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager}{Parallel\+Buffer\+Pool\+Manager}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ParallelBufferPoolManager_a23b3f455c262812b5f8d76cbb2df6e21}\label{classbustub_1_1ParallelBufferPoolManager_a23b3f455c262812b5f8d76cbb2df6e21}} 
+\index{bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}!DeletePgImp@{DeletePgImp}}
+\index{DeletePgImp@{DeletePgImp}!bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{DeletePgImp()}{DeletePgImp()}}
+{\footnotesize\ttfamily bool bustub\+::\+Parallel\+Buffer\+Pool\+Manager\+::\+Delete\+Pg\+Imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Deletes a page from the buffer pool. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of page to be deleted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the page exists but could not be deleted, true if the page didn\textquotesingle{}t exist or deletion succeeded 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a1c30494c0e3b29e1e6aad70cc6e54a0b}{bustub\+::\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1ParallelBufferPoolManager_a93d88163dc2378d5e161e9f2370e500f}\label{classbustub_1_1ParallelBufferPoolManager_a93d88163dc2378d5e161e9f2370e500f}} 
+\index{bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}!FetchPgImp@{FetchPgImp}}
+\index{FetchPgImp@{FetchPgImp}!bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{FetchPgImp()}{FetchPgImp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ bustub\+::\+Parallel\+Buffer\+Pool\+Manager\+::\+Fetch\+Pg\+Imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Fetch the requested page from the buffer pool. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of page to be fetched \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the requested page 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a290e1723d12d509714e15650546b957d}{bustub\+::\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1ParallelBufferPoolManager_a2521b43ed78ec4eb59ddcfe9bae70901}\label{classbustub_1_1ParallelBufferPoolManager_a2521b43ed78ec4eb59ddcfe9bae70901}} 
+\index{bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}!FlushAllPgsImp@{FlushAllPgsImp}}
+\index{FlushAllPgsImp@{FlushAllPgsImp}!bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{FlushAllPgsImp()}{FlushAllPgsImp()}}
+{\footnotesize\ttfamily void bustub\+::\+Parallel\+Buffer\+Pool\+Manager\+::\+Flush\+All\+Pgs\+Imp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Flushes all the pages in the buffer pool to disk. 
+
+Implements \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aa92aa48f53f033bfd7d0db433f2d25af}{bustub\+::\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1ParallelBufferPoolManager_a1e2effcd377cd25f0a6affda0c6306bf}\label{classbustub_1_1ParallelBufferPoolManager_a1e2effcd377cd25f0a6affda0c6306bf}} 
+\index{bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}!FlushPgImp@{FlushPgImp}}
+\index{FlushPgImp@{FlushPgImp}!bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{FlushPgImp()}{FlushPgImp()}}
+{\footnotesize\ttfamily bool bustub\+::\+Parallel\+Buffer\+Pool\+Manager\+::\+Flush\+Pg\+Imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Flushes the target page to disk. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of page to be flushed, cannot be I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+G\+E\+\_\+\+ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the page could not be found in the page table, true otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1BufferPoolManager_ac8156b2e4371685daad5765896dab8b6}{bustub\+::\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1ParallelBufferPoolManager_a30d25a5441baacb13b52f6b60d3bfbff}\label{classbustub_1_1ParallelBufferPoolManager_a30d25a5441baacb13b52f6b60d3bfbff}} 
+\index{bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}!GetBufferPoolManager@{GetBufferPoolManager}}
+\index{GetBufferPoolManager@{GetBufferPoolManager}!bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{GetBufferPoolManager()}{GetBufferPoolManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$ bustub\+::\+Parallel\+Buffer\+Pool\+Manager\+::\+Get\+Buffer\+Pool\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of page \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer to the \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} responsible for handling given page id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ParallelBufferPoolManager_a9b250f8c86bf4e48fcada7414cfd4e5d}\label{classbustub_1_1ParallelBufferPoolManager_a9b250f8c86bf4e48fcada7414cfd4e5d}} 
+\index{bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}!GetPoolSize@{GetPoolSize}}
+\index{GetPoolSize@{GetPoolSize}!bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{GetPoolSize()}{GetPoolSize()}}
+{\footnotesize\ttfamily size\+\_\+t bustub\+::\+Parallel\+Buffer\+Pool\+Manager\+::\+Get\+Pool\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+size of the buffer pool 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aa803b9c1fe285cad7c688c7e5807200c}{bustub\+::\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1ParallelBufferPoolManager_ae8963fe7a8bc9041ef15e00d3ee3d501}\label{classbustub_1_1ParallelBufferPoolManager_ae8963fe7a8bc9041ef15e00d3ee3d501}} 
+\index{bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}!NewPgImp@{NewPgImp}}
+\index{NewPgImp@{NewPgImp}!bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{NewPgImp()}{NewPgImp()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ bustub\+::\+Parallel\+Buffer\+Pool\+Manager\+::\+New\+Pg\+Imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} $\ast$}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Creates a new page in the buffer pool. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em page\+\_\+id} & id of created page \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nullptr if no new pages could be created, otherwise pointer to new page 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a326ef41dc22371cd4e453f3d606b16ab}{bustub\+::\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1ParallelBufferPoolManager_a39cba8710ae8dd4aad37c76a6abf3887}\label{classbustub_1_1ParallelBufferPoolManager_a39cba8710ae8dd4aad37c76a6abf3887}} 
+\index{bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}!UnpinPgImp@{UnpinPgImp}}
+\index{UnpinPgImp@{UnpinPgImp}!bustub::ParallelBufferPoolManager@{bustub::ParallelBufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{UnpinPgImp()}{UnpinPgImp()}}
+{\footnotesize\ttfamily bool bustub\+::\+Parallel\+Buffer\+Pool\+Manager\+::\+Unpin\+Pg\+Imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id,  }\item[{bool}]{is\+\_\+dirty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+Unpin the target page from the buffer pool. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of page to be unpinned \\
+\hline
+{\em is\+\_\+dirty} & true if the page should be marked as dirty, false otherwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the page pin count is $<$= 0 before this call, true otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aa8871523e4ae89bad7b56fae79515344}{bustub\+::\+Buffer\+Pool\+Manager}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/buffer/\mbox{\hyperlink{parallel__buffer__pool__manager_8h}{parallel\+\_\+buffer\+\_\+pool\+\_\+manager.\+h}}\item 
+src/buffer/\mbox{\hyperlink{parallel__buffer__pool__manager_8cpp}{parallel\+\_\+buffer\+\_\+pool\+\_\+manager.\+cpp}}\end{DoxyCompactItemize}

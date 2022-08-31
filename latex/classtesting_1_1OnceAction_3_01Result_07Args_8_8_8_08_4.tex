@@ -1,0 +1,86 @@
+\hypertarget{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4}{}\doxysection{testing\+::Once\+Action$<$ Result(Args...)$>$ Class Template Reference}
+\label{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4}\index{testing::OnceAction$<$ Result(Args...)$>$@{testing::OnceAction$<$ Result(Args...)$>$}}
+
+
+{\ttfamily \#include $<$gmock-\/actions.\+h$>$}
+
+
+
+Collaboration diagram for testing\+::Once\+Action$<$ Result(Args...)$>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=192pt]{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename Callable , typename std\+::enable\+\_\+if$<$ internal\+::conjunction$<$ internal\+::negation$<$ std\+::is\+\_\+same$<$ Once\+Action, typename std\+::decay$<$ Callable $>$\+::type $>$$>$, Is\+Directly\+Compatible$<$ Callable $>$$>$ \+::value, int $>$\+::type  = 0$>$ }\\\mbox{\hyperlink{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_a8fd4189468d622987a0158f8779c8284}{Once\+Action}} (Callable \&\&callable)
+\item 
+{\footnotesize template$<$typename Callable , typename std\+::enable\+\_\+if$<$ internal\+::conjunction$<$ internal\+::negation$<$ std\+::is\+\_\+same$<$ Once\+Action, typename std\+::decay$<$ Callable $>$\+::type $>$$>$, internal\+::negation$<$ Is\+Directly\+Compatible$<$ Callable $>$$>$, Is\+Compatible\+After\+Ignoring\+Arguments$<$ Callable $>$$>$\+::value, int $>$\+::type  = 0$>$ }\\\mbox{\hyperlink{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_a8fd4189468d622987a0158f8779c8284}{Once\+Action}} (Callable \&\&callable)
+\item 
+\mbox{\hyperlink{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_a28dd0b46528370e44de35a9bbbfa64b3}{Once\+Action}} (const \mbox{\hyperlink{classtesting_1_1OnceAction}{Once\+Action}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesting_1_1OnceAction}{Once\+Action}} \& \mbox{\hyperlink{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_ae874c987a7c19b6af7f6a31c0b21e036}{operator=}} (const \mbox{\hyperlink{classtesting_1_1OnceAction}{Once\+Action}} \&)=delete
+\item 
+\mbox{\hyperlink{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_a059ac54d55b016e53e62d4593454a8d2}{Once\+Action}} (\mbox{\hyperlink{classtesting_1_1OnceAction}{Once\+Action}} \&\&)=default
+\item 
+Result \mbox{\hyperlink{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_a2879dbd872e4821a4688e32f23de458f}{Call}} (Args... args) \&\&
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_a8fd4189468d622987a0158f8779c8284}\label{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_a8fd4189468d622987a0158f8779c8284}} 
+\index{testing::OnceAction$<$ Result(Args...)$>$@{testing::OnceAction$<$ Result(Args...)$>$}!OnceAction@{OnceAction}}
+\index{OnceAction@{OnceAction}!testing::OnceAction$<$ Result(Args...)$>$@{testing::OnceAction$<$ Result(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{OnceAction()}{OnceAction()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename Result , typename... Args$>$ \\
+template$<$typename Callable , typename std\+::enable\+\_\+if$<$ internal\+::conjunction$<$ internal\+::negation$<$ std\+::is\+\_\+same$<$ Once\+Action, typename std\+::decay$<$ Callable $>$\+::type $>$$>$, Is\+Directly\+Compatible$<$ Callable $>$$>$ \+::value, int $>$\+::type  = 0$>$ \\
+\mbox{\hyperlink{classtesting_1_1OnceAction}{testing\+::\+Once\+Action}}$<$ Result(Args...)$>$\+::\mbox{\hyperlink{classtesting_1_1OnceAction}{Once\+Action}} (\begin{DoxyParamCaption}\item[{Callable \&\&}]{callable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_a8fd4189468d622987a0158f8779c8284}\label{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_a8fd4189468d622987a0158f8779c8284}} 
+\index{testing::OnceAction$<$ Result(Args...)$>$@{testing::OnceAction$<$ Result(Args...)$>$}!OnceAction@{OnceAction}}
+\index{OnceAction@{OnceAction}!testing::OnceAction$<$ Result(Args...)$>$@{testing::OnceAction$<$ Result(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{OnceAction()}{OnceAction()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename Result , typename... Args$>$ \\
+template$<$typename Callable , typename std\+::enable\+\_\+if$<$ internal\+::conjunction$<$ internal\+::negation$<$ std\+::is\+\_\+same$<$ Once\+Action, typename std\+::decay$<$ Callable $>$\+::type $>$$>$, internal\+::negation$<$ Is\+Directly\+Compatible$<$ Callable $>$$>$, Is\+Compatible\+After\+Ignoring\+Arguments$<$ Callable $>$$>$\+::value, int $>$\+::type  = 0$>$ \\
+\mbox{\hyperlink{classtesting_1_1OnceAction}{testing\+::\+Once\+Action}}$<$ Result(Args...)$>$\+::\mbox{\hyperlink{classtesting_1_1OnceAction}{Once\+Action}} (\begin{DoxyParamCaption}\item[{Callable \&\&}]{callable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_a28dd0b46528370e44de35a9bbbfa64b3}\label{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_a28dd0b46528370e44de35a9bbbfa64b3}} 
+\index{testing::OnceAction$<$ Result(Args...)$>$@{testing::OnceAction$<$ Result(Args...)$>$}!OnceAction@{OnceAction}}
+\index{OnceAction@{OnceAction}!testing::OnceAction$<$ Result(Args...)$>$@{testing::OnceAction$<$ Result(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{OnceAction()}{OnceAction()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename Result , typename... Args$>$ \\
+\mbox{\hyperlink{classtesting_1_1OnceAction}{testing\+::\+Once\+Action}}$<$ Result(Args...)$>$\+::\mbox{\hyperlink{classtesting_1_1OnceAction}{Once\+Action}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesting_1_1OnceAction}{Once\+Action}}$<$ Result(Args...)$>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+\mbox{\Hypertarget{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_a059ac54d55b016e53e62d4593454a8d2}\label{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_a059ac54d55b016e53e62d4593454a8d2}} 
+\index{testing::OnceAction$<$ Result(Args...)$>$@{testing::OnceAction$<$ Result(Args...)$>$}!OnceAction@{OnceAction}}
+\index{OnceAction@{OnceAction}!testing::OnceAction$<$ Result(Args...)$>$@{testing::OnceAction$<$ Result(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{OnceAction()}{OnceAction()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename Result , typename... Args$>$ \\
+\mbox{\hyperlink{classtesting_1_1OnceAction}{testing\+::\+Once\+Action}}$<$ Result(Args...)$>$\+::\mbox{\hyperlink{classtesting_1_1OnceAction}{Once\+Action}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classtesting_1_1OnceAction}{Once\+Action}}$<$ Result(Args...)$>$ \&\&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_a2879dbd872e4821a4688e32f23de458f}\label{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_a2879dbd872e4821a4688e32f23de458f}} 
+\index{testing::OnceAction$<$ Result(Args...)$>$@{testing::OnceAction$<$ Result(Args...)$>$}!Call@{Call}}
+\index{Call@{Call}!testing::OnceAction$<$ Result(Args...)$>$@{testing::OnceAction$<$ Result(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{Call()}{Call()}}
+{\footnotesize\ttfamily template$<$typename Result , typename... Args$>$ \\
+Result \mbox{\hyperlink{classtesting_1_1OnceAction}{testing\+::\+Once\+Action}}$<$ Result(Args...)$>$\+::Call (\begin{DoxyParamCaption}\item[{Args...}]{args }\end{DoxyParamCaption}) \&\&\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_ae874c987a7c19b6af7f6a31c0b21e036}\label{classtesting_1_1OnceAction_3_01Result_07Args_8_8_8_08_4_ae874c987a7c19b6af7f6a31c0b21e036}} 
+\index{testing::OnceAction$<$ Result(Args...)$>$@{testing::OnceAction$<$ Result(Args...)$>$}!operator=@{operator=}}
+\index{operator=@{operator=}!testing::OnceAction$<$ Result(Args...)$>$@{testing::OnceAction$<$ Result(Args...)$>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename Result , typename... Args$>$ \\
+\mbox{\hyperlink{classtesting_1_1OnceAction}{Once\+Action}}\& \mbox{\hyperlink{classtesting_1_1OnceAction}{testing\+::\+Once\+Action}}$<$ Result(Args...)$>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classtesting_1_1OnceAction}{Once\+Action}}$<$ Result(Args...)$>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [delete]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+build/googletest-\/src/googlemock/include/gmock/\mbox{\hyperlink{gmock-actions_8h}{gmock-\/actions.\+h}}\end{DoxyCompactItemize}

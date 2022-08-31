@@ -1,0 +1,82 @@
+\hypertarget{gtest-printers_8cc}{}\doxysection{build/googletest-\/src/googletest/src/gtest-\/printers.cc File Reference}
+\label{gtest-printers_8cc}\index{build/googletest-\/src/googletest/src/gtest-\/printers.cc@{build/googletest-\/src/googletest/src/gtest-\/printers.cc}}
+{\ttfamily \#include \char`\"{}gtest/gtest-\/printers.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cwchar$>$}\newline
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include \char`\"{}gtest/internal/gtest-\/port.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}src/gtest-\/internal-\/inl.\+h\char`\"{}}\newline
+Include dependency graph for gtest-\/printers.cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gtest-printers_8cc__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{gtest-printers_8cc__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesting}{testing}}
+\item 
+ \mbox{\hyperlink{namespacetesting_1_1internal}{testing\+::internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacetesting_1_1internal_ae2ef98247c76a50cdc80ceb4a6c81793}{testing\+::internal\+::\+Char\+Format}} \{ \mbox{\hyperlink{namespacetesting_1_1internal_ae2ef98247c76a50cdc80ceb4a6c81793af7038866be92e9978360b831e376ffaa}{testing\+::internal\+::k\+As\+Is}}, 
+\mbox{\hyperlink{namespacetesting_1_1internal_ae2ef98247c76a50cdc80ceb4a6c81793aebfa5293302338a8e8678744c103f113}{testing\+::internal\+::k\+Hex\+Escape}}, 
+\mbox{\hyperlink{namespacetesting_1_1internal_ae2ef98247c76a50cdc80ceb4a6c81793ae1211108e9f35f891d9951da64794d03}{testing\+::internal\+::k\+Special\+Escape}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{namespacetesting_1_1internal_a52d18c9d995e8b3a3cb77cc83d7bbc68}{testing\+::internal\+::\+Print\+Bytes\+In\+Object\+To}} (const unsigned char $\ast$obj\+\_\+bytes, size\+\_\+t \mbox{\hyperlink{gmock__stress__test_8cc_afd9db40e3361ae09188795e8cbe19752}{count}}, ostream $\ast$os)
+\item 
+bool \mbox{\hyperlink{namespacetesting_1_1internal_a015a6ee397bad1b5496d50790bbd67b0}{testing\+::internal\+::\+Is\+Printable\+Ascii}} (char32\+\_\+t c)
+\item 
+{\footnotesize template$<$typename Char $>$ }\\void \mbox{\hyperlink{namespacetesting_1_1internal_ae309e29fd7a2218b8f03b2a66d1149cb}{testing\+::internal\+::\+Print\+Char\+And\+Code\+To}} (Char c, ostream $\ast$os)
+\item 
+\mbox{\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+}} void \mbox{\hyperlink{namespacetesting_1_1internal_ab7524d6d3ab8c31b1deea88bf61783bb}{testing\+::internal\+::\+Print\+To}} (unsigned char c, \+::std\+::ostream $\ast$os)
+\item 
+\mbox{\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+}} void \mbox{\hyperlink{namespacetesting_1_1internal_ad453af399370e394881079c243abacb4}{testing\+::internal\+::\+Print\+To}} (signed char c, \+::std\+::ostream $\ast$os)
+\item 
+void \mbox{\hyperlink{namespacetesting_1_1internal_aa74ea9d64f76ce69eceb225ca5ebef58}{testing\+::internal\+::\+Print\+To}} (wchar\+\_\+t wc, ostream $\ast$os)
+\item 
+\mbox{\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+}} void \mbox{\hyperlink{namespacetesting_1_1internal_a724b53b854fd9b16e6604a422e8dea46}{testing\+::internal\+::\+Print\+To}} (char32\+\_\+t c, \+::std\+::ostream $\ast$os)
+\item 
+void \mbox{\hyperlink{namespacetesting_1_1internal_a070107e7a8205ad6ec4d538d52b15b38}{testing\+::internal\+::\+Universal\+Print\+Array}} (const char $\ast$begin, size\+\_\+t len, ostream $\ast$os)
+\item 
+void \mbox{\hyperlink{namespacetesting_1_1internal_aebe5db97cc05310ee31c2b2c16bd4485}{testing\+::internal\+::\+Universal\+Print\+Array}} (const char16\+\_\+t $\ast$begin, size\+\_\+t len, ostream $\ast$os)
+\item 
+void \mbox{\hyperlink{namespacetesting_1_1internal_a1858d4aac7d0eb32c19e4bdff14a2864}{testing\+::internal\+::\+Universal\+Print\+Array}} (const char32\+\_\+t $\ast$begin, size\+\_\+t len, ostream $\ast$os)
+\item 
+void \mbox{\hyperlink{namespacetesting_1_1internal_a52394019018eb5079f9f1bcca23dcd60}{testing\+::internal\+::\+Universal\+Print\+Array}} (const wchar\+\_\+t $\ast$begin, size\+\_\+t len, ostream $\ast$os)
+\item 
+void \mbox{\hyperlink{namespacetesting_1_1internal_adc6c98306d40b53fd07be4e295102a0a}{testing\+::internal\+::\+Print\+To}} (const char $\ast$s, ostream $\ast$os)
+\item 
+void \mbox{\hyperlink{namespacetesting_1_1internal_ad0bc07b66792a391c6753cfb1a43a08c}{testing\+::internal\+::\+Print\+To}} (const char16\+\_\+t $\ast$s, ostream $\ast$os)
+\item 
+void \mbox{\hyperlink{namespacetesting_1_1internal_a8814e076fa3e05dbdacba89b69a65e11}{testing\+::internal\+::\+Print\+To}} (const char32\+\_\+t $\ast$s, ostream $\ast$os)
+\item 
+void \mbox{\hyperlink{namespacetesting_1_1internal_afc20fb56b2547a8f91f9ff99650f2024}{testing\+::internal\+::\+Print\+To}} (const wchar\+\_\+t $\ast$s, ostream $\ast$os)
+\item 
+void \mbox{\hyperlink{namespacetesting_1_1internal_ad609167d8d6792b0fb186539e0e159bd}{testing\+::internal\+::\+Print\+String\+To}} (const \+::std\+::string \&s, ostream $\ast$os)
+\item 
+void \mbox{\hyperlink{namespacetesting_1_1internal_a07ad0fc028c84e42db25649d7ad304f6}{testing\+::internal\+::\+Print\+U16\+String\+To}} (const \+::std\+::u16string \&s, ostream $\ast$os)
+\item 
+void \mbox{\hyperlink{namespacetesting_1_1internal_afc0094a7e0fcb9f63a1f2b6c2ef4f585}{testing\+::internal\+::\+Print\+U32\+String\+To}} (const \+::std\+::u32string \&s, ostream $\ast$os)
+\end{DoxyCompactItemize}

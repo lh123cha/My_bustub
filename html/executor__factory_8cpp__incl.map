@@ -1,0 +1,52 @@
+<map id="src/execution/executor_factory.cpp" name="src/execution/executor_factory.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="2181,5,2349,47"/>
+<area shape="rect" id="node2" href="$executor__factory_8h.html" title=" " alt="" coords="353,95,498,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="544,616,621,643"/>
+<area shape="rect" id="node4" href="$abstract__executor_8h.html" title=" " alt="" coords="2261,184,2414,225"/>
+<area shape="rect" id="node7" title=" " alt="" coords="3227,616,3287,643"/>
+<area shape="rect" id="node22" href="$aggregation__executor_8h.html" title=" " alt="" coords="3837,95,4016,136"/>
+<area shape="rect" id="node30" href="$delete__executor_8h.html" title=" " alt="" coords="1352,95,1504,136"/>
+<area shape="rect" id="node32" href="$distinct__executor_8h.html" title=" " alt="" coords="547,95,699,136"/>
+<area shape="rect" id="node34" href="$hash__join__executor_8h.html" title=" " alt="" coords="2901,95,3064,136"/>
+<area shape="rect" id="node36" href="$index__scan__executor_8h.html" title=" " alt="" coords="2636,95,2809,136"/>
+<area shape="rect" id="node38" href="$insert__executor_8h.html" title=" " alt="" coords="2460,95,2612,136"/>
+<area shape="rect" id="node40" href="$limit__executor_8h.html" title=" " alt="" coords="723,95,875,136"/>
+<area shape="rect" id="node42" href="$nested__index__join__executor_8h.html" title=" " alt="" coords="899,95,1117,136"/>
+<area shape="rect" id="node44" href="$nested__loop__join__executor_8h.html" title=" " alt="" coords="2089,95,2300,136"/>
+<area shape="rect" id="node46" href="$seq__scan__executor_8h.html" title=" " alt="" coords="1797,95,1957,136"/>
+<area shape="rect" id="node48" href="$update__executor_8h.html" title=" " alt="" coords="3395,95,3547,136"/>
+<area shape="rect" id="node50" href="$generic__key_8h.html" title=" " alt="" coords="4436,363,4599,404"/>
+<area shape="rect" id="node21" href="$abstract__plan_8h.html" title=" " alt="" coords="1355,363,1536,404"/>
+<area shape="rect" id="node5" href="$executor__context_8h.html" title=" " alt="" coords="2501,273,2646,315"/>
+<area shape="rect" id="node15" href="$tuple_8h.html" title=" " alt="" coords="2281,459,2439,486"/>
+<area shape="rect" id="node6" title=" " alt="" coords="2463,459,2577,486"/>
+<area shape="rect" id="node8" title=" " alt="" coords="1845,616,1907,643"/>
+<area shape="rect" id="node9" href="$catalog_8h.html" title=" " alt="" coords="1561,370,1695,397"/>
+<area shape="rect" id="node14" href="$transaction_8h.html" title=" " alt="" coords="2573,370,2763,397"/>
+<area shape="rect" id="node19" href="$tmp__tuple__page_8h.html" title=" " alt="" coords="2015,363,2193,404"/>
+<area shape="rect" id="node10" title=" " alt="" coords="2704,616,2763,643"/>
+<area shape="rect" id="node11" title=" " alt="" coords="2815,459,2939,486"/>
+<area shape="rect" id="node12" href="$schema_8h.html" title=" " alt="" coords="1701,541,1838,568"/>
+<area shape="rect" id="node13" href="$hash__function_8h.html" title=" " alt="" coords="3167,452,3321,493"/>
+<area shape="rect" id="node16" href="$rid_8h.html" title=" " alt="" coords="2847,541,2959,568"/>
+<area shape="rect" id="node17" href="$value_8h.html" title=" " alt="" coords="3966,541,4069,568"/>
+<area shape="rect" id="node18" title=" " alt="" coords="4268,616,4335,643"/>
+<area shape="rect" id="node20" href="$tmp__tuple_8h.html" title=" " alt="" coords="1965,459,2155,486"/>
+<area shape="rect" id="node23" href="$hash__util_8h.html" title=" " alt="" coords="4183,370,4361,397"/>
+<area shape="rect" id="node27" href="$abstract__expression_8h.html" title=" " alt="" coords="1719,363,1889,404"/>
+<area shape="rect" id="node28" href="$aggregation__plan_8h.html" title=" " alt="" coords="4015,273,4222,315"/>
+<area shape="rect" id="node29" href="$value__factory_8h.html" title=" " alt="" coords="4004,370,4159,397"/>
+<area shape="rect" id="node24" title=" " alt="" coords="4055,459,4140,486"/>
+<area shape="rect" id="node25" title=" " alt="" coords="4370,459,4435,486"/>
+<area shape="rect" id="node26" title=" " alt="" coords="4265,459,4345,486"/>
+<area shape="rect" id="node31" href="$delete__plan_8h.html" title=" " alt="" coords="1501,273,1670,315"/>
+<area shape="rect" id="node33" href="$distinct__plan_8h.html" title=" " alt="" coords="803,184,979,225"/>
+<area shape="rect" id="node35" href="$hash__join__plan_8h.html" title=" " alt="" coords="3223,273,3382,315"/>
+<area shape="rect" id="node37" href="$index__scan__plan_8h.html" title=" " alt="" coords="1869,273,2033,315"/>
+<area shape="rect" id="node39" href="$insert__plan_8h.html" title=" " alt="" coords="2159,273,2324,315"/>
+<area shape="rect" id="node41" href="$limit__plan_8h.html" title=" " alt="" coords="1003,184,1162,225"/>
+<area shape="rect" id="node43" href="$nested__index__join__plan_8h.html" title=" " alt="" coords="702,273,874,315"/>
+<area shape="rect" id="node45" href="$nested__loop__join__plan_8h.html" title=" " alt="" coords="1305,273,1477,315"/>
+<area shape="rect" id="node47" href="$seq__scan__plan_8h.html" title=" " alt="" coords="1694,273,1845,315"/>
+<area shape="rect" id="node49" href="$update__plan_8h.html" title=" " alt="" coords="2721,273,2895,315"/>
+</map>

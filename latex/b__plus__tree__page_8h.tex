@@ -1,0 +1,64 @@
+\hypertarget{b__plus__tree__page_8h}{}\doxysection{src/include/storage/page/b\+\_\+plus\+\_\+tree\+\_\+page.h File Reference}
+\label{b__plus__tree__page_8h}\index{src/include/storage/page/b\_plus\_tree\_page.h@{src/include/storage/page/b\_plus\_tree\_page.h}}
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$climits$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}buffer/buffer\+\_\+pool\+\_\+manager.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}storage/index/generic\+\_\+key.\+h\char`\"{}}\newline
+Include dependency graph for b\+\_\+plus\+\_\+tree\+\_\+page.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{b__plus__tree__page_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{b__plus__tree__page_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page$<$ Key\+Type, Value\+Type $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacebustub}{bustub}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{b__plus__tree__page_8h_a139704601c819af8cdce06a6c1080a85}{Mapping\+Type}}~std\+::pair$<$Key\+Type, Value\+Type$>$
+\item 
+\#define \mbox{\hyperlink{b__plus__tree__page_8h_a4c3acf10c136a6a89b0805e36e535847}{I\+N\+D\+E\+X\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS}}~template $<$typename Key\+Type, typename Value\+Type, typename Key\+Comparator$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacebustub_aa22b843a31f36c3abba2ac5410480497}{bustub\+::\+Index\+Page\+Type}} \{ \mbox{\hyperlink{namespacebustub_aa22b843a31f36c3abba2ac5410480497a989ae859024cc4c42b2ff8c522622d9b}{bustub\+::\+Index\+Page\+Type\+::\+I\+N\+V\+A\+L\+I\+D\+\_\+\+I\+N\+D\+E\+X\+\_\+\+P\+A\+GE}} = 0, 
+\mbox{\hyperlink{namespacebustub_aa22b843a31f36c3abba2ac5410480497a584d5f27cfd3d8d95e2e9d67e898b551}{bustub\+::\+Index\+Page\+Type\+::\+L\+E\+A\+F\+\_\+\+P\+A\+GE}}, 
+\mbox{\hyperlink{namespacebustub_aa22b843a31f36c3abba2ac5410480497ae11efb2490cfe0280d3f47a76a000bb0}{bustub\+::\+Index\+Page\+Type\+::\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+P\+A\+GE}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{b__plus__tree__page_8h_a4c3acf10c136a6a89b0805e36e535847}\label{b__plus__tree__page_8h_a4c3acf10c136a6a89b0805e36e535847}} 
+\index{b\_plus\_tree\_page.h@{b\_plus\_tree\_page.h}!INDEX\_TEMPLATE\_ARGUMENTS@{INDEX\_TEMPLATE\_ARGUMENTS}}
+\index{INDEX\_TEMPLATE\_ARGUMENTS@{INDEX\_TEMPLATE\_ARGUMENTS}!b\_plus\_tree\_page.h@{b\_plus\_tree\_page.h}}
+\doxysubsubsection{\texorpdfstring{INDEX\_TEMPLATE\_ARGUMENTS}{INDEX\_TEMPLATE\_ARGUMENTS}}
+{\footnotesize\ttfamily \#define I\+N\+D\+E\+X\+\_\+\+T\+E\+M\+P\+L\+A\+T\+E\+\_\+\+A\+R\+G\+U\+M\+E\+N\+TS~template $<$typename Key\+Type, typename Value\+Type, typename Key\+Comparator$>$}
+
+\mbox{\Hypertarget{b__plus__tree__page_8h_a139704601c819af8cdce06a6c1080a85}\label{b__plus__tree__page_8h_a139704601c819af8cdce06a6c1080a85}} 
+\index{b\_plus\_tree\_page.h@{b\_plus\_tree\_page.h}!MappingType@{MappingType}}
+\index{MappingType@{MappingType}!b\_plus\_tree\_page.h@{b\_plus\_tree\_page.h}}
+\doxysubsubsection{\texorpdfstring{MappingType}{MappingType}}
+{\footnotesize\ttfamily \#define Mapping\+Type~std\+::pair$<$Key\+Type, Value\+Type$>$}
+

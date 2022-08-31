@@ -1,0 +1,92 @@
+\hypertarget{classbustub_1_1RowMatrixOperations}{}\doxysection{bustub\+::Row\+Matrix\+Operations$<$ T $>$ Class Template Reference}
+\label{classbustub_1_1RowMatrixOperations}\index{bustub::RowMatrixOperations$<$ T $>$@{bustub::RowMatrixOperations$<$ T $>$}}
+
+
+{\ttfamily \#include $<$p0\+\_\+starter.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Row\+Matrix\+Operations$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{classbustub_1_1RowMatrixOperations__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $>$ \mbox{\hyperlink{classbustub_1_1RowMatrixOperations_a3bbbb43c057d0392be36cc78900c415f}{Add}} (const \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $\ast$matrixA, const \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $\ast$matrixB)
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $>$ \mbox{\hyperlink{classbustub_1_1RowMatrixOperations_a89bb145605ecf2c1e1bdc20f5c017689}{Multiply}} (const \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $\ast$matrixA, const \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $\ast$matrixB)
+\item 
+static std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $>$ \mbox{\hyperlink{classbustub_1_1RowMatrixOperations_ac5b8f9097a3ef76422d4bbfde6b33c1e}{G\+E\+MM}} (const \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $\ast$matrixA, const \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $\ast$matrixB, const \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $\ast$matrixC)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class bustub\+::\+Row\+Matrix\+Operations$<$ T $>$}
+
+The \mbox{\hyperlink{classbustub_1_1RowMatrixOperations}{Row\+Matrix\+Operations}} class defines operations that may be performed on instances of {\ttfamily \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1RowMatrixOperations_a3bbbb43c057d0392be36cc78900c415f}\label{classbustub_1_1RowMatrixOperations_a3bbbb43c057d0392be36cc78900c415f}} 
+\index{bustub::RowMatrixOperations$<$ T $>$@{bustub::RowMatrixOperations$<$ T $>$}!Add@{Add}}
+\index{Add@{Add}!bustub::RowMatrixOperations$<$ T $>$@{bustub::RowMatrixOperations$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$T$>$ $>$ \mbox{\hyperlink{classbustub_1_1RowMatrixOperations}{bustub\+::\+Row\+Matrix\+Operations}}$<$ T $>$\+::Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $\ast$}]{matrixA,  }\item[{const \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $\ast$}]{matrixB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Compute ({\ttfamily matrixA} + {\ttfamily matrixB}) and return the result. Return {\ttfamily nullptr} if dimensions mismatch for input matrices. 
+\begin{DoxyParams}{Parameters}
+{\em matrixA} & Input matrix \\
+\hline
+{\em matrixB} & Input matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of matrix addition 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1RowMatrixOperations_ac5b8f9097a3ef76422d4bbfde6b33c1e}\label{classbustub_1_1RowMatrixOperations_ac5b8f9097a3ef76422d4bbfde6b33c1e}} 
+\index{bustub::RowMatrixOperations$<$ T $>$@{bustub::RowMatrixOperations$<$ T $>$}!GEMM@{GEMM}}
+\index{GEMM@{GEMM}!bustub::RowMatrixOperations$<$ T $>$@{bustub::RowMatrixOperations$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GEMM()}{GEMM()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$T$>$ $>$ \mbox{\hyperlink{classbustub_1_1RowMatrixOperations}{bustub\+::\+Row\+Matrix\+Operations}}$<$ T $>$\+::G\+E\+MM (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $\ast$}]{matrixA,  }\item[{const \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $\ast$}]{matrixB,  }\item[{const \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $\ast$}]{matrixC }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Simplified General \mbox{\hyperlink{classbustub_1_1Matrix}{Matrix}} Multiply operation. Compute ({\ttfamily matrixA} $\ast$ {\ttfamily matrixB} + {\ttfamily matrixC}). Return {\ttfamily nullptr} if dimensions mismatch for input matrices. 
+\begin{DoxyParams}{Parameters}
+{\em matrixA} & Input matrix \\
+\hline
+{\em matrixB} & Input matrix \\
+\hline
+{\em matrixC} & Input matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of general matrix multiply 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1RowMatrixOperations_a89bb145605ecf2c1e1bdc20f5c017689}\label{classbustub_1_1RowMatrixOperations_a89bb145605ecf2c1e1bdc20f5c017689}} 
+\index{bustub::RowMatrixOperations$<$ T $>$@{bustub::RowMatrixOperations$<$ T $>$}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!bustub::RowMatrixOperations$<$ T $>$@{bustub::RowMatrixOperations$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+static std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$T$>$ $>$ \mbox{\hyperlink{classbustub_1_1RowMatrixOperations}{bustub\+::\+Row\+Matrix\+Operations}}$<$ T $>$\+::Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $\ast$}]{matrixA,  }\item[{const \mbox{\hyperlink{classbustub_1_1RowMatrix}{Row\+Matrix}}$<$ T $>$ $\ast$}]{matrixB }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Compute the matrix multiplication ({\ttfamily matrixA} $\ast$ {\ttfamily matrixB} and return the result. Return {\ttfamily nullptr} if dimensions mismatch for input matrices. 
+\begin{DoxyParams}{Parameters}
+{\em matrixA} & Input matrix \\
+\hline
+{\em matrixB} & Input matrix \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of matrix multiplication 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/primer/\mbox{\hyperlink{p0__starter_8h}{p0\+\_\+starter.\+h}}\end{DoxyCompactItemize}

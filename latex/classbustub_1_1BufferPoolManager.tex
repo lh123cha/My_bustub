@@ -1,0 +1,293 @@
+\hypertarget{classbustub_1_1BufferPoolManager}{}\doxysection{bustub\+::Buffer\+Pool\+Manager Class Reference}
+\label{classbustub_1_1BufferPoolManager}\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+
+
+{\ttfamily \#include $<$buffer\+\_\+pool\+\_\+manager.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Buffer\+Pool\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbustub_1_1BufferPoolManager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Buffer\+Pool\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classbustub_1_1BufferPoolManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a06dae7dffb7ed91759659f5ce0e05ff4}{Callback\+Type}} \{ \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a06dae7dffb7ed91759659f5ce0e05ff4a3525317285c6126ce3b62a8df8c00b07}{Callback\+Type\+::\+B\+E\+F\+O\+RE}}, 
+\mbox{\hyperlink{classbustub_1_1BufferPoolManager_a06dae7dffb7ed91759659f5ce0e05ff4ac130fda0cb93540bf1574912e78964fb}{Callback\+Type\+::\+A\+F\+T\+ER}}
+ \}
+\item 
+using \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bufferpool\+\_\+callback\+\_\+fn}} = void($\ast$)(enum \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a06dae7dffb7ed91759659f5ce0e05ff4}{Callback\+Type}}, const \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1BufferPoolManager_ac26cd50cfd0eb69a652df3d73bdb0608}{Buffer\+Pool\+Manager}} ()=default
+\item 
+virtual \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a8405b897fdf538beddb60985db1947ac}{$\sim$\+Buffer\+Pool\+Manager}} ()=default
+\item 
+\mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ \mbox{\hyperlink{classbustub_1_1BufferPoolManager_ae9b2440792bb5edb506ee46dc80f25c1}{Fetch\+Page}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id, \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bufferpool\+\_\+callback\+\_\+fn}} callback=nullptr)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1BufferPoolManager_ad1bdff550cf569917063b109ff2aeb9b}{Unpin\+Page}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id, bool is\+\_\+dirty, \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bufferpool\+\_\+callback\+\_\+fn}} callback=nullptr)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a37a0d00c93e1369a26c23a98e5d09d56}{Flush\+Page}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id, \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bufferpool\+\_\+callback\+\_\+fn}} callback=nullptr)
+\item 
+\mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a4bacf440c7b52c658814f923df72841e}{New\+Page}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} $\ast$page\+\_\+id, \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bufferpool\+\_\+callback\+\_\+fn}} callback=nullptr)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a1373eb1950d8d528c6d0e859aeb5041c}{Delete\+Page}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id, \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bufferpool\+\_\+callback\+\_\+fn}} callback=nullptr)
+\item 
+void \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a959d52c606087936901d12233a25531e}{Flush\+All\+Pages}} (\mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bufferpool\+\_\+callback\+\_\+fn}} callback=nullptr)
+\item 
+virtual size\+\_\+t \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aa803b9c1fe285cad7c688c7e5807200c}{Get\+Pool\+Size}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aa63c3dc99b0a61c1a4043652c0348e22}{Grading\+Callback}} (\mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bufferpool\+\_\+callback\+\_\+fn}} callback, \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a06dae7dffb7ed91759659f5ce0e05ff4}{Callback\+Type}} callback\+\_\+type, \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id)
+\item 
+virtual \mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a290e1723d12d509714e15650546b957d}{Fetch\+Pg\+Imp}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id)=0
+\item 
+virtual bool \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aa8871523e4ae89bad7b56fae79515344}{Unpin\+Pg\+Imp}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id, bool is\+\_\+dirty)=0
+\item 
+virtual bool \mbox{\hyperlink{classbustub_1_1BufferPoolManager_ac8156b2e4371685daad5765896dab8b6}{Flush\+Pg\+Imp}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id)=0
+\item 
+virtual \mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a326ef41dc22371cd4e453f3d606b16ab}{New\+Pg\+Imp}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} $\ast$page\+\_\+id)=0
+\item 
+virtual bool \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a1c30494c0e3b29e1e6aad70cc6e54a0b}{Delete\+Pg\+Imp}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id)=0
+\item 
+virtual void \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aa92aa48f53f033bfd7d0db433f2d25af}{Flush\+All\+Pgs\+Imp}} ()=0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} reads disk pages to and from its internal buffer pool. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}\label{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!bufferpool\_callback\_fn@{bufferpool\_callback\_fn}}
+\index{bufferpool\_callback\_fn@{bufferpool\_callback\_fn}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{bufferpool\_callback\_fn}{bufferpool\_callback\_fn}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bustub\+::\+Buffer\+Pool\+Manager\+::bufferpool\+\_\+callback\+\_\+fn}} =  void ($\ast$)(enum \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a06dae7dffb7ed91759659f5ce0e05ff4}{Callback\+Type}}, const \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id)}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a06dae7dffb7ed91759659f5ce0e05ff4}\label{classbustub_1_1BufferPoolManager_a06dae7dffb7ed91759659f5ce0e05ff4}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!CallbackType@{CallbackType}}
+\index{CallbackType@{CallbackType}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{CallbackType}{CallbackType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classbustub_1_1BufferPoolManager_a06dae7dffb7ed91759659f5ce0e05ff4}{bustub\+::\+Buffer\+Pool\+Manager\+::\+Callback\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BEFORE@{BEFORE}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!BEFORE@{BEFORE}}}\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a06dae7dffb7ed91759659f5ce0e05ff4a3525317285c6126ce3b62a8df8c00b07}\label{classbustub_1_1BufferPoolManager_a06dae7dffb7ed91759659f5ce0e05ff4a3525317285c6126ce3b62a8df8c00b07}} 
+B\+E\+F\+O\+RE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AFTER@{AFTER}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!AFTER@{AFTER}}}\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a06dae7dffb7ed91759659f5ce0e05ff4ac130fda0cb93540bf1574912e78964fb}\label{classbustub_1_1BufferPoolManager_a06dae7dffb7ed91759659f5ce0e05ff4ac130fda0cb93540bf1574912e78964fb}} 
+A\+F\+T\+ER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_ac26cd50cfd0eb69a652df3d73bdb0608}\label{classbustub_1_1BufferPoolManager_ac26cd50cfd0eb69a652df3d73bdb0608}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!BufferPoolManager@{BufferPoolManager}}
+\index{BufferPoolManager@{BufferPoolManager}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{BufferPoolManager()}{BufferPoolManager()}}
+{\footnotesize\ttfamily bustub\+::\+Buffer\+Pool\+Manager\+::\+Buffer\+Pool\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a8405b897fdf538beddb60985db1947ac}\label{classbustub_1_1BufferPoolManager_a8405b897fdf538beddb60985db1947ac}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!````~BufferPoolManager@{$\sim$BufferPoolManager}}
+\index{````~BufferPoolManager@{$\sim$BufferPoolManager}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$BufferPoolManager()}{~BufferPoolManager()}}
+{\footnotesize\ttfamily virtual bustub\+::\+Buffer\+Pool\+Manager\+::$\sim$\+Buffer\+Pool\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Destroys an existing \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}}. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a1373eb1950d8d528c6d0e859aeb5041c}\label{classbustub_1_1BufferPoolManager_a1373eb1950d8d528c6d0e859aeb5041c}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!DeletePage@{DeletePage}}
+\index{DeletePage@{DeletePage}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{DeletePage()}{DeletePage()}}
+{\footnotesize\ttfamily bool bustub\+::\+Buffer\+Pool\+Manager\+::\+Delete\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id,  }\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bufferpool\+\_\+callback\+\_\+fn}}}]{callback = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Grading function. Do not modify! \mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a1c30494c0e3b29e1e6aad70cc6e54a0b}\label{classbustub_1_1BufferPoolManager_a1c30494c0e3b29e1e6aad70cc6e54a0b}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!DeletePgImp@{DeletePgImp}}
+\index{DeletePgImp@{DeletePgImp}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{DeletePgImp()}{DeletePgImp()}}
+{\footnotesize\ttfamily virtual bool bustub\+::\+Buffer\+Pool\+Manager\+::\+Delete\+Pg\+Imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Deletes a page from the buffer pool. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of page to be deleted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the page exists but could not be deleted, true if the page didn\textquotesingle{}t exist or deletion succeeded 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a256384e9d22a21adc432ea7f6b9d4298}{bustub\+::\+Buffer\+Pool\+Manager\+Instance}}, and \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_a23b3f455c262812b5f8d76cbb2df6e21}{bustub\+::\+Parallel\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_ae9b2440792bb5edb506ee46dc80f25c1}\label{classbustub_1_1BufferPoolManager_ae9b2440792bb5edb506ee46dc80f25c1}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!FetchPage@{FetchPage}}
+\index{FetchPage@{FetchPage}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{FetchPage()}{FetchPage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Page}{Page}}$\ast$ bustub\+::\+Buffer\+Pool\+Manager\+::\+Fetch\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id,  }\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bufferpool\+\_\+callback\+\_\+fn}}}]{callback = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Grading function. Do not modify! \mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a290e1723d12d509714e15650546b957d}\label{classbustub_1_1BufferPoolManager_a290e1723d12d509714e15650546b957d}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!FetchPgImp@{FetchPgImp}}
+\index{FetchPgImp@{FetchPgImp}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{FetchPgImp()}{FetchPgImp()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classbustub_1_1Page}{Page}}$\ast$ bustub\+::\+Buffer\+Pool\+Manager\+::\+Fetch\+Pg\+Imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Fetch the requested page from the buffer pool. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of page to be fetched \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the requested page 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a03b394acdbcdb847ad61aadd7143a6eb}{bustub\+::\+Buffer\+Pool\+Manager\+Instance}}, and \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_a93d88163dc2378d5e161e9f2370e500f}{bustub\+::\+Parallel\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a959d52c606087936901d12233a25531e}\label{classbustub_1_1BufferPoolManager_a959d52c606087936901d12233a25531e}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!FlushAllPages@{FlushAllPages}}
+\index{FlushAllPages@{FlushAllPages}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{FlushAllPages()}{FlushAllPages()}}
+{\footnotesize\ttfamily void bustub\+::\+Buffer\+Pool\+Manager\+::\+Flush\+All\+Pages (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bufferpool\+\_\+callback\+\_\+fn}}}]{callback = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Grading function. Do not modify! \mbox{\Hypertarget{classbustub_1_1BufferPoolManager_aa92aa48f53f033bfd7d0db433f2d25af}\label{classbustub_1_1BufferPoolManager_aa92aa48f53f033bfd7d0db433f2d25af}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!FlushAllPgsImp@{FlushAllPgsImp}}
+\index{FlushAllPgsImp@{FlushAllPgsImp}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{FlushAllPgsImp()}{FlushAllPgsImp()}}
+{\footnotesize\ttfamily virtual void bustub\+::\+Buffer\+Pool\+Manager\+::\+Flush\+All\+Pgs\+Imp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Flushes all the pages in the buffer pool to disk. 
+
+Implemented in \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a892663bed7b1ff075f1489d2d0de70ff}{bustub\+::\+Buffer\+Pool\+Manager\+Instance}}, and \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_a2521b43ed78ec4eb59ddcfe9bae70901}{bustub\+::\+Parallel\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a37a0d00c93e1369a26c23a98e5d09d56}\label{classbustub_1_1BufferPoolManager_a37a0d00c93e1369a26c23a98e5d09d56}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!FlushPage@{FlushPage}}
+\index{FlushPage@{FlushPage}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{FlushPage()}{FlushPage()}}
+{\footnotesize\ttfamily bool bustub\+::\+Buffer\+Pool\+Manager\+::\+Flush\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id,  }\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bufferpool\+\_\+callback\+\_\+fn}}}]{callback = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Grading function. Do not modify! \mbox{\Hypertarget{classbustub_1_1BufferPoolManager_ac8156b2e4371685daad5765896dab8b6}\label{classbustub_1_1BufferPoolManager_ac8156b2e4371685daad5765896dab8b6}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!FlushPgImp@{FlushPgImp}}
+\index{FlushPgImp@{FlushPgImp}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{FlushPgImp()}{FlushPgImp()}}
+{\footnotesize\ttfamily virtual bool bustub\+::\+Buffer\+Pool\+Manager\+::\+Flush\+Pg\+Imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Flushes the target page to disk. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of page to be flushed, cannot be I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+G\+E\+\_\+\+ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the page could not be found in the page table, true otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a92b23b88d357e8e89b0b95f925e6dd67}{bustub\+::\+Buffer\+Pool\+Manager\+Instance}}, and \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_a1e2effcd377cd25f0a6affda0c6306bf}{bustub\+::\+Parallel\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_aa803b9c1fe285cad7c688c7e5807200c}\label{classbustub_1_1BufferPoolManager_aa803b9c1fe285cad7c688c7e5807200c}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!GetPoolSize@{GetPoolSize}}
+\index{GetPoolSize@{GetPoolSize}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{GetPoolSize()}{GetPoolSize()}}
+{\footnotesize\ttfamily virtual size\+\_\+t bustub\+::\+Buffer\+Pool\+Manager\+::\+Get\+Pool\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+size of the buffer pool 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a85c9f27cdf20808f38f9f3335cb6b771}{bustub\+::\+Buffer\+Pool\+Manager\+Instance}}, and \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_a9b250f8c86bf4e48fcada7414cfd4e5d}{bustub\+::\+Parallel\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_aa63c3dc99b0a61c1a4043652c0348e22}\label{classbustub_1_1BufferPoolManager_aa63c3dc99b0a61c1a4043652c0348e22}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!GradingCallback@{GradingCallback}}
+\index{GradingCallback@{GradingCallback}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{GradingCallback()}{GradingCallback()}}
+{\footnotesize\ttfamily void bustub\+::\+Buffer\+Pool\+Manager\+::\+Grading\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bufferpool\+\_\+callback\+\_\+fn}}}]{callback,  }\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager_a06dae7dffb7ed91759659f5ce0e05ff4}{Callback\+Type}}}]{callback\+\_\+type,  }\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Grading function. Do not modify! Invokes the callback function if it is not null. 
+\begin{DoxyParams}{Parameters}
+{\em callback} & callback function to be invoked \\
+\hline
+{\em callback\+\_\+type} & B\+E\+F\+O\+RE or A\+F\+T\+ER \\
+\hline
+{\em page\+\_\+id} & the page id to invoke the callback with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a4bacf440c7b52c658814f923df72841e}\label{classbustub_1_1BufferPoolManager_a4bacf440c7b52c658814f923df72841e}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!NewPage@{NewPage}}
+\index{NewPage@{NewPage}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{NewPage()}{NewPage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Page}{Page}}$\ast$ bustub\+::\+Buffer\+Pool\+Manager\+::\+New\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} $\ast$}]{page\+\_\+id,  }\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bufferpool\+\_\+callback\+\_\+fn}}}]{callback = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Grading function. Do not modify! \mbox{\Hypertarget{classbustub_1_1BufferPoolManager_a326ef41dc22371cd4e453f3d606b16ab}\label{classbustub_1_1BufferPoolManager_a326ef41dc22371cd4e453f3d606b16ab}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!NewPgImp@{NewPgImp}}
+\index{NewPgImp@{NewPgImp}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{NewPgImp()}{NewPgImp()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classbustub_1_1Page}{Page}}$\ast$ bustub\+::\+Buffer\+Pool\+Manager\+::\+New\+Pg\+Imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} $\ast$}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Creates a new page in the buffer pool. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em page\+\_\+id} & id of created page \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nullptr if no new pages could be created, otherwise pointer to new page 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_aa286e2adbd48f2b68e6782ce4a866d89}{bustub\+::\+Buffer\+Pool\+Manager\+Instance}}, and \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_ae8963fe7a8bc9041ef15e00d3ee3d501}{bustub\+::\+Parallel\+Buffer\+Pool\+Manager}}.
+
+\mbox{\Hypertarget{classbustub_1_1BufferPoolManager_ad1bdff550cf569917063b109ff2aeb9b}\label{classbustub_1_1BufferPoolManager_ad1bdff550cf569917063b109ff2aeb9b}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!UnpinPage@{UnpinPage}}
+\index{UnpinPage@{UnpinPage}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{UnpinPage()}{UnpinPage()}}
+{\footnotesize\ttfamily bool bustub\+::\+Buffer\+Pool\+Manager\+::\+Unpin\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id,  }\item[{bool}]{is\+\_\+dirty,  }\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager_aabdc1a8cd11d26c66e688adb5157a15b}{bufferpool\+\_\+callback\+\_\+fn}}}]{callback = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Grading function. Do not modify! \mbox{\Hypertarget{classbustub_1_1BufferPoolManager_aa8871523e4ae89bad7b56fae79515344}\label{classbustub_1_1BufferPoolManager_aa8871523e4ae89bad7b56fae79515344}} 
+\index{bustub::BufferPoolManager@{bustub::BufferPoolManager}!UnpinPgImp@{UnpinPgImp}}
+\index{UnpinPgImp@{UnpinPgImp}!bustub::BufferPoolManager@{bustub::BufferPoolManager}}
+\doxysubsubsection{\texorpdfstring{UnpinPgImp()}{UnpinPgImp()}}
+{\footnotesize\ttfamily virtual bool bustub\+::\+Buffer\+Pool\+Manager\+::\+Unpin\+Pg\+Imp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id,  }\item[{bool}]{is\+\_\+dirty }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+Unpin the target page from the buffer pool. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of page to be unpinned \\
+\hline
+{\em is\+\_\+dirty} & true if the page should be marked as dirty, false otherwise \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+false if the page pin count is $<$= 0 before this call, true otherwise 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1BufferPoolManagerInstance_a78c7a0b207e6f37b267cac6a5d3cd43a}{bustub\+::\+Buffer\+Pool\+Manager\+Instance}}, and \mbox{\hyperlink{classbustub_1_1ParallelBufferPoolManager_a39cba8710ae8dd4aad37c76a6abf3887}{bustub\+::\+Parallel\+Buffer\+Pool\+Manager}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/buffer/\mbox{\hyperlink{buffer__pool__manager_8h}{buffer\+\_\+pool\+\_\+manager.\+h}}\end{DoxyCompactItemize}

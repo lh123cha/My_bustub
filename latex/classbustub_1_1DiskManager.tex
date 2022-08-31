@@ -1,0 +1,187 @@
+\hypertarget{classbustub_1_1DiskManager}{}\doxysection{bustub\+::Disk\+Manager Class Reference}
+\label{classbustub_1_1DiskManager}\index{bustub::DiskManager@{bustub::DiskManager}}
+
+
+{\ttfamily \#include $<$disk\+\_\+manager.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Disk\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classbustub_1_1DiskManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1DiskManager_aba194755344868fb657ee9fa9588b41c}{Disk\+Manager}} (const std\+::string \&db\+\_\+file)
+\item 
+\mbox{\hyperlink{classbustub_1_1DiskManager_a46a473815d2e423cf6958387f468fc8e}{$\sim$\+Disk\+Manager}} ()=default
+\item 
+void \mbox{\hyperlink{classbustub_1_1DiskManager_a570857ef083e9f7410309850609db52b}{Shut\+Down}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1DiskManager_ae89df7f59076403589c78c52482c4ceb}{Write\+Page}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id, const char $\ast$page\+\_\+data)
+\item 
+void \mbox{\hyperlink{classbustub_1_1DiskManager_aa6cc12345be1e07c2fdb70c50af5e2d8}{Read\+Page}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id, char $\ast$page\+\_\+data)
+\item 
+void \mbox{\hyperlink{classbustub_1_1DiskManager_ae3764dd5b64c7cfed48d9ee3f8490171}{Write\+Log}} (char $\ast$log\+\_\+data, int size)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1DiskManager_abb5b256a7aa917c7814ad0f67404eda5}{Read\+Log}} (char $\ast$log\+\_\+data, int size, int offset)
+\item 
+int \mbox{\hyperlink{classbustub_1_1DiskManager_ac954db4aee2313467d2eb25912c0cd37}{Get\+Num\+Flushes}} () const
+\item 
+bool \mbox{\hyperlink{classbustub_1_1DiskManager_ade15c71806ed0d7603888a32051419b7}{Get\+Flush\+State}} () const
+\item 
+int \mbox{\hyperlink{classbustub_1_1DiskManager_ad80ffbf179c9b030c675d816f5f3f7ee}{Get\+Num\+Writes}} () const
+\item 
+void \mbox{\hyperlink{classbustub_1_1DiskManager_ac26ad206410e4a792e0f095e3ba27f96}{Set\+Flush\+Log\+Future}} (std\+::future$<$ void $>$ $\ast$f)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1DiskManager_a0ee9fba74f52c903bbf18bcf81412d9b}{Has\+Flush\+Log\+Future}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1DiskManager}{Disk\+Manager}} takes care of the allocation and deallocation of pages within a database. It performs the reading and writing of pages to and from disk, providing a logical file layer within the context of a database management system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1DiskManager_aba194755344868fb657ee9fa9588b41c}\label{classbustub_1_1DiskManager_aba194755344868fb657ee9fa9588b41c}} 
+\index{bustub::DiskManager@{bustub::DiskManager}!DiskManager@{DiskManager}}
+\index{DiskManager@{DiskManager}!bustub::DiskManager@{bustub::DiskManager}}
+\doxysubsubsection{\texorpdfstring{DiskManager()}{DiskManager()}}
+{\footnotesize\ttfamily bustub\+::\+Disk\+Manager\+::\+Disk\+Manager (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{db\+\_\+file }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Creates a new disk manager that writes to the specified database file. 
+\begin{DoxyParams}{Parameters}
+{\em db\+\_\+file} & the file name of the database file to write to\\
+\hline
+\end{DoxyParams}
+Constructor\+: open/create a single database file \& log file @input db\+\_\+file\+: database file name \mbox{\Hypertarget{classbustub_1_1DiskManager_a46a473815d2e423cf6958387f468fc8e}\label{classbustub_1_1DiskManager_a46a473815d2e423cf6958387f468fc8e}} 
+\index{bustub::DiskManager@{bustub::DiskManager}!````~DiskManager@{$\sim$DiskManager}}
+\index{````~DiskManager@{$\sim$DiskManager}!bustub::DiskManager@{bustub::DiskManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$DiskManager()}{~DiskManager()}}
+{\footnotesize\ttfamily bustub\+::\+Disk\+Manager\+::$\sim$\+Disk\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1DiskManager_ade15c71806ed0d7603888a32051419b7}\label{classbustub_1_1DiskManager_ade15c71806ed0d7603888a32051419b7}} 
+\index{bustub::DiskManager@{bustub::DiskManager}!GetFlushState@{GetFlushState}}
+\index{GetFlushState@{GetFlushState}!bustub::DiskManager@{bustub::DiskManager}}
+\doxysubsubsection{\texorpdfstring{GetFlushState()}{GetFlushState()}}
+{\footnotesize\ttfamily bool bustub\+::\+Disk\+Manager\+::\+Get\+Flush\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+true iff the in-\/memory content has not been flushed yet
+\end{DoxyReturn}
+Returns true if the log is currently being flushed \mbox{\Hypertarget{classbustub_1_1DiskManager_ac954db4aee2313467d2eb25912c0cd37}\label{classbustub_1_1DiskManager_ac954db4aee2313467d2eb25912c0cd37}} 
+\index{bustub::DiskManager@{bustub::DiskManager}!GetNumFlushes@{GetNumFlushes}}
+\index{GetNumFlushes@{GetNumFlushes}!bustub::DiskManager@{bustub::DiskManager}}
+\doxysubsubsection{\texorpdfstring{GetNumFlushes()}{GetNumFlushes()}}
+{\footnotesize\ttfamily int bustub\+::\+Disk\+Manager\+::\+Get\+Num\+Flushes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the number of disk flushes
+\end{DoxyReturn}
+Returns number of flushes made so far \mbox{\Hypertarget{classbustub_1_1DiskManager_ad80ffbf179c9b030c675d816f5f3f7ee}\label{classbustub_1_1DiskManager_ad80ffbf179c9b030c675d816f5f3f7ee}} 
+\index{bustub::DiskManager@{bustub::DiskManager}!GetNumWrites@{GetNumWrites}}
+\index{GetNumWrites@{GetNumWrites}!bustub::DiskManager@{bustub::DiskManager}}
+\doxysubsubsection{\texorpdfstring{GetNumWrites()}{GetNumWrites()}}
+{\footnotesize\ttfamily int bustub\+::\+Disk\+Manager\+::\+Get\+Num\+Writes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+the number of disk writes
+\end{DoxyReturn}
+Returns number of Writes made so far \mbox{\Hypertarget{classbustub_1_1DiskManager_a0ee9fba74f52c903bbf18bcf81412d9b}\label{classbustub_1_1DiskManager_a0ee9fba74f52c903bbf18bcf81412d9b}} 
+\index{bustub::DiskManager@{bustub::DiskManager}!HasFlushLogFuture@{HasFlushLogFuture}}
+\index{HasFlushLogFuture@{HasFlushLogFuture}!bustub::DiskManager@{bustub::DiskManager}}
+\doxysubsubsection{\texorpdfstring{HasFlushLogFuture()}{HasFlushLogFuture()}}
+{\footnotesize\ttfamily bool bustub\+::\+Disk\+Manager\+::\+Has\+Flush\+Log\+Future (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Checks if the non-\/blocking flush future was set. \mbox{\Hypertarget{classbustub_1_1DiskManager_abb5b256a7aa917c7814ad0f67404eda5}\label{classbustub_1_1DiskManager_abb5b256a7aa917c7814ad0f67404eda5}} 
+\index{bustub::DiskManager@{bustub::DiskManager}!ReadLog@{ReadLog}}
+\index{ReadLog@{ReadLog}!bustub::DiskManager@{bustub::DiskManager}}
+\doxysubsubsection{\texorpdfstring{ReadLog()}{ReadLog()}}
+{\footnotesize\ttfamily bool bustub\+::\+Disk\+Manager\+::\+Read\+Log (\begin{DoxyParamCaption}\item[{char $\ast$}]{log\+\_\+data,  }\item[{int}]{size,  }\item[{int}]{offset }\end{DoxyParamCaption})}
+
+Read a log entry from the log file. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em log\+\_\+data} & output buffer \\
+\hline
+ & {\em size} & size of the log entry \\
+\hline
+ & {\em offset} & offset of the log entry in the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the read was successful, false otherwise
+\end{DoxyReturn}
+Read the contents of the log into the given memory area Always read from the beginning and perform sequence read \begin{DoxyReturn}{Returns}
+\+: false means already reach the end 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1DiskManager_aa6cc12345be1e07c2fdb70c50af5e2d8}\label{classbustub_1_1DiskManager_aa6cc12345be1e07c2fdb70c50af5e2d8}} 
+\index{bustub::DiskManager@{bustub::DiskManager}!ReadPage@{ReadPage}}
+\index{ReadPage@{ReadPage}!bustub::DiskManager@{bustub::DiskManager}}
+\doxysubsubsection{\texorpdfstring{ReadPage()}{ReadPage()}}
+{\footnotesize\ttfamily void bustub\+::\+Disk\+Manager\+::\+Read\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id,  }\item[{char $\ast$}]{page\+\_\+data }\end{DoxyParamCaption})}
+
+Read a page from the database file. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em page\+\_\+id} & id of the page \\
+\hline
+\mbox{\texttt{ out}}  & {\em page\+\_\+data} & output buffer\\
+\hline
+\end{DoxyParams}
+Read the contents of the specified page into the given memory area \mbox{\Hypertarget{classbustub_1_1DiskManager_ac26ad206410e4a792e0f095e3ba27f96}\label{classbustub_1_1DiskManager_ac26ad206410e4a792e0f095e3ba27f96}} 
+\index{bustub::DiskManager@{bustub::DiskManager}!SetFlushLogFuture@{SetFlushLogFuture}}
+\index{SetFlushLogFuture@{SetFlushLogFuture}!bustub::DiskManager@{bustub::DiskManager}}
+\doxysubsubsection{\texorpdfstring{SetFlushLogFuture()}{SetFlushLogFuture()}}
+{\footnotesize\ttfamily void bustub\+::\+Disk\+Manager\+::\+Set\+Flush\+Log\+Future (\begin{DoxyParamCaption}\item[{std\+::future$<$ void $>$ $\ast$}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Sets the future which is used to check for non-\/blocking flushes. 
+\begin{DoxyParams}{Parameters}
+{\em f} & the non-\/blocking flush check \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1DiskManager_a570857ef083e9f7410309850609db52b}\label{classbustub_1_1DiskManager_a570857ef083e9f7410309850609db52b}} 
+\index{bustub::DiskManager@{bustub::DiskManager}!ShutDown@{ShutDown}}
+\index{ShutDown@{ShutDown}!bustub::DiskManager@{bustub::DiskManager}}
+\doxysubsubsection{\texorpdfstring{ShutDown()}{ShutDown()}}
+{\footnotesize\ttfamily void bustub\+::\+Disk\+Manager\+::\+Shut\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Shut down the disk manager and close all the file resources.
+
+Close all file streams \mbox{\Hypertarget{classbustub_1_1DiskManager_ae3764dd5b64c7cfed48d9ee3f8490171}\label{classbustub_1_1DiskManager_ae3764dd5b64c7cfed48d9ee3f8490171}} 
+\index{bustub::DiskManager@{bustub::DiskManager}!WriteLog@{WriteLog}}
+\index{WriteLog@{WriteLog}!bustub::DiskManager@{bustub::DiskManager}}
+\doxysubsubsection{\texorpdfstring{WriteLog()}{WriteLog()}}
+{\footnotesize\ttfamily void bustub\+::\+Disk\+Manager\+::\+Write\+Log (\begin{DoxyParamCaption}\item[{char $\ast$}]{log\+\_\+data,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+Flush the entire log buffer into disk. 
+\begin{DoxyParams}{Parameters}
+{\em log\+\_\+data} & raw log data \\
+\hline
+{\em size} & size of log entry\\
+\hline
+\end{DoxyParams}
+Write the contents of the log into disk file Only return when sync is done, and only perform sequence write \mbox{\Hypertarget{classbustub_1_1DiskManager_ae89df7f59076403589c78c52482c4ceb}\label{classbustub_1_1DiskManager_ae89df7f59076403589c78c52482c4ceb}} 
+\index{bustub::DiskManager@{bustub::DiskManager}!WritePage@{WritePage}}
+\index{WritePage@{WritePage}!bustub::DiskManager@{bustub::DiskManager}}
+\doxysubsubsection{\texorpdfstring{WritePage()}{WritePage()}}
+{\footnotesize\ttfamily void bustub\+::\+Disk\+Manager\+::\+Write\+Page (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id,  }\item[{const char $\ast$}]{page\+\_\+data }\end{DoxyParamCaption})}
+
+Write a page to the database file. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & id of the page \\
+\hline
+{\em page\+\_\+data} & raw page data\\
+\hline
+\end{DoxyParams}
+Write the contents of the specified page into disk file 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/disk/\mbox{\hyperlink{disk__manager_8h}{disk\+\_\+manager.\+h}}\item 
+src/storage/disk/\mbox{\hyperlink{disk__manager_8cpp}{disk\+\_\+manager.\+cpp}}\end{DoxyCompactItemize}

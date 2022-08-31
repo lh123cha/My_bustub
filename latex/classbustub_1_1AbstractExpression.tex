@@ -1,0 +1,162 @@
+\hypertarget{classbustub_1_1AbstractExpression}{}\doxysection{bustub\+::Abstract\+Expression Class Reference}
+\label{classbustub_1_1AbstractExpression}\index{bustub::AbstractExpression@{bustub::AbstractExpression}}
+
+
+{\ttfamily \#include $<$abstract\+\_\+expression.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Abstract\+Expression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbustub_1_1AbstractExpression__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Abstract\+Expression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{classbustub_1_1AbstractExpression__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1AbstractExpression_a14f9c4449434a35dd98335ff1884f028}{Abstract\+Expression}} (std\+::vector$<$ const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ $>$ \&\&children, \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} ret\+\_\+type)
+\item 
+virtual \mbox{\hyperlink{classbustub_1_1AbstractExpression_a39d2128291169c6fd8beaf2203aefd7e}{$\sim$\+Abstract\+Expression}} ()=default
+\item 
+virtual \mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1AbstractExpression_a20ce852bd02a5e8c1fc9b8707421747c}{Evaluate}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$schema) const =0
+\item 
+virtual \mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1AbstractExpression_a5b672f7f2b84194fcdf3ff7b52f6d985}{Evaluate\+Join}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$left\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$left\+\_\+schema, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$right\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$right\+\_\+schema) const =0
+\item 
+virtual \mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1AbstractExpression_a0b82b02ed6b714e77a0395da6d2f4254}{Evaluate\+Aggregate}} (const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ \&group\+\_\+bys, const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ \&aggregates) const =0
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ \mbox{\hyperlink{classbustub_1_1AbstractExpression_a13b3b1745896bb4640f4c4b98db25f2c}{Get\+Child\+At}} (uint32\+\_\+t child\+\_\+idx) const
+\item 
+const std\+::vector$<$ const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ $>$ \& \mbox{\hyperlink{classbustub_1_1AbstractExpression_a833cdf595ff7eee7053b82dc55a9f190}{Get\+Children}} () const
+\item 
+virtual \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} \mbox{\hyperlink{classbustub_1_1AbstractExpression_a7bad48e5a683233f45c9ed5175ba9ce1}{Get\+Return\+Type}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} is the base class of all the expressions in the system. Expressions are modeled as trees, i.\+e. every expression may have a variable number of children. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_a14f9c4449434a35dd98335ff1884f028}\label{classbustub_1_1AbstractExpression_a14f9c4449434a35dd98335ff1884f028}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!AbstractExpression@{AbstractExpression}}
+\index{AbstractExpression@{AbstractExpression}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{AbstractExpression()}{AbstractExpression()}}
+{\footnotesize\ttfamily bustub\+::\+Abstract\+Expression\+::\+Abstract\+Expression (\begin{DoxyParamCaption}\item[{std\+::vector$<$ const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ $>$ \&\&}]{children,  }\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{ret\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Create a new \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} with the given children and return type. 
+\begin{DoxyParams}{Parameters}
+{\em children} & the children of this abstract expression \\
+\hline
+{\em ret\+\_\+type} & the return type of this abstract expression when it is evaluated \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_a39d2128291169c6fd8beaf2203aefd7e}\label{classbustub_1_1AbstractExpression_a39d2128291169c6fd8beaf2203aefd7e}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!````~AbstractExpression@{$\sim$AbstractExpression}}
+\index{````~AbstractExpression@{$\sim$AbstractExpression}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{$\sim$AbstractExpression()}{~AbstractExpression()}}
+{\footnotesize\ttfamily virtual bustub\+::\+Abstract\+Expression\+::$\sim$\+Abstract\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Virtual destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_a20ce852bd02a5e8c1fc9b8707421747c}\label{classbustub_1_1AbstractExpression_a20ce852bd02a5e8c1fc9b8707421747c}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!Evaluate@{Evaluate}}
+\index{Evaluate@{Evaluate}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{Evaluate()}{Evaluate()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Abstract\+Expression\+::\+Evaluate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{schema }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating the tuple with the given schema 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1AggregateValueExpression_a7552c6cc8841219b4cbc76ed16647faf}{bustub\+::\+Aggregate\+Value\+Expression}}, \mbox{\hyperlink{classbustub_1_1ComparisonExpression_ae4593aba1bca6fc4d2cd2cc074d50445}{bustub\+::\+Comparison\+Expression}}, \mbox{\hyperlink{classbustub_1_1ColumnValueExpression_ae48653bbd0c7b0addebe1c3b9b16fae9}{bustub\+::\+Column\+Value\+Expression}}, and \mbox{\hyperlink{classbustub_1_1ConstantValueExpression_ab4253c2eecc1a10e3bedc1e4bd68d185}{bustub\+::\+Constant\+Value\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_a0b82b02ed6b714e77a0395da6d2f4254}\label{classbustub_1_1AbstractExpression_a0b82b02ed6b714e77a0395da6d2f4254}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!EvaluateAggregate@{EvaluateAggregate}}
+\index{EvaluateAggregate@{EvaluateAggregate}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{EvaluateAggregate()}{EvaluateAggregate()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Abstract\+Expression\+::\+Evaluate\+Aggregate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ \&}]{group\+\_\+bys,  }\item[{const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ \&}]{aggregates }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns the value obtained by evaluating the aggregates. 
+\begin{DoxyParams}{Parameters}
+{\em group\+\_\+bys} & The group by values \\
+\hline
+{\em aggregates} & The aggregate values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value obtained by checking the aggregates and group-\/bys 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1AggregateValueExpression_af724dfde04df7d5ab3e207b893ba9088}{bustub\+::\+Aggregate\+Value\+Expression}}, \mbox{\hyperlink{classbustub_1_1ComparisonExpression_a47de9e75528d5ca3218fc46d71bc3db9}{bustub\+::\+Comparison\+Expression}}, \mbox{\hyperlink{classbustub_1_1ColumnValueExpression_a976239d1f0a570036680600091a8216e}{bustub\+::\+Column\+Value\+Expression}}, and \mbox{\hyperlink{classbustub_1_1ConstantValueExpression_a14734efc7c5395781d63ede9cd316564}{bustub\+::\+Constant\+Value\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_a5b672f7f2b84194fcdf3ff7b52f6d985}\label{classbustub_1_1AbstractExpression_a5b672f7f2b84194fcdf3ff7b52f6d985}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!EvaluateJoin@{EvaluateJoin}}
+\index{EvaluateJoin@{EvaluateJoin}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{EvaluateJoin()}{EvaluateJoin()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Abstract\+Expression\+::\+Evaluate\+Join (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{left\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{left\+\_\+schema,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{right\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{right\+\_\+schema }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Returns the value obtained by evaluating a J\+O\+IN. 
+\begin{DoxyParams}{Parameters}
+{\em left\+\_\+tuple} & The left tuple \\
+\hline
+{\em left\+\_\+schema} & The left tuple\textquotesingle{}s schema \\
+\hline
+{\em right\+\_\+tuple} & The right tuple \\
+\hline
+{\em right\+\_\+schema} & The right tuple\textquotesingle{}s schema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The value obtained by evaluating a J\+O\+IN on the left and right 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1ComparisonExpression_a5a4fe166a615358628780c4aa649680f}{bustub\+::\+Comparison\+Expression}}, \mbox{\hyperlink{classbustub_1_1AggregateValueExpression_aca4ec7661197a272be53b6d34f54aca4}{bustub\+::\+Aggregate\+Value\+Expression}}, \mbox{\hyperlink{classbustub_1_1ColumnValueExpression_a69857c12f468f5f54babeea64464f488}{bustub\+::\+Column\+Value\+Expression}}, and \mbox{\hyperlink{classbustub_1_1ConstantValueExpression_a603d23e6913a918b7470392528f30228}{bustub\+::\+Constant\+Value\+Expression}}.
+
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_a13b3b1745896bb4640f4c4b98db25f2c}\label{classbustub_1_1AbstractExpression_a13b3b1745896bb4640f4c4b98db25f2c}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!GetChildAt@{GetChildAt}}
+\index{GetChildAt@{GetChildAt}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{GetChildAt()}{GetChildAt()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$\ast$ bustub\+::\+Abstract\+Expression\+::\+Get\+Child\+At (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{child\+\_\+idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the child\+\_\+idx\textquotesingle{}th child of this expression 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_a833cdf595ff7eee7053b82dc55a9f190}\label{classbustub_1_1AbstractExpression_a833cdf595ff7eee7053b82dc55a9f190}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!GetChildren@{GetChildren}}
+\index{GetChildren@{GetChildren}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{GetChildren()}{GetChildren()}}
+{\footnotesize\ttfamily const std\+::vector$<$const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$$>$\& bustub\+::\+Abstract\+Expression\+::\+Get\+Children (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the children of this expression, ordering may matter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AbstractExpression_a7bad48e5a683233f45c9ed5175ba9ce1}\label{classbustub_1_1AbstractExpression_a7bad48e5a683233f45c9ed5175ba9ce1}} 
+\index{bustub::AbstractExpression@{bustub::AbstractExpression}!GetReturnType@{GetReturnType}}
+\index{GetReturnType@{GetReturnType}!bustub::AbstractExpression@{bustub::AbstractExpression}}
+\doxysubsubsection{\texorpdfstring{GetReturnType()}{GetReturnType()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} bustub\+::\+Abstract\+Expression\+::\+Get\+Return\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the type of this expression if it were to be evaluated 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/expressions/\mbox{\hyperlink{abstract__expression_8h}{abstract\+\_\+expression.\+h}}\end{DoxyCompactItemize}

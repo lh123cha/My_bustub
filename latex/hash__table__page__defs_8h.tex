@@ -1,0 +1,64 @@
+\hypertarget{hash__table__page__defs_8h}{}\doxysection{src/include/storage/page/hash\+\_\+table\+\_\+page\+\_\+defs.h File Reference}
+\label{hash__table__page__defs_8h}\index{src/include/storage/page/hash\_table\_page\_defs.h@{src/include/storage/page/hash\_table\_page\_defs.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{hash__table__page__defs_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{hash__table__page__defs_8h_a139704601c819af8cdce06a6c1080a85}{Mapping\+Type}}~std\+::pair$<$Key\+Type, Value\+Type$>$
+\item 
+\#define \mbox{\hyperlink{hash__table__page__defs_8h_a6ba069a365137103d5c207c9b72fd54f}{H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+Y\+PE}}~Hash\+Table\+Block\+Page$<$Key\+Type, Value\+Type, Key\+Comparator$>$
+\item 
+\#define \mbox{\hyperlink{hash__table__page__defs_8h_aa248adf6523ba18254eca1aef1a12670}{B\+L\+O\+C\+K\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+S\+I\+ZE}}~(4 $\ast$ P\+A\+G\+E\+\_\+\+S\+I\+ZE / (4 $\ast$ sizeof(\mbox{\hyperlink{hash__table__page__defs_8h_a139704601c819af8cdce06a6c1080a85}{Mapping\+Type}}) + 1))
+\item 
+\#define \mbox{\hyperlink{hash__table__page__defs_8h_a6100d50b66f0da5c241d2aba0f71305f}{H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+T\+Y\+PE}}~Hash\+Table\+Bucket\+Page$<$Key\+Type, Value\+Type, Key\+Comparator$>$
+\item 
+\#define \mbox{\hyperlink{hash__table__page__defs_8h_a33263f2fd1edcc681ea3692a02901e16}{D\+I\+R\+E\+C\+T\+O\+R\+Y\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+S\+I\+ZE}}~512
+\item 
+\#define \mbox{\hyperlink{hash__table__page__defs_8h_a621d10a678ff99f5854a9833fb02e610}{B\+U\+C\+K\+E\+T\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+S\+I\+ZE}}~(4 $\ast$ P\+A\+G\+E\+\_\+\+S\+I\+ZE / (4 $\ast$ sizeof(\mbox{\hyperlink{hash__table__page__defs_8h_a139704601c819af8cdce06a6c1080a85}{Mapping\+Type}}) + 1))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{hash__table__page__defs_8h_aa248adf6523ba18254eca1aef1a12670}\label{hash__table__page__defs_8h_aa248adf6523ba18254eca1aef1a12670}} 
+\index{hash\_table\_page\_defs.h@{hash\_table\_page\_defs.h}!BLOCK\_ARRAY\_SIZE@{BLOCK\_ARRAY\_SIZE}}
+\index{BLOCK\_ARRAY\_SIZE@{BLOCK\_ARRAY\_SIZE}!hash\_table\_page\_defs.h@{hash\_table\_page\_defs.h}}
+\doxysubsubsection{\texorpdfstring{BLOCK\_ARRAY\_SIZE}{BLOCK\_ARRAY\_SIZE}}
+{\footnotesize\ttfamily \#define B\+L\+O\+C\+K\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+S\+I\+ZE~(4 $\ast$ P\+A\+G\+E\+\_\+\+S\+I\+ZE / (4 $\ast$ sizeof(\mbox{\hyperlink{hash__table__page__defs_8h_a139704601c819af8cdce06a6c1080a85}{Mapping\+Type}}) + 1))}
+
+B\+L\+O\+C\+K\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+S\+I\+ZE is the number of (key, value) pairs that can be stored in a linear probe hash block page. It is an approximate calculation based on the size of Mapping\+Type (which is a std\+::pair of Key\+Type and Value\+Type). For each key/value pair, we need two additional bits for occupied\+\_\+ and readable\+\_\+. 4 $\ast$ P\+A\+G\+E\+\_\+\+S\+I\+ZE / (4 $\ast$ sizeof (Mapping\+Type) + 1) = P\+A\+G\+E\+\_\+\+S\+I\+Z\+E/(sizeof (Mapping\+Type) + 0.\+25) because 0.\+25 bytes = 2 bits is the space required to maintain the occupied and readable flags for a key value pair. \mbox{\Hypertarget{hash__table__page__defs_8h_a621d10a678ff99f5854a9833fb02e610}\label{hash__table__page__defs_8h_a621d10a678ff99f5854a9833fb02e610}} 
+\index{hash\_table\_page\_defs.h@{hash\_table\_page\_defs.h}!BUCKET\_ARRAY\_SIZE@{BUCKET\_ARRAY\_SIZE}}
+\index{BUCKET\_ARRAY\_SIZE@{BUCKET\_ARRAY\_SIZE}!hash\_table\_page\_defs.h@{hash\_table\_page\_defs.h}}
+\doxysubsubsection{\texorpdfstring{BUCKET\_ARRAY\_SIZE}{BUCKET\_ARRAY\_SIZE}}
+{\footnotesize\ttfamily \#define B\+U\+C\+K\+E\+T\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+S\+I\+ZE~(4 $\ast$ P\+A\+G\+E\+\_\+\+S\+I\+ZE / (4 $\ast$ sizeof(\mbox{\hyperlink{hash__table__page__defs_8h_a139704601c819af8cdce06a6c1080a85}{Mapping\+Type}}) + 1))}
+
+B\+U\+C\+K\+E\+T\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+S\+I\+ZE is the number of (key, value) pairs that can be stored in an extendible hashing bucket page. It is an approximate calculation based on the size of Mapping\+Type (which is a std\+::pair of Key\+Type and Value\+Type). For each key/value pair, we need two additional bits for occupied\+\_\+ and readable\+\_\+. 4 $\ast$ (P\+A\+G\+E\+\_\+\+S\+I\+ZE -\/ 4) / (4 $\ast$ sizeof (Mapping\+Type) + 1) = (P\+A\+G\+E\+\_\+\+S\+I\+ZE -\/ 4)/(sizeof (Mapping\+Type) + 0.\+25) because 0.\+25 bytes = 2 bits is the space required to maintain the occupied and readable flags for a key value pair. \mbox{\Hypertarget{hash__table__page__defs_8h_a33263f2fd1edcc681ea3692a02901e16}\label{hash__table__page__defs_8h_a33263f2fd1edcc681ea3692a02901e16}} 
+\index{hash\_table\_page\_defs.h@{hash\_table\_page\_defs.h}!DIRECTORY\_ARRAY\_SIZE@{DIRECTORY\_ARRAY\_SIZE}}
+\index{DIRECTORY\_ARRAY\_SIZE@{DIRECTORY\_ARRAY\_SIZE}!hash\_table\_page\_defs.h@{hash\_table\_page\_defs.h}}
+\doxysubsubsection{\texorpdfstring{DIRECTORY\_ARRAY\_SIZE}{DIRECTORY\_ARRAY\_SIZE}}
+{\footnotesize\ttfamily \#define D\+I\+R\+E\+C\+T\+O\+R\+Y\+\_\+\+A\+R\+R\+A\+Y\+\_\+\+S\+I\+ZE~512}
+
+\mbox{\Hypertarget{hash__table__page__defs_8h_a6ba069a365137103d5c207c9b72fd54f}\label{hash__table__page__defs_8h_a6ba069a365137103d5c207c9b72fd54f}} 
+\index{hash\_table\_page\_defs.h@{hash\_table\_page\_defs.h}!HASH\_TABLE\_BLOCK\_TYPE@{HASH\_TABLE\_BLOCK\_TYPE}}
+\index{HASH\_TABLE\_BLOCK\_TYPE@{HASH\_TABLE\_BLOCK\_TYPE}!hash\_table\_page\_defs.h@{hash\_table\_page\_defs.h}}
+\doxysubsubsection{\texorpdfstring{HASH\_TABLE\_BLOCK\_TYPE}{HASH\_TABLE\_BLOCK\_TYPE}}
+{\footnotesize\ttfamily \#define H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+B\+L\+O\+C\+K\+\_\+\+T\+Y\+PE~Hash\+Table\+Block\+Page$<$Key\+Type, Value\+Type, Key\+Comparator$>$}
+
+Linear Probe Hashing Definitions \mbox{\Hypertarget{hash__table__page__defs_8h_a6100d50b66f0da5c241d2aba0f71305f}\label{hash__table__page__defs_8h_a6100d50b66f0da5c241d2aba0f71305f}} 
+\index{hash\_table\_page\_defs.h@{hash\_table\_page\_defs.h}!HASH\_TABLE\_BUCKET\_TYPE@{HASH\_TABLE\_BUCKET\_TYPE}}
+\index{HASH\_TABLE\_BUCKET\_TYPE@{HASH\_TABLE\_BUCKET\_TYPE}!hash\_table\_page\_defs.h@{hash\_table\_page\_defs.h}}
+\doxysubsubsection{\texorpdfstring{HASH\_TABLE\_BUCKET\_TYPE}{HASH\_TABLE\_BUCKET\_TYPE}}
+{\footnotesize\ttfamily \#define H\+A\+S\+H\+\_\+\+T\+A\+B\+L\+E\+\_\+\+B\+U\+C\+K\+E\+T\+\_\+\+T\+Y\+PE~Hash\+Table\+Bucket\+Page$<$Key\+Type, Value\+Type, Key\+Comparator$>$}
+
+Extendible Hashing Definitions \mbox{\Hypertarget{hash__table__page__defs_8h_a139704601c819af8cdce06a6c1080a85}\label{hash__table__page__defs_8h_a139704601c819af8cdce06a6c1080a85}} 
+\index{hash\_table\_page\_defs.h@{hash\_table\_page\_defs.h}!MappingType@{MappingType}}
+\index{MappingType@{MappingType}!hash\_table\_page\_defs.h@{hash\_table\_page\_defs.h}}
+\doxysubsubsection{\texorpdfstring{MappingType}{MappingType}}
+{\footnotesize\ttfamily \#define Mapping\+Type~std\+::pair$<$Key\+Type, Value\+Type$>$}
+

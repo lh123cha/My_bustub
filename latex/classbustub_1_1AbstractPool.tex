@@ -1,0 +1,70 @@
+\hypertarget{classbustub_1_1AbstractPool}{}\doxysection{bustub\+::Abstract\+Pool Class Reference}
+\label{classbustub_1_1AbstractPool}\index{bustub::AbstractPool@{bustub::AbstractPool}}
+
+
+{\ttfamily \#include $<$abstract\+\_\+pool.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Abstract\+Pool\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classbustub_1_1AbstractPool__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classbustub_1_1AbstractPool_a38e9c29157b9aafe1922df62f51c78fe}{$\sim$\+Abstract\+Pool}} ()=default
+\item 
+virtual void $\ast$ \mbox{\hyperlink{classbustub_1_1AbstractPool_a2faea8fb8aaa9d9998486ab0bcccc29a}{Allocate}} (size\+\_\+t size)=0
+\begin{DoxyCompactList}\small\item\em Allocate a contiguous block of memory of the given size. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classbustub_1_1AbstractPool_acd20c45bdb3cb4dbf2c5f9058e50cfe1}{Free}} (void $\ast$ptr)=0
+\begin{DoxyCompactList}\small\item\em Returns the provided chunk of memory back into the pool. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractPool_a38e9c29157b9aafe1922df62f51c78fe}\label{classbustub_1_1AbstractPool_a38e9c29157b9aafe1922df62f51c78fe}} 
+\index{bustub::AbstractPool@{bustub::AbstractPool}!````~AbstractPool@{$\sim$AbstractPool}}
+\index{````~AbstractPool@{$\sim$AbstractPool}!bustub::AbstractPool@{bustub::AbstractPool}}
+\doxysubsubsection{\texorpdfstring{$\sim$AbstractPool()}{~AbstractPool()}}
+{\footnotesize\ttfamily virtual bustub\+::\+Abstract\+Pool\+::$\sim$\+Abstract\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractPool_a2faea8fb8aaa9d9998486ab0bcccc29a}\label{classbustub_1_1AbstractPool_a2faea8fb8aaa9d9998486ab0bcccc29a}} 
+\index{bustub::AbstractPool@{bustub::AbstractPool}!Allocate@{Allocate}}
+\index{Allocate@{Allocate}!bustub::AbstractPool@{bustub::AbstractPool}}
+\doxysubsubsection{\texorpdfstring{Allocate()}{Allocate()}}
+{\footnotesize\ttfamily virtual void$\ast$ bustub\+::\+Abstract\+Pool\+::\+Allocate (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Allocate a contiguous block of memory of the given size. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em size} & The size (in bytes) of memory to allocate \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A non-\/null pointer if allocation is successful. A null pointer if allocation fails.
+\end{DoxyReturn}
+T\+O\+DO\+: Provide good error codes for failure cases \mbox{\Hypertarget{classbustub_1_1AbstractPool_acd20c45bdb3cb4dbf2c5f9058e50cfe1}\label{classbustub_1_1AbstractPool_acd20c45bdb3cb4dbf2c5f9058e50cfe1}} 
+\index{bustub::AbstractPool@{bustub::AbstractPool}!Free@{Free}}
+\index{Free@{Free}!bustub::AbstractPool@{bustub::AbstractPool}}
+\doxysubsubsection{\texorpdfstring{Free()}{Free()}}
+{\footnotesize\ttfamily virtual void bustub\+::\+Abstract\+Pool\+::\+Free (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Returns the provided chunk of memory back into the pool. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/type/\mbox{\hyperlink{abstract__pool_8h}{abstract\+\_\+pool.\+h}}\end{DoxyCompactItemize}

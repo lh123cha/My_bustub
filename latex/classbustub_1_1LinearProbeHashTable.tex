@@ -1,0 +1,169 @@
+\hypertarget{classbustub_1_1LinearProbeHashTable}{}\doxysection{bustub\+::Linear\+Probe\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$ Class Template Reference}
+\label{classbustub_1_1LinearProbeHashTable}\index{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+
+
+{\ttfamily \#include $<$linear\+\_\+probe\+\_\+hash\+\_\+table.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Linear\+Probe\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{classbustub_1_1LinearProbeHashTable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Linear\+Probe\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{classbustub_1_1LinearProbeHashTable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1LinearProbeHashTable_aa183891ec13956137e3f7e2a340626ea}{Linear\+Probe\+Hash\+Table}} (const std\+::string \&name, \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$buffer\+\_\+pool\+\_\+manager, const Key\+Comparator \&comparator, size\+\_\+t num\+\_\+buckets, \mbox{\hyperlink{classbustub_1_1HashFunction}{Hash\+Function}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} $>$ hash\+\_\+fn)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable_a87d4774ff24636060446bf39247db613}{Insert}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key, const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&\mbox{\hyperlink{gmock-spec-builders__test_8cc_ac4f474c82e82cbb89ca7c36dd52be0ed}{value}}) override
+\item 
+bool \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable_aa43cbc91f63b0c39e16e4d94eb9e9d54}{Remove}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key, const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&\mbox{\hyperlink{gmock-spec-builders__test_8cc_ac4f474c82e82cbb89ca7c36dd52be0ed}{value}}) override
+\item 
+bool \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable_a1bf7ce14f5e1a077a3bb449dd6c1de51}{Get\+Value}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction, const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key, std\+::vector$<$ \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$ $\ast$result) override
+\item 
+void \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable_a699704cfadf5270b4ce58fef8eb4bbca}{Resize}} (size\+\_\+t initial\+\_\+size)
+\item 
+size\+\_\+t \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable_a2f82faa8493b544b7add20284b5b8b52}{Get\+Size}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Key\+Type, typename Value\+Type, typename Key\+Comparator$>$\newline
+class bustub\+::\+Linear\+Probe\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}
+
+Implementation of linear probing hash table that is backed by a buffer pool manager. Non-\/unique keys are supported. Supports insert and delete. The table dynamically grows once full. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTable_aa183891ec13956137e3f7e2a340626ea}\label{classbustub_1_1LinearProbeHashTable_aa183891ec13956137e3f7e2a340626ea}} 
+\index{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$}!LinearProbeHashTable@{LinearProbeHashTable}}
+\index{LinearProbeHashTable@{LinearProbeHashTable}!bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{LinearProbeHashTable()}{LinearProbeHashTable()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+\mbox{\hyperlink{classbustub_1_1LinearProbeHashTable}{bustub\+::\+Linear\+Probe\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::\mbox{\hyperlink{classbustub_1_1LinearProbeHashTable}{Linear\+Probe\+Hash\+Table}} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$}]{buffer\+\_\+pool\+\_\+manager,  }\item[{const Key\+Comparator \&}]{comparator,  }\item[{size\+\_\+t}]{num\+\_\+buckets,  }\item[{\mbox{\hyperlink{classbustub_1_1HashFunction}{Hash\+Function}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} $>$}]{hash\+\_\+fn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Creates a new \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable}{Linear\+Probe\+Hash\+Table}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer\+\_\+pool\+\_\+manager} & buffer pool manager to be used \\
+\hline
+{\em comparator} & comparator for keys \\
+\hline
+{\em num\+\_\+buckets} & initial number of buckets contained by this hash table \\
+\hline
+{\em hash\+\_\+fn} & the hash function \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTable_a2f82faa8493b544b7add20284b5b8b52}\label{classbustub_1_1LinearProbeHashTable_a2f82faa8493b544b7add20284b5b8b52}} 
+\index{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+size\+\_\+t \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable}{bustub\+::\+Linear\+Probe\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Gets the size of the hash table \begin{DoxyReturn}{Returns}
+current size of the hash table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTable_a1bf7ce14f5e1a077a3bb449dd6c1de51}\label{classbustub_1_1LinearProbeHashTable_a1bf7ce14f5e1a077a3bb449dd6c1de51}} 
+\index{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+bool \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable}{bustub\+::\+Linear\+Probe\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Get\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction,  }\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$ $\ast$}]{result }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Performs a point query on the hash table. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em transaction} & the current transaction \\
+\hline
+ & {\em key} & the key to look up \\
+\hline
+\mbox{\texttt{ out}}  & {\em result} & the value(s) associated with a given key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the value(s) associated with the given key 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1HashTable_a1b5ffceaf3a1d1e2ce161d9f806277a7}{bustub\+::\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}}.
+
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTable_a87d4774ff24636060446bf39247db613}\label{classbustub_1_1LinearProbeHashTable_a87d4774ff24636060446bf39247db613}} 
+\index{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$}!Insert@{Insert}}
+\index{Insert@{Insert}!bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+bool \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable}{bustub\+::\+Linear\+Probe\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction,  }\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key,  }\item[{const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Inserts a key-\/value pair into the hash table. 
+\begin{DoxyParams}{Parameters}
+{\em transaction} & the current transaction \\
+\hline
+{\em key} & the key to create \\
+\hline
+{\em value} & the value to be associated with the key \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if insert succeeded, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1HashTable_aa210942f79353b8ce4f234937177f1ef}{bustub\+::\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}}.
+
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTable_aa43cbc91f63b0c39e16e4d94eb9e9d54}\label{classbustub_1_1LinearProbeHashTable_aa43cbc91f63b0c39e16e4d94eb9e9d54}} 
+\index{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$}!Remove@{Remove}}
+\index{Remove@{Remove}!bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+bool \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable}{bustub\+::\+Linear\+Probe\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction,  }\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key,  }\item[{const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Deletes the associated value for the given key. 
+\begin{DoxyParams}{Parameters}
+{\em transaction} & the current transaction \\
+\hline
+{\em key} & the key to delete \\
+\hline
+{\em value} & the value to delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if remove succeeded, false otherwise 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1HashTable_afe270f191a766e41e891730a6d587ad7}{bustub\+::\+Hash\+Table$<$ Key\+Type, Value\+Type, Key\+Comparator $>$}}.
+
+\mbox{\Hypertarget{classbustub_1_1LinearProbeHashTable_a699704cfadf5270b4ce58fef8eb4bbca}\label{classbustub_1_1LinearProbeHashTable_a699704cfadf5270b4ce58fef8eb4bbca}} 
+\index{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$}!Resize@{Resize}}
+\index{Resize@{Resize}!bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$@{bustub::LinearProbeHashTable$<$ KeyType, ValueType, KeyComparator $>$}}
+\doxysubsubsection{\texorpdfstring{Resize()}{Resize()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type , typename Key\+Comparator $>$ \\
+void \mbox{\hyperlink{classbustub_1_1LinearProbeHashTable}{bustub\+::\+Linear\+Probe\+Hash\+Table}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}, Key\+Comparator $>$\+::Resize (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{initial\+\_\+size }\end{DoxyParamCaption})}
+
+Resizes the table to at least twice the initial size provided. 
+\begin{DoxyParams}{Parameters}
+{\em initial\+\_\+size} & the initial size of the hash table \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/container/hash/\mbox{\hyperlink{linear__probe__hash__table_8h}{linear\+\_\+probe\+\_\+hash\+\_\+table.\+h}}\end{DoxyCompactItemize}

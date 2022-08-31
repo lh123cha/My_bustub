@@ -1,0 +1,220 @@
+\hypertarget{classbustub_1_1StringUtil}{}\doxysection{bustub\+::String\+Util Class Reference}
+\label{classbustub_1_1StringUtil}\index{bustub::StringUtil@{bustub::StringUtil}}
+
+
+{\ttfamily \#include $<$string\+\_\+util.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::String\+Util\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{classbustub_1_1StringUtil__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classbustub_1_1StringUtil_a5842c6d2889724eea8f006b2a9c7ddc4}{Contains}} (const std\+::string \&haystack, const std\+::string \&needle)
+\item 
+static bool \mbox{\hyperlink{classbustub_1_1StringUtil_a02d8fd9aed9caa2a5d8351ade828326d}{Starts\+With}} (const std\+::string \&str, const std\+::string \&prefix)
+\item 
+static bool \mbox{\hyperlink{classbustub_1_1StringUtil_a30803663d096a59aafe2bcda6d11aef1}{Ends\+With}} (const std\+::string \&str, const std\+::string \&suffix)
+\item 
+static std\+::string \mbox{\hyperlink{classbustub_1_1StringUtil_af86a21492c993d3aeda8305c312c9b87}{Repeat}} (const std\+::string \&str, std\+::size\+\_\+t n)
+\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classbustub_1_1StringUtil_a899dd140720a7de43e6a87de42a2339c}{Split}} (const std\+::string \&str, char delimiter)
+\item 
+static std\+::string \mbox{\hyperlink{classbustub_1_1StringUtil_afa4d9024c43c5c66843cf0afec265868}{Join}} (const std\+::vector$<$ std\+::string $>$ \&input, const std\+::string \&separator)
+\item 
+static std\+::string \mbox{\hyperlink{classbustub_1_1StringUtil_a7d0c9fc6d5b3a12db052ae142719e52a}{Prefix}} (const std\+::string \&str, const std\+::string \&prefix)
+\item 
+static std\+::string \mbox{\hyperlink{classbustub_1_1StringUtil_afc72f82ecc85da86a64a2ca36fcbc0d6}{Format\+Size}} (uint64\+\_\+t bytes)
+\item 
+static std\+::string \mbox{\hyperlink{classbustub_1_1StringUtil_af79da262fe3f7770167ae1a687284891}{Bold}} (const std\+::string \&str)
+\item 
+static std\+::string \mbox{\hyperlink{classbustub_1_1StringUtil_a8778b53e19ab97d3ebe4930afe0f608d}{Upper}} (const std\+::string \&str)
+\item 
+static std\+::string \mbox{\hyperlink{classbustub_1_1StringUtil_a6270d7dcbcf822e1c2c1a91743e2563f}{Lower}} (const std\+::string \&str)
+\item 
+static std\+::string \mbox{\hyperlink{classbustub_1_1StringUtil_a055cb91b576010a11b210a61d08e010c}{Format}} (std\+::string fmt\+\_\+str,...)
+\item 
+static std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{classbustub_1_1StringUtil_a74624e5576e5d33cf524d4cc7e67e7ed}{Split}} (const std\+::string \&input, const std\+::string \&split)
+\item 
+static void \mbox{\hyperlink{classbustub_1_1StringUtil_a0a3c468de57e97a5c1632d9b3e07dfba}{R\+Trim}} (std\+::string $\ast$str)
+\item 
+static std\+::string \mbox{\hyperlink{classbustub_1_1StringUtil_ab59eec2a76c4769806c752f636a8a2c0}{Indent}} (int num\+\_\+indent)
+\item 
+static std\+::string \mbox{\hyperlink{classbustub_1_1StringUtil_a7c025557110ddaf7c1bf52f63909b54b}{Strip}} (const std\+::string \&str, char c)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1StringUtil}{String\+Util}} provides I\+N\+E\+F\+F\+I\+C\+I\+E\+NT utility functions for working with strings. They should only be used for debugging. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_af79da262fe3f7770167ae1a687284891}\label{classbustub_1_1StringUtil_af79da262fe3f7770167ae1a687284891}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!Bold@{Bold}}
+\index{Bold@{Bold}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{Bold()}{Bold()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+String\+Util\+::\+Bold (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+string wrapped with control characters to appear bold in the console 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_a5842c6d2889724eea8f006b2a9c7ddc4}\label{classbustub_1_1StringUtil_a5842c6d2889724eea8f006b2a9c7ddc4}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!Contains@{Contains}}
+\index{Contains@{Contains}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{Contains()}{Contains()}}
+{\footnotesize\ttfamily bool bustub\+::\+String\+Util\+::\+Contains (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{haystack,  }\item[{const std\+::string \&}]{needle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+true if haystack contains needle, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_a30803663d096a59aafe2bcda6d11aef1}\label{classbustub_1_1StringUtil_a30803663d096a59aafe2bcda6d11aef1}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!EndsWith@{EndsWith}}
+\index{EndsWith@{EndsWith}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{EndsWith()}{EndsWith()}}
+{\footnotesize\ttfamily bool bustub\+::\+String\+Util\+::\+Ends\+With (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{const std\+::string \&}]{suffix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+true if target string ends with the given suffix, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_a055cb91b576010a11b210a61d08e010c}\label{classbustub_1_1StringUtil_a055cb91b576010a11b210a61d08e010c}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!Format@{Format}}
+\index{Format@{Format}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{Format()}{Format()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+String\+Util\+::\+Format (\begin{DoxyParamCaption}\item[{std\+::string}]{fmt\+\_\+str,  }\item[{}]{... }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+string formatted with printf semantics 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_afc72f82ecc85da86a64a2ca36fcbc0d6}\label{classbustub_1_1StringUtil_afc72f82ecc85da86a64a2ca36fcbc0d6}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!FormatSize@{FormatSize}}
+\index{FormatSize@{FormatSize}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{FormatSize()}{FormatSize()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+String\+Util\+::\+Format\+Size (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{bytes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+bytes formatted into the appropriate kilobyte, megabyte or gigabyte representation 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_ab59eec2a76c4769806c752f636a8a2c0}\label{classbustub_1_1StringUtil_ab59eec2a76c4769806c752f636a8a2c0}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!Indent@{Indent}}
+\index{Indent@{Indent}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{Indent()}{Indent()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+String\+Util\+::\+Indent (\begin{DoxyParamCaption}\item[{int}]{num\+\_\+indent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+indented string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_afa4d9024c43c5c66843cf0afec265868}\label{classbustub_1_1StringUtil_afa4d9024c43c5c66843cf0afec265868}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!Join@{Join}}
+\index{Join@{Join}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{Join()}{Join()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+String\+Util\+::\+Join (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::string $>$ \&}]{input,  }\item[{const std\+::string \&}]{separator }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+concatenation of all input strings, separated by the separator 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_a6270d7dcbcf822e1c2c1a91743e2563f}\label{classbustub_1_1StringUtil_a6270d7dcbcf822e1c2c1a91743e2563f}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!Lower@{Lower}}
+\index{Lower@{Lower}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{Lower()}{Lower()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+String\+Util\+::\+Lower (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+lowercase version of the string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_a7d0c9fc6d5b3a12db052ae142719e52a}\label{classbustub_1_1StringUtil_a7d0c9fc6d5b3a12db052ae142719e52a}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!Prefix@{Prefix}}
+\index{Prefix@{Prefix}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{Prefix()}{Prefix()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+String\+Util\+::\+Prefix (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{const std\+::string \&}]{prefix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+prefix prepended to the beginning of each line in str 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_af86a21492c993d3aeda8305c312c9b87}\label{classbustub_1_1StringUtil_af86a21492c993d3aeda8305c312c9b87}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!Repeat@{Repeat}}
+\index{Repeat@{Repeat}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{Repeat()}{Repeat()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+String\+Util\+::\+Repeat (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{std\+::size\+\_\+t}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+str repeated n times 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_a0a3c468de57e97a5c1632d9b3e07dfba}\label{classbustub_1_1StringUtil_a0a3c468de57e97a5c1632d9b3e07dfba}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!RTrim@{RTrim}}
+\index{RTrim@{RTrim}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{RTrim()}{RTrim()}}
+{\footnotesize\ttfamily void bustub\+::\+String\+Util\+::\+R\+Trim (\begin{DoxyParamCaption}\item[{std\+::string $\ast$}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Removes the whitespace characters from the right side of the string. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em str} & string to be trimmed on the right \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_a74624e5576e5d33cf524d4cc7e67e7ed}\label{classbustub_1_1StringUtil_a74624e5576e5d33cf524d4cc7e67e7ed}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!Split@{Split}}
+\index{Split@{Split}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{Split()}{Split()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ bustub\+::\+String\+Util\+::\+Split (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input,  }\item[{const std\+::string \&}]{split }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+input string split based on the split string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_a899dd140720a7de43e6a87de42a2339c}\label{classbustub_1_1StringUtil_a899dd140720a7de43e6a87de42a2339c}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!Split@{Split}}
+\index{Split@{Split}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{Split()}{Split()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ bustub\+::\+String\+Util\+::\+Split (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{char}]{delimiter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+input string split based on the delimiter 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_a02d8fd9aed9caa2a5d8351ade828326d}\label{classbustub_1_1StringUtil_a02d8fd9aed9caa2a5d8351ade828326d}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!StartsWith@{StartsWith}}
+\index{StartsWith@{StartsWith}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{StartsWith()}{StartsWith()}}
+{\footnotesize\ttfamily bool bustub\+::\+String\+Util\+::\+Starts\+With (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{const std\+::string \&}]{prefix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+true if target string starts with given prefix, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_a7c025557110ddaf7c1bf52f63909b54b}\label{classbustub_1_1StringUtil_a7c025557110ddaf7c1bf52f63909b54b}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!Strip@{Strip}}
+\index{Strip@{Strip}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{Strip()}{Strip()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+String\+Util\+::\+Strip (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str,  }\item[{char}]{c }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Return a new string that has stripped all occurrences of the provided character from the provided string.
+
+N\+O\+TE\+: W\+A\+S\+T\+E\+F\+UL. Performs a copy. Do N\+OT use for performance-\/critical code!
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & input string \\
+\hline
+{\em c} & character to be removed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a new string with no occurrences of the provided character 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1StringUtil_a8778b53e19ab97d3ebe4930afe0f608d}\label{classbustub_1_1StringUtil_a8778b53e19ab97d3ebe4930afe0f608d}} 
+\index{bustub::StringUtil@{bustub::StringUtil}!Upper@{Upper}}
+\index{Upper@{Upper}!bustub::StringUtil@{bustub::StringUtil}}
+\doxysubsubsection{\texorpdfstring{Upper()}{Upper()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+String\+Util\+::\+Upper (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{str }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\begin{DoxyReturn}{Returns}
+uppercase version of the string 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/common/util/\mbox{\hyperlink{string__util_8h}{string\+\_\+util.\+h}}\item 
+src/common/util/\mbox{\hyperlink{string__util_8cpp}{string\+\_\+util.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,9 @@
+<map id="bustub::BustubInstance" name="bustub::BustubInstance">
+<area shape="rect" id="node1" title=" " alt="" coords="537,365,711,457"/>
+<area shape="rect" id="node2" href="$classbustub_1_1TransactionManager.html" title=" " alt="" coords="5,57,211,251"/>
+<area shape="rect" id="node3" href="$classbustub_1_1LockManager.html" title=" " alt="" coords="235,79,397,229"/>
+<area shape="rect" id="node4" href="$classbustub_1_1BufferPoolManager.html" title=" " alt="" coords="421,5,619,303"/>
+<area shape="rect" id="node5" href="$classbustub_1_1DiskManager.html" title=" " alt="" coords="644,35,815,273"/>
+<area shape="rect" id="node6" href="$classbustub_1_1CheckpointManager.html" title=" " alt="" coords="839,93,1043,215"/>
+<area shape="rect" id="node7" href="$classbustub_1_1LogManager.html" title=" " alt="" coords="1067,57,1231,251"/>
+</map>

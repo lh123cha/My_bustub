@@ -1,0 +1,13 @@
+<map id="bustub::Type" name="bustub::Type">
+<area shape="rect" id="node1" title=" " alt="" coords="333,5,564,317"/>
+<area shape="rect" id="node2" href="$classbustub_1_1BooleanType.html" title=" " alt="" coords="5,365,236,633"/>
+<area shape="rect" id="node3" href="$classbustub_1_1NumericType.html" title=" " alt="" coords="260,373,419,626"/>
+<area shape="rect" id="node10" href="$classbustub_1_1TimestampType.html" title=" " alt="" coords="443,387,673,611"/>
+<area shape="rect" id="node11" href="$classbustub_1_1VarlenType.html" title=" " alt="" coords="697,387,928,611"/>
+<area shape="rect" id="node4" href="$classbustub_1_1DecimalType.html" title=" " alt="" coords="160,733,319,957"/>
+<area shape="rect" id="node5" href="$classbustub_1_1IntegerParentType.html" title=" " alt="" coords="343,681,533,1008"/>
+<area shape="rect" id="node6" href="$classbustub_1_1BigintType.html" title=" " alt="" coords="59,1056,231,1309"/>
+<area shape="rect" id="node7" href="$classbustub_1_1IntegerType.html" title=" " alt="" coords="255,1056,427,1309"/>
+<area shape="rect" id="node8" href="$classbustub_1_1SmallintType.html" title=" " alt="" coords="451,1056,623,1309"/>
+<area shape="rect" id="node9" href="$classbustub_1_1TinyintType.html" title=" " alt="" coords="647,1056,819,1309"/>
+</map>

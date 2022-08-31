@@ -1,0 +1,128 @@
+\hypertarget{classbustub_1_1TableIterator}{}\doxysection{bustub\+::Table\+Iterator Class Reference}
+\label{classbustub_1_1TableIterator}\index{bustub::TableIterator@{bustub::TableIterator}}
+
+
+{\ttfamily \#include $<$table\+\_\+iterator.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Table\+Iterator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{classbustub_1_1TableIterator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1TableIterator_a193c29aae09e7b44251dd404593fbdda}{Table\+Iterator}} (\mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}} $\ast$table\+\_\+heap, \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn)
+\item 
+\mbox{\hyperlink{classbustub_1_1TableIterator_a24bc312508d931ff5bbbdf963989ee17}{Table\+Iterator}} (const \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \&other)
+\item 
+\mbox{\hyperlink{classbustub_1_1TableIterator_a14754a566c6539e4c9bdf51a7e437702}{$\sim$\+Table\+Iterator}} ()
+\item 
+bool \mbox{\hyperlink{classbustub_1_1TableIterator_a67d662187d4910cc1281c0f7697489da}{operator==}} (const \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \&itr) const
+\item 
+bool \mbox{\hyperlink{classbustub_1_1TableIterator_a05f660adffe4ef00c5ff033f21c56a60}{operator!=}} (const \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \&itr) const
+\item 
+const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \& \mbox{\hyperlink{classbustub_1_1TableIterator_abedf00a49b0df91ce4673345335f19e0}{operator$\ast$}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$ \mbox{\hyperlink{classbustub_1_1TableIterator_a3fc97feefd07d1bb96a30033288ab31c}{operator-\/$>$}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \& \mbox{\hyperlink{classbustub_1_1TableIterator_af730b719d9da424a378e2984ee2a46ae}{operator++}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \mbox{\hyperlink{classbustub_1_1TableIterator_ab65edc9db9396274ef0188f76a08aefa}{operator++}} (int)
+\item 
+\mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \& \mbox{\hyperlink{classbustub_1_1TableIterator_ad1323ea074a2d276324606d5dc480c55}{operator=}} (const \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \&other)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbustub_1_1TableIterator_a9591eb6f6543f40292912e27b74f4d27}{Cursor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} enables the sequential scan of a \mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1TableIterator_a193c29aae09e7b44251dd404593fbdda}\label{classbustub_1_1TableIterator_a193c29aae09e7b44251dd404593fbdda}} 
+\index{bustub::TableIterator@{bustub::TableIterator}!TableIterator@{TableIterator}}
+\index{TableIterator@{TableIterator}!bustub::TableIterator@{bustub::TableIterator}}
+\doxysubsubsection{\texorpdfstring{TableIterator()}{TableIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bustub\+::\+Table\+Iterator\+::\+Table\+Iterator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}} $\ast$}]{table\+\_\+heap,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}}}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1TableIterator_a24bc312508d931ff5bbbdf963989ee17}\label{classbustub_1_1TableIterator_a24bc312508d931ff5bbbdf963989ee17}} 
+\index{bustub::TableIterator@{bustub::TableIterator}!TableIterator@{TableIterator}}
+\index{TableIterator@{TableIterator}!bustub::TableIterator@{bustub::TableIterator}}
+\doxysubsubsection{\texorpdfstring{TableIterator()}{TableIterator()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bustub\+::\+Table\+Iterator\+::\+Table\+Iterator (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1TableIterator_a14754a566c6539e4c9bdf51a7e437702}\label{classbustub_1_1TableIterator_a14754a566c6539e4c9bdf51a7e437702}} 
+\index{bustub::TableIterator@{bustub::TableIterator}!````~TableIterator@{$\sim$TableIterator}}
+\index{````~TableIterator@{$\sim$TableIterator}!bustub::TableIterator@{bustub::TableIterator}}
+\doxysubsubsection{\texorpdfstring{$\sim$TableIterator()}{~TableIterator()}}
+{\footnotesize\ttfamily bustub\+::\+Table\+Iterator\+::$\sim$\+Table\+Iterator (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1TableIterator_a05f660adffe4ef00c5ff033f21c56a60}\label{classbustub_1_1TableIterator_a05f660adffe4ef00c5ff033f21c56a60}} 
+\index{bustub::TableIterator@{bustub::TableIterator}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!bustub::TableIterator@{bustub::TableIterator}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool bustub\+::\+Table\+Iterator\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \&}]{itr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1TableIterator_abedf00a49b0df91ce4673345335f19e0}\label{classbustub_1_1TableIterator_abedf00a49b0df91ce4673345335f19e0}} 
+\index{bustub::TableIterator@{bustub::TableIterator}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!bustub::TableIterator@{bustub::TableIterator}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \& bustub\+::\+Table\+Iterator\+::operator$\ast$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1TableIterator_af730b719d9da424a378e2984ee2a46ae}\label{classbustub_1_1TableIterator_af730b719d9da424a378e2984ee2a46ae}} 
+\index{bustub::TableIterator@{bustub::TableIterator}!operator++@{operator++}}
+\index{operator++@{operator++}!bustub::TableIterator@{bustub::TableIterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \& bustub\+::\+Table\+Iterator\+::operator++ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1TableIterator_ab65edc9db9396274ef0188f76a08aefa}\label{classbustub_1_1TableIterator_ab65edc9db9396274ef0188f76a08aefa}} 
+\index{bustub::TableIterator@{bustub::TableIterator}!operator++@{operator++}}
+\index{operator++@{operator++}!bustub::TableIterator@{bustub::TableIterator}}
+\doxysubsubsection{\texorpdfstring{operator++()}{operator++()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} bustub\+::\+Table\+Iterator\+::operator++ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1TableIterator_a3fc97feefd07d1bb96a30033288ab31c}\label{classbustub_1_1TableIterator_a3fc97feefd07d1bb96a30033288ab31c}} 
+\index{bustub::TableIterator@{bustub::TableIterator}!operator-\/$>$@{operator-\/$>$}}
+\index{operator-\/$>$@{operator-\/$>$}!bustub::TableIterator@{bustub::TableIterator}}
+\doxysubsubsection{\texorpdfstring{operator-\/$>$()}{operator->()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$ bustub\+::\+Table\+Iterator\+::operator-\/$>$ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1TableIterator_ad1323ea074a2d276324606d5dc480c55}\label{classbustub_1_1TableIterator_ad1323ea074a2d276324606d5dc480c55}} 
+\index{bustub::TableIterator@{bustub::TableIterator}!operator=@{operator=}}
+\index{operator=@{operator=}!bustub::TableIterator@{bustub::TableIterator}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}}\& bustub\+::\+Table\+Iterator\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \&}]{other }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1TableIterator_a67d662187d4910cc1281c0f7697489da}\label{classbustub_1_1TableIterator_a67d662187d4910cc1281c0f7697489da}} 
+\index{bustub::TableIterator@{bustub::TableIterator}!operator==@{operator==}}
+\index{operator==@{operator==}!bustub::TableIterator@{bustub::TableIterator}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool bustub\+::\+Table\+Iterator\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \&}]{itr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1TableIterator_a9591eb6f6543f40292912e27b74f4d27}\label{classbustub_1_1TableIterator_a9591eb6f6543f40292912e27b74f4d27}} 
+\index{bustub::TableIterator@{bustub::TableIterator}!Cursor@{Cursor}}
+\index{Cursor@{Cursor}!bustub::TableIterator@{bustub::TableIterator}}
+\doxysubsubsection{\texorpdfstring{Cursor}{Cursor}}
+{\footnotesize\ttfamily friend class Cursor\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/table/\mbox{\hyperlink{table__iterator_8h}{table\+\_\+iterator.\+h}}\item 
+src/storage/table/\mbox{\hyperlink{table__iterator_8cpp}{table\+\_\+iterator.\+cpp}}\end{DoxyCompactItemize}

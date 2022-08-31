@@ -1,0 +1,61 @@
+\hypertarget{b__plus__tree__leaf__page_8h}{}\doxysection{src/include/storage/page/b\+\_\+plus\+\_\+tree\+\_\+leaf\+\_\+page.h File Reference}
+\label{b__plus__tree__leaf__page_8h}\index{src/include/storage/page/b\_plus\_tree\_leaf\_page.h@{src/include/storage/page/b\_plus\_tree\_leaf\_page.h}}
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}storage/page/b\+\_\+plus\+\_\+tree\+\_\+page.\+h\char`\"{}}\newline
+Include dependency graph for b\+\_\+plus\+\_\+tree\+\_\+leaf\+\_\+page.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{b__plus__tree__leaf__page_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{b__plus__tree__leaf__page_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbustub_1_1BPlusTreeLeafPage}{bustub\+::\+B\+Plus\+Tree\+Leaf\+Page}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacebustub}{bustub}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{b__plus__tree__leaf__page_8h_ac3f9326059fa0d2535cb5f9f829de075}{B\+\_\+\+P\+L\+U\+S\+\_\+\+T\+R\+E\+E\+\_\+\+L\+E\+A\+F\+\_\+\+P\+A\+G\+E\+\_\+\+T\+Y\+PE}}~B\+Plus\+Tree\+Leaf\+Page$<$Key\+Type, Value\+Type, Key\+Comparator$>$
+\item 
+\#define \mbox{\hyperlink{b__plus__tree__leaf__page_8h_a98e5132577ac58a8bbf9bae3c345a88b}{L\+E\+A\+F\+\_\+\+P\+A\+G\+E\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}~28
+\item 
+\#define \mbox{\hyperlink{b__plus__tree__leaf__page_8h_a1bf27d964f8ae5ad340eb82a7bd5fee7}{L\+E\+A\+F\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE}}~((P\+A\+G\+E\+\_\+\+S\+I\+ZE -\/ \mbox{\hyperlink{b__plus__tree__leaf__page_8h_a98e5132577ac58a8bbf9bae3c345a88b}{L\+E\+A\+F\+\_\+\+P\+A\+G\+E\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}) / sizeof(\mbox{\hyperlink{hash__table__page__defs_8h_a139704601c819af8cdce06a6c1080a85}{Mapping\+Type}}))
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{b__plus__tree__leaf__page_8h_ac3f9326059fa0d2535cb5f9f829de075}\label{b__plus__tree__leaf__page_8h_ac3f9326059fa0d2535cb5f9f829de075}} 
+\index{b\_plus\_tree\_leaf\_page.h@{b\_plus\_tree\_leaf\_page.h}!B\_PLUS\_TREE\_LEAF\_PAGE\_TYPE@{B\_PLUS\_TREE\_LEAF\_PAGE\_TYPE}}
+\index{B\_PLUS\_TREE\_LEAF\_PAGE\_TYPE@{B\_PLUS\_TREE\_LEAF\_PAGE\_TYPE}!b\_plus\_tree\_leaf\_page.h@{b\_plus\_tree\_leaf\_page.h}}
+\doxysubsubsection{\texorpdfstring{B\_PLUS\_TREE\_LEAF\_PAGE\_TYPE}{B\_PLUS\_TREE\_LEAF\_PAGE\_TYPE}}
+{\footnotesize\ttfamily \#define B\+\_\+\+P\+L\+U\+S\+\_\+\+T\+R\+E\+E\+\_\+\+L\+E\+A\+F\+\_\+\+P\+A\+G\+E\+\_\+\+T\+Y\+PE~B\+Plus\+Tree\+Leaf\+Page$<$Key\+Type, Value\+Type, Key\+Comparator$>$}
+
+\mbox{\Hypertarget{b__plus__tree__leaf__page_8h_a98e5132577ac58a8bbf9bae3c345a88b}\label{b__plus__tree__leaf__page_8h_a98e5132577ac58a8bbf9bae3c345a88b}} 
+\index{b\_plus\_tree\_leaf\_page.h@{b\_plus\_tree\_leaf\_page.h}!LEAF\_PAGE\_HEADER\_SIZE@{LEAF\_PAGE\_HEADER\_SIZE}}
+\index{LEAF\_PAGE\_HEADER\_SIZE@{LEAF\_PAGE\_HEADER\_SIZE}!b\_plus\_tree\_leaf\_page.h@{b\_plus\_tree\_leaf\_page.h}}
+\doxysubsubsection{\texorpdfstring{LEAF\_PAGE\_HEADER\_SIZE}{LEAF\_PAGE\_HEADER\_SIZE}}
+{\footnotesize\ttfamily \#define L\+E\+A\+F\+\_\+\+P\+A\+G\+E\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE~28}
+
+\mbox{\Hypertarget{b__plus__tree__leaf__page_8h_a1bf27d964f8ae5ad340eb82a7bd5fee7}\label{b__plus__tree__leaf__page_8h_a1bf27d964f8ae5ad340eb82a7bd5fee7}} 
+\index{b\_plus\_tree\_leaf\_page.h@{b\_plus\_tree\_leaf\_page.h}!LEAF\_PAGE\_SIZE@{LEAF\_PAGE\_SIZE}}
+\index{LEAF\_PAGE\_SIZE@{LEAF\_PAGE\_SIZE}!b\_plus\_tree\_leaf\_page.h@{b\_plus\_tree\_leaf\_page.h}}
+\doxysubsubsection{\texorpdfstring{LEAF\_PAGE\_SIZE}{LEAF\_PAGE\_SIZE}}
+{\footnotesize\ttfamily \#define L\+E\+A\+F\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE~((P\+A\+G\+E\+\_\+\+S\+I\+ZE -\/ \mbox{\hyperlink{b__plus__tree__leaf__page_8h_a98e5132577ac58a8bbf9bae3c345a88b}{L\+E\+A\+F\+\_\+\+P\+A\+G\+E\+\_\+\+H\+E\+A\+D\+E\+R\+\_\+\+S\+I\+ZE}}) / sizeof(\mbox{\hyperlink{hash__table__page__defs_8h_a139704601c819af8cdce06a6c1080a85}{Mapping\+Type}}))}
+

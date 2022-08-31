@@ -1,0 +1,265 @@
+\hypertarget{classbustub_1_1TablePage}{}\doxysection{bustub\+::Table\+Page Class Reference}
+\label{classbustub_1_1TablePage}\index{bustub::TablePage@{bustub::TablePage}}
+
+
+{\ttfamily \#include $<$table\+\_\+page.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Table\+Page\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classbustub_1_1TablePage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Table\+Page\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classbustub_1_1TablePage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbustub_1_1TablePage_a78d02d550420257366e695c519bb0564}{Init}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id, uint32\+\_\+t page\+\_\+size, \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} prev\+\_\+page\+\_\+id, \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn)
+\item 
+\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1TablePage_a19836c50a189dc3cbca290d92797e4a0}{Get\+Table\+Page\+Id}} ()
+\item 
+\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1TablePage_a8a00d8c2dd85af6d2fbc3bceda0829d1}{Get\+Prev\+Page\+Id}} ()
+\item 
+\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1TablePage_acf57e08a0251d2ebb7abd1ca1f0f588b}{Get\+Next\+Page\+Id}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1TablePage_a8895de087dff1ecbf8f5ed841b402f34}{Set\+Prev\+Page\+Id}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} prev\+\_\+page\+\_\+id)
+\item 
+void \mbox{\hyperlink{classbustub_1_1TablePage_ae76444e2eb46f9030af404be81b72075}{Set\+Next\+Page\+Id}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} next\+\_\+page\+\_\+id)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1TablePage_a0add6681f788db413dda51bf3dd34c0d}{Insert\+Tuple}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple, \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn, \mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$lock\+\_\+manager, \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1TablePage_a8f6cb459674fb23aed6c50973c4e4b76}{Mark\+Delete}} (const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn, \mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$lock\+\_\+manager, \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1TablePage_a34876d543258622a723068250aa6dc73}{Update\+Tuple}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&new\+\_\+tuple, \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$old\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn, \mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$lock\+\_\+manager, \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager)
+\item 
+void \mbox{\hyperlink{classbustub_1_1TablePage_a35c6d336546ee2457eb5bf56ec15a5ad}{Apply\+Delete}} (const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn, \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager)
+\item 
+void \mbox{\hyperlink{classbustub_1_1TablePage_a80e3ac2269265b46412fb3d3ec62d4a8}{Rollback\+Delete}} (const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn, \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1TablePage_aa0a31d53927470f9ea527ccda7d819dc}{Get\+Tuple}} (const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&rid, \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn, \mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$lock\+\_\+manager)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1TablePage_adb09b71b9f7a8fd2239bed0bdee68fc4}{Get\+First\+Tuple\+Rid}} (\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$first\+\_\+rid)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1TablePage_aa25f84a9c096483e85cbe96efbcea919}{Get\+Next\+Tuple\+Rid}} (const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&cur\+\_\+rid, \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$next\+\_\+rid)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\hypertarget{classbustub_1_1TablePage_autotoc_md456}{}\doxysubsubsection{Slotted page format\+:}\label{classbustub_1_1TablePage_autotoc_md456}
+\hypertarget{classbustub_1_1TablePage_autotoc_md457}{}\doxysubsubsection{$\vert$ H\+E\+A\+D\+E\+R $\vert$ ... F\+R\+E\+E S\+P\+A\+C\+E ... $\vert$ ... I\+N\+S\+E\+R\+T\+E\+D T\+U\+P\+L\+E\+S ... $\vert$}\label{classbustub_1_1TablePage_autotoc_md457}
+$^\wedge$ free space pointer\hypertarget{classbustub_1_1TablePage_autotoc_md458}{}\doxysubsubsection{Header format (size in bytes)\+:}\label{classbustub_1_1TablePage_autotoc_md458}
+\hypertarget{classbustub_1_1TablePage_autotoc_md459}{}\doxysubsubsection{$\vert$ Page\+Id (4)$\vert$ L\+S\+N (4)$\vert$ Prev\+Page\+Id (4)$\vert$ Next\+Page\+Id (4)$\vert$ Free\+Space\+Pointer(4) $\vert$}\label{classbustub_1_1TablePage_autotoc_md459}
+\DoxyHorRuler{0}
+ \hypertarget{classbustub_1_1TablePage_autotoc_md460}{}\doxysubsubsection{$\vert$ Tuple\+Count (4) $\vert$ Tuple\+\_\+1 offset (4) $\vert$ Tuple\+\_\+1 size (4) $\vert$ ... $\vert$}\label{classbustub_1_1TablePage_autotoc_md460}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1TablePage_a35c6d336546ee2457eb5bf56ec15a5ad}\label{classbustub_1_1TablePage_a35c6d336546ee2457eb5bf56ec15a5ad}} 
+\index{bustub::TablePage@{bustub::TablePage}!ApplyDelete@{ApplyDelete}}
+\index{ApplyDelete@{ApplyDelete}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{ApplyDelete()}{ApplyDelete()}}
+{\footnotesize\ttfamily void bustub\+::\+Table\+Page\+::\+Apply\+Delete (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn,  }\item[{\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$}]{log\+\_\+manager }\end{DoxyParamCaption})}
+
+To be called on commit or abort. Actually perform the delete or rollback an insert. \mbox{\Hypertarget{classbustub_1_1TablePage_adb09b71b9f7a8fd2239bed0bdee68fc4}\label{classbustub_1_1TablePage_adb09b71b9f7a8fd2239bed0bdee68fc4}} 
+\index{bustub::TablePage@{bustub::TablePage}!GetFirstTupleRid@{GetFirstTupleRid}}
+\index{GetFirstTupleRid@{GetFirstTupleRid}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{GetFirstTupleRid()}{GetFirstTupleRid()}}
+{\footnotesize\ttfamily bool bustub\+::\+Table\+Page\+::\+Get\+First\+Tuple\+Rid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$}]{first\+\_\+rid }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the rid of the first tuple in this page 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em first\+\_\+rid} & the \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} of the first tuple in this page \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the first tuple exists, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TablePage_acf57e08a0251d2ebb7abd1ca1f0f588b}\label{classbustub_1_1TablePage_acf57e08a0251d2ebb7abd1ca1f0f588b}} 
+\index{bustub::TablePage@{bustub::TablePage}!GetNextPageId@{GetNextPageId}}
+\index{GetNextPageId@{GetNextPageId}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{GetNextPageId()}{GetNextPageId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} bustub\+::\+Table\+Page\+::\+Get\+Next\+Page\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the page ID of the next table page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TablePage_aa25f84a9c096483e85cbe96efbcea919}\label{classbustub_1_1TablePage_aa25f84a9c096483e85cbe96efbcea919}} 
+\index{bustub::TablePage@{bustub::TablePage}!GetNextTupleRid@{GetNextTupleRid}}
+\index{GetNextTupleRid@{GetNextTupleRid}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{GetNextTupleRid()}{GetNextTupleRid()}}
+{\footnotesize\ttfamily bool bustub\+::\+Table\+Page\+::\+Get\+Next\+Tuple\+Rid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&}]{cur\+\_\+rid,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$}]{next\+\_\+rid }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em cur\+\_\+rid} & the \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} of the current tuple \\
+\hline
+\mbox{\texttt{ out}}  & {\em next\+\_\+rid} & the \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} of the tuple following the current tuple \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the next tuple exists, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TablePage_a8a00d8c2dd85af6d2fbc3bceda0829d1}\label{classbustub_1_1TablePage_a8a00d8c2dd85af6d2fbc3bceda0829d1}} 
+\index{bustub::TablePage@{bustub::TablePage}!GetPrevPageId@{GetPrevPageId}}
+\index{GetPrevPageId@{GetPrevPageId}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{GetPrevPageId()}{GetPrevPageId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} bustub\+::\+Table\+Page\+::\+Get\+Prev\+Page\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the page ID of the previous table page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TablePage_a19836c50a189dc3cbca290d92797e4a0}\label{classbustub_1_1TablePage_a19836c50a189dc3cbca290d92797e4a0}} 
+\index{bustub::TablePage@{bustub::TablePage}!GetTablePageId@{GetTablePageId}}
+\index{GetTablePageId@{GetTablePageId}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{GetTablePageId()}{GetTablePageId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} bustub\+::\+Table\+Page\+::\+Get\+Table\+Page\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the page ID of this table page 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TablePage_aa0a31d53927470f9ea527ccda7d819dc}\label{classbustub_1_1TablePage_aa0a31d53927470f9ea527ccda7d819dc}} 
+\index{bustub::TablePage@{bustub::TablePage}!GetTuple@{GetTuple}}
+\index{GetTuple@{GetTuple}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{GetTuple()}{GetTuple()}}
+{\footnotesize\ttfamily bool bustub\+::\+Table\+Page\+::\+Get\+Tuple (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn,  }\item[{\mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$}]{lock\+\_\+manager }\end{DoxyParamCaption})}
+
+Read a tuple from a table. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em rid} & rid of the tuple to read \\
+\hline
+\mbox{\texttt{ out}}  & {\em tuple} & the tuple that was read \\
+\hline
+ & {\em txn} & transaction performing the read \\
+\hline
+ & {\em lock\+\_\+manager} & the lock manager \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the read is successful (i.\+e. the tuple exists) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TablePage_a78d02d550420257366e695c519bb0564}\label{classbustub_1_1TablePage_a78d02d550420257366e695c519bb0564}} 
+\index{bustub::TablePage@{bustub::TablePage}!Init@{Init}}
+\index{Init@{Init}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Table\+Page\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id,  }\item[{uint32\+\_\+t}]{page\+\_\+size,  }\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{prev\+\_\+page\+\_\+id,  }\item[{\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$}]{log\+\_\+manager,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn }\end{DoxyParamCaption})}
+
+Initialize the \mbox{\hyperlink{classbustub_1_1TablePage}{Table\+Page}} header. 
+\begin{DoxyParams}{Parameters}
+{\em page\+\_\+id} & the page ID of this table page \\
+\hline
+{\em page\+\_\+size} & the size of this table page \\
+\hline
+{\em prev\+\_\+page\+\_\+id} & the previous table page ID \\
+\hline
+{\em log\+\_\+manager} & the log manager in use \\
+\hline
+{\em txn} & the transaction that this page is created in \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1TablePage_a0add6681f788db413dda51bf3dd34c0d}\label{classbustub_1_1TablePage_a0add6681f788db413dda51bf3dd34c0d}} 
+\index{bustub::TablePage@{bustub::TablePage}!InsertTuple@{InsertTuple}}
+\index{InsertTuple@{InsertTuple}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{InsertTuple()}{InsertTuple()}}
+{\footnotesize\ttfamily bool bustub\+::\+Table\+Page\+::\+Insert\+Tuple (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn,  }\item[{\mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$}]{lock\+\_\+manager,  }\item[{\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$}]{log\+\_\+manager }\end{DoxyParamCaption})}
+
+Insert a tuple into the table. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em tuple} & tuple to insert \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & rid of the inserted tuple \\
+\hline
+ & {\em txn} & transaction performing the insert \\
+\hline
+ & {\em lock\+\_\+manager} & the lock manager \\
+\hline
+ & {\em log\+\_\+manager} & the log manager \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the insert is successful (i.\+e. there is enough space) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TablePage_a8f6cb459674fb23aed6c50973c4e4b76}\label{classbustub_1_1TablePage_a8f6cb459674fb23aed6c50973c4e4b76}} 
+\index{bustub::TablePage@{bustub::TablePage}!MarkDelete@{MarkDelete}}
+\index{MarkDelete@{MarkDelete}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{MarkDelete()}{MarkDelete()}}
+{\footnotesize\ttfamily bool bustub\+::\+Table\+Page\+::\+Mark\+Delete (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn,  }\item[{\mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$}]{lock\+\_\+manager,  }\item[{\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$}]{log\+\_\+manager }\end{DoxyParamCaption})}
+
+Mark a tuple as deleted. This does not actually delete the tuple. 
+\begin{DoxyParams}{Parameters}
+{\em rid} & rid of the tuple to mark as deleted \\
+\hline
+{\em txn} & transaction performing the delete \\
+\hline
+{\em lock\+\_\+manager} & the lock manager \\
+\hline
+{\em log\+\_\+manager} & the log manager \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if marking the tuple as deleted is successful (i.\+e the tuple exists) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TablePage_a80e3ac2269265b46412fb3d3ec62d4a8}\label{classbustub_1_1TablePage_a80e3ac2269265b46412fb3d3ec62d4a8}} 
+\index{bustub::TablePage@{bustub::TablePage}!RollbackDelete@{RollbackDelete}}
+\index{RollbackDelete@{RollbackDelete}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{RollbackDelete()}{RollbackDelete()}}
+{\footnotesize\ttfamily void bustub\+::\+Table\+Page\+::\+Rollback\+Delete (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn,  }\item[{\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$}]{log\+\_\+manager }\end{DoxyParamCaption})}
+
+To be called on abort. Rollback a delete, i.\+e. this reverses a Mark\+Delete. \mbox{\Hypertarget{classbustub_1_1TablePage_ae76444e2eb46f9030af404be81b72075}\label{classbustub_1_1TablePage_ae76444e2eb46f9030af404be81b72075}} 
+\index{bustub::TablePage@{bustub::TablePage}!SetNextPageId@{SetNextPageId}}
+\index{SetNextPageId@{SetNextPageId}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{SetNextPageId()}{SetNextPageId()}}
+{\footnotesize\ttfamily void bustub\+::\+Table\+Page\+::\+Set\+Next\+Page\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{next\+\_\+page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the page id of the next page in the table. \mbox{\Hypertarget{classbustub_1_1TablePage_a8895de087dff1ecbf8f5ed841b402f34}\label{classbustub_1_1TablePage_a8895de087dff1ecbf8f5ed841b402f34}} 
+\index{bustub::TablePage@{bustub::TablePage}!SetPrevPageId@{SetPrevPageId}}
+\index{SetPrevPageId@{SetPrevPageId}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{SetPrevPageId()}{SetPrevPageId()}}
+{\footnotesize\ttfamily void bustub\+::\+Table\+Page\+::\+Set\+Prev\+Page\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{prev\+\_\+page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Set the page id of the previous page in the table. \mbox{\Hypertarget{classbustub_1_1TablePage_a34876d543258622a723068250aa6dc73}\label{classbustub_1_1TablePage_a34876d543258622a723068250aa6dc73}} 
+\index{bustub::TablePage@{bustub::TablePage}!UpdateTuple@{UpdateTuple}}
+\index{UpdateTuple@{UpdateTuple}!bustub::TablePage@{bustub::TablePage}}
+\doxysubsubsection{\texorpdfstring{UpdateTuple()}{UpdateTuple()}}
+{\footnotesize\ttfamily bool bustub\+::\+Table\+Page\+::\+Update\+Tuple (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{new\+\_\+tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{old\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn,  }\item[{\mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$}]{lock\+\_\+manager,  }\item[{\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$}]{log\+\_\+manager }\end{DoxyParamCaption})}
+
+Update a tuple. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em new\+\_\+tuple} & new value of the tuple \\
+\hline
+\mbox{\texttt{ out}}  & {\em old\+\_\+tuple} & old value of the tuple \\
+\hline
+ & {\em rid} & rid of the tuple \\
+\hline
+ & {\em txn} & transaction performing the update \\
+\hline
+ & {\em lock\+\_\+manager} & the lock manager \\
+\hline
+ & {\em log\+\_\+manager} & the log manager \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if updating the tuple succeeded 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/\mbox{\hyperlink{table__page_8h}{table\+\_\+page.\+h}}\item 
+src/storage/page/\mbox{\hyperlink{table__page_8cpp}{table\+\_\+page.\+cpp}}\end{DoxyCompactItemize}

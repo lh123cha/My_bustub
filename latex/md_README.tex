@@ -1,0 +1,159 @@
+
+
+\DoxyHorRuler{0}
+
+
+\href{https://travis-ci.org/cmu-db/bustub}{\texttt{ }} \href{https://circleci.com/gh/cmu-db/bustub/tree/master}{\texttt{ }}
+
+Bus\+Tub is a relational database management system built at \href{https://db.cs.cmu.edu}{\texttt{ Carnegie Mellon University}} for the \href{https://15445.courses.cs.cmu.edu}{\texttt{ Introduction to Database Systems}} (15-\/445/645) course. This system was developed for educational purposes and should not be used in production environments.
+
+{\bfseries{W\+A\+R\+N\+I\+NG\+: IF Y\+OU A\+RE A S\+T\+U\+D\+E\+NT IN T\+HE C\+L\+A\+SS, DO N\+OT D\+I\+R\+E\+C\+T\+LY F\+O\+RK T\+H\+IS R\+E\+PO. DO N\+OT P\+U\+SH P\+R\+O\+J\+E\+CT S\+O\+L\+U\+T\+I\+O\+NS P\+U\+B\+L\+I\+C\+LY. T\+H\+IS IS AN A\+C\+A\+D\+E\+M\+IC I\+N\+T\+E\+G\+R\+I\+TY V\+I\+O\+L\+A\+T\+I\+ON A\+ND C\+AN L\+E\+AD TO G\+E\+T\+T\+I\+NG Y\+O\+UR D\+E\+G\+R\+EE R\+E\+V\+O\+K\+ED, E\+V\+EN A\+F\+T\+ER Y\+OU G\+R\+A\+D\+U\+A\+TE.}}\hypertarget{md_README_autotoc_md418}{}\doxysubsection{Cloning this Repository}\label{md_README_autotoc_md418}
+The following instructions are adapted from the Github documentation on \href{https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/duplicating-a-repository}{\texttt{ duplicating a repository}}. The procedure below walks you through creating a private Bus\+Tub repository that you can use for development.
+
+
+\begin{DoxyEnumerate}
+\item Go \href{https://github.com/new}{\texttt{ here}} to create a new repository under your account. Pick a name (e.\+g. {\ttfamily bustub-\/private}) and select {\bfseries{Private}} for the repository visibility level.
+\item On your development machine, create a bare clone of the public Bus\+Tub repository\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ git clone -\/-\/bare https://github.com/cmu-\/db/bustub.git bustub-\/public}
+\end{DoxyCode}
+
+\item Next, \href{https://git-scm.com/docs/git-push\#Documentation/git-push.txt---mirror}{\texttt{ mirror}} the public Bus\+Tub repository to your own private Bus\+Tub repository. Suppose your Git\+Hub name is {\ttfamily student} and your repository name is {\ttfamily bustub-\/private}. The procedure for mirroring the repository is then\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ cd bustub-\/public}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# If you pull / push over HTTPS}
+\DoxyCodeLine{\$ git push -\/-\/mirror https://github.com/student/bustub-\/private.git}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# If you pull / push over SSH}
+\DoxyCodeLine{\$ git push -\/-\/mirror git@github.com:student/bustub-\/private.git}
+\end{DoxyCode}
+
+
+This copies everything in the public Bus\+Tub repository to your own private repository. You can now delete your local clone of the public repository\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ cd ..}
+\DoxyCodeLine{\$ rm -\/rf bustub-\/public}
+\end{DoxyCode}
+
+\item Clone your private repository to your development machine\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\# If you pull / push over HTTPS}
+\DoxyCodeLine{\$ git clone https://github.com/student/bustub-\/private.git}
+\DoxyCodeLine{}
+\DoxyCodeLine{\# If you pull / push over SSH}
+\DoxyCodeLine{\$ git clone git@github.com:student/bustub-\/private.git}
+\end{DoxyCode}
+
+\item Add the public Bus\+Tub repository as a second remote. This allows you to retrieve changes from the C\+M\+U-\/\+DB repository and merge them with your solution throughout the semester\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ git remote add public https://github.com/cmu-\/db/bustub.git}
+\end{DoxyCode}
+
+
+You can verify that the remote was added with the following command\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ git remote -\/v}
+\DoxyCodeLine{origin   https://github.com/student/bustub-\/private.git (fetch)}
+\DoxyCodeLine{origin   https://github.com/student/bustub-\/private.git (push)}
+\DoxyCodeLine{public   https://github.com/cmu-\/db/bustub.git (fetch)}
+\DoxyCodeLine{public   https://github.com/cmu-\/db/bustub.git (push)}
+\end{DoxyCode}
+
+\item You can now pull in changes from the public Bus\+Tub repository as needed with\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ git pull public master}
+\end{DoxyCode}
+
+\end{DoxyEnumerate}
+
+We suggest working on your projects in separate branches. If you do not understand how Git branches work, \href{https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging}{\texttt{ learn how}}. If you fail to do this, you might lose all your work at some point in the semester, and nobody will be able to help you.\hypertarget{md_README_autotoc_md419}{}\doxysubsection{Build}\label{md_README_autotoc_md419}
+\hypertarget{md_README_autotoc_md420}{}\doxysubsubsection{Linux / Mac}\label{md_README_autotoc_md420}
+To ensure that you have the proper packages on your machine, run the following script to automatically install them\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ sudo build\_support/packages.sh}
+\end{DoxyCode}
+
+
+Then run the following commands to build the system\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ mkdir build}
+\DoxyCodeLine{\$ cd build}
+\DoxyCodeLine{\$ cmake ..}
+\DoxyCodeLine{\$ make}
+\end{DoxyCode}
+
+
+If you want to compile the system in debug mode, pass in the following flag to cmake\+: Debug mode\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ cmake -\/DCMAKE\_BUILD\_TYPE=Debug ..}
+\DoxyCodeLine{\$ make}
+\end{DoxyCode}
+
+
+This enables \href{https://github.com/google/sanitizers}{\texttt{ Address\+Sanitizer}}, which can generate false positives for overflow on S\+TL containers. If you encounter this, define the environment variable {\ttfamily A\+S\+A\+N\+\_\+\+O\+P\+T\+I\+O\+NS=detect\+\_\+container\+\_\+overflow=0}.\hypertarget{md_README_autotoc_md421}{}\doxysubsubsection{Windows}\label{md_README_autotoc_md421}
+If you are using Windows 10, you can use the Windows Subsystem for Linux (W\+SL) to develop, build, and test Bustub. All you need is to \href{https://docs.microsoft.com/en-us/windows/wsl/install-win10}{\texttt{ Install W\+SL}}. You can just choose \char`\"{}\+Ubuntu\char`\"{} (no specific version) in Microsoft Store. Then, enter W\+SL and follow the above instructions.
+
+If you are using C\+Lion, it also \href{https://blog.jetbrains.com/clion/2018/01/clion-and-linux-toolchain-on-windows-are-now-friends}{\texttt{ works with W\+SL}}.\hypertarget{md_README_autotoc_md422}{}\doxysubsection{Testing}\label{md_README_autotoc_md422}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ cd build}
+\DoxyCodeLine{\$ make check-\/tests}
+\end{DoxyCode}
+\hypertarget{md_README_autotoc_md423}{}\doxysubsection{Build environment}\label{md_README_autotoc_md423}
+If you have trouble getting cmake or make to run, an easy solution is to create a virtual container to build in. There are two options available\+:\hypertarget{md_README_autotoc_md424}{}\doxysubsubsection{Vagrant}\label{md_README_autotoc_md424}
+First, make sure you have Vagrant and Virtualbox installed 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ sudo apt update}
+\DoxyCodeLine{\$ sudo apt install vagrant virtualbox}
+\end{DoxyCode}
+
+
+From the repository directory, run this command to create and start a Vagrant box\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ vagrant up}
+\end{DoxyCode}
+
+
+This will start a Vagrant box running Ubuntu 20.\+02 in the background with all the packages needed. To access it, type
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ vagrant ssh}
+\end{DoxyCode}
+
+
+to open a shell within the box. You can find Bustub\textquotesingle{}s code mounted at {\ttfamily /bustub} and run the commands mentioned above like normal.\hypertarget{md_README_autotoc_md425}{}\doxysubsubsection{Docker}\label{md_README_autotoc_md425}
+First, make sure that you have docker installed\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ sudo apt update}
+\DoxyCodeLine{\$ sudo apt install docker}
+\end{DoxyCode}
+
+
+From the repository directory, run these commands to create a Docker image and container\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ docker build . -\/t bustub}
+\DoxyCodeLine{\$ docker create -\/t -\/i -\/-\/name bustub -\/v \$(pwd):/bustub bustub bash}
+\end{DoxyCode}
+
+
+This will create a Docker image and container. To run it, type\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ docker start -\/a -\/i bustub}
+\end{DoxyCode}
+
+
+to open a shell within the box. You can find Bustub\textquotesingle{}s code mounted at {\ttfamily /bustub} and run the commands mentioned above like normal. 

@@ -1,0 +1,534 @@
+\hypertarget{classbustub_1_1Value}{}\doxysection{bustub\+::Value Class Reference}
+\label{classbustub_1_1Value}\index{bustub::Value@{bustub::Value}}
+
+
+{\ttfamily \#include $<$value.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Value\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{classbustub_1_1Value__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionbustub_1_1Value_1_1Val}{Val}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1Value_a275c9c2eb9aa9780d4ac33d2d71f4840}{Value}} (const \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type)
+\item 
+\mbox{\hyperlink{classbustub_1_1Value_a0e9b246c8c41260dea9fd39a58799ab5}{Value}} (\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type, int8\+\_\+t \mbox{\hyperlink{googletest-output-test-golden-lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}})
+\item 
+\mbox{\hyperlink{classbustub_1_1Value_a11cf1c9ac36d809d58efc1d57cda9b25}{Value}} (\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type, double d)
+\item 
+\mbox{\hyperlink{classbustub_1_1Value_aa97eab6a3ce99c31551e56fbd54ddb44}{Value}} (\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type, float f)
+\item 
+\mbox{\hyperlink{classbustub_1_1Value_a54e13e4894308ad296b5e172082e6f03}{Value}} (\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type, int16\+\_\+t \mbox{\hyperlink{googletest-output-test-golden-lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}})
+\item 
+\mbox{\hyperlink{classbustub_1_1Value_a0b1ef06245f86b1df5f21a0fadd89390}{Value}} (\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type, int32\+\_\+t \mbox{\hyperlink{googletest-output-test-golden-lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}})
+\item 
+\mbox{\hyperlink{classbustub_1_1Value_a04aaf248b3213d8bfb96342dec4f8fc3}{Value}} (\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type, int64\+\_\+t \mbox{\hyperlink{googletest-output-test-golden-lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}})
+\item 
+\mbox{\hyperlink{classbustub_1_1Value_a34c6cf4364fbd47b1b05df14ece302f4}{Value}} (\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type, uint64\+\_\+t \mbox{\hyperlink{googletest-output-test-golden-lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}})
+\item 
+\mbox{\hyperlink{classbustub_1_1Value_ae5edd3284269ee7e3bcf2080afc2808d}{Value}} (\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type, const char $\ast$data, uint32\+\_\+t len, bool manage\+\_\+data)
+\item 
+\mbox{\hyperlink{classbustub_1_1Value_ad7a2a09b3c0105f4f22dc12084aab72a}{Value}} (\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type, const std\+::string \&data)
+\item 
+\mbox{\hyperlink{classbustub_1_1Value_a869b52c68c961c722ec6f46f10ab5afe}{Value}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1Value_a867a88004b664f106e8a48e1c21ce6f4}{Value}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&other)
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \& \mbox{\hyperlink{classbustub_1_1Value_a47629960a9f827eb7d56f39033d16228}{operator=}} (\mbox{\hyperlink{classbustub_1_1Value}{Value}} other)
+\item 
+\mbox{\hyperlink{classbustub_1_1Value_ad1658c65b5b97f296d242ffab2c78dde}{$\sim$\+Value}} ()
+\item 
+bool \mbox{\hyperlink{classbustub_1_1Value_ac303119057964784a950da8f480518a6}{Check\+Integer}} () const
+\item 
+bool \mbox{\hyperlink{classbustub_1_1Value_a86c2fbd0ba907bcd88a8d443f191ab54}{Check\+Comparable}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&o) const
+\item 
+\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} \mbox{\hyperlink{classbustub_1_1Value_a16d9471eeeab42f3e98d294d39db0b5c}{Get\+Type\+Id}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1Value_a72aa06162b8d9ec0b54d4534463807ec}{Get\+Length}} () const
+\item 
+const char $\ast$ \mbox{\hyperlink{classbustub_1_1Value_aafad9fd116061f7fffc84771d42b4819}{Get\+Data}} () const
+\item 
+{\footnotesize template$<$class T $>$ }\\T \mbox{\hyperlink{classbustub_1_1Value_a38c5e1106426016d1d4c740bb59f7c84}{Get\+As}} () const
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1Value_a7205f21c9c89530e58133375efbebbcb}{Cast\+As}} (const \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type\+\_\+id) const
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1Value_a0c584674b36604501783fd60ebb6f09e}{Compare\+Equals}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&o) const
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1Value_a0ceeb530adfc6983b89e124dc629ffb1}{Compare\+Not\+Equals}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&o) const
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1Value_a419373bb0c7f74d73f9dae84c140cce9}{Compare\+Less\+Than}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&o) const
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1Value_adaee627dfa32af2ff2de3b66a09c8cd5}{Compare\+Less\+Than\+Equals}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&o) const
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1Value_a897ad434d946a74bfcf282c055532d91}{Compare\+Greater\+Than}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&o) const
+\item 
+\mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} \mbox{\hyperlink{classbustub_1_1Value_a8bf82a2970c45784c235c789d1c2838d}{Compare\+Greater\+Than\+Equals}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&o) const
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1Value_aeef1af95a5bb6c3cab0c17a1f87382a4}{Add}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&o) const
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1Value_afd16650dfcaef9535636c846b73e0f44}{Subtract}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&o) const
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1Value_a96935e05bf960b2ba09e14012a38aa83}{Multiply}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&o) const
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1Value_a96af4b87e709edb942a9239913b2d8e2}{Divide}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&o) const
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1Value_abcfbcf249feb778721d71122490a757b}{Modulo}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&o) const
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1Value_ab9e3a7182b22edb802dc1b20496a5297}{Min}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&o) const
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1Value_aae5e0676c7c8328d367d642c9de4db16}{Max}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&o) const
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1Value_a2cc53db6745c98b31495a46db1cfd793}{Sqrt}} () const
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1Value_a4ae944f55b3d2c094981e5a9bf183528}{Operate\+Null}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&o) const
+\item 
+bool \mbox{\hyperlink{classbustub_1_1Value_a0040e0570d778512c06714e63f1f9616}{Is\+Zero}} () const
+\item 
+bool \mbox{\hyperlink{classbustub_1_1Value_a2a12bc87ff412839e75a1dc641beb7da}{Is\+Null}} () const
+\item 
+void \mbox{\hyperlink{classbustub_1_1Value_ac8be32b9de7e116d57158442347b6625}{Serialize\+To}} (char $\ast$storage) const
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1Value_a73387211c2edea4633dd21c4c2d1d3c3}{To\+String}} () const
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1Value_a5915a1e75cf6a919c68ca2a41614c73a}{Copy}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1Value_a8e4c4c8a2fb2d46681e6d9072a2109cc}{Deserialize\+From}} (const char $\ast$storage, const \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} type\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+union \mbox{\hyperlink{unionbustub_1_1Value_1_1Val}{bustub\+::\+Value\+::\+Val}} \mbox{\hyperlink{classbustub_1_1Value_ad77e745e5195370cd16432fd1786b893}{value\+\_\+}}
+\item 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>uint32\_t \mbox{\hyperlink{classbustub_1_1Value_a50ce01f436ca203c4612db41392de052}{len\_}}\\
+\>\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{TypeId}} \mbox{\hyperlink{classbustub_1_1Value_af08760ffd3d945e144e8feb763b0425f}{elem\_type\_id\_}}\\
+\} \mbox{\hyperlink{classbustub_1_1Value_a26b514972a28e24915fc7b7ce3d3aab5}{size\_}}\\
+
+\end{tabbing}\item 
+bool \mbox{\hyperlink{classbustub_1_1Value_a1680f1c5aceacdae4287c2b04743ceed}{manage\+\_\+data\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} \mbox{\hyperlink{classbustub_1_1Value_ab39fb104d3db35514ff96b8ed6f1b594}{type\+\_\+id\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbustub_1_1Value_a18dba29b4f3e91d6d2bc53472a6bb7cc}{Type}}
+\item 
+class \mbox{\hyperlink{classbustub_1_1Value_a79159b84381e94ec5d5c80ba7d4da120}{Numeric\+Type}}
+\item 
+class \mbox{\hyperlink{classbustub_1_1Value_abbaa4aeba44cb76d4a8be26c817a8d3d}{Integer\+Parent\+Type}}
+\item 
+class \mbox{\hyperlink{classbustub_1_1Value_ad5daa7c4cdceceba369041d829746cb2}{Tinyint\+Type}}
+\item 
+class \mbox{\hyperlink{classbustub_1_1Value_ad318ef5bdf47bfa23ef259520e393c86}{Smallint\+Type}}
+\item 
+class \mbox{\hyperlink{classbustub_1_1Value_aaa06efd1401ee152456eb22a467ddcb3}{Integer\+Type}}
+\item 
+class \mbox{\hyperlink{classbustub_1_1Value_a0a40f921b043a08617c1ee3885cfe2b6}{Bigint\+Type}}
+\item 
+class \mbox{\hyperlink{classbustub_1_1Value_a74722ac014df85e9013a3d2b1d008f0c}{Decimal\+Type}}
+\item 
+class \mbox{\hyperlink{classbustub_1_1Value_a4352efebead58c24093f4ecf729cfc64}{Timestamp\+Type}}
+\item 
+class \mbox{\hyperlink{classbustub_1_1Value_ae6685da7e972a1fbaf35774b1c4a3c66}{Boolean\+Type}}
+\item 
+class \mbox{\hyperlink{classbustub_1_1Value_ab48da2a2719dd78acf8e27060d83ecac}{Varlen\+Type}}
+\item 
+void \mbox{\hyperlink{classbustub_1_1Value_a77ac879921541d41ad8aa7fffb3d454f}{Swap}} (\mbox{\hyperlink{classbustub_1_1Value}{Value}} \&first, \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&second)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1Value_a275c9c2eb9aa9780d4ac33d2d71f4840}\label{classbustub_1_1Value_a275c9c2eb9aa9780d4ac33d2d71f4840}} 
+\index{bustub::Value@{bustub::Value}!Value@{Value}}
+\index{Value@{Value}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [1/12]}}
+{\footnotesize\ttfamily bustub\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a0e9b246c8c41260dea9fd39a58799ab5}\label{classbustub_1_1Value_a0e9b246c8c41260dea9fd39a58799ab5}} 
+\index{bustub::Value@{bustub::Value}!Value@{Value}}
+\index{Value@{Value}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [2/12]}}
+{\footnotesize\ttfamily bustub\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type,  }\item[{int8\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a11cf1c9ac36d809d58efc1d57cda9b25}\label{classbustub_1_1Value_a11cf1c9ac36d809d58efc1d57cda9b25}} 
+\index{bustub::Value@{bustub::Value}!Value@{Value}}
+\index{Value@{Value}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [3/12]}}
+{\footnotesize\ttfamily bustub\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type,  }\item[{double}]{d }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1Value_aa97eab6a3ce99c31551e56fbd54ddb44}\label{classbustub_1_1Value_aa97eab6a3ce99c31551e56fbd54ddb44}} 
+\index{bustub::Value@{bustub::Value}!Value@{Value}}
+\index{Value@{Value}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [4/12]}}
+{\footnotesize\ttfamily bustub\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type,  }\item[{float}]{f }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a54e13e4894308ad296b5e172082e6f03}\label{classbustub_1_1Value_a54e13e4894308ad296b5e172082e6f03}} 
+\index{bustub::Value@{bustub::Value}!Value@{Value}}
+\index{Value@{Value}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [5/12]}}
+{\footnotesize\ttfamily bustub\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type,  }\item[{int16\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a0b1ef06245f86b1df5f21a0fadd89390}\label{classbustub_1_1Value_a0b1ef06245f86b1df5f21a0fadd89390}} 
+\index{bustub::Value@{bustub::Value}!Value@{Value}}
+\index{Value@{Value}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [6/12]}}
+{\footnotesize\ttfamily bustub\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type,  }\item[{int32\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a04aaf248b3213d8bfb96342dec4f8fc3}\label{classbustub_1_1Value_a04aaf248b3213d8bfb96342dec4f8fc3}} 
+\index{bustub::Value@{bustub::Value}!Value@{Value}}
+\index{Value@{Value}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [7/12]}}
+{\footnotesize\ttfamily bustub\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type,  }\item[{int64\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a34c6cf4364fbd47b1b05df14ece302f4}\label{classbustub_1_1Value_a34c6cf4364fbd47b1b05df14ece302f4}} 
+\index{bustub::Value@{bustub::Value}!Value@{Value}}
+\index{Value@{Value}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [8/12]}}
+{\footnotesize\ttfamily bustub\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type,  }\item[{uint64\+\_\+t}]{i }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1Value_ae5edd3284269ee7e3bcf2080afc2808d}\label{classbustub_1_1Value_ae5edd3284269ee7e3bcf2080afc2808d}} 
+\index{bustub::Value@{bustub::Value}!Value@{Value}}
+\index{Value@{Value}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [9/12]}}
+{\footnotesize\ttfamily bustub\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type,  }\item[{const char $\ast$}]{data,  }\item[{uint32\+\_\+t}]{len,  }\item[{bool}]{manage\+\_\+data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1Value_ad7a2a09b3c0105f4f22dc12084aab72a}\label{classbustub_1_1Value_ad7a2a09b3c0105f4f22dc12084aab72a}} 
+\index{bustub::Value@{bustub::Value}!Value@{Value}}
+\index{Value@{Value}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [10/12]}}
+{\footnotesize\ttfamily bustub\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type,  }\item[{const std\+::string \&}]{data }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a869b52c68c961c722ec6f46f10ab5afe}\label{classbustub_1_1Value_a869b52c68c961c722ec6f46f10ab5afe}} 
+\index{bustub::Value@{bustub::Value}!Value@{Value}}
+\index{Value@{Value}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [11/12]}}
+{\footnotesize\ttfamily bustub\+::\+Value\+::\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a867a88004b664f106e8a48e1c21ce6f4}\label{classbustub_1_1Value_a867a88004b664f106e8a48e1c21ce6f4}} 
+\index{bustub::Value@{bustub::Value}!Value@{Value}}
+\index{Value@{Value}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Value()}{Value()}\hspace{0.1cm}{\footnotesize\ttfamily [12/12]}}
+{\footnotesize\ttfamily bustub\+::\+Value\+::\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1Value_ad1658c65b5b97f296d242ffab2c78dde}\label{classbustub_1_1Value_ad1658c65b5b97f296d242ffab2c78dde}} 
+\index{bustub::Value@{bustub::Value}!````~Value@{$\sim$Value}}
+\index{````~Value@{$\sim$Value}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{$\sim$Value()}{~Value()}}
+{\footnotesize\ttfamily bustub\+::\+Value\+::$\sim$\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Value_aeef1af95a5bb6c3cab0c17a1f87382a4}\label{classbustub_1_1Value_aeef1af95a5bb6c3cab0c17a1f87382a4}} 
+\index{bustub::Value@{bustub::Value}!Add@{Add}}
+\index{Add@{Add}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Add()}{Add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Value\+::\+Add (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a7205f21c9c89530e58133375efbebbcb}\label{classbustub_1_1Value_a7205f21c9c89530e58133375efbebbcb}} 
+\index{bustub::Value@{bustub::Value}!CastAs@{CastAs}}
+\index{CastAs@{CastAs}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{CastAs()}{CastAs()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Value\+::\+Cast\+As (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type\+\_\+id }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a86c2fbd0ba907bcd88a8d443f191ab54}\label{classbustub_1_1Value_a86c2fbd0ba907bcd88a8d443f191ab54}} 
+\index{bustub::Value@{bustub::Value}!CheckComparable@{CheckComparable}}
+\index{CheckComparable@{CheckComparable}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{CheckComparable()}{CheckComparable()}}
+{\footnotesize\ttfamily bool bustub\+::\+Value\+::\+Check\+Comparable (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{o }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classbustub_1_1Value_ac303119057964784a950da8f480518a6}\label{classbustub_1_1Value_ac303119057964784a950da8f480518a6}} 
+\index{bustub::Value@{bustub::Value}!CheckInteger@{CheckInteger}}
+\index{CheckInteger@{CheckInteger}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{CheckInteger()}{CheckInteger()}}
+{\footnotesize\ttfamily bool bustub\+::\+Value\+::\+Check\+Integer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a0c584674b36604501783fd60ebb6f09e}\label{classbustub_1_1Value_a0c584674b36604501783fd60ebb6f09e}} 
+\index{bustub::Value@{bustub::Value}!CompareEquals@{CompareEquals}}
+\index{CompareEquals@{CompareEquals}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{CompareEquals()}{CompareEquals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Value\+::\+Compare\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a897ad434d946a74bfcf282c055532d91}\label{classbustub_1_1Value_a897ad434d946a74bfcf282c055532d91}} 
+\index{bustub::Value@{bustub::Value}!CompareGreaterThan@{CompareGreaterThan}}
+\index{CompareGreaterThan@{CompareGreaterThan}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{CompareGreaterThan()}{CompareGreaterThan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Value\+::\+Compare\+Greater\+Than (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a8bf82a2970c45784c235c789d1c2838d}\label{classbustub_1_1Value_a8bf82a2970c45784c235c789d1c2838d}} 
+\index{bustub::Value@{bustub::Value}!CompareGreaterThanEquals@{CompareGreaterThanEquals}}
+\index{CompareGreaterThanEquals@{CompareGreaterThanEquals}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{CompareGreaterThanEquals()}{CompareGreaterThanEquals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Value\+::\+Compare\+Greater\+Than\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a419373bb0c7f74d73f9dae84c140cce9}\label{classbustub_1_1Value_a419373bb0c7f74d73f9dae84c140cce9}} 
+\index{bustub::Value@{bustub::Value}!CompareLessThan@{CompareLessThan}}
+\index{CompareLessThan@{CompareLessThan}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{CompareLessThan()}{CompareLessThan()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Value\+::\+Compare\+Less\+Than (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_adaee627dfa32af2ff2de3b66a09c8cd5}\label{classbustub_1_1Value_adaee627dfa32af2ff2de3b66a09c8cd5}} 
+\index{bustub::Value@{bustub::Value}!CompareLessThanEquals@{CompareLessThanEquals}}
+\index{CompareLessThanEquals@{CompareLessThanEquals}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{CompareLessThanEquals()}{CompareLessThanEquals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Value\+::\+Compare\+Less\+Than\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a0ceeb530adfc6983b89e124dc629ffb1}\label{classbustub_1_1Value_a0ceeb530adfc6983b89e124dc629ffb1}} 
+\index{bustub::Value@{bustub::Value}!CompareNotEquals@{CompareNotEquals}}
+\index{CompareNotEquals@{CompareNotEquals}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{CompareNotEquals()}{CompareNotEquals()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a0b4071db2dd630bdbf7a86b4f251f560}{Cmp\+Bool}} bustub\+::\+Value\+::\+Compare\+Not\+Equals (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a5915a1e75cf6a919c68ca2a41614c73a}\label{classbustub_1_1Value_a5915a1e75cf6a919c68ca2a41614c73a}} 
+\index{bustub::Value@{bustub::Value}!Copy@{Copy}}
+\index{Copy@{Copy}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Copy()}{Copy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Value\+::\+Copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a8e4c4c8a2fb2d46681e6d9072a2109cc}\label{classbustub_1_1Value_a8e4c4c8a2fb2d46681e6d9072a2109cc}} 
+\index{bustub::Value@{bustub::Value}!DeserializeFrom@{DeserializeFrom}}
+\index{DeserializeFrom@{DeserializeFrom}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{DeserializeFrom()}{DeserializeFrom()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Value\+::\+Deserialize\+From (\begin{DoxyParamCaption}\item[{const char $\ast$}]{storage,  }\item[{const \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}}}]{type\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a96af4b87e709edb942a9239913b2d8e2}\label{classbustub_1_1Value_a96af4b87e709edb942a9239913b2d8e2}} 
+\index{bustub::Value@{bustub::Value}!Divide@{Divide}}
+\index{Divide@{Divide}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Divide()}{Divide()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Value\+::\+Divide (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a38c5e1106426016d1d4c740bb59f7c84}\label{classbustub_1_1Value_a38c5e1106426016d1d4c740bb59f7c84}} 
+\index{bustub::Value@{bustub::Value}!GetAs@{GetAs}}
+\index{GetAs@{GetAs}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{GetAs()}{GetAs()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T bustub\+::\+Value\+::\+Get\+As (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_aafad9fd116061f7fffc84771d42b4819}\label{classbustub_1_1Value_aafad9fd116061f7fffc84771d42b4819}} 
+\index{bustub::Value@{bustub::Value}!GetData@{GetData}}
+\index{GetData@{GetData}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{GetData()}{GetData()}}
+{\footnotesize\ttfamily const char$\ast$ bustub\+::\+Value\+::\+Get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a72aa06162b8d9ec0b54d4534463807ec}\label{classbustub_1_1Value_a72aa06162b8d9ec0b54d4534463807ec}} 
+\index{bustub::Value@{bustub::Value}!GetLength@{GetLength}}
+\index{GetLength@{GetLength}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{GetLength()}{GetLength()}}
+{\footnotesize\ttfamily uint32\+\_\+t bustub\+::\+Value\+::\+Get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a16d9471eeeab42f3e98d294d39db0b5c}\label{classbustub_1_1Value_a16d9471eeeab42f3e98d294d39db0b5c}} 
+\index{bustub::Value@{bustub::Value}!GetTypeId@{GetTypeId}}
+\index{GetTypeId@{GetTypeId}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{GetTypeId()}{GetTypeId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} bustub\+::\+Value\+::\+Get\+Type\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a2a12bc87ff412839e75a1dc641beb7da}\label{classbustub_1_1Value_a2a12bc87ff412839e75a1dc641beb7da}} 
+\index{bustub::Value@{bustub::Value}!IsNull@{IsNull}}
+\index{IsNull@{IsNull}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{IsNull()}{IsNull()}}
+{\footnotesize\ttfamily bool bustub\+::\+Value\+::\+Is\+Null (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a0040e0570d778512c06714e63f1f9616}\label{classbustub_1_1Value_a0040e0570d778512c06714e63f1f9616}} 
+\index{bustub::Value@{bustub::Value}!IsZero@{IsZero}}
+\index{IsZero@{IsZero}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{IsZero()}{IsZero()}}
+{\footnotesize\ttfamily bool bustub\+::\+Value\+::\+Is\+Zero (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_aae5e0676c7c8328d367d642c9de4db16}\label{classbustub_1_1Value_aae5e0676c7c8328d367d642c9de4db16}} 
+\index{bustub::Value@{bustub::Value}!Max@{Max}}
+\index{Max@{Max}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Max()}{Max()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Value\+::\+Max (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_ab9e3a7182b22edb802dc1b20496a5297}\label{classbustub_1_1Value_ab9e3a7182b22edb802dc1b20496a5297}} 
+\index{bustub::Value@{bustub::Value}!Min@{Min}}
+\index{Min@{Min}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Min()}{Min()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Value\+::\+Min (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_abcfbcf249feb778721d71122490a757b}\label{classbustub_1_1Value_abcfbcf249feb778721d71122490a757b}} 
+\index{bustub::Value@{bustub::Value}!Modulo@{Modulo}}
+\index{Modulo@{Modulo}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Modulo()}{Modulo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Value\+::\+Modulo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a96935e05bf960b2ba09e14012a38aa83}\label{classbustub_1_1Value_a96935e05bf960b2ba09e14012a38aa83}} 
+\index{bustub::Value@{bustub::Value}!Multiply@{Multiply}}
+\index{Multiply@{Multiply}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Multiply()}{Multiply()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Value\+::\+Multiply (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a4ae944f55b3d2c094981e5a9bf183528}\label{classbustub_1_1Value_a4ae944f55b3d2c094981e5a9bf183528}} 
+\index{bustub::Value@{bustub::Value}!OperateNull@{OperateNull}}
+\index{OperateNull@{OperateNull}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{OperateNull()}{OperateNull()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Value\+::\+Operate\+Null (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a47629960a9f827eb7d56f39033d16228}\label{classbustub_1_1Value_a47629960a9f827eb7d56f39033d16228}} 
+\index{bustub::Value@{bustub::Value}!operator=@{operator=}}
+\index{operator=@{operator=}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} \& bustub\+::\+Value\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Value}{Value}}}]{other }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1Value_ac8be32b9de7e116d57158442347b6625}\label{classbustub_1_1Value_ac8be32b9de7e116d57158442347b6625}} 
+\index{bustub::Value@{bustub::Value}!SerializeTo@{SerializeTo}}
+\index{SerializeTo@{SerializeTo}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{SerializeTo()}{SerializeTo()}}
+{\footnotesize\ttfamily void bustub\+::\+Value\+::\+Serialize\+To (\begin{DoxyParamCaption}\item[{char $\ast$}]{storage }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a2cc53db6745c98b31495a46db1cfd793}\label{classbustub_1_1Value_a2cc53db6745c98b31495a46db1cfd793}} 
+\index{bustub::Value@{bustub::Value}!Sqrt@{Sqrt}}
+\index{Sqrt@{Sqrt}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Sqrt()}{Sqrt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Value\+::\+Sqrt (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_afd16650dfcaef9535636c846b73e0f44}\label{classbustub_1_1Value_afd16650dfcaef9535636c846b73e0f44}} 
+\index{bustub::Value@{bustub::Value}!Subtract@{Subtract}}
+\index{Subtract@{Subtract}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Subtract()}{Subtract()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Value}{Value}} bustub\+::\+Value\+::\+Subtract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{o }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a73387211c2edea4633dd21c4c2d1d3c3}\label{classbustub_1_1Value_a73387211c2edea4633dd21c4c2d1d3c3}} 
+\index{bustub::Value@{bustub::Value}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Value\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Value_a0a40f921b043a08617c1ee3885cfe2b6}\label{classbustub_1_1Value_a0a40f921b043a08617c1ee3885cfe2b6}} 
+\index{bustub::Value@{bustub::Value}!BigintType@{BigintType}}
+\index{BigintType@{BigintType}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{BigintType}{BigintType}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classbustub_1_1BigintType}{Bigint\+Type}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_ae6685da7e972a1fbaf35774b1c4a3c66}\label{classbustub_1_1Value_ae6685da7e972a1fbaf35774b1c4a3c66}} 
+\index{bustub::Value@{bustub::Value}!BooleanType@{BooleanType}}
+\index{BooleanType@{BooleanType}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{BooleanType}{BooleanType}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classbustub_1_1BooleanType}{Boolean\+Type}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a74722ac014df85e9013a3d2b1d008f0c}\label{classbustub_1_1Value_a74722ac014df85e9013a3d2b1d008f0c}} 
+\index{bustub::Value@{bustub::Value}!DecimalType@{DecimalType}}
+\index{DecimalType@{DecimalType}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{DecimalType}{DecimalType}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classbustub_1_1DecimalType}{Decimal\+Type}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_abbaa4aeba44cb76d4a8be26c817a8d3d}\label{classbustub_1_1Value_abbaa4aeba44cb76d4a8be26c817a8d3d}} 
+\index{bustub::Value@{bustub::Value}!IntegerParentType@{IntegerParentType}}
+\index{IntegerParentType@{IntegerParentType}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{IntegerParentType}{IntegerParentType}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classbustub_1_1IntegerParentType}{Integer\+Parent\+Type}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_aaa06efd1401ee152456eb22a467ddcb3}\label{classbustub_1_1Value_aaa06efd1401ee152456eb22a467ddcb3}} 
+\index{bustub::Value@{bustub::Value}!IntegerType@{IntegerType}}
+\index{IntegerType@{IntegerType}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{IntegerType}{IntegerType}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classbustub_1_1IntegerType}{Integer\+Type}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a79159b84381e94ec5d5c80ba7d4da120}\label{classbustub_1_1Value_a79159b84381e94ec5d5c80ba7d4da120}} 
+\index{bustub::Value@{bustub::Value}!NumericType@{NumericType}}
+\index{NumericType@{NumericType}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{NumericType}{NumericType}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classbustub_1_1NumericType}{Numeric\+Type}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_ad318ef5bdf47bfa23ef259520e393c86}\label{classbustub_1_1Value_ad318ef5bdf47bfa23ef259520e393c86}} 
+\index{bustub::Value@{bustub::Value}!SmallintType@{SmallintType}}
+\index{SmallintType@{SmallintType}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{SmallintType}{SmallintType}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classbustub_1_1SmallintType}{Smallint\+Type}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a77ac879921541d41ad8aa7fffb3d454f}\label{classbustub_1_1Value_a77ac879921541d41ad8aa7fffb3d454f}} 
+\index{bustub::Value@{bustub::Value}!Swap@{Swap}}
+\index{Swap@{Swap}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Swap}{Swap}}
+{\footnotesize\ttfamily void Swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{first,  }\item[{\mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{second }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a4352efebead58c24093f4ecf729cfc64}\label{classbustub_1_1Value_a4352efebead58c24093f4ecf729cfc64}} 
+\index{bustub::Value@{bustub::Value}!TimestampType@{TimestampType}}
+\index{TimestampType@{TimestampType}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{TimestampType}{TimestampType}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classbustub_1_1TimestampType}{Timestamp\+Type}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_ad5daa7c4cdceceba369041d829746cb2}\label{classbustub_1_1Value_ad5daa7c4cdceceba369041d829746cb2}} 
+\index{bustub::Value@{bustub::Value}!TinyintType@{TinyintType}}
+\index{TinyintType@{TinyintType}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{TinyintType}{TinyintType}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classbustub_1_1TinyintType}{Tinyint\+Type}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a18dba29b4f3e91d6d2bc53472a6bb7cc}\label{classbustub_1_1Value_a18dba29b4f3e91d6d2bc53472a6bb7cc}} 
+\index{bustub::Value@{bustub::Value}!Type@{Type}}
+\index{Type@{Type}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{Type}{Type}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classbustub_1_1Type}{Type}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_ab48da2a2719dd78acf8e27060d83ecac}\label{classbustub_1_1Value_ab48da2a2719dd78acf8e27060d83ecac}} 
+\index{bustub::Value@{bustub::Value}!VarlenType@{VarlenType}}
+\index{VarlenType@{VarlenType}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{VarlenType}{VarlenType}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classbustub_1_1VarlenType}{Varlen\+Type}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1Value_af08760ffd3d945e144e8feb763b0425f}\label{classbustub_1_1Value_af08760ffd3d945e144e8feb763b0425f}} 
+\index{bustub::Value@{bustub::Value}!elem\_type\_id\_@{elem\_type\_id\_}}
+\index{elem\_type\_id\_@{elem\_type\_id\_}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{elem\_type\_id\_}{elem\_type\_id\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} bustub\+::\+Value\+::elem\+\_\+type\+\_\+id\+\_\+}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a50ce01f436ca203c4612db41392de052}\label{classbustub_1_1Value_a50ce01f436ca203c4612db41392de052}} 
+\index{bustub::Value@{bustub::Value}!len\_@{len\_}}
+\index{len\_@{len\_}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{len\_}{len\_}}
+{\footnotesize\ttfamily uint32\+\_\+t bustub\+::\+Value\+::len\+\_\+}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a1680f1c5aceacdae4287c2b04743ceed}\label{classbustub_1_1Value_a1680f1c5aceacdae4287c2b04743ceed}} 
+\index{bustub::Value@{bustub::Value}!manage\_data\_@{manage\_data\_}}
+\index{manage\_data\_@{manage\_data\_}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{manage\_data\_}{manage\_data\_}}
+{\footnotesize\ttfamily bool bustub\+::\+Value\+::manage\+\_\+data\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_a26b514972a28e24915fc7b7ce3d3aab5}\label{classbustub_1_1Value_a26b514972a28e24915fc7b7ce3d3aab5}} 
+\index{bustub::Value@{bustub::Value}!size\_@{size\_}}
+\index{size\_@{size\_}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{size\_}{size\_}}
+{\footnotesize\ttfamily union \{ ... \}  bustub\+::\+Value\+::size\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_ab39fb104d3db35514ff96b8ed6f1b594}\label{classbustub_1_1Value_ab39fb104d3db35514ff96b8ed6f1b594}} 
+\index{bustub::Value@{bustub::Value}!type\_id\_@{type\_id\_}}
+\index{type\_id\_@{type\_id\_}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{type\_id\_}{type\_id\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8}{Type\+Id}} bustub\+::\+Value\+::type\+\_\+id\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classbustub_1_1Value_ad77e745e5195370cd16432fd1786b893}\label{classbustub_1_1Value_ad77e745e5195370cd16432fd1786b893}} 
+\index{bustub::Value@{bustub::Value}!value\_@{value\_}}
+\index{value\_@{value\_}!bustub::Value@{bustub::Value}}
+\doxysubsubsection{\texorpdfstring{value\_}{value\_}}
+{\footnotesize\ttfamily union \mbox{\hyperlink{unionbustub_1_1Value_1_1Val}{bustub\+::\+Value\+::\+Val}} bustub\+::\+Value\+::value\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/type/\mbox{\hyperlink{value_8h}{value.\+h}}\item 
+src/type/\mbox{\hyperlink{value_8cpp}{value.\+cpp}}\end{DoxyCompactItemize}

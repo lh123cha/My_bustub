@@ -1,0 +1,72 @@
+\hypertarget{transaction_8h}{}\doxysection{src/include/concurrency/transaction.h File Reference}
+\label{transaction_8h}\index{src/include/concurrency/transaction.h@{src/include/concurrency/transaction.h}}
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+set$>$}\newline
+{\ttfamily \#include \char`\"{}common/config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}common/logger.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}storage/page/page.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}storage/table/tuple.\+h\char`\"{}}\newline
+Include dependency graph for transaction.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transaction_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{transaction_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbustub_1_1TableWriteRecord}{bustub\+::\+Table\+Write\+Record}}
+\item 
+class \mbox{\hyperlink{classbustub_1_1IndexWriteRecord}{bustub\+::\+Index\+Write\+Record}}
+\item 
+class \mbox{\hyperlink{classbustub_1_1TransactionAbortException}{bustub\+::\+Transaction\+Abort\+Exception}}
+\item 
+class \mbox{\hyperlink{classbustub_1_1Transaction}{bustub\+::\+Transaction}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacebustub}{bustub}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacebustub_ae58cece0a05d5cfc7ec83fc4a9161e20}{bustub\+::\+Transaction\+State}} \{ \mbox{\hyperlink{namespacebustub_ae58cece0a05d5cfc7ec83fc4a9161e20a53a5c6962088d681882494048d2f0817}{bustub\+::\+Transaction\+State\+::\+G\+R\+O\+W\+I\+NG}}, 
+\mbox{\hyperlink{namespacebustub_ae58cece0a05d5cfc7ec83fc4a9161e20aff1f34de72566813b10e966b03977ac0}{bustub\+::\+Transaction\+State\+::\+S\+H\+R\+I\+N\+K\+I\+NG}}, 
+\mbox{\hyperlink{namespacebustub_ae58cece0a05d5cfc7ec83fc4a9161e20a1c372d13f50af5ca9a935ebc78006e82}{bustub\+::\+Transaction\+State\+::\+C\+O\+M\+M\+I\+T\+T\+ED}}, 
+\mbox{\hyperlink{namespacebustub_ae58cece0a05d5cfc7ec83fc4a9161e20a4e6c860e5da10e31c5fd9cb76ddc2025}{bustub\+::\+Transaction\+State\+::\+A\+B\+O\+R\+T\+ED}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5}{bustub\+::\+Isolation\+Level}} \{ \mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5a7b5722b7d02a9d8ff3a8bdfcb7d278c3}{bustub\+::\+Isolation\+Level\+::\+R\+E\+A\+D\+\_\+\+U\+N\+C\+O\+M\+M\+I\+T\+T\+ED}}, 
+\mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5aa4b37efaa1a6b533614ed81660dbf912}{bustub\+::\+Isolation\+Level\+::\+R\+E\+P\+E\+A\+T\+A\+B\+L\+E\+\_\+\+R\+E\+AD}}, 
+\mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5a1671fb17b5ce9bd0af0cf47f3f4ea337}{bustub\+::\+Isolation\+Level\+::\+R\+E\+A\+D\+\_\+\+C\+O\+M\+M\+I\+T\+T\+ED}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacebustub_a10572b38743f7663ec041295d3810cac}{bustub\+::\+W\+Type}} \{ \mbox{\hyperlink{namespacebustub_a10572b38743f7663ec041295d3810caca61ee777e7f71dc466c3b2c685d8d313b}{bustub\+::\+W\+Type\+::\+I\+N\+S\+E\+RT}} = 0, 
+\mbox{\hyperlink{namespacebustub_a10572b38743f7663ec041295d3810caca32f68a60cef40faedbc6af20298c1a1e}{bustub\+::\+W\+Type\+::\+D\+E\+L\+E\+TE}}, 
+\mbox{\hyperlink{namespacebustub_a10572b38743f7663ec041295d3810caca15a8022d0ed9cd9c2a2e756822703eb4}{bustub\+::\+W\+Type\+::\+U\+P\+D\+A\+TE}}
+ \}
+\item 
+enum \mbox{\hyperlink{namespacebustub_af44028a0a3ce771db1a77e858f3e07ca}{bustub\+::\+Abort\+Reason}} \{ \newline
+\mbox{\hyperlink{namespacebustub_af44028a0a3ce771db1a77e858f3e07caa97eb89545356d08442dbf5fdd92b3d5a}{bustub\+::\+Abort\+Reason\+::\+L\+O\+C\+K\+\_\+\+O\+N\+\_\+\+S\+H\+R\+I\+N\+K\+I\+NG}}, 
+\mbox{\hyperlink{namespacebustub_af44028a0a3ce771db1a77e858f3e07caa83c1f3829c0646534509d50730097b68}{bustub\+::\+Abort\+Reason\+::\+U\+N\+L\+O\+C\+K\+\_\+\+O\+N\+\_\+\+S\+H\+R\+I\+N\+K\+I\+NG}}, 
+\mbox{\hyperlink{namespacebustub_af44028a0a3ce771db1a77e858f3e07caa49847c93d1589c51e27451e384da1025}{bustub\+::\+Abort\+Reason\+::\+U\+P\+G\+R\+A\+D\+E\+\_\+\+C\+O\+N\+F\+L\+I\+CT}}, 
+\mbox{\hyperlink{namespacebustub_af44028a0a3ce771db1a77e858f3e07caa8f35b656de87c54e18710fc94d73a614}{bustub\+::\+Abort\+Reason\+::\+D\+E\+A\+D\+L\+O\+CK}}, 
+\newline
+\mbox{\hyperlink{namespacebustub_af44028a0a3ce771db1a77e858f3e07caaccf87b15ab00dd3ea4718d693f18feb5}{bustub\+::\+Abort\+Reason\+::\+L\+O\+C\+K\+S\+H\+A\+R\+E\+D\+\_\+\+O\+N\+\_\+\+R\+E\+A\+D\+\_\+\+U\+N\+C\+O\+M\+M\+I\+T\+T\+ED}}
+ \}
+\end{DoxyCompactItemize}

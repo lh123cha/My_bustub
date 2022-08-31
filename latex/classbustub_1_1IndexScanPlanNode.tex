@@ -1,0 +1,97 @@
+\hypertarget{classbustub_1_1IndexScanPlanNode}{}\doxysection{bustub\+::Index\+Scan\+Plan\+Node Class Reference}
+\label{classbustub_1_1IndexScanPlanNode}\index{bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}}
+
+
+{\ttfamily \#include $<$index\+\_\+scan\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Index\+Scan\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classbustub_1_1IndexScanPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Index\+Scan\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classbustub_1_1IndexScanPlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1IndexScanPlanNode_aa38d5e003e42762d0194205104a676e4}{Index\+Scan\+Plan\+Node}} (const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$output, const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$predicate, \mbox{\hyperlink{namespacebustub_a5ca00ce350a2fa387503e74218ae76c0}{index\+\_\+oid\+\_\+t}} index\+\_\+oid)
+\item 
+\mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} \mbox{\hyperlink{classbustub_1_1IndexScanPlanNode_a726dc40d1b8a6be325e67998a29fde5d}{Get\+Type}} () const override
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ \mbox{\hyperlink{classbustub_1_1IndexScanPlanNode_aa4bd9d03bf5004e9bc245b59fa7cf501}{Get\+Predicate}} () const
+\item 
+\mbox{\hyperlink{namespacebustub_a5ca00ce350a2fa387503e74218ae76c0}{index\+\_\+oid\+\_\+t}} \mbox{\hyperlink{classbustub_1_1IndexScanPlanNode_ac3852a681be317823c4ff04547161369}{Get\+Index\+Oid}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1IndexScanPlanNode}{Index\+Scan\+Plan\+Node}} identifies a table that should be scanned with an optional predicate. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1IndexScanPlanNode_aa38d5e003e42762d0194205104a676e4}\label{classbustub_1_1IndexScanPlanNode_aa38d5e003e42762d0194205104a676e4}} 
+\index{bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}!IndexScanPlanNode@{IndexScanPlanNode}}
+\index{IndexScanPlanNode@{IndexScanPlanNode}!bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{IndexScanPlanNode()}{IndexScanPlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Index\+Scan\+Plan\+Node\+::\+Index\+Scan\+Plan\+Node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{output,  }\item[{const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$}]{predicate,  }\item[{\mbox{\hyperlink{namespacebustub_a5ca00ce350a2fa387503e74218ae76c0}{index\+\_\+oid\+\_\+t}}}]{index\+\_\+oid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new index scan plan node. 
+\begin{DoxyParams}{Parameters}
+{\em output} & the output format of this scan plan node \\
+\hline
+{\em predicate} & the predicate to scan with, tuples are returned if predicate(tuple) == true or predicate == nullptr \\
+\hline
+{\em table\+\_\+oid} & the identifier of table to be scanned \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1IndexScanPlanNode_ac3852a681be317823c4ff04547161369}\label{classbustub_1_1IndexScanPlanNode_ac3852a681be317823c4ff04547161369}} 
+\index{bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}!GetIndexOid@{GetIndexOid}}
+\index{GetIndexOid@{GetIndexOid}!bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetIndexOid()}{GetIndexOid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a5ca00ce350a2fa387503e74218ae76c0}{index\+\_\+oid\+\_\+t}} bustub\+::\+Index\+Scan\+Plan\+Node\+::\+Get\+Index\+Oid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the identifier of the table that should be scanned 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1IndexScanPlanNode_aa4bd9d03bf5004e9bc245b59fa7cf501}\label{classbustub_1_1IndexScanPlanNode_aa4bd9d03bf5004e9bc245b59fa7cf501}} 
+\index{bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}!GetPredicate@{GetPredicate}}
+\index{GetPredicate@{GetPredicate}!bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetPredicate()}{GetPredicate()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$\ast$ bustub\+::\+Index\+Scan\+Plan\+Node\+::\+Get\+Predicate (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the predicate to test tuples against; tuples should only be returned if they evaluate to true 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1IndexScanPlanNode_a726dc40d1b8a6be325e67998a29fde5d}\label{classbustub_1_1IndexScanPlanNode_a726dc40d1b8a6be325e67998a29fde5d}} 
+\index{bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::IndexScanPlanNode@{bustub::IndexScanPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} bustub\+::\+Index\+Scan\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+the type of this plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a68b80a5e248dfb5dfe0858a4afd8bc93}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/\mbox{\hyperlink{index__scan__plan_8h}{index\+\_\+scan\+\_\+plan.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,139 @@
+\hypertarget{classbustub_1_1BPlusTree}{}\doxysection{bustub\+::B\+Plus\+Tree Class Reference}
+\label{classbustub_1_1BPlusTree}\index{bustub::BPlusTree@{bustub::BPlusTree}}
+
+
+{\ttfamily \#include $<$b\+\_\+plus\+\_\+tree.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::B\+Plus\+Tree\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classbustub_1_1BPlusTree__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1BPlusTree_a929e3c85b179ec888cec4179a110dec5}{B\+Plus\+Tree}} (std\+::string name, \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$buffer\+\_\+pool\+\_\+manager, const Key\+Comparator \&comparator, int leaf\+\_\+max\+\_\+size=\mbox{\hyperlink{b__plus__tree__leaf__page_8h_a1bf27d964f8ae5ad340eb82a7bd5fee7}{L\+E\+A\+F\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE}}, int internal\+\_\+max\+\_\+size=\mbox{\hyperlink{b__plus__tree__internal__page_8h_a04db3f924b29e986d8b3e94dbbbb9d55}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE}})
+\item 
+bool \mbox{\hyperlink{classbustub_1_1BPlusTree_a1418a13a1b403a49668cc25dc3712cdb}{Is\+Empty}} () const
+\item 
+bool \mbox{\hyperlink{classbustub_1_1BPlusTree_ac358f442e7fd6b5b06d45e7073c1afbc}{Insert}} (const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key, const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&\mbox{\hyperlink{gmock-spec-builders__test_8cc_ac4f474c82e82cbb89ca7c36dd52be0ed}{value}}, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction=nullptr)
+\item 
+void \mbox{\hyperlink{classbustub_1_1BPlusTree_a393f00bb2a87eaa0d331aee763ab13c5}{Remove}} (const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction=nullptr)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1BPlusTree_ae618d991f386649a85292745b9f5c1fb}{Get\+Value}} (const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key, std\+::vector$<$ \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$ $\ast$result, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction=nullptr)
+\item 
+\mbox{\hyperlink{index__iterator_8h_af44bbf16ed06a9a1165c4d6e74335f31}{I\+N\+D\+E\+X\+I\+T\+E\+R\+A\+T\+O\+R\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{classbustub_1_1BPlusTree_a21b544f9e739b62763e383d155fbe8fa}{Begin}} ()
+\item 
+\mbox{\hyperlink{index__iterator_8h_af44bbf16ed06a9a1165c4d6e74335f31}{I\+N\+D\+E\+X\+I\+T\+E\+R\+A\+T\+O\+R\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{classbustub_1_1BPlusTree_acbe4d262c41153611d6b8f0c046be091}{Begin}} (const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key)
+\item 
+\mbox{\hyperlink{index__iterator_8h_af44bbf16ed06a9a1165c4d6e74335f31}{I\+N\+D\+E\+X\+I\+T\+E\+R\+A\+T\+O\+R\+\_\+\+T\+Y\+PE}} \mbox{\hyperlink{classbustub_1_1BPlusTree_ac0131dd40d2fe7ec50ed85c6edac82e0}{End}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1BPlusTree_a21c9225f6334233dab4adbfdcc02e67c}{Print}} (\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$bpm)
+\item 
+void \mbox{\hyperlink{classbustub_1_1BPlusTree_a1b2017f5d001c8afaca49cf15686e634}{Draw}} (\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$bpm, const std\+::string \&outf)
+\item 
+void \mbox{\hyperlink{classbustub_1_1BPlusTree_a0ac52d9af5613ae9db998cddf9942599}{Insert\+From\+File}} (const std\+::string \&file\+\_\+name, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction=nullptr)
+\item 
+void \mbox{\hyperlink{classbustub_1_1BPlusTree_a01cfda0b89c37ee0e3e9f69cc67ee133}{Remove\+From\+File}} (const std\+::string \&file\+\_\+name, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$transaction=nullptr)
+\item 
+\mbox{\hyperlink{classbustub_1_1Page}{Page}} $\ast$ \mbox{\hyperlink{classbustub_1_1BPlusTree_aa84fe4ecacef782d721d0b13aac5fb8b}{Find\+Leaf\+Page}} (const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&key, bool left\+Most=false)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main class providing the A\+PI for the Interactive B+ Tree.
+
+Implementation of simple b+ tree data structure where internal pages direct the search and leaf pages contain actual data. (1) We only support unique key (2) support insert \& remove (3) The structure should shrink and grow dynamically (4) Implement index iterator for range scan 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a929e3c85b179ec888cec4179a110dec5}\label{classbustub_1_1BPlusTree_a929e3c85b179ec888cec4179a110dec5}} 
+\index{bustub::BPlusTree@{bustub::BPlusTree}!BPlusTree@{BPlusTree}}
+\index{BPlusTree@{BPlusTree}!bustub::BPlusTree@{bustub::BPlusTree}}
+\doxysubsubsection{\texorpdfstring{BPlusTree()}{BPlusTree()}}
+{\footnotesize\ttfamily bustub\+::\+B\+Plus\+Tree\+::\+B\+Plus\+Tree (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$}]{buffer\+\_\+pool\+\_\+manager,  }\item[{const Key\+Comparator \&}]{comparator,  }\item[{int}]{leaf\+\_\+max\+\_\+size = {\ttfamily \mbox{\hyperlink{b__plus__tree__leaf__page_8h_a1bf27d964f8ae5ad340eb82a7bd5fee7}{L\+E\+A\+F\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE}}},  }\item[{int}]{internal\+\_\+max\+\_\+size = {\ttfamily \mbox{\hyperlink{b__plus__tree__internal__page_8h_a04db3f924b29e986d8b3e94dbbbb9d55}{I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+P\+A\+G\+E\+\_\+\+S\+I\+ZE}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a21b544f9e739b62763e383d155fbe8fa}\label{classbustub_1_1BPlusTree_a21b544f9e739b62763e383d155fbe8fa}} 
+\index{bustub::BPlusTree@{bustub::BPlusTree}!Begin@{Begin}}
+\index{Begin@{Begin}!bustub::BPlusTree@{bustub::BPlusTree}}
+\doxysubsubsection{\texorpdfstring{Begin()}{Begin()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{index__iterator_8h_af44bbf16ed06a9a1165c4d6e74335f31}{I\+N\+D\+E\+X\+I\+T\+E\+R\+A\+T\+O\+R\+\_\+\+T\+Y\+PE}} bustub\+::\+B\+Plus\+Tree\+::\+Begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_acbe4d262c41153611d6b8f0c046be091}\label{classbustub_1_1BPlusTree_acbe4d262c41153611d6b8f0c046be091}} 
+\index{bustub::BPlusTree@{bustub::BPlusTree}!Begin@{Begin}}
+\index{Begin@{Begin}!bustub::BPlusTree@{bustub::BPlusTree}}
+\doxysubsubsection{\texorpdfstring{Begin()}{Begin()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{index__iterator_8h_af44bbf16ed06a9a1165c4d6e74335f31}{I\+N\+D\+E\+X\+I\+T\+E\+R\+A\+T\+O\+R\+\_\+\+T\+Y\+PE}} bustub\+::\+B\+Plus\+Tree\+::\+Begin (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a1b2017f5d001c8afaca49cf15686e634}\label{classbustub_1_1BPlusTree_a1b2017f5d001c8afaca49cf15686e634}} 
+\index{bustub::BPlusTree@{bustub::BPlusTree}!Draw@{Draw}}
+\index{Draw@{Draw}!bustub::BPlusTree@{bustub::BPlusTree}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily void bustub\+::\+B\+Plus\+Tree\+::\+Draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$}]{bpm,  }\item[{const std\+::string \&}]{outf }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_ac0131dd40d2fe7ec50ed85c6edac82e0}\label{classbustub_1_1BPlusTree_ac0131dd40d2fe7ec50ed85c6edac82e0}} 
+\index{bustub::BPlusTree@{bustub::BPlusTree}!End@{End}}
+\index{End@{End}!bustub::BPlusTree@{bustub::BPlusTree}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{index__iterator_8h_af44bbf16ed06a9a1165c4d6e74335f31}{I\+N\+D\+E\+X\+I\+T\+E\+R\+A\+T\+O\+R\+\_\+\+T\+Y\+PE}} bustub\+::\+B\+Plus\+Tree\+::\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_aa84fe4ecacef782d721d0b13aac5fb8b}\label{classbustub_1_1BPlusTree_aa84fe4ecacef782d721d0b13aac5fb8b}} 
+\index{bustub::BPlusTree@{bustub::BPlusTree}!FindLeafPage@{FindLeafPage}}
+\index{FindLeafPage@{FindLeafPage}!bustub::BPlusTree@{bustub::BPlusTree}}
+\doxysubsubsection{\texorpdfstring{FindLeafPage()}{FindLeafPage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Page}{Page}}$\ast$ bustub\+::\+B\+Plus\+Tree\+::\+Find\+Leaf\+Page (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key,  }\item[{bool}]{left\+Most = {\ttfamily false} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_ae618d991f386649a85292745b9f5c1fb}\label{classbustub_1_1BPlusTree_ae618d991f386649a85292745b9f5c1fb}} 
+\index{bustub::BPlusTree@{bustub::BPlusTree}!GetValue@{GetValue}}
+\index{GetValue@{GetValue}!bustub::BPlusTree@{bustub::BPlusTree}}
+\doxysubsubsection{\texorpdfstring{GetValue()}{GetValue()}}
+{\footnotesize\ttfamily bool bustub\+::\+B\+Plus\+Tree\+::\+Get\+Value (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key,  }\item[{std\+::vector$<$ \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$ $\ast$}]{result,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_ac358f442e7fd6b5b06d45e7073c1afbc}\label{classbustub_1_1BPlusTree_ac358f442e7fd6b5b06d45e7073c1afbc}} 
+\index{bustub::BPlusTree@{bustub::BPlusTree}!Insert@{Insert}}
+\index{Insert@{Insert}!bustub::BPlusTree@{bustub::BPlusTree}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily bool bustub\+::\+B\+Plus\+Tree\+::\+Insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key,  }\item[{const \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} \&}]{value,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a0ac52d9af5613ae9db998cddf9942599}\label{classbustub_1_1BPlusTree_a0ac52d9af5613ae9db998cddf9942599}} 
+\index{bustub::BPlusTree@{bustub::BPlusTree}!InsertFromFile@{InsertFromFile}}
+\index{InsertFromFile@{InsertFromFile}!bustub::BPlusTree@{bustub::BPlusTree}}
+\doxysubsubsection{\texorpdfstring{InsertFromFile()}{InsertFromFile()}}
+{\footnotesize\ttfamily void bustub\+::\+B\+Plus\+Tree\+::\+Insert\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+name,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a1418a13a1b403a49668cc25dc3712cdb}\label{classbustub_1_1BPlusTree_a1418a13a1b403a49668cc25dc3712cdb}} 
+\index{bustub::BPlusTree@{bustub::BPlusTree}!IsEmpty@{IsEmpty}}
+\index{IsEmpty@{IsEmpty}!bustub::BPlusTree@{bustub::BPlusTree}}
+\doxysubsubsection{\texorpdfstring{IsEmpty()}{IsEmpty()}}
+{\footnotesize\ttfamily bool bustub\+::\+B\+Plus\+Tree\+::\+Is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a21c9225f6334233dab4adbfdcc02e67c}\label{classbustub_1_1BPlusTree_a21c9225f6334233dab4adbfdcc02e67c}} 
+\index{bustub::BPlusTree@{bustub::BPlusTree}!Print@{Print}}
+\index{Print@{Print}!bustub::BPlusTree@{bustub::BPlusTree}}
+\doxysubsubsection{\texorpdfstring{Print()}{Print()}}
+{\footnotesize\ttfamily void bustub\+::\+B\+Plus\+Tree\+::\+Print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$}]{bpm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a393f00bb2a87eaa0d331aee763ab13c5}\label{classbustub_1_1BPlusTree_a393f00bb2a87eaa0d331aee763ab13c5}} 
+\index{bustub::BPlusTree@{bustub::BPlusTree}!Remove@{Remove}}
+\index{Remove@{Remove}!bustub::BPlusTree@{bustub::BPlusTree}}
+\doxysubsubsection{\texorpdfstring{Remove()}{Remove()}}
+{\footnotesize\ttfamily void bustub\+::\+B\+Plus\+Tree\+::\+Remove (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} \&}]{key,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTree_a01cfda0b89c37ee0e3e9f69cc67ee133}\label{classbustub_1_1BPlusTree_a01cfda0b89c37ee0e3e9f69cc67ee133}} 
+\index{bustub::BPlusTree@{bustub::BPlusTree}!RemoveFromFile@{RemoveFromFile}}
+\index{RemoveFromFile@{RemoveFromFile}!bustub::BPlusTree@{bustub::BPlusTree}}
+\doxysubsubsection{\texorpdfstring{RemoveFromFile()}{RemoveFromFile()}}
+{\footnotesize\ttfamily void bustub\+::\+B\+Plus\+Tree\+::\+Remove\+From\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+\_\+name,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{transaction = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/index/\mbox{\hyperlink{b__plus__tree_8h}{b\+\_\+plus\+\_\+tree.\+h}}\end{DoxyCompactItemize}

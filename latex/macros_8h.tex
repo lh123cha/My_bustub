@@ -1,0 +1,89 @@
+\hypertarget{macros_8h}{}\doxysection{src/include/common/macros.h File Reference}
+\label{macros_8h}\index{src/include/common/macros.h@{src/include/common/macros.h}}
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+Include dependency graph for macros.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{macros_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{macros_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacebustub}{bustub}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{macros_8h_a76a969385a538dabceb09997d3c06c31}{B\+U\+S\+T\+U\+B\+\_\+\+A\+S\+S\+E\+RT}}(expr,  \mbox{\hyperlink{test_2CMakeLists_8txt_a4a19bb428010e205054cfb5e70b1bfbe}{message}})~assert((expr) \&\& (\mbox{\hyperlink{test_2CMakeLists_8txt_a4a19bb428010e205054cfb5e70b1bfbe}{message}}))
+\item 
+\#define \mbox{\hyperlink{macros_8h_ab1282cb3b18636534805bfc9448e889f}{U\+N\+R\+E\+A\+C\+H\+A\+B\+LE}}(\mbox{\hyperlink{test_2CMakeLists_8txt_a4a19bb428010e205054cfb5e70b1bfbe}{message}})~throw std\+::logic\+\_\+error(\mbox{\hyperlink{test_2CMakeLists_8txt_a4a19bb428010e205054cfb5e70b1bfbe}{message}})
+\item 
+\#define \mbox{\hyperlink{macros_8h_a6c7cf594d5cbb5024d5aa43aa7a1e09c}{D\+I\+S\+A\+L\+L\+O\+W\+\_\+\+C\+O\+PY}}(cname)
+\item 
+\#define \mbox{\hyperlink{macros_8h_a97263ebcd2e9e382b9f91b4408453244}{D\+I\+S\+A\+L\+L\+O\+W\+\_\+\+M\+O\+VE}}(cname)
+\item 
+\#define \mbox{\hyperlink{macros_8h_a2f86593f7e029b7feed3828e30fe5017}{D\+I\+S\+A\+L\+L\+O\+W\+\_\+\+C\+O\+P\+Y\+\_\+\+A\+N\+D\+\_\+\+M\+O\+VE}}(cname)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{macros_8h_a76a969385a538dabceb09997d3c06c31}\label{macros_8h_a76a969385a538dabceb09997d3c06c31}} 
+\index{macros.h@{macros.h}!BUSTUB\_ASSERT@{BUSTUB\_ASSERT}}
+\index{BUSTUB\_ASSERT@{BUSTUB\_ASSERT}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{BUSTUB\_ASSERT}{BUSTUB\_ASSERT}}
+{\footnotesize\ttfamily \#define B\+U\+S\+T\+U\+B\+\_\+\+A\+S\+S\+E\+RT(\begin{DoxyParamCaption}\item[{}]{expr,  }\item[{}]{\mbox{\hyperlink{test_2CMakeLists_8txt_a4a19bb428010e205054cfb5e70b1bfbe}{message}} }\end{DoxyParamCaption})~assert((expr) \&\& (\mbox{\hyperlink{test_2CMakeLists_8txt_a4a19bb428010e205054cfb5e70b1bfbe}{message}}))}
+
+\mbox{\Hypertarget{macros_8h_a6c7cf594d5cbb5024d5aa43aa7a1e09c}\label{macros_8h_a6c7cf594d5cbb5024d5aa43aa7a1e09c}} 
+\index{macros.h@{macros.h}!DISALLOW\_COPY@{DISALLOW\_COPY}}
+\index{DISALLOW\_COPY@{DISALLOW\_COPY}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY}{DISALLOW\_COPY}}
+{\footnotesize\ttfamily \#define D\+I\+S\+A\+L\+L\+O\+W\+\_\+\+C\+O\+PY(\begin{DoxyParamCaption}\item[{}]{cname }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  cname(\textcolor{keyword}{const} cname \&) = \textcolor{keyword}{delete};            \textcolor{comment}{/* NOLINT */} \(\backslash\)}
+\DoxyCodeLine{  cname \&operator=(\textcolor{keyword}{const} cname \&) = \textcolor{keyword}{delete}; \textcolor{comment}{/* NOLINT */}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{macros_8h_a2f86593f7e029b7feed3828e30fe5017}\label{macros_8h_a2f86593f7e029b7feed3828e30fe5017}} 
+\index{macros.h@{macros.h}!DISALLOW\_COPY\_AND\_MOVE@{DISALLOW\_COPY\_AND\_MOVE}}
+\index{DISALLOW\_COPY\_AND\_MOVE@{DISALLOW\_COPY\_AND\_MOVE}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY\_AND\_MOVE}{DISALLOW\_COPY\_AND\_MOVE}}
+{\footnotesize\ttfamily \#define D\+I\+S\+A\+L\+L\+O\+W\+\_\+\+C\+O\+P\+Y\+\_\+\+A\+N\+D\+\_\+\+M\+O\+VE(\begin{DoxyParamCaption}\item[{}]{cname }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \mbox{\hyperlink{macros_8h_a6c7cf594d5cbb5024d5aa43aa7a1e09c}{DISALLOW\_COPY}}(cname);               \(\backslash\)}
+\DoxyCodeLine{  DISALLOW\_MOVE(cname);}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{macros_8h_a97263ebcd2e9e382b9f91b4408453244}\label{macros_8h_a97263ebcd2e9e382b9f91b4408453244}} 
+\index{macros.h@{macros.h}!DISALLOW\_MOVE@{DISALLOW\_MOVE}}
+\index{DISALLOW\_MOVE@{DISALLOW\_MOVE}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_MOVE}{DISALLOW\_MOVE}}
+{\footnotesize\ttfamily \#define D\+I\+S\+A\+L\+L\+O\+W\+\_\+\+M\+O\+VE(\begin{DoxyParamCaption}\item[{}]{cname }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  cname(cname \&\&) = \textcolor{keyword}{delete};            \textcolor{comment}{/* NOLINT */} \(\backslash\)}
+\DoxyCodeLine{  cname \&operator=(cname \&\&) = \textcolor{keyword}{delete}; \textcolor{comment}{/* NOLINT */}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{macros_8h_ab1282cb3b18636534805bfc9448e889f}\label{macros_8h_ab1282cb3b18636534805bfc9448e889f}} 
+\index{macros.h@{macros.h}!UNREACHABLE@{UNREACHABLE}}
+\index{UNREACHABLE@{UNREACHABLE}!macros.h@{macros.h}}
+\doxysubsubsection{\texorpdfstring{UNREACHABLE}{UNREACHABLE}}
+{\footnotesize\ttfamily \#define U\+N\+R\+E\+A\+C\+H\+A\+B\+LE(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{test_2CMakeLists_8txt_a4a19bb428010e205054cfb5e70b1bfbe}{message}} }\end{DoxyParamCaption})~throw std\+::logic\+\_\+error(\mbox{\hyperlink{test_2CMakeLists_8txt_a4a19bb428010e205054cfb5e70b1bfbe}{message}})}
+

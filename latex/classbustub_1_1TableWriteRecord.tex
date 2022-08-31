@@ -1,0 +1,76 @@
+\hypertarget{classbustub_1_1TableWriteRecord}{}\doxysection{bustub\+::Table\+Write\+Record Class Reference}
+\label{classbustub_1_1TableWriteRecord}\index{bustub::TableWriteRecord@{bustub::TableWriteRecord}}
+
+
+{\ttfamily \#include $<$transaction.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Table\+Write\+Record\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbustub_1_1TableWriteRecord__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1TableWriteRecord_ad2c5585e7b92be33c3c5cc146ab69a75}{Table\+Write\+Record}} (\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} rid, \mbox{\hyperlink{namespacebustub_a10572b38743f7663ec041295d3810cac}{W\+Type}} wtype, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple, \mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}} $\ast$table)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \mbox{\hyperlink{classbustub_1_1TableWriteRecord_abb4a593aeb39a82bd08929e3cbae1858}{rid\+\_\+}}
+\item 
+\mbox{\hyperlink{namespacebustub_a10572b38743f7663ec041295d3810cac}{W\+Type}} \mbox{\hyperlink{classbustub_1_1TableWriteRecord_a275477dc5e513f6c21b9be12f8ea34d3}{wtype\+\_\+}}
+\item 
+\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \mbox{\hyperlink{classbustub_1_1TableWriteRecord_aaa6a12f5f093ae20bdad829e987499a8}{tuple\+\_\+}}
+\item 
+\mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}} $\ast$ \mbox{\hyperlink{classbustub_1_1TableWriteRecord_ab6791eadc71229acb4885e89978d51e8}{table\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Write\+Record tracks information related to a write. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1TableWriteRecord_ad2c5585e7b92be33c3c5cc146ab69a75}\label{classbustub_1_1TableWriteRecord_ad2c5585e7b92be33c3c5cc146ab69a75}} 
+\index{bustub::TableWriteRecord@{bustub::TableWriteRecord}!TableWriteRecord@{TableWriteRecord}}
+\index{TableWriteRecord@{TableWriteRecord}!bustub::TableWriteRecord@{bustub::TableWriteRecord}}
+\doxysubsubsection{\texorpdfstring{TableWriteRecord()}{TableWriteRecord()}}
+{\footnotesize\ttfamily bustub\+::\+Table\+Write\+Record\+::\+Table\+Write\+Record (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}}}]{rid,  }\item[{\mbox{\hyperlink{namespacebustub_a10572b38743f7663ec041295d3810cac}{W\+Type}}}]{wtype,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}} $\ast$}]{table }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1TableWriteRecord_abb4a593aeb39a82bd08929e3cbae1858}\label{classbustub_1_1TableWriteRecord_abb4a593aeb39a82bd08929e3cbae1858}} 
+\index{bustub::TableWriteRecord@{bustub::TableWriteRecord}!rid\_@{rid\_}}
+\index{rid\_@{rid\_}!bustub::TableWriteRecord@{bustub::TableWriteRecord}}
+\doxysubsubsection{\texorpdfstring{rid\_}{rid\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} bustub\+::\+Table\+Write\+Record\+::rid\+\_\+}
+
+\mbox{\Hypertarget{classbustub_1_1TableWriteRecord_ab6791eadc71229acb4885e89978d51e8}\label{classbustub_1_1TableWriteRecord_ab6791eadc71229acb4885e89978d51e8}} 
+\index{bustub::TableWriteRecord@{bustub::TableWriteRecord}!table\_@{table\_}}
+\index{table\_@{table\_}!bustub::TableWriteRecord@{bustub::TableWriteRecord}}
+\doxysubsubsection{\texorpdfstring{table\_}{table\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}}$\ast$ bustub\+::\+Table\+Write\+Record\+::table\+\_\+}
+
+The table heap specifies which table this write record is for. \mbox{\Hypertarget{classbustub_1_1TableWriteRecord_aaa6a12f5f093ae20bdad829e987499a8}\label{classbustub_1_1TableWriteRecord_aaa6a12f5f093ae20bdad829e987499a8}} 
+\index{bustub::TableWriteRecord@{bustub::TableWriteRecord}!tuple\_@{tuple\_}}
+\index{tuple\_@{tuple\_}!bustub::TableWriteRecord@{bustub::TableWriteRecord}}
+\doxysubsubsection{\texorpdfstring{tuple\_}{tuple\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} bustub\+::\+Table\+Write\+Record\+::tuple\+\_\+}
+
+The tuple is only used for the update operation. \mbox{\Hypertarget{classbustub_1_1TableWriteRecord_a275477dc5e513f6c21b9be12f8ea34d3}\label{classbustub_1_1TableWriteRecord_a275477dc5e513f6c21b9be12f8ea34d3}} 
+\index{bustub::TableWriteRecord@{bustub::TableWriteRecord}!wtype\_@{wtype\_}}
+\index{wtype\_@{wtype\_}!bustub::TableWriteRecord@{bustub::TableWriteRecord}}
+\doxysubsubsection{\texorpdfstring{wtype\_}{wtype\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a10572b38743f7663ec041295d3810cac}{W\+Type}} bustub\+::\+Table\+Write\+Record\+::wtype\+\_\+}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/concurrency/\mbox{\hyperlink{transaction_8h}{transaction.\+h}}\end{DoxyCompactItemize}

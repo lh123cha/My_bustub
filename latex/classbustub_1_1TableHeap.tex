@@ -1,0 +1,235 @@
+\hypertarget{classbustub_1_1TableHeap}{}\doxysection{bustub\+::Table\+Heap Class Reference}
+\label{classbustub_1_1TableHeap}\index{bustub::TableHeap@{bustub::TableHeap}}
+
+
+{\ttfamily \#include $<$table\+\_\+heap.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Table\+Heap\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classbustub_1_1TableHeap__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1TableHeap_ae2b0fde1845735fef6dccc26dc6011dc}{$\sim$\+Table\+Heap}} ()=default
+\item 
+\mbox{\hyperlink{classbustub_1_1TableHeap_a72213faf3a731eb00cf293e50ab66bae}{Table\+Heap}} (\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$buffer\+\_\+pool\+\_\+manager, \mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$lock\+\_\+manager, \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager, \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} first\+\_\+page\+\_\+id)
+\item 
+\mbox{\hyperlink{classbustub_1_1TableHeap_adda1765ee1c2fe97be93d6eb875dd554}{Table\+Heap}} (\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$buffer\+\_\+pool\+\_\+manager, \mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$lock\+\_\+manager, \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1TableHeap_a8c15dfcda3195194de230abd36ac1df0}{Insert\+Tuple}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple, \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1TableHeap_ae86b26b839b68c9d99825ee3825e7694}{Mark\+Delete}} (const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1TableHeap_a5593b0d83a185907dadb647bae98d1a0}{Update\+Tuple}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple, const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn)
+\item 
+void \mbox{\hyperlink{classbustub_1_1TableHeap_ae9856cfa33a3361d272e6603a206dddd}{Apply\+Delete}} (const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn)
+\item 
+void \mbox{\hyperlink{classbustub_1_1TableHeap_ae8386419c83c5056a23a8d8afcbae417}{Rollback\+Delete}} (const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&rid, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn)
+\item 
+bool \mbox{\hyperlink{classbustub_1_1TableHeap_a0762ce2e5a540fff2a1752e5e26b7159}{Get\+Tuple}} (const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&rid, \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn)
+\item 
+\mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \mbox{\hyperlink{classbustub_1_1TableHeap_a6a6ccb54f871d9fbd5f42aaa29e6b297}{Begin}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn)
+\item 
+\mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} \mbox{\hyperlink{classbustub_1_1TableHeap_a2000b613f72177c6a95379491506b5be}{End}} ()
+\item 
+\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1TableHeap_af10c6861abbf1cf380252c672e67280f}{Get\+First\+Page\+Id}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbustub_1_1TableHeap_ab0165532e287d023758cc64c24e40fb7}{Table\+Iterator}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1TableHeap}{Table\+Heap}} represents a physical table on disk. This is just a doubly-\/linked list of pages. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_ae2b0fde1845735fef6dccc26dc6011dc}\label{classbustub_1_1TableHeap_ae2b0fde1845735fef6dccc26dc6011dc}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!````~TableHeap@{$\sim$TableHeap}}
+\index{````~TableHeap@{$\sim$TableHeap}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{$\sim$TableHeap()}{~TableHeap()}}
+{\footnotesize\ttfamily bustub\+::\+Table\+Heap\+::$\sim$\+Table\+Heap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a72213faf3a731eb00cf293e50ab66bae}\label{classbustub_1_1TableHeap_a72213faf3a731eb00cf293e50ab66bae}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!TableHeap@{TableHeap}}
+\index{TableHeap@{TableHeap}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{TableHeap()}{TableHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bustub\+::\+Table\+Heap\+::\+Table\+Heap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$}]{buffer\+\_\+pool\+\_\+manager,  }\item[{\mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$}]{lock\+\_\+manager,  }\item[{\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$}]{log\+\_\+manager,  }\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{first\+\_\+page\+\_\+id }\end{DoxyParamCaption})}
+
+Create a table heap without a transaction. (open table) 
+\begin{DoxyParams}{Parameters}
+{\em buffer\+\_\+pool\+\_\+manager} & the buffer pool manager \\
+\hline
+{\em lock\+\_\+manager} & the lock manager \\
+\hline
+{\em log\+\_\+manager} & the log manager \\
+\hline
+{\em first\+\_\+page\+\_\+id} & the id of the first page \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_adda1765ee1c2fe97be93d6eb875dd554}\label{classbustub_1_1TableHeap_adda1765ee1c2fe97be93d6eb875dd554}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!TableHeap@{TableHeap}}
+\index{TableHeap@{TableHeap}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{TableHeap()}{TableHeap()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bustub\+::\+Table\+Heap\+::\+Table\+Heap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$}]{buffer\+\_\+pool\+\_\+manager,  }\item[{\mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$}]{lock\+\_\+manager,  }\item[{\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$}]{log\+\_\+manager,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn }\end{DoxyParamCaption})}
+
+Create a table heap with a transaction. (create table) 
+\begin{DoxyParams}{Parameters}
+{\em buffer\+\_\+pool\+\_\+manager} & the buffer pool manager \\
+\hline
+{\em lock\+\_\+manager} & the lock manager \\
+\hline
+{\em log\+\_\+manager} & the log manager \\
+\hline
+{\em txn} & the creating transaction \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_ae9856cfa33a3361d272e6603a206dddd}\label{classbustub_1_1TableHeap_ae9856cfa33a3361d272e6603a206dddd}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!ApplyDelete@{ApplyDelete}}
+\index{ApplyDelete@{ApplyDelete}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{ApplyDelete()}{ApplyDelete()}}
+{\footnotesize\ttfamily void bustub\+::\+Table\+Heap\+::\+Apply\+Delete (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn }\end{DoxyParamCaption})}
+
+Called on Commit/\+Abort to actually delete a tuple or rollback an insert. 
+\begin{DoxyParams}{Parameters}
+{\em rid} & rid of the tuple to delete \\
+\hline
+{\em txn} & transaction performing the delete. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a6a6ccb54f871d9fbd5f42aaa29e6b297}\label{classbustub_1_1TableHeap_a6a6ccb54f871d9fbd5f42aaa29e6b297}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!Begin@{Begin}}
+\index{Begin@{Begin}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{Begin()}{Begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} bustub\+::\+Table\+Heap\+::\+Begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the begin iterator of this table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a2000b613f72177c6a95379491506b5be}\label{classbustub_1_1TableHeap_a2000b613f72177c6a95379491506b5be}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!End@{End}}
+\index{End@{End}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{End()}{End()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}} bustub\+::\+Table\+Heap\+::\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\begin{DoxyReturn}{Returns}
+the end iterator of this table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_af10c6861abbf1cf380252c672e67280f}\label{classbustub_1_1TableHeap_af10c6861abbf1cf380252c672e67280f}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!GetFirstPageId@{GetFirstPageId}}
+\index{GetFirstPageId@{GetFirstPageId}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{GetFirstPageId()}{GetFirstPageId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} bustub\+::\+Table\+Heap\+::\+Get\+First\+Page\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the id of the first page of this table 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a0762ce2e5a540fff2a1752e5e26b7159}\label{classbustub_1_1TableHeap_a0762ce2e5a540fff2a1752e5e26b7159}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!GetTuple@{GetTuple}}
+\index{GetTuple@{GetTuple}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{GetTuple()}{GetTuple()}}
+{\footnotesize\ttfamily bool bustub\+::\+Table\+Heap\+::\+Get\+Tuple (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn }\end{DoxyParamCaption})}
+
+Read a tuple from the table. 
+\begin{DoxyParams}{Parameters}
+{\em rid} & rid of the tuple to read \\
+\hline
+{\em tuple} & output variable for the tuple \\
+\hline
+{\em txn} & transaction performing the read \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the read was successful (i.\+e. the tuple exists) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a8c15dfcda3195194de230abd36ac1df0}\label{classbustub_1_1TableHeap_a8c15dfcda3195194de230abd36ac1df0}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!InsertTuple@{InsertTuple}}
+\index{InsertTuple@{InsertTuple}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{InsertTuple()}{InsertTuple()}}
+{\footnotesize\ttfamily bool bustub\+::\+Table\+Heap\+::\+Insert\+Tuple (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn }\end{DoxyParamCaption})}
+
+Insert a tuple into the table. If the tuple is too large ($>$= page\+\_\+size), return false. 
+\begin{DoxyParams}[1]{Parameters}
+ & {\em tuple} & tuple to insert \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & the rid of the inserted tuple \\
+\hline
+ & {\em txn} & the transaction performing the insert \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff the insert is successful 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_ae86b26b839b68c9d99825ee3825e7694}\label{classbustub_1_1TableHeap_ae86b26b839b68c9d99825ee3825e7694}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!MarkDelete@{MarkDelete}}
+\index{MarkDelete@{MarkDelete}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{MarkDelete()}{MarkDelete()}}
+{\footnotesize\ttfamily bool bustub\+::\+Table\+Heap\+::\+Mark\+Delete (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn }\end{DoxyParamCaption})}
+
+Mark the tuple as deleted. The actual delete will occur when Apply\+Delete is called. 
+\begin{DoxyParams}{Parameters}
+{\em rid} & resource id of the tuple of delete \\
+\hline
+{\em txn} & transaction performing the delete \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true iff the delete is successful (i.\+e the tuple exists) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_ae8386419c83c5056a23a8d8afcbae417}\label{classbustub_1_1TableHeap_ae8386419c83c5056a23a8d8afcbae417}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!RollbackDelete@{RollbackDelete}}
+\index{RollbackDelete@{RollbackDelete}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{RollbackDelete()}{RollbackDelete()}}
+{\footnotesize\ttfamily void bustub\+::\+Table\+Heap\+::\+Rollback\+Delete (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn }\end{DoxyParamCaption})}
+
+Called on abort to rollback a delete. 
+\begin{DoxyParams}{Parameters}
+{\em rid} & rid of the deleted tuple. \\
+\hline
+{\em txn} & transaction performing the rollback \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_a5593b0d83a185907dadb647bae98d1a0}\label{classbustub_1_1TableHeap_a5593b0d83a185907dadb647bae98d1a0}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!UpdateTuple@{UpdateTuple}}
+\index{UpdateTuple@{UpdateTuple}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{UpdateTuple()}{UpdateTuple()}}
+{\footnotesize\ttfamily bool bustub\+::\+Table\+Heap\+::\+Update\+Tuple (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&}]{rid,  }\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn }\end{DoxyParamCaption})}
+
+if the new tuple is too large to fit in the old page, return false (will delete and insert) 
+\begin{DoxyParams}{Parameters}
+{\em tuple} & new tuple \\
+\hline
+{\em rid} & rid of the old tuple \\
+\hline
+{\em txn} & transaction performing the update \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true is update is successful. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1TableHeap_ab0165532e287d023758cc64c24e40fb7}\label{classbustub_1_1TableHeap_ab0165532e287d023758cc64c24e40fb7}} 
+\index{bustub::TableHeap@{bustub::TableHeap}!TableIterator@{TableIterator}}
+\index{TableIterator@{TableIterator}!bustub::TableHeap@{bustub::TableHeap}}
+\doxysubsubsection{\texorpdfstring{TableIterator}{TableIterator}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classbustub_1_1TableIterator}{Table\+Iterator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/table/\mbox{\hyperlink{table__heap_8h}{table\+\_\+heap.\+h}}\item 
+src/storage/table/\mbox{\hyperlink{table__heap_8cpp}{table\+\_\+heap.\+cpp}}\end{DoxyCompactItemize}

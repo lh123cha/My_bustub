@@ -1,0 +1,54 @@
+\hypertarget{varlen__type_8cpp}{}\doxysection{src/type/varlen\+\_\+type.cpp File Reference}
+\label{varlen__type_8cpp}\index{src/type/varlen\_type.cpp@{src/type/varlen\_type.cpp}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}common/exception.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}type/type\+\_\+util.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}type/varlen\+\_\+type.\+h\char`\"{}}\newline
+Include dependency graph for varlen\+\_\+type.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{varlen__type_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacebustub}{bustub}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{varlen__type_8cpp_a94cfd4b9da7fcd7dc36a87106303bc29}{V\+A\+R\+L\+E\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+F\+U\+NC}}(OP)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{varlen__type_8cpp_a94cfd4b9da7fcd7dc36a87106303bc29}\label{varlen__type_8cpp_a94cfd4b9da7fcd7dc36a87106303bc29}} 
+\index{varlen\_type.cpp@{varlen\_type.cpp}!VARLEN\_COMPARE\_FUNC@{VARLEN\_COMPARE\_FUNC}}
+\index{VARLEN\_COMPARE\_FUNC@{VARLEN\_COMPARE\_FUNC}!varlen\_type.cpp@{varlen\_type.cpp}}
+\doxysubsubsection{\texorpdfstring{VARLEN\_COMPARE\_FUNC}{VARLEN\_COMPARE\_FUNC}}
+{\footnotesize\ttfamily \#define V\+A\+R\+L\+E\+N\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+F\+U\+NC(\begin{DoxyParamCaption}\item[{}]{OP }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keyword}{const} \textcolor{keywordtype}{char} *str1 = left.GetData();                                          \(\backslash\)}
+\DoxyCodeLine{  uint32\_t len1 = GetLength(left) -\/ 1;                                        \(\backslash\)}
+\DoxyCodeLine{  const \textcolor{keywordtype}{char} *str2;                                                           \(\backslash\)}
+\DoxyCodeLine{  uint32\_t len2;                                                              \(\backslash\)}
+\DoxyCodeLine{  if (right.GetTypeId() == \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8a661248b1a09344f415babe0a39122386}{TypeId::VARCHAR}}) \{                                 \(\backslash\)}
+\DoxyCodeLine{    str2 = right.GetData();                                                   \(\backslash\)}
+\DoxyCodeLine{    len2 = GetLength(right) -\/ 1;                                              \(\backslash\)}
+\DoxyCodeLine{    \textcolor{comment}{/* NOLINTNEXTLINE */}                                                      \(\backslash\)}
+\DoxyCodeLine{    return \mbox{\hyperlink{namespacebustub_a164137c2a7a4d5cbd82487b274e17f9d}{GetCmpBool}}(TypeUtil::CompareStrings(str1, len1, str2, len2) OP 0); \(\backslash\)}
+\DoxyCodeLine{  \} \textcolor{keywordflow}{else} \{                                                                    \(\backslash\)}
+\DoxyCodeLine{    auto r\_value = right.CastAs(\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8a661248b1a09344f415babe0a39122386}{TypeId::VARCHAR}});                             \(\backslash\)}
+\DoxyCodeLine{    str2 = r\_value.GetData();                                                 \(\backslash\)}
+\DoxyCodeLine{    len2 = GetLength(r\_value) -\/ 1;                                            \(\backslash\)}
+\DoxyCodeLine{    \textcolor{comment}{/* NOLINTNEXTLINE */}                                                      \(\backslash\)}
+\DoxyCodeLine{    return \mbox{\hyperlink{namespacebustub_a164137c2a7a4d5cbd82487b274e17f9d}{GetCmpBool}}(TypeUtil::CompareStrings(str1, len1, str2, len2) OP 0); \(\backslash\)}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}

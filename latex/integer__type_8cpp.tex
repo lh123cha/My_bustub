@@ -1,0 +1,91 @@
+\hypertarget{integer__type_8cpp}{}\doxysection{src/type/integer\+\_\+type.cpp File Reference}
+\label{integer__type_8cpp}\index{src/type/integer\_type.cpp@{src/type/integer\_type.cpp}}
+{\ttfamily \#include $<$cassert$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}type/integer\+\_\+type.\+h\char`\"{}}\newline
+Include dependency graph for integer\+\_\+type.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{integer__type_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacebustub}{bustub}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{integer__type_8cpp_a403d6b711e9ab5aab93c37e9e271c9d2}{I\+N\+T\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+F\+U\+NC}}(OP)
+\item 
+\#define \mbox{\hyperlink{integer__type_8cpp_a476874a2fc61a83fe279689d3d039a7d}{I\+N\+T\+\_\+\+M\+O\+D\+I\+F\+Y\+\_\+\+F\+U\+NC}}(M\+E\+T\+H\+OD,  OP)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{integer__type_8cpp_a403d6b711e9ab5aab93c37e9e271c9d2}\label{integer__type_8cpp_a403d6b711e9ab5aab93c37e9e271c9d2}} 
+\index{integer\_type.cpp@{integer\_type.cpp}!INT\_COMPARE\_FUNC@{INT\_COMPARE\_FUNC}}
+\index{INT\_COMPARE\_FUNC@{INT\_COMPARE\_FUNC}!integer\_type.cpp@{integer\_type.cpp}}
+\doxysubsubsection{\texorpdfstring{INT\_COMPARE\_FUNC}{INT\_COMPARE\_FUNC}}
+{\footnotesize\ttfamily \#define I\+N\+T\+\_\+\+C\+O\+M\+P\+A\+R\+E\+\_\+\+F\+U\+NC(\begin{DoxyParamCaption}\item[{}]{OP }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{switch} (right.GetTypeId()) \{                                             \(\backslash\)}
+\DoxyCodeLine{    case \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8a42a53d491422a000fddacf033a3d8592}{TypeId::TINYINT}}:                                                  \(\backslash\)}
+\DoxyCodeLine{      return \mbox{\hyperlink{namespacebustub_a164137c2a7a4d5cbd82487b274e17f9d}{GetCmpBool}}(left.value\_.integer\_ OP right.GetAs<int8\_t>());    \(\backslash\)}
+\DoxyCodeLine{    case \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8af1d5de83e0968b9f5b97390946216ae6}{TypeId::SMALLINT}}:                                                 \(\backslash\)}
+\DoxyCodeLine{      return \mbox{\hyperlink{namespacebustub_a164137c2a7a4d5cbd82487b274e17f9d}{GetCmpBool}}(left.value\_.integer\_ OP right.GetAs<int16\_t>());   \(\backslash\)}
+\DoxyCodeLine{    case \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8a407acaee13a2c2418e2d452e46a567d0}{TypeId::INTEGER}}:                                                  \(\backslash\)}
+\DoxyCodeLine{      return \mbox{\hyperlink{namespacebustub_a164137c2a7a4d5cbd82487b274e17f9d}{GetCmpBool}}(left.value\_.integer\_ OP right.GetAs<int32\_t>());   \(\backslash\)}
+\DoxyCodeLine{    case \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8a1eaf918fca184578656e768fa5e1be06}{TypeId::BIGINT}}:                                                   \(\backslash\)}
+\DoxyCodeLine{      return \mbox{\hyperlink{namespacebustub_a164137c2a7a4d5cbd82487b274e17f9d}{GetCmpBool}}(left.value\_.integer\_ OP right.GetAs<int64\_t>());   \(\backslash\)}
+\DoxyCodeLine{    case \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8ab2b72097010116f1391d0defef5e8944}{TypeId::DECIMAL}}:                                                  \(\backslash\)}
+\DoxyCodeLine{      return \mbox{\hyperlink{namespacebustub_a164137c2a7a4d5cbd82487b274e17f9d}{GetCmpBool}}(left.value\_.integer\_ OP right.GetAs<\textcolor{keywordtype}{double}>());    \(\backslash\)}
+\DoxyCodeLine{    case \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8a661248b1a09344f415babe0a39122386}{TypeId::VARCHAR}}: \{                                                \(\backslash\)}
+\DoxyCodeLine{      auto r\_value = right.CastAs(\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8a407acaee13a2c2418e2d452e46a567d0}{TypeId::INTEGER}});                        \(\backslash\)}
+\DoxyCodeLine{      return \mbox{\hyperlink{namespacebustub_a164137c2a7a4d5cbd82487b274e17f9d}{GetCmpBool}}(left.value\_.integer\_ OP r\_value.GetAs<int32\_t>()); \(\backslash\)}
+\DoxyCodeLine{    \}                                                                      \(\backslash\)}
+\DoxyCodeLine{    default:                                                               \(\backslash\)}
+\DoxyCodeLine{      break;                                                               \(\backslash\)}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{integer__type_8cpp_a476874a2fc61a83fe279689d3d039a7d}\label{integer__type_8cpp_a476874a2fc61a83fe279689d3d039a7d}} 
+\index{integer\_type.cpp@{integer\_type.cpp}!INT\_MODIFY\_FUNC@{INT\_MODIFY\_FUNC}}
+\index{INT\_MODIFY\_FUNC@{INT\_MODIFY\_FUNC}!integer\_type.cpp@{integer\_type.cpp}}
+\doxysubsubsection{\texorpdfstring{INT\_MODIFY\_FUNC}{INT\_MODIFY\_FUNC}}
+{\footnotesize\ttfamily \#define I\+N\+T\+\_\+\+M\+O\+D\+I\+F\+Y\+\_\+\+F\+U\+NC(\begin{DoxyParamCaption}\item[{}]{M\+E\+T\+H\+OD,  }\item[{}]{OP }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{  \textcolor{keywordflow}{switch} (right.GetTypeId()) \{                                                      \(\backslash\)}
+\DoxyCodeLine{    case \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8a42a53d491422a000fddacf033a3d8592}{TypeId::TINYINT}}:                                                           \(\backslash\)}
+\DoxyCodeLine{      \textcolor{comment}{/* NOLINTNEXTLINE */}                                                          \(\backslash\)}
+\DoxyCodeLine{      return METHOD<int32\_t, int8\_t>(left, right);                                  \(\backslash\)}
+\DoxyCodeLine{    case \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8af1d5de83e0968b9f5b97390946216ae6}{TypeId::SMALLINT}}:                                                          \(\backslash\)}
+\DoxyCodeLine{      \textcolor{comment}{/* NOLINTNEXTLINE */}                                                          \(\backslash\)}
+\DoxyCodeLine{      return METHOD<int32\_t, int16\_t>(left, right);                                 \(\backslash\)}
+\DoxyCodeLine{    case \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8a407acaee13a2c2418e2d452e46a567d0}{TypeId::INTEGER}}:                                                           \(\backslash\)}
+\DoxyCodeLine{      \textcolor{comment}{/* NOLINTNEXTLINE */}                                                          \(\backslash\)}
+\DoxyCodeLine{      return METHOD<int32\_t, int32\_t>(left, right);                                 \(\backslash\)}
+\DoxyCodeLine{    case \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8a1eaf918fca184578656e768fa5e1be06}{TypeId::BIGINT}}:                                                            \(\backslash\)}
+\DoxyCodeLine{      \textcolor{comment}{/* NOLINTNEXTLINE */}                                                          \(\backslash\)}
+\DoxyCodeLine{      return METHOD<int32\_t, int64\_t>(left, right);                                 \(\backslash\)}
+\DoxyCodeLine{    case \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8ab2b72097010116f1391d0defef5e8944}{TypeId::DECIMAL}}:                                                           \(\backslash\)}
+\DoxyCodeLine{      return Value(\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8ab2b72097010116f1391d0defef5e8944}{TypeId::DECIMAL}}, left.value\_.integer\_ OP right.GetAs<\textcolor{keywordtype}{double}>()); \(\backslash\)}
+\DoxyCodeLine{    case \mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8a661248b1a09344f415babe0a39122386}{TypeId::VARCHAR}}: \{                                                         \(\backslash\)}
+\DoxyCodeLine{      auto r\_value = right.CastAs(\mbox{\hyperlink{namespacebustub_a49735e6748963f5515394bbb228f1fc8a407acaee13a2c2418e2d452e46a567d0}{TypeId::INTEGER}});                                 \(\backslash\)}
+\DoxyCodeLine{      \textcolor{comment}{/* NOLINTNEXTLINE */}                                                          \(\backslash\)}
+\DoxyCodeLine{      return METHOD<int32\_t, int32\_t>(left, r\_value);                               \(\backslash\)}
+\DoxyCodeLine{    \}                                                                               \(\backslash\)}
+\DoxyCodeLine{    default:                                                                        \(\backslash\)}
+\DoxyCodeLine{      break;                                                                        \(\backslash\)}
+\DoxyCodeLine{  \}}
+
+\end{DoxyCode}

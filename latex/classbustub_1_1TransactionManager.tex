@@ -1,0 +1,151 @@
+\hypertarget{classbustub_1_1TransactionManager}{}\doxysection{bustub\+::Transaction\+Manager Class Reference}
+\label{classbustub_1_1TransactionManager}\index{bustub::TransactionManager@{bustub::TransactionManager}}
+
+
+{\ttfamily \#include $<$transaction\+\_\+manager.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Transaction\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classbustub_1_1TransactionManager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1TransactionManager_aecf907c4b365e6ca283948f5841d512a}{Transaction\+Manager}} (\mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$lock\+\_\+manager, \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$log\+\_\+manager=nullptr)
+\item 
+\mbox{\hyperlink{classbustub_1_1TransactionManager_aea75b9783284e10319f315b33912b3f7}{$\sim$\+Transaction\+Manager}} ()=default
+\item 
+\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$ \mbox{\hyperlink{classbustub_1_1TransactionManager_a7bd696ba2d4b6481ccd773cd6347fe0e}{Begin}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn=nullptr, \mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5}{Isolation\+Level}} isolation\+\_\+level=\mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5aa4b37efaa1a6b533614ed81660dbf912}{Isolation\+Level\+::\+R\+E\+P\+E\+A\+T\+A\+B\+L\+E\+\_\+\+R\+E\+AD}})
+\item 
+void \mbox{\hyperlink{classbustub_1_1TransactionManager_a03a9f5e5c04b71ad71dc91dddfdec3a3}{Commit}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn)
+\item 
+void \mbox{\hyperlink{classbustub_1_1TransactionManager_ac5fd161a27a717980dca5a8f7dec17d6}{Abort}} (\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$txn)
+\item 
+void \mbox{\hyperlink{classbustub_1_1TransactionManager_a71689acd200a9aafd465d33eb3f1dba9}{Block\+All\+Transactions}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1TransactionManager_ab01133499d3abf91933837c167d28b6d}{Resume\+Transactions}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$ \mbox{\hyperlink{classbustub_1_1TransactionManager_a36d9bca5c14cbe855fac02b4a1020046}{Get\+Transaction}} (\mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}} txn\+\_\+id)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}}, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$ $>$ \mbox{\hyperlink{classbustub_1_1TransactionManager_a27eec0bd42b0c7495a858c415fc5b5c2}{txn\+\_\+map}} = \{\}
+\item 
+static std\+::shared\+\_\+mutex \mbox{\hyperlink{classbustub_1_1TransactionManager_ad7cb35550f3a850045706f5bc6630fba}{txn\+\_\+map\+\_\+mutex}} = \{\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1TransactionManager}{Transaction\+Manager}} keeps track of all the transactions running in the system. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1TransactionManager_aecf907c4b365e6ca283948f5841d512a}\label{classbustub_1_1TransactionManager_aecf907c4b365e6ca283948f5841d512a}} 
+\index{bustub::TransactionManager@{bustub::TransactionManager}!TransactionManager@{TransactionManager}}
+\index{TransactionManager@{TransactionManager}!bustub::TransactionManager@{bustub::TransactionManager}}
+\doxysubsubsection{\texorpdfstring{TransactionManager()}{TransactionManager()}}
+{\footnotesize\ttfamily bustub\+::\+Transaction\+Manager\+::\+Transaction\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$}]{lock\+\_\+manager,  }\item[{\mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}} $\ast$}]{log\+\_\+manager = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{classbustub_1_1TransactionManager_aea75b9783284e10319f315b33912b3f7}\label{classbustub_1_1TransactionManager_aea75b9783284e10319f315b33912b3f7}} 
+\index{bustub::TransactionManager@{bustub::TransactionManager}!````~TransactionManager@{$\sim$TransactionManager}}
+\index{````~TransactionManager@{$\sim$TransactionManager}!bustub::TransactionManager@{bustub::TransactionManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$TransactionManager()}{~TransactionManager()}}
+{\footnotesize\ttfamily bustub\+::\+Transaction\+Manager\+::$\sim$\+Transaction\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1TransactionManager_ac5fd161a27a717980dca5a8f7dec17d6}\label{classbustub_1_1TransactionManager_ac5fd161a27a717980dca5a8f7dec17d6}} 
+\index{bustub::TransactionManager@{bustub::TransactionManager}!Abort@{Abort}}
+\index{Abort@{Abort}!bustub::TransactionManager@{bustub::TransactionManager}}
+\doxysubsubsection{\texorpdfstring{Abort()}{Abort()}}
+{\footnotesize\ttfamily void bustub\+::\+Transaction\+Manager\+::\+Abort (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn }\end{DoxyParamCaption})}
+
+Aborts a transaction 
+\begin{DoxyParams}{Parameters}
+{\em txn} & the transaction to abort \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1TransactionManager_a7bd696ba2d4b6481ccd773cd6347fe0e}\label{classbustub_1_1TransactionManager_a7bd696ba2d4b6481ccd773cd6347fe0e}} 
+\index{bustub::TransactionManager@{bustub::TransactionManager}!Begin@{Begin}}
+\index{Begin@{Begin}!bustub::TransactionManager@{bustub::TransactionManager}}
+\doxysubsubsection{\texorpdfstring{Begin()}{Begin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$ bustub\+::\+Transaction\+Manager\+::\+Begin (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn = {\ttfamily nullptr},  }\item[{\mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5}{Isolation\+Level}}}]{isolation\+\_\+level = {\ttfamily \mbox{\hyperlink{namespacebustub_a57ce43470b186e0066e7f128390005b5aa4b37efaa1a6b533614ed81660dbf912}{Isolation\+Level\+::\+R\+E\+P\+E\+A\+T\+A\+B\+L\+E\+\_\+\+R\+E\+AD}}} }\end{DoxyParamCaption})}
+
+Begins a new transaction. 
+\begin{DoxyParams}{Parameters}
+{\em txn} & an optional transaction object to be initialized, otherwise a new transaction is created. \\
+\hline
+{\em isolation\+\_\+level} & an optional isolation level of the transaction. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+an initialized transaction 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TransactionManager_a71689acd200a9aafd465d33eb3f1dba9}\label{classbustub_1_1TransactionManager_a71689acd200a9aafd465d33eb3f1dba9}} 
+\index{bustub::TransactionManager@{bustub::TransactionManager}!BlockAllTransactions@{BlockAllTransactions}}
+\index{BlockAllTransactions@{BlockAllTransactions}!bustub::TransactionManager@{bustub::TransactionManager}}
+\doxysubsubsection{\texorpdfstring{BlockAllTransactions()}{BlockAllTransactions()}}
+{\footnotesize\ttfamily void bustub\+::\+Transaction\+Manager\+::\+Block\+All\+Transactions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Prevents all transactions from performing operations, used for checkpointing. \mbox{\Hypertarget{classbustub_1_1TransactionManager_a03a9f5e5c04b71ad71dc91dddfdec3a3}\label{classbustub_1_1TransactionManager_a03a9f5e5c04b71ad71dc91dddfdec3a3}} 
+\index{bustub::TransactionManager@{bustub::TransactionManager}!Commit@{Commit}}
+\index{Commit@{Commit}!bustub::TransactionManager@{bustub::TransactionManager}}
+\doxysubsubsection{\texorpdfstring{Commit()}{Commit()}}
+{\footnotesize\ttfamily void bustub\+::\+Transaction\+Manager\+::\+Commit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$}]{txn }\end{DoxyParamCaption})}
+
+Commits a transaction. 
+\begin{DoxyParams}{Parameters}
+{\em txn} & the transaction to commit \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1TransactionManager_a36d9bca5c14cbe855fac02b4a1020046}\label{classbustub_1_1TransactionManager_a36d9bca5c14cbe855fac02b4a1020046}} 
+\index{bustub::TransactionManager@{bustub::TransactionManager}!GetTransaction@{GetTransaction}}
+\index{GetTransaction@{GetTransaction}!bustub::TransactionManager@{bustub::TransactionManager}}
+\doxysubsubsection{\texorpdfstring{GetTransaction()}{GetTransaction()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}}$\ast$ bustub\+::\+Transaction\+Manager\+::\+Get\+Transaction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}}}]{txn\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Locates and returns the transaction with the given transaction ID. 
+\begin{DoxyParams}{Parameters}
+{\em txn\+\_\+id} & the id of the transaction to be found, it must exist! \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the transaction with the given transaction id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1TransactionManager_ab01133499d3abf91933837c167d28b6d}\label{classbustub_1_1TransactionManager_ab01133499d3abf91933837c167d28b6d}} 
+\index{bustub::TransactionManager@{bustub::TransactionManager}!ResumeTransactions@{ResumeTransactions}}
+\index{ResumeTransactions@{ResumeTransactions}!bustub::TransactionManager@{bustub::TransactionManager}}
+\doxysubsubsection{\texorpdfstring{ResumeTransactions()}{ResumeTransactions()}}
+{\footnotesize\ttfamily void bustub\+::\+Transaction\+Manager\+::\+Resume\+Transactions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Resumes all transactions, used for checkpointing. 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1TransactionManager_a27eec0bd42b0c7495a858c415fc5b5c2}\label{classbustub_1_1TransactionManager_a27eec0bd42b0c7495a858c415fc5b5c2}} 
+\index{bustub::TransactionManager@{bustub::TransactionManager}!txn\_map@{txn\_map}}
+\index{txn\_map@{txn\_map}!bustub::TransactionManager@{bustub::TransactionManager}}
+\doxysubsubsection{\texorpdfstring{txn\_map}{txn\_map}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}}, \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$ $>$ bustub\+::\+Transaction\+Manager\+::txn\+\_\+map = \{\}\hspace{0.3cm}{\ttfamily [static]}}
+
+Global list of running transactions The transaction map is a global list of all the running transactions in the system. \mbox{\Hypertarget{classbustub_1_1TransactionManager_ad7cb35550f3a850045706f5bc6630fba}\label{classbustub_1_1TransactionManager_ad7cb35550f3a850045706f5bc6630fba}} 
+\index{bustub::TransactionManager@{bustub::TransactionManager}!txn\_map\_mutex@{txn\_map\_mutex}}
+\index{txn\_map\_mutex@{txn\_map\_mutex}!bustub::TransactionManager@{bustub::TransactionManager}}
+\doxysubsubsection{\texorpdfstring{txn\_map\_mutex}{txn\_map\_mutex}}
+{\footnotesize\ttfamily std\+::shared\+\_\+mutex bustub\+::\+Transaction\+Manager\+::txn\+\_\+map\+\_\+mutex = \{\}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/concurrency/\mbox{\hyperlink{transaction__manager_8h}{transaction\+\_\+manager.\+h}}\item 
+src/concurrency/\mbox{\hyperlink{transaction__manager_8cpp}{transaction\+\_\+manager.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,107 @@
+\hypertarget{classbustub_1_1DeleteExecutor}{}\doxysection{bustub\+::Delete\+Executor Class Reference}
+\label{classbustub_1_1DeleteExecutor}\index{bustub::DeleteExecutor@{bustub::DeleteExecutor}}
+
+
+{\ttfamily \#include $<$delete\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Delete\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classbustub_1_1DeleteExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Delete\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classbustub_1_1DeleteExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1DeleteExecutor_a8d3dad537d09ba61401748fb831d6b07}{Delete\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1DeletePlanNode}{Delete\+Plan\+Node}} $\ast$plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&child\+\_\+executor)
+\item 
+void \mbox{\hyperlink{classbustub_1_1DeleteExecutor_a7fb4b4300c1e51a59884c90ce31bd411}{Init}} () override
+\item 
+bool \mbox{\hyperlink{classbustub_1_1DeleteExecutor_afd92d81ebbcf8b6a4039b2c927ac0990}{Next}} (\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]}\mbox{]} \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$rid) override
+\item 
+const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$ \mbox{\hyperlink{classbustub_1_1DeleteExecutor_a8cc802b4aaea5f20f9bda6035669ac83}{Get\+Output\+Schema}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Deleted\+Executor executes a delete on a table. Deleted values are always pulled from a child. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1DeleteExecutor_a8d3dad537d09ba61401748fb831d6b07}\label{classbustub_1_1DeleteExecutor_a8d3dad537d09ba61401748fb831d6b07}} 
+\index{bustub::DeleteExecutor@{bustub::DeleteExecutor}!DeleteExecutor@{DeleteExecutor}}
+\index{DeleteExecutor@{DeleteExecutor}!bustub::DeleteExecutor@{bustub::DeleteExecutor}}
+\doxysubsubsection{\texorpdfstring{DeleteExecutor()}{DeleteExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Delete\+Executor\+::\+Delete\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1DeletePlanNode}{Delete\+Plan\+Node}} $\ast$}]{plan,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{child\+\_\+executor }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1DeleteExecutor}{Delete\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The delete plan to be executed \\
+\hline
+{\em child\+\_\+executor} & The child executor that feeds the delete \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1DeleteExecutor_a8cc802b4aaea5f20f9bda6035669ac83}\label{classbustub_1_1DeleteExecutor_a8cc802b4aaea5f20f9bda6035669ac83}} 
+\index{bustub::DeleteExecutor@{bustub::DeleteExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::DeleteExecutor@{bustub::DeleteExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}}$\ast$ bustub\+::\+Delete\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the delete 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a4dd2f1bb76d58cfc5c7b6abd9ed64017}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1DeleteExecutor_a7fb4b4300c1e51a59884c90ce31bd411}\label{classbustub_1_1DeleteExecutor_a7fb4b4300c1e51a59884c90ce31bd411}} 
+\index{bustub::DeleteExecutor@{bustub::DeleteExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::DeleteExecutor@{bustub::DeleteExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Delete\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the delete 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1DeleteExecutor_afd92d81ebbcf8b6a4039b2c927ac0990}\label{classbustub_1_1DeleteExecutor_afd92d81ebbcf8b6a4039b2c927ac0990}} 
+\index{bustub::DeleteExecutor@{bustub::DeleteExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::DeleteExecutor@{bustub::DeleteExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily bool bustub\+::\+Delete\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{[}\mbox{[}maybe\+\_\+unused\mbox{]} \mbox{]} \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$}]{rid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Yield the next tuple from the delete. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the update \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} produced by the update \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily false} unconditionally (throw to indicate failure)
+\end{DoxyReturn}
+N\+O\+TE\+: \mbox{\hyperlink{classbustub_1_1DeleteExecutor_afd92d81ebbcf8b6a4039b2c927ac0990}{Delete\+Executor\+::\+Next()}} does not use the {\ttfamily tuple} out-\/parameter. N\+O\+TE\+: \mbox{\hyperlink{classbustub_1_1DeleteExecutor_afd92d81ebbcf8b6a4039b2c927ac0990}{Delete\+Executor\+::\+Next()}} does not use the {\ttfamily rid} out-\/parameter. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/\mbox{\hyperlink{delete__executor_8h}{delete\+\_\+executor.\+h}}\item 
+src/execution/\mbox{\hyperlink{delete__executor_8cpp}{delete\+\_\+executor.\+cpp}}\end{DoxyCompactItemize}

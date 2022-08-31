@@ -1,0 +1,101 @@
+\hypertarget{classbustub_1_1GenericKey}{}\doxysection{bustub\+::Generic\+Key$<$ Key\+Size $>$ Class Template Reference}
+\label{classbustub_1_1GenericKey}\index{bustub::GenericKey$<$ KeySize $>$@{bustub::GenericKey$<$ KeySize $>$}}
+
+
+{\ttfamily \#include $<$generic\+\_\+key.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Generic\+Key$<$ Key\+Size $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=191pt]{classbustub_1_1GenericKey__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbustub_1_1GenericKey_a1673f86b5bce161d3dd556c09e7cd572}{Set\+From\+Key}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple)
+\item 
+void \mbox{\hyperlink{classbustub_1_1GenericKey_a3cdd6f68405050a6059ad62232d3ecee}{Set\+From\+Integer}} (int64\+\_\+t key)
+\item 
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1GenericKey_a36a1d6fae4a2e798567cc0366f7a8833}{To\+Value}} (\mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$schema, uint32\+\_\+t column\+\_\+idx) const
+\item 
+int64\+\_\+t \mbox{\hyperlink{classbustub_1_1GenericKey_a3ab17b2ad1571f0b132627fd63f41d9b}{To\+String}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{classbustub_1_1GenericKey_a0c55198d7686c3b411a549455f9a8b6d}{data\+\_\+}} \mbox{[}Key\+Size\mbox{]}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classbustub_1_1GenericKey_addf872a6bac5dff3dab330bcc73a78c6}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classbustub_1_1GenericKey}{Generic\+Key}} \&key)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$size\+\_\+t Key\+Size$>$\newline
+class bustub\+::\+Generic\+Key$<$ Key\+Size $>$}
+
+Generic key is used for indexing with opaque data.
+
+This key type uses an fixed length array to hold data for indexing purposes, the actual size of which is specified and instantiated with a template argument. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1GenericKey_a3cdd6f68405050a6059ad62232d3ecee}\label{classbustub_1_1GenericKey_a3cdd6f68405050a6059ad62232d3ecee}} 
+\index{bustub::GenericKey$<$ KeySize $>$@{bustub::GenericKey$<$ KeySize $>$}!SetFromInteger@{SetFromInteger}}
+\index{SetFromInteger@{SetFromInteger}!bustub::GenericKey$<$ KeySize $>$@{bustub::GenericKey$<$ KeySize $>$}}
+\doxysubsubsection{\texorpdfstring{SetFromInteger()}{SetFromInteger()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t Key\+Size$>$ \\
+void \mbox{\hyperlink{classbustub_1_1GenericKey}{bustub\+::\+Generic\+Key}}$<$ Key\+Size $>$\+::Set\+From\+Integer (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1GenericKey_a1673f86b5bce161d3dd556c09e7cd572}\label{classbustub_1_1GenericKey_a1673f86b5bce161d3dd556c09e7cd572}} 
+\index{bustub::GenericKey$<$ KeySize $>$@{bustub::GenericKey$<$ KeySize $>$}!SetFromKey@{SetFromKey}}
+\index{SetFromKey@{SetFromKey}!bustub::GenericKey$<$ KeySize $>$@{bustub::GenericKey$<$ KeySize $>$}}
+\doxysubsubsection{\texorpdfstring{SetFromKey()}{SetFromKey()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t Key\+Size$>$ \\
+void \mbox{\hyperlink{classbustub_1_1GenericKey}{bustub\+::\+Generic\+Key}}$<$ Key\+Size $>$\+::Set\+From\+Key (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{tuple }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1GenericKey_a3ab17b2ad1571f0b132627fd63f41d9b}\label{classbustub_1_1GenericKey_a3ab17b2ad1571f0b132627fd63f41d9b}} 
+\index{bustub::GenericKey$<$ KeySize $>$@{bustub::GenericKey$<$ KeySize $>$}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::GenericKey$<$ KeySize $>$@{bustub::GenericKey$<$ KeySize $>$}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t Key\+Size$>$ \\
+int64\+\_\+t \mbox{\hyperlink{classbustub_1_1GenericKey}{bustub\+::\+Generic\+Key}}$<$ Key\+Size $>$\+::To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1GenericKey_a36a1d6fae4a2e798567cc0366f7a8833}\label{classbustub_1_1GenericKey_a36a1d6fae4a2e798567cc0366f7a8833}} 
+\index{bustub::GenericKey$<$ KeySize $>$@{bustub::GenericKey$<$ KeySize $>$}!ToValue@{ToValue}}
+\index{ToValue@{ToValue}!bustub::GenericKey$<$ KeySize $>$@{bustub::GenericKey$<$ KeySize $>$}}
+\doxysubsubsection{\texorpdfstring{ToValue()}{ToValue()}}
+{\footnotesize\ttfamily template$<$size\+\_\+t Key\+Size$>$ \\
+\mbox{\hyperlink{classbustub_1_1Value}{Value}} \mbox{\hyperlink{classbustub_1_1GenericKey}{bustub\+::\+Generic\+Key}}$<$ Key\+Size $>$\+::To\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{schema,  }\item[{uint32\+\_\+t}]{column\+\_\+idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1GenericKey_addf872a6bac5dff3dab330bcc73a78c6}\label{classbustub_1_1GenericKey_addf872a6bac5dff3dab330bcc73a78c6}} 
+\index{bustub::GenericKey$<$ KeySize $>$@{bustub::GenericKey$<$ KeySize $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!bustub::GenericKey$<$ KeySize $>$@{bustub::GenericKey$<$ KeySize $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily template$<$size\+\_\+t Key\+Size$>$ \\
+std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classbustub_1_1GenericKey}{Generic\+Key}}$<$ Key\+Size $>$ \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1GenericKey_a0c55198d7686c3b411a549455f9a8b6d}\label{classbustub_1_1GenericKey_a0c55198d7686c3b411a549455f9a8b6d}} 
+\index{bustub::GenericKey$<$ KeySize $>$@{bustub::GenericKey$<$ KeySize $>$}!data\_@{data\_}}
+\index{data\_@{data\_}!bustub::GenericKey$<$ KeySize $>$@{bustub::GenericKey$<$ KeySize $>$}}
+\doxysubsubsection{\texorpdfstring{data\_}{data\_}}
+{\footnotesize\ttfamily template$<$size\+\_\+t Key\+Size$>$ \\
+char \mbox{\hyperlink{classbustub_1_1GenericKey}{bustub\+::\+Generic\+Key}}$<$ Key\+Size $>$\+::data\+\_\+\mbox{[}Key\+Size\mbox{]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/index/\mbox{\hyperlink{generic__key_8h}{generic\+\_\+key.\+h}}\end{DoxyCompactItemize}

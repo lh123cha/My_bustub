@@ -1,0 +1,114 @@
+\hypertarget{classbustub_1_1NestIndexJoinExecutor}{}\doxysection{bustub\+::Nest\+Index\+Join\+Executor Class Reference}
+\label{classbustub_1_1NestIndexJoinExecutor}\index{bustub::NestIndexJoinExecutor@{bustub::NestIndexJoinExecutor}}
+
+
+{\ttfamily \#include $<$nested\+\_\+index\+\_\+join\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Nest\+Index\+Join\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=245pt]{classbustub_1_1NestIndexJoinExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Nest\+Index\+Join\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classbustub_1_1NestIndexJoinExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1NestIndexJoinExecutor_a5bc5b7f547434fd623ca579d79985c91}{Nest\+Index\+Join\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1NestedIndexJoinPlanNode}{Nested\+Index\+Join\+Plan\+Node}} $\ast$plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&child\+\_\+executor)
+\item 
+const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$ \mbox{\hyperlink{classbustub_1_1NestIndexJoinExecutor_a5a8576051ac49530fe73e1d9e941e989}{Get\+Output\+Schema}} () override
+\item 
+void \mbox{\hyperlink{classbustub_1_1NestIndexJoinExecutor_a1a4839e1f6a5cbdaf87a81944698dc51}{Init}} () override
+\item 
+bool \mbox{\hyperlink{classbustub_1_1NestIndexJoinExecutor_ad0633f58d00ec9df1a9851c337ab5955}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$rid) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Index\+Join\+Executor executes index join operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1NestIndexJoinExecutor_a5bc5b7f547434fd623ca579d79985c91}\label{classbustub_1_1NestIndexJoinExecutor_a5bc5b7f547434fd623ca579d79985c91}} 
+\index{bustub::NestIndexJoinExecutor@{bustub::NestIndexJoinExecutor}!NestIndexJoinExecutor@{NestIndexJoinExecutor}}
+\index{NestIndexJoinExecutor@{NestIndexJoinExecutor}!bustub::NestIndexJoinExecutor@{bustub::NestIndexJoinExecutor}}
+\doxysubsubsection{\texorpdfstring{NestIndexJoinExecutor()}{NestIndexJoinExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Nest\+Index\+Join\+Executor\+::\+Nest\+Index\+Join\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1NestedIndexJoinPlanNode}{Nested\+Index\+Join\+Plan\+Node}} $\ast$}]{plan,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{child\+\_\+executor }\end{DoxyParamCaption})}
+
+Creates a new nested index join executor. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & the context that the hash join should be performed in \\
+\hline
+{\em plan} & the nested index join plan node \\
+\hline
+{\em outer} & table child \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1NestIndexJoinExecutor_a5a8576051ac49530fe73e1d9e941e989}\label{classbustub_1_1NestIndexJoinExecutor_a5a8576051ac49530fe73e1d9e941e989}} 
+\index{bustub::NestIndexJoinExecutor@{bustub::NestIndexJoinExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::NestIndexJoinExecutor@{bustub::NestIndexJoinExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}}$\ast$ bustub\+::\+Nest\+Index\+Join\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The schema of the tuples that this executor produces 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a4dd2f1bb76d58cfc5c7b6abd9ed64017}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1NestIndexJoinExecutor_a1a4839e1f6a5cbdaf87a81944698dc51}\label{classbustub_1_1NestIndexJoinExecutor_a1a4839e1f6a5cbdaf87a81944698dc51}} 
+\index{bustub::NestIndexJoinExecutor@{bustub::NestIndexJoinExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::NestIndexJoinExecutor@{bustub::NestIndexJoinExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Nest\+Index\+Join\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the executor. \begin{DoxyWarning}{Warning}
+This function must be called before \mbox{\hyperlink{classbustub_1_1NestIndexJoinExecutor_ad0633f58d00ec9df1a9851c337ab5955}{Next()}} is called! 
+\end{DoxyWarning}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1NestIndexJoinExecutor_ad0633f58d00ec9df1a9851c337ab5955}\label{classbustub_1_1NestIndexJoinExecutor_ad0633f58d00ec9df1a9851c337ab5955}} 
+\index{bustub::NestIndexJoinExecutor@{bustub::NestIndexJoinExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::NestIndexJoinExecutor@{bustub::NestIndexJoinExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily bool bustub\+::\+Nest\+Index\+Join\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$}]{rid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from this executor. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by this executor \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} produced by this executor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a5baf2d49aa23901553398d6c309d2afe}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/\mbox{\hyperlink{nested__index__join__executor_8h}{nested\+\_\+index\+\_\+join\+\_\+executor.\+h}}\item 
+src/execution/\mbox{\hyperlink{nested__index__join__executor_8cpp}{nested\+\_\+index\+\_\+join\+\_\+executor.\+cpp}}\end{DoxyCompactItemize}

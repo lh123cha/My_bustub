@@ -1,0 +1,67 @@
+\hypertarget{MurmurHash3_8cpp}{}\doxysection{third\+\_\+party/murmur3/\+Murmur\+Hash3.cpp File Reference}
+\label{MurmurHash3_8cpp}\index{third\_party/murmur3/MurmurHash3.cpp@{third\_party/murmur3/MurmurHash3.cpp}}
+{\ttfamily \#include \char`\"{}Murmur\+Hash3.\+h\char`\"{}}\newline
+Include dependency graph for Murmur\+Hash3.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{MurmurHash3_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacemurmur3}{murmur3}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{MurmurHash3_8cpp_ac032d233a8ebfcd82fd49d0824eefb18}{F\+O\+R\+C\+E\+\_\+\+I\+N\+L\+I\+NE}}~inline \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))
+\item 
+\#define \mbox{\hyperlink{MurmurHash3_8cpp_ab32bb365c62dcb0da675e248b7e814a9}{R\+O\+T\+L32}}(\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a6150e0515f7202e2fb518f7206ed97dc}{x}},  \mbox{\hyperlink{gmock-matchers-containers__test_8cc_a39cb44155237f0205e0feb931d5acbed}{y}})~rotl32(\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a6150e0515f7202e2fb518f7206ed97dc}{x}},\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a39cb44155237f0205e0feb931d5acbed}{y}})
+\item 
+\#define \mbox{\hyperlink{MurmurHash3_8cpp_a612c70207b96b27f06eff614e3b9ffd9}{R\+O\+T\+L64}}(\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a6150e0515f7202e2fb518f7206ed97dc}{x}},  \mbox{\hyperlink{gmock-matchers-containers__test_8cc_a39cb44155237f0205e0feb931d5acbed}{y}})~rotl64(\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a6150e0515f7202e2fb518f7206ed97dc}{x}},\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a39cb44155237f0205e0feb931d5acbed}{y}})
+\item 
+\#define \mbox{\hyperlink{MurmurHash3_8cpp_a8e0f90a6ea3d3db65033b8ace70cb65a}{B\+I\+G\+\_\+\+C\+O\+N\+S\+T\+A\+NT}}(\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a6150e0515f7202e2fb518f7206ed97dc}{x}})~(\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a6150e0515f7202e2fb518f7206ed97dc}{x}}\#\#L\+LU)
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacemurmur3_a6a50cfe03d27b8149e06682378f05626}{murmur3\+::rotl32}} (uint32\+\_\+t \mbox{\hyperlink{gmock-matchers-containers__test_8cc_a6150e0515f7202e2fb518f7206ed97dc}{x}}, int8\+\_\+t r)
+\item 
+uint64\+\_\+t \mbox{\hyperlink{namespacemurmur3_accf798d389267fb2a54914fb33c21403}{murmur3\+::rotl64}} (uint64\+\_\+t \mbox{\hyperlink{gmock-matchers-containers__test_8cc_a6150e0515f7202e2fb518f7206ed97dc}{x}}, int8\+\_\+t r)
+\item 
+int32\+\_\+t \mbox{\hyperlink{namespacemurmur3_a83562bb42a04bb1881105ff287863dc6}{murmur3\+::\+Murmur\+Hash3\+\_\+x64\+\_\+128}} (const void $\ast$key, const int len, const uint32\+\_\+t seed)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{namespacemurmur3_ae87455ad115dcfe9f0b4897638dea4ed}{murmur3\+::\+Murmur\+Hash3\+\_\+x86\+\_\+32}} (const void $\ast$key, uint32\+\_\+t len, uint32\+\_\+t seed)
+\item 
+void \mbox{\hyperlink{namespacemurmur3_a7b8558a08e99938b49f6100002ec7de6}{murmur3\+::\+Murmur\+Hash3\+\_\+x64\+\_\+128}} (const void $\ast$key, const int len, const uint32\+\_\+t seed, void $\ast$out)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{MurmurHash3_8cpp_a8e0f90a6ea3d3db65033b8ace70cb65a}\label{MurmurHash3_8cpp_a8e0f90a6ea3d3db65033b8ace70cb65a}} 
+\index{MurmurHash3.cpp@{MurmurHash3.cpp}!BIG\_CONSTANT@{BIG\_CONSTANT}}
+\index{BIG\_CONSTANT@{BIG\_CONSTANT}!MurmurHash3.cpp@{MurmurHash3.cpp}}
+\doxysubsubsection{\texorpdfstring{BIG\_CONSTANT}{BIG\_CONSTANT}}
+{\footnotesize\ttfamily \#define B\+I\+G\+\_\+\+C\+O\+N\+S\+T\+A\+NT(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a6150e0515f7202e2fb518f7206ed97dc}{x}} }\end{DoxyParamCaption})~(\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a6150e0515f7202e2fb518f7206ed97dc}{x}}\#\#L\+LU)}
+
+\mbox{\Hypertarget{MurmurHash3_8cpp_ac032d233a8ebfcd82fd49d0824eefb18}\label{MurmurHash3_8cpp_ac032d233a8ebfcd82fd49d0824eefb18}} 
+\index{MurmurHash3.cpp@{MurmurHash3.cpp}!FORCE\_INLINE@{FORCE\_INLINE}}
+\index{FORCE\_INLINE@{FORCE\_INLINE}!MurmurHash3.cpp@{MurmurHash3.cpp}}
+\doxysubsubsection{\texorpdfstring{FORCE\_INLINE}{FORCE\_INLINE}}
+{\footnotesize\ttfamily \#define F\+O\+R\+C\+E\+\_\+\+I\+N\+L\+I\+NE~inline \+\_\+\+\_\+attribute\+\_\+\+\_\+((always\+\_\+inline))}
+
+\mbox{\Hypertarget{MurmurHash3_8cpp_ab32bb365c62dcb0da675e248b7e814a9}\label{MurmurHash3_8cpp_ab32bb365c62dcb0da675e248b7e814a9}} 
+\index{MurmurHash3.cpp@{MurmurHash3.cpp}!ROTL32@{ROTL32}}
+\index{ROTL32@{ROTL32}!MurmurHash3.cpp@{MurmurHash3.cpp}}
+\doxysubsubsection{\texorpdfstring{ROTL32}{ROTL32}}
+{\footnotesize\ttfamily \#define R\+O\+T\+L32(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a6150e0515f7202e2fb518f7206ed97dc}{x}},  }\item[{}]{\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a39cb44155237f0205e0feb931d5acbed}{y}} }\end{DoxyParamCaption})~rotl32(\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a6150e0515f7202e2fb518f7206ed97dc}{x}},\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a39cb44155237f0205e0feb931d5acbed}{y}})}
+
+\mbox{\Hypertarget{MurmurHash3_8cpp_a612c70207b96b27f06eff614e3b9ffd9}\label{MurmurHash3_8cpp_a612c70207b96b27f06eff614e3b9ffd9}} 
+\index{MurmurHash3.cpp@{MurmurHash3.cpp}!ROTL64@{ROTL64}}
+\index{ROTL64@{ROTL64}!MurmurHash3.cpp@{MurmurHash3.cpp}}
+\doxysubsubsection{\texorpdfstring{ROTL64}{ROTL64}}
+{\footnotesize\ttfamily \#define R\+O\+T\+L64(\begin{DoxyParamCaption}\item[{}]{\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a6150e0515f7202e2fb518f7206ed97dc}{x}},  }\item[{}]{\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a39cb44155237f0205e0feb931d5acbed}{y}} }\end{DoxyParamCaption})~rotl64(\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a6150e0515f7202e2fb518f7206ed97dc}{x}},\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a39cb44155237f0205e0feb931d5acbed}{y}})}
+

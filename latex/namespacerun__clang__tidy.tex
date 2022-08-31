@@ -1,0 +1,92 @@
+\hypertarget{namespacerun__clang__tidy}{}\doxysection{run\+\_\+clang\+\_\+tidy Namespace Reference}
+\label{namespacerun__clang__tidy}\index{run\_clang\_tidy@{run\_clang\_tidy}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacerun__clang__tidy_a49c834a13d3137510731e98a553931bf}{find\+\_\+compilation\+\_\+database}} (path)
+\item 
+def \mbox{\hyperlink{namespacerun__clang__tidy_a992c6e23e4eee6a7aa567a2e7847d357}{make\+\_\+absolute}} (f, directory)
+\item 
+def \mbox{\hyperlink{namespacerun__clang__tidy_ad930f0ae89870f659d44fd6f6582069b}{get\+\_\+tidy\+\_\+invocation}} (f, clang\+\_\+tidy\+\_\+binary, checks, tmpdir, build\+\_\+path, header\+\_\+filter, extra\+\_\+arg, extra\+\_\+arg\+\_\+before, quiet, config)
+\item 
+def \mbox{\hyperlink{namespacerun__clang__tidy_a5e1975aaa7f17392f37236ec6114e63b}{merge\+\_\+replacement\+\_\+files}} (tmpdir, mergefile)
+\item 
+def \mbox{\hyperlink{namespacerun__clang__tidy_a8c465cf34c1c894a255439341d0abf1b}{check\+\_\+clang\+\_\+apply\+\_\+replacements\+\_\+binary}} (args)
+\item 
+def \mbox{\hyperlink{namespacerun__clang__tidy_a46b13e241c09a324068baf340135b46f}{apply\+\_\+fixes}} (args, tmpdir)
+\item 
+def \mbox{\hyperlink{namespacerun__clang__tidy_a1adfe09e09844d02baa03c6ebf5cbbca}{run\+\_\+tidy}} (args, tmpdir, build\+\_\+path, queue, lock, failed\+\_\+files)
+\item 
+def \mbox{\hyperlink{namespacerun__clang__tidy_a8d246a0ba4003d5386f183f31b9da534}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{namespacerun__clang__tidy_aab68c67551bf57bcd89f354077ad39d3}{is\+\_\+py2}} = \textquotesingle{}2\textquotesingle{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespacerun__clang__tidy_a46b13e241c09a324068baf340135b46f}\label{namespacerun__clang__tidy_a46b13e241c09a324068baf340135b46f}} 
+\index{run\_clang\_tidy@{run\_clang\_tidy}!apply\_fixes@{apply\_fixes}}
+\index{apply\_fixes@{apply\_fixes}!run\_clang\_tidy@{run\_clang\_tidy}}
+\doxysubsubsection{\texorpdfstring{apply\_fixes()}{apply\_fixes()}}
+{\footnotesize\ttfamily def run\+\_\+clang\+\_\+tidy.\+apply\+\_\+fixes (\begin{DoxyParamCaption}\item[{}]{args,  }\item[{}]{tmpdir }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Calls clang-apply-fixes on a given directory.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacerun__clang__tidy_a8c465cf34c1c894a255439341d0abf1b}\label{namespacerun__clang__tidy_a8c465cf34c1c894a255439341d0abf1b}} 
+\index{run\_clang\_tidy@{run\_clang\_tidy}!check\_clang\_apply\_replacements\_binary@{check\_clang\_apply\_replacements\_binary}}
+\index{check\_clang\_apply\_replacements\_binary@{check\_clang\_apply\_replacements\_binary}!run\_clang\_tidy@{run\_clang\_tidy}}
+\doxysubsubsection{\texorpdfstring{check\_clang\_apply\_replacements\_binary()}{check\_clang\_apply\_replacements\_binary()}}
+{\footnotesize\ttfamily def run\+\_\+clang\+\_\+tidy.\+check\+\_\+clang\+\_\+apply\+\_\+replacements\+\_\+binary (\begin{DoxyParamCaption}\item[{}]{args }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Checks if invoking supplied clang-apply-replacements binary works.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacerun__clang__tidy_a49c834a13d3137510731e98a553931bf}\label{namespacerun__clang__tidy_a49c834a13d3137510731e98a553931bf}} 
+\index{run\_clang\_tidy@{run\_clang\_tidy}!find\_compilation\_database@{find\_compilation\_database}}
+\index{find\_compilation\_database@{find\_compilation\_database}!run\_clang\_tidy@{run\_clang\_tidy}}
+\doxysubsubsection{\texorpdfstring{find\_compilation\_database()}{find\_compilation\_database()}}
+{\footnotesize\ttfamily def run\+\_\+clang\+\_\+tidy.\+find\+\_\+compilation\+\_\+database (\begin{DoxyParamCaption}\item[{}]{path }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Adjusts the directory until a compilation database is found.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacerun__clang__tidy_ad930f0ae89870f659d44fd6f6582069b}\label{namespacerun__clang__tidy_ad930f0ae89870f659d44fd6f6582069b}} 
+\index{run\_clang\_tidy@{run\_clang\_tidy}!get\_tidy\_invocation@{get\_tidy\_invocation}}
+\index{get\_tidy\_invocation@{get\_tidy\_invocation}!run\_clang\_tidy@{run\_clang\_tidy}}
+\doxysubsubsection{\texorpdfstring{get\_tidy\_invocation()}{get\_tidy\_invocation()}}
+{\footnotesize\ttfamily def run\+\_\+clang\+\_\+tidy.\+get\+\_\+tidy\+\_\+invocation (\begin{DoxyParamCaption}\item[{}]{f,  }\item[{}]{clang\+\_\+tidy\+\_\+binary,  }\item[{}]{checks,  }\item[{}]{tmpdir,  }\item[{}]{build\+\_\+path,  }\item[{}]{header\+\_\+filter,  }\item[{}]{extra\+\_\+arg,  }\item[{}]{extra\+\_\+arg\+\_\+before,  }\item[{}]{quiet,  }\item[{}]{config }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Gets a command line for clang-tidy.\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacerun__clang__tidy_a8d246a0ba4003d5386f183f31b9da534}\label{namespacerun__clang__tidy_a8d246a0ba4003d5386f183f31b9da534}} 
+\index{run\_clang\_tidy@{run\_clang\_tidy}!main@{main}}
+\index{main@{main}!run\_clang\_tidy@{run\_clang\_tidy}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily def run\+\_\+clang\+\_\+tidy.\+main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacerun__clang__tidy_a992c6e23e4eee6a7aa567a2e7847d357}\label{namespacerun__clang__tidy_a992c6e23e4eee6a7aa567a2e7847d357}} 
+\index{run\_clang\_tidy@{run\_clang\_tidy}!make\_absolute@{make\_absolute}}
+\index{make\_absolute@{make\_absolute}!run\_clang\_tidy@{run\_clang\_tidy}}
+\doxysubsubsection{\texorpdfstring{make\_absolute()}{make\_absolute()}}
+{\footnotesize\ttfamily def run\+\_\+clang\+\_\+tidy.\+make\+\_\+absolute (\begin{DoxyParamCaption}\item[{}]{f,  }\item[{}]{directory }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespacerun__clang__tidy_a5e1975aaa7f17392f37236ec6114e63b}\label{namespacerun__clang__tidy_a5e1975aaa7f17392f37236ec6114e63b}} 
+\index{run\_clang\_tidy@{run\_clang\_tidy}!merge\_replacement\_files@{merge\_replacement\_files}}
+\index{merge\_replacement\_files@{merge\_replacement\_files}!run\_clang\_tidy@{run\_clang\_tidy}}
+\doxysubsubsection{\texorpdfstring{merge\_replacement\_files()}{merge\_replacement\_files()}}
+{\footnotesize\ttfamily def run\+\_\+clang\+\_\+tidy.\+merge\+\_\+replacement\+\_\+files (\begin{DoxyParamCaption}\item[{}]{tmpdir,  }\item[{}]{mergefile }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Merge all replacement files in a directory into a single file\end{DoxyVerb}
+ \mbox{\Hypertarget{namespacerun__clang__tidy_a1adfe09e09844d02baa03c6ebf5cbbca}\label{namespacerun__clang__tidy_a1adfe09e09844d02baa03c6ebf5cbbca}} 
+\index{run\_clang\_tidy@{run\_clang\_tidy}!run\_tidy@{run\_tidy}}
+\index{run\_tidy@{run\_tidy}!run\_clang\_tidy@{run\_clang\_tidy}}
+\doxysubsubsection{\texorpdfstring{run\_tidy()}{run\_tidy()}}
+{\footnotesize\ttfamily def run\+\_\+clang\+\_\+tidy.\+run\+\_\+tidy (\begin{DoxyParamCaption}\item[{}]{args,  }\item[{}]{tmpdir,  }\item[{}]{build\+\_\+path,  }\item[{}]{queue,  }\item[{}]{lock,  }\item[{}]{failed\+\_\+files }\end{DoxyParamCaption})}
+
+\begin{DoxyVerb}Takes filenames out of queue and runs clang-tidy on them.\end{DoxyVerb}
+ 
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{namespacerun__clang__tidy_aab68c67551bf57bcd89f354077ad39d3}\label{namespacerun__clang__tidy_aab68c67551bf57bcd89f354077ad39d3}} 
+\index{run\_clang\_tidy@{run\_clang\_tidy}!is\_py2@{is\_py2}}
+\index{is\_py2@{is\_py2}!run\_clang\_tidy@{run\_clang\_tidy}}
+\doxysubsubsection{\texorpdfstring{is\_py2}{is\_py2}}
+{\footnotesize\ttfamily string run\+\_\+clang\+\_\+tidy.\+is\+\_\+py2 = \textquotesingle{}2\textquotesingle{}}
+

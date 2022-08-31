@@ -1,0 +1,147 @@
+\hypertarget{classbustub_1_1InsertPlanNode}{}\doxysection{bustub\+::Insert\+Plan\+Node Class Reference}
+\label{classbustub_1_1InsertPlanNode}\index{bustub::InsertPlanNode@{bustub::InsertPlanNode}}
+
+
+{\ttfamily \#include $<$insert\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Insert\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1InsertPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Insert\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1InsertPlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1InsertPlanNode_a38158b43982bdba1b86e2afd301fe574}{Insert\+Plan\+Node}} (std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$$>$ \&\&raw\+\_\+values, \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} table\+\_\+oid)
+\item 
+\mbox{\hyperlink{classbustub_1_1InsertPlanNode_a58305fcaf4e7fcc1437f01e2f348f57d}{Insert\+Plan\+Node}} (const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $\ast$child, \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} table\+\_\+oid)
+\item 
+\mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} \mbox{\hyperlink{classbustub_1_1InsertPlanNode_a0b499220af1d7ede523b7a45ced6c412}{Get\+Type}} () const override
+\item 
+\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \mbox{\hyperlink{classbustub_1_1InsertPlanNode_aabfc7b539c2ccc3b59ab6303e161dd1a}{Table\+Oid}} () const
+\item 
+bool \mbox{\hyperlink{classbustub_1_1InsertPlanNode_aa4ecb944efd374122e3693bbdc7f60db}{Is\+Raw\+Insert}} () const
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ \& \mbox{\hyperlink{classbustub_1_1InsertPlanNode_a1e1cad9e5ecd064486554ee21f885d70}{Raw\+Values\+At}} (uint32\+\_\+t idx) const
+\item 
+const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$ $>$ \& \mbox{\hyperlink{classbustub_1_1InsertPlanNode_aabde1db23c792d80bd8a9f579117b602}{Raw\+Values}} () const
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $\ast$ \mbox{\hyperlink{classbustub_1_1InsertPlanNode_a3ab6c618c65664be95fd41c4b24adca0}{Get\+Child\+Plan}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1InsertPlanNode}{Insert\+Plan\+Node}} identifies a table into which tuples are inserted.
+
+The values to be inserted are either embedded into the \mbox{\hyperlink{classbustub_1_1InsertPlanNode}{Insert\+Plan\+Node}} itself, i.\+e. a \char`\"{}raw insert\char`\"{}, or will come from the child of the node.
+
+N\+O\+TE\+: To simplify the assignment, \mbox{\hyperlink{classbustub_1_1InsertPlanNode}{Insert\+Plan\+Node}} has at most one child. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1InsertPlanNode_a38158b43982bdba1b86e2afd301fe574}\label{classbustub_1_1InsertPlanNode_a38158b43982bdba1b86e2afd301fe574}} 
+\index{bustub::InsertPlanNode@{bustub::InsertPlanNode}!InsertPlanNode@{InsertPlanNode}}
+\index{InsertPlanNode@{InsertPlanNode}!bustub::InsertPlanNode@{bustub::InsertPlanNode}}
+\doxysubsubsection{\texorpdfstring{InsertPlanNode()}{InsertPlanNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bustub\+::\+Insert\+Plan\+Node\+::\+Insert\+Plan\+Node (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Value}{Value}} $>$$>$ \&\&}]{raw\+\_\+values,  }\item[{\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}}]{table\+\_\+oid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new insert plan node for inserting raw values. 
+\begin{DoxyParams}{Parameters}
+{\em raw\+\_\+values} & the raw values to be inserted \\
+\hline
+{\em table\+\_\+oid} & the identifier of the table to be inserted into \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1InsertPlanNode_a58305fcaf4e7fcc1437f01e2f348f57d}\label{classbustub_1_1InsertPlanNode_a58305fcaf4e7fcc1437f01e2f348f57d}} 
+\index{bustub::InsertPlanNode@{bustub::InsertPlanNode}!InsertPlanNode@{InsertPlanNode}}
+\index{InsertPlanNode@{InsertPlanNode}!bustub::InsertPlanNode@{bustub::InsertPlanNode}}
+\doxysubsubsection{\texorpdfstring{InsertPlanNode()}{InsertPlanNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bustub\+::\+Insert\+Plan\+Node\+::\+Insert\+Plan\+Node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $\ast$}]{child,  }\item[{\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}}]{table\+\_\+oid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Creates a new insert plan node for inserting values from a child plan. 
+\begin{DoxyParams}{Parameters}
+{\em child} & the child plan to obtain values from \\
+\hline
+{\em table\+\_\+oid} & the identifier of the table that should be inserted into \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1InsertPlanNode_a3ab6c618c65664be95fd41c4b24adca0}\label{classbustub_1_1InsertPlanNode_a3ab6c618c65664be95fd41c4b24adca0}} 
+\index{bustub::InsertPlanNode@{bustub::InsertPlanNode}!GetChildPlan@{GetChildPlan}}
+\index{GetChildPlan@{GetChildPlan}!bustub::InsertPlanNode@{bustub::InsertPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetChildPlan()}{GetChildPlan()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}}$\ast$ bustub\+::\+Insert\+Plan\+Node\+::\+Get\+Child\+Plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the child plan providing tuples to be inserted 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1InsertPlanNode_a0b499220af1d7ede523b7a45ced6c412}\label{classbustub_1_1InsertPlanNode_a0b499220af1d7ede523b7a45ced6c412}} 
+\index{bustub::InsertPlanNode@{bustub::InsertPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::InsertPlanNode@{bustub::InsertPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} bustub\+::\+Insert\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a68b80a5e248dfb5dfe0858a4afd8bc93}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1InsertPlanNode_aa4ecb944efd374122e3693bbdc7f60db}\label{classbustub_1_1InsertPlanNode_aa4ecb944efd374122e3693bbdc7f60db}} 
+\index{bustub::InsertPlanNode@{bustub::InsertPlanNode}!IsRawInsert@{IsRawInsert}}
+\index{IsRawInsert@{IsRawInsert}!bustub::InsertPlanNode@{bustub::InsertPlanNode}}
+\doxysubsubsection{\texorpdfstring{IsRawInsert()}{IsRawInsert()}}
+{\footnotesize\ttfamily bool bustub\+::\+Insert\+Plan\+Node\+::\+Is\+Raw\+Insert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if we embed insert values directly into the plan, {\ttfamily false} if we have a child plan that provides tuples 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1InsertPlanNode_aabde1db23c792d80bd8a9f579117b602}\label{classbustub_1_1InsertPlanNode_aabde1db23c792d80bd8a9f579117b602}} 
+\index{bustub::InsertPlanNode@{bustub::InsertPlanNode}!RawValues@{RawValues}}
+\index{RawValues@{RawValues}!bustub::InsertPlanNode@{bustub::InsertPlanNode}}
+\doxysubsubsection{\texorpdfstring{RawValues()}{RawValues()}}
+{\footnotesize\ttfamily const std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{classbustub_1_1Value}{Value}}$>$ $>$\& bustub\+::\+Insert\+Plan\+Node\+::\+Raw\+Values (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The raw values to be inserted 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1InsertPlanNode_a1e1cad9e5ecd064486554ee21f885d70}\label{classbustub_1_1InsertPlanNode_a1e1cad9e5ecd064486554ee21f885d70}} 
+\index{bustub::InsertPlanNode@{bustub::InsertPlanNode}!RawValuesAt@{RawValuesAt}}
+\index{RawValuesAt@{RawValuesAt}!bustub::InsertPlanNode@{bustub::InsertPlanNode}}
+\doxysubsubsection{\texorpdfstring{RawValuesAt()}{RawValuesAt()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{classbustub_1_1Value}{Value}}$>$\& bustub\+::\+Insert\+Plan\+Node\+::\+Raw\+Values\+At (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The raw value to be inserted at the particular index 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1InsertPlanNode_aabfc7b539c2ccc3b59ab6303e161dd1a}\label{classbustub_1_1InsertPlanNode_aabfc7b539c2ccc3b59ab6303e161dd1a}} 
+\index{bustub::InsertPlanNode@{bustub::InsertPlanNode}!TableOid@{TableOid}}
+\index{TableOid@{TableOid}!bustub::InsertPlanNode@{bustub::InsertPlanNode}}
+\doxysubsubsection{\texorpdfstring{TableOid()}{TableOid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} bustub\+::\+Insert\+Plan\+Node\+::\+Table\+Oid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The identifier of the table into which tuples are inserted 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/\mbox{\hyperlink{insert__plan_8h}{insert\+\_\+plan.\+h}}\end{DoxyCompactItemize}

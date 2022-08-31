@@ -1,0 +1,236 @@
+\hypertarget{cpplint_8py}{}\doxysection{build\+\_\+support/cpplint.py File Reference}
+\label{cpplint_8py}\index{build\_support/cpplint.py@{build\_support/cpplint.py}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classcpplint_1_1__IncludeState}{cpplint.\+\_\+\+Include\+State}}
+\item 
+class \mbox{\hyperlink{classcpplint_1_1__CppLintState}{cpplint.\+\_\+\+Cpp\+Lint\+State}}
+\item 
+class \mbox{\hyperlink{classcpplint_1_1__FunctionState}{cpplint.\+\_\+\+Function\+State}}
+\item 
+class \mbox{\hyperlink{classcpplint_1_1__IncludeError}{cpplint.\+\_\+\+Include\+Error}}
+\item 
+class \mbox{\hyperlink{classcpplint_1_1FileInfo}{cpplint.\+File\+Info}}
+\item 
+class \mbox{\hyperlink{classcpplint_1_1CleansedLines}{cpplint.\+Cleansed\+Lines}}
+\item 
+class \mbox{\hyperlink{classcpplint_1_1__BlockInfo}{cpplint.\+\_\+\+Block\+Info}}
+\item 
+class \mbox{\hyperlink{classcpplint_1_1__ExternCInfo}{cpplint.\+\_\+\+Extern\+C\+Info}}
+\item 
+class \mbox{\hyperlink{classcpplint_1_1__ClassInfo}{cpplint.\+\_\+\+Class\+Info}}
+\item 
+class \mbox{\hyperlink{classcpplint_1_1__NamespaceInfo}{cpplint.\+\_\+\+Namespace\+Info}}
+\item 
+class \mbox{\hyperlink{classcpplint_1_1__PreprocessorInfo}{cpplint.\+\_\+\+Preprocessor\+Info}}
+\item 
+class \mbox{\hyperlink{classcpplint_1_1NestingState}{cpplint.\+Nesting\+State}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacecpplint}{cpplint}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{namespacecpplint_af530575e5a1ca099904526eedee174eb}{cpplint.\+unicode\+\_\+escape\+\_\+decode}} (\mbox{\hyperlink{gmock-matchers-containers__test_8cc_a6150e0515f7202e2fb518f7206ed97dc}{x}})
+\item 
+def \mbox{\hyperlink{namespacecpplint_a28e546a8f20e32ef7dcf4ecbecd8b367}{cpplint.\+Process\+Hpp\+Headers\+Option}} (val)
+\item 
+def \mbox{\hyperlink{namespacecpplint_ad4fd5ecbae967884b0a77ee8b3ba1e16}{cpplint.\+Is\+Header\+Extension}} (file\+\_\+extension)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a6a680a2259f786ae86a040fbeece3619}{cpplint.\+Get\+Header\+Extensions}} ()
+\item 
+def \mbox{\hyperlink{namespacecpplint_a3f85c074cef71124a9375cee804fad84}{cpplint.\+Get\+All\+Extensions}} ()
+\item 
+def \mbox{\hyperlink{namespacecpplint_aa025c65f9868086177dc334d888fdca2}{cpplint.\+Process\+Extensions\+Option}} (val)
+\item 
+def \mbox{\hyperlink{namespacecpplint_ad0e3369de3ef72be0857453194bcf63d}{cpplint.\+Get\+Non\+Header\+Extensions}} ()
+\item 
+def \mbox{\hyperlink{namespacecpplint_a52ae8f1d9436d14ddb94ceed06026c43}{cpplint.\+Parse\+Nolint\+Suppressions}} (filename, raw\+\_\+line, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a316dc237dc0cde7bafec3c30d5624cac}{cpplint.\+Process\+Global\+Suppresions}} (lines)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a1d92dc3582da477f98ab5b85bd13fea0}{cpplint.\+Reset\+Nolint\+Suppressions}} ()
+\item 
+def \mbox{\hyperlink{namespacecpplint_a0b9e1f991f1a3d02cda3234784241d1f}{cpplint.\+Is\+Error\+Suppressed\+By\+Nolint}} (category, linenum)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a73ac2ecfcd9c52b4a3755176c68dea7e}{cpplint.\+Match}} (pattern, s)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a1b85a5657aeab8b4a0ed85e06aed3576}{cpplint.\+Replace\+All}} (pattern, rep, s)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a75eae6bb88590e904f751502c8ee4bab}{cpplint.\+Search}} (pattern, s)
+\item 
+def \mbox{\hyperlink{namespacecpplint_ae51e76d6d73b36b9e965d2ac9d21d7c2}{cpplint.\+Error}} (filename, linenum, category, confidence, \mbox{\hyperlink{test_2CMakeLists_8txt_a4a19bb428010e205054cfb5e70b1bfbe}{message}})
+\item 
+def \mbox{\hyperlink{namespacecpplint_a034b93866a853c2e21577fb371a7fa9d}{cpplint.\+Is\+Cpp\+String}} (line)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a61b3f81ef467e7cb417d13e9051180fc}{cpplint.\+Cleanse\+Raw\+Strings}} (raw\+\_\+lines)
+\item 
+def \mbox{\hyperlink{namespacecpplint_af0404401670283c9d4f948180e427401}{cpplint.\+Find\+Next\+Multi\+Line\+Comment\+Start}} (lines, lineix)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a4965d6f615333f43155d9e430471e228}{cpplint.\+Find\+Next\+Multi\+Line\+Comment\+End}} (lines, lineix)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a3a5f71cdc2e78491b4bedde8a0103679}{cpplint.\+Remove\+Multi\+Line\+Comments\+From\+Range}} (lines, begin, end)
+\item 
+def \mbox{\hyperlink{namespacecpplint_ac259a6d0f292aeec05dee7ca312e1fc2}{cpplint.\+Remove\+Multi\+Line\+Comments}} (filename, lines, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_ad795aa89f263838ec59fb0e7c52c842a}{cpplint.\+Cleanse\+Comments}} (line)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a6e623c46c1ae3bf650454744a693a633}{cpplint.\+Find\+End\+Of\+Expression\+In\+Line}} (line, startpos, stack)
+\item 
+def \mbox{\hyperlink{namespacecpplint_af254258f584f59c87fcfd755e3c9017a}{cpplint.\+Close\+Expression}} (clean\+\_\+lines, linenum, pos)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a8572f47efb3bc11632d1192fd74bb7eb}{cpplint.\+Find\+Start\+Of\+Expression\+In\+Line}} (line, endpos, stack)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a15cd96cbf1c13e655e156fbd98cf0bae}{cpplint.\+Reverse\+Close\+Expression}} (clean\+\_\+lines, linenum, pos)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a0ad6bf921300c829db3696b81fa52d20}{cpplint.\+Check\+For\+Copyright}} (filename, lines, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a1b5cb7c1367845d7c7079eac5ea61dc8}{cpplint.\+Get\+Indent\+Level}} (line)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a5431eb8ee7d7408f91157a50740fe516}{cpplint.\+Path\+Split\+To\+List}} (path)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a3f143d4e8f70c0fd05e3f0ce81b0cc9a}{cpplint.\+Get\+Header\+Guard\+C\+P\+P\+Variable}} (filename)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a3694fa1b195f49a0d78dfc81ee665eec}{cpplint.\+Check\+For\+Header\+Guard}} (filename, clean\+\_\+lines, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_ab549dcced7ca1d4b24538ec52b42439e}{cpplint.\+Check\+Header\+File\+Included}} (filename, include\+\_\+state, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a03c0e0d285b02b0e26ec514761654da8}{cpplint.\+Check\+For\+Bad\+Characters}} (filename, lines, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a7a594af230939932174dd5743088027d}{cpplint.\+Check\+For\+Newline\+At\+E\+OF}} (filename, lines, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a81c4baf76bde576f56661c22d01e470d}{cpplint.\+Check\+For\+Multiline\+Comments\+And\+Strings}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a9c406c00843a2c47058b1e9dec4e5b11}{cpplint.\+Check\+Posix\+Threading}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_ab066834feaa7bf5a92982bbfb0af89c1}{cpplint.\+Check\+Vlog\+Arguments}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a8b47da46bc61f72ab12e9228acc3a0cd}{cpplint.\+Check\+Invalid\+Increment}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a5a95ee1e23638e172a3361723503329c}{cpplint.\+Is\+Macro\+Definition}} (clean\+\_\+lines, linenum)
+\item 
+def \mbox{\hyperlink{namespacecpplint_adde7d60b6354b40d9ef9acda6e847d7b}{cpplint.\+Is\+Forward\+Class\+Declaration}} (clean\+\_\+lines, linenum)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a954b179c4037e5da8ac599cce095c37e}{cpplint.\+Check\+For\+Non\+Standard\+Constructs}} (filename, clean\+\_\+lines, linenum, nesting\+\_\+state, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a2ea8b2c917d5ce466287e1c6fe26f0db}{cpplint.\+Check\+Spacing\+For\+Function\+Call}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_adf59429f3dd145e978624fe239809260}{cpplint.\+Is\+Blank\+Line}} (line)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a7c5964127d06521a2a05fbb28cc26478}{cpplint.\+Check\+For\+Namespace\+Indentation}} (filename, nesting\+\_\+state, clean\+\_\+lines, line, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a2699a7cad55a82cab5f73c012747203e}{cpplint.\+Check\+For\+Function\+Lengths}} (filename, clean\+\_\+lines, linenum, function\+\_\+state, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_af126b85f4c25f359c40ce349f4eb7a2d}{cpplint.\+Check\+Comment}} (line, filename, linenum, next\+\_\+line\+\_\+start, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a73e82f51a8d59c816db26b5f797b3431}{cpplint.\+Check\+Spacing}} (filename, clean\+\_\+lines, linenum, nesting\+\_\+state, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a6a15b27f48cfd70fbf76f595c34f6d9e}{cpplint.\+Check\+Operator\+Spacing}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_aacf5fa793ab27c7038e376d6a4c53d87}{cpplint.\+Check\+Parenthesis\+Spacing}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a46d2c48a2d4e747feee44616af987bdf}{cpplint.\+Check\+Comma\+Spacing}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a205bb76a59359eb1c0be86567bbc5256}{cpplint.\+Check\+Braces\+Spacing}} (filename, clean\+\_\+lines, linenum, nesting\+\_\+state, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a6e55ab13af2fa8b8e1f50e09aed592b8}{cpplint.\+Is\+Decltype}} (clean\+\_\+lines, linenum, column)
+\item 
+def \mbox{\hyperlink{namespacecpplint_abc4e2f3f48debd6ae3a9561d052a955b}{cpplint.\+Check\+Section\+Spacing}} (filename, clean\+\_\+lines, class\+\_\+info, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a27743480b080a71eb8a0320da2ca0fa3}{cpplint.\+Get\+Previous\+Non\+Blank\+Line}} (clean\+\_\+lines, linenum)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a3f0a4d2ab1846bf487c742dc88946e3e}{cpplint.\+Check\+Braces}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a725663cb5a341fbf726f2ac8fa4e61a3}{cpplint.\+Check\+Trailing\+Semicolon}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a9c8aa68644d8cb55497a7d9cb8fb12d1}{cpplint.\+Check\+Empty\+Block\+Body}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_aefff9c2eefe99656a226d11ce4d9b555}{cpplint.\+Find\+Check\+Macro}} (line)
+\item 
+def \mbox{\hyperlink{namespacecpplint_afc5b544f640cd11be2665e6bb4646de7}{cpplint.\+Check\+Check}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a47f66a697e177c06b56491613fbc2d38}{cpplint.\+Check\+Alt\+Tokens}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_ae55f74f34d41b59cf262511c5944209a}{cpplint.\+Get\+Line\+Width}} (line)
+\item 
+def \mbox{\hyperlink{namespacecpplint_acfc546daa5947842cb01af319dcb482b}{cpplint.\+Check\+Style}} (filename, clean\+\_\+lines, linenum, file\+\_\+extension, nesting\+\_\+state, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_add7eb8486a182205bb86de635db01384}{cpplint.\+Check\+Include\+Line}} (filename, clean\+\_\+lines, linenum, include\+\_\+state, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a6992d951cf4be06500f6b392ee6a8111}{cpplint.\+Check\+Language}} (filename, clean\+\_\+lines, linenum, file\+\_\+extension, include\+\_\+state, nesting\+\_\+state, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a64fc322bcf08988b43f003ff495fbabb}{cpplint.\+Check\+Global\+Static}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_aaa8b988b9e83ad1c8964ecc0739d52e5}{cpplint.\+Check\+Printf}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_ac8519cf084d818c931eac29994b03f55}{cpplint.\+Is\+Derived\+Function}} (clean\+\_\+lines, linenum)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a52e4468f674e140c256254eb0d1cf007}{cpplint.\+Is\+Out\+Of\+Line\+Method\+Definition}} (clean\+\_\+lines, linenum)
+\item 
+def \mbox{\hyperlink{namespacecpplint_ae06fb1dd669681214573c0441b7e854f}{cpplint.\+Is\+Initializer\+List}} (clean\+\_\+lines, linenum)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a97f01c7d6e7e6d38b52744ab393d4160}{cpplint.\+Check\+For\+Non\+Const\+Reference}} (filename, clean\+\_\+lines, linenum, nesting\+\_\+state, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a59c5f44ae1dbedad109809d46e80588e}{cpplint.\+Check\+Casts}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_ac23d9b29d869054db2ece1e7d5196349}{cpplint.\+Check\+C\+Style\+Cast}} (filename, clean\+\_\+lines, linenum, cast\+\_\+type, pattern, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a7657def0315cfe229ba436632f2d5042}{cpplint.\+Expecting\+Function\+Args}} (clean\+\_\+lines, linenum)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a66083e7d453e845a2751e76043fcd9ea}{cpplint.\+Files\+Belong\+To\+Same\+Module}} (filename\+\_\+cc, filename\+\_\+h)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a127416bee5c376937479b3119a727817}{cpplint.\+Update\+Include\+State}} (filename, include\+\_\+dict, io=codecs)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a8e1a5bea9f77246f8a0ae98a23d8d04e}{cpplint.\+Check\+For\+Include\+What\+You\+Use}} (filename, clean\+\_\+lines, include\+\_\+state, error, io=codecs)
+\item 
+def \mbox{\hyperlink{namespacecpplint_add392d0ab0e8bcfeea6d02410229a0cc}{cpplint.\+Check\+Make\+Pair\+Uses\+Deduction}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a828985bee0575cfbb64212db74b61d9a}{cpplint.\+Check\+Redundant\+Virtual}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_ab4f9b0390c702f149cec4030901d249d}{cpplint.\+Check\+Redundant\+Override\+Or\+Final}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a618e046738f246f01972bce339ee5d49}{cpplint.\+Is\+Block\+In\+Name\+Space}} (nesting\+\_\+state, is\+\_\+forward\+\_\+declaration)
+\item 
+def \mbox{\hyperlink{namespacecpplint_aaaeb792789007d86b0898676c00caa72}{cpplint.\+Should\+Check\+Namespace\+Indentation}} (nesting\+\_\+state, is\+\_\+namespace\+\_\+indent\+\_\+item, raw\+\_\+lines\+\_\+no\+\_\+comments, linenum)
+\item 
+def \mbox{\hyperlink{namespacecpplint_ac8e3b4340d0d83c8b2e7b199597b29a0}{cpplint.\+Check\+Item\+Indentation\+In\+Namespace}} (filename, raw\+\_\+lines\+\_\+no\+\_\+comments, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a0982264a7b4f297b634fbc813d6a856e}{cpplint.\+Process\+Line}} (filename, file\+\_\+extension, clean\+\_\+lines, line, include\+\_\+state, function\+\_\+state, nesting\+\_\+state, error, extra\+\_\+check\+\_\+functions=None)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a386f43855367cc82348b0e2834e5cdc0}{cpplint.\+Flag\+Cxx11\+Features}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a744a4eecd461be0235779b03d34d6daf}{cpplint.\+Flag\+Cxx14\+Features}} (filename, clean\+\_\+lines, linenum, error)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a8ecdd81734dffbe90b22728f8343d92e}{cpplint.\+Process\+File\+Data}} (filename, file\+\_\+extension, lines, error, extra\+\_\+check\+\_\+functions=None)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a6b67f01b8b199f5f6a7481fc0fb53878}{cpplint.\+Process\+Config\+Overrides}} (filename)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a59b7dc731a8de535da0a5caadda53a36}{cpplint.\+Process\+File}} (filename, vlevel, extra\+\_\+check\+\_\+functions=None)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a57542503fc1cce3e5c7171fc32d6ba05}{cpplint.\+Print\+Usage}} (\mbox{\hyperlink{test_2CMakeLists_8txt_a4a19bb428010e205054cfb5e70b1bfbe}{message}})
+\item 
+def \mbox{\hyperlink{namespacecpplint_ac40973dd055717e5eb966a56c2e73da5}{cpplint.\+Print\+Version}} ()
+\item 
+def \mbox{\hyperlink{namespacecpplint_a3b1a047aa772a0d7d049d29c8ee62aba}{cpplint.\+Print\+Categories}} ()
+\item 
+def \mbox{\hyperlink{namespacecpplint_a57476f6a7321d342db7b7ca98d80bd27}{cpplint.\+Parse\+Arguments}} (args)
+\item 
+def \mbox{\hyperlink{namespacecpplint_a03dd39c6bfb4337676fcfaf5cd797c91}{cpplint.\+main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{namespacecpplint_aa354ba81f1673ed31f2c0d7ce1f05f5e}{cpplint.\+xrange}} = range
+\item 
+\mbox{\hyperlink{namespacecpplint_a509d6f2251ec740347ada9c519c235ee}{cpplint.\+basestring}} = str
+\item 
+\mbox{\hyperlink{namespacecpplint_ab015cd61a1d1e48b317bd2a0be747e11}{cpplint.\+long}} = int
+\item 
+\mbox{\hyperlink{namespacecpplint_a147fcba52cedae4991ee5b799777b022}{cpplint.\+itervalues}} = dict.\+itervalues
+\item 
+\mbox{\hyperlink{namespacecpplint_a4264bdda2adcd8de2c47c06328e7b3cd}{cpplint.\+iteritems}} = dict.\+iteritems
+\end{DoxyCompactItemize}

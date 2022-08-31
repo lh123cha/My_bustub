@@ -1,0 +1,97 @@
+\hypertarget{classbustub_1_1DeletePlanNode}{}\doxysection{bustub\+::Delete\+Plan\+Node Class Reference}
+\label{classbustub_1_1DeletePlanNode}\index{bustub::DeletePlanNode@{bustub::DeletePlanNode}}
+
+
+{\ttfamily \#include $<$delete\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Delete\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1DeletePlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Delete\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{classbustub_1_1DeletePlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1DeletePlanNode_a2e937fcb14ca5aae23c817237d1f586c}{Delete\+Plan\+Node}} (const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $\ast$child, \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} table\+\_\+oid)
+\item 
+\mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} \mbox{\hyperlink{classbustub_1_1DeletePlanNode_af4634440d1f49fb3565d13a3a8af6acd}{Get\+Type}} () const override
+\item 
+\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} \mbox{\hyperlink{classbustub_1_1DeletePlanNode_a8cd6d19b4027146dad6c578d9412ac25}{Table\+Oid}} () const
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $\ast$ \mbox{\hyperlink{classbustub_1_1DeletePlanNode_a9a3690dbdb56c6c8798d2de0e587f623}{Get\+Child\+Plan}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1DeletePlanNode}{Delete\+Plan\+Node}} identifies a table from which tuples should be deleted. The tuple(s) to be updated come from the child of the \mbox{\hyperlink{classbustub_1_1DeleteExecutor}{Delete\+Executor}}.
+
+N\+O\+TE\+: To simplify the assignment, \mbox{\hyperlink{classbustub_1_1DeletePlanNode}{Delete\+Plan\+Node}} has at most one child. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1DeletePlanNode_a2e937fcb14ca5aae23c817237d1f586c}\label{classbustub_1_1DeletePlanNode_a2e937fcb14ca5aae23c817237d1f586c}} 
+\index{bustub::DeletePlanNode@{bustub::DeletePlanNode}!DeletePlanNode@{DeletePlanNode}}
+\index{DeletePlanNode@{DeletePlanNode}!bustub::DeletePlanNode@{bustub::DeletePlanNode}}
+\doxysubsubsection{\texorpdfstring{DeletePlanNode()}{DeletePlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Delete\+Plan\+Node\+::\+Delete\+Plan\+Node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $\ast$}]{child,  }\item[{\mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}}}]{table\+\_\+oid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1DeletePlanNode}{Delete\+Plan\+Node}}. 
+\begin{DoxyParams}{Parameters}
+{\em child} & The child plan to obtain tuple from \\
+\hline
+{\em table\+\_\+oid} & The identifier of the table from which tuples are deleted \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1DeletePlanNode_a9a3690dbdb56c6c8798d2de0e587f623}\label{classbustub_1_1DeletePlanNode_a9a3690dbdb56c6c8798d2de0e587f623}} 
+\index{bustub::DeletePlanNode@{bustub::DeletePlanNode}!GetChildPlan@{GetChildPlan}}
+\index{GetChildPlan@{GetChildPlan}!bustub::DeletePlanNode@{bustub::DeletePlanNode}}
+\doxysubsubsection{\texorpdfstring{GetChildPlan()}{GetChildPlan()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}}$\ast$ bustub\+::\+Delete\+Plan\+Node\+::\+Get\+Child\+Plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The child plan providing tuples to be deleted 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1DeletePlanNode_af4634440d1f49fb3565d13a3a8af6acd}\label{classbustub_1_1DeletePlanNode_af4634440d1f49fb3565d13a3a8af6acd}} 
+\index{bustub::DeletePlanNode@{bustub::DeletePlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::DeletePlanNode@{bustub::DeletePlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} bustub\+::\+Delete\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a68b80a5e248dfb5dfe0858a4afd8bc93}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1DeletePlanNode_a8cd6d19b4027146dad6c578d9412ac25}\label{classbustub_1_1DeletePlanNode_a8cd6d19b4027146dad6c578d9412ac25}} 
+\index{bustub::DeletePlanNode@{bustub::DeletePlanNode}!TableOid@{TableOid}}
+\index{TableOid@{TableOid}!bustub::DeletePlanNode@{bustub::DeletePlanNode}}
+\doxysubsubsection{\texorpdfstring{TableOid()}{TableOid()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a3571cdcf7aa43bd929669794e75cbc48}{table\+\_\+oid\+\_\+t}} bustub\+::\+Delete\+Plan\+Node\+::\+Table\+Oid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The identifier of the table from which tuples are deleted 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/\mbox{\hyperlink{delete__plan_8h}{delete\+\_\+plan.\+h}}\end{DoxyCompactItemize}

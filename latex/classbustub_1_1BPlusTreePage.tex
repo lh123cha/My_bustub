@@ -1,0 +1,185 @@
+\hypertarget{classbustub_1_1BPlusTreePage}{}\doxysection{bustub\+::B\+Plus\+Tree\+Page$<$ Key\+Type, Value\+Type $>$ Class Template Reference}
+\label{classbustub_1_1BPlusTreePage}\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+
+
+{\ttfamily \#include $<$b\+\_\+plus\+\_\+tree\+\_\+page.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::B\+Plus\+Tree\+Page$<$ Key\+Type, Value\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbustub_1_1BPlusTreePage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::B\+Plus\+Tree\+Page$<$ Key\+Type, Value\+Type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classbustub_1_1BPlusTreePage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classbustub_1_1BPlusTreePage_a129ccc80aad454529f6332e9801567fc}{Is\+Leaf\+Page}} () const
+\item 
+bool \mbox{\hyperlink{classbustub_1_1BPlusTreePage_a85eac20f44afd763e2c063ca40d1e5f9}{Is\+Root\+Page}} () const
+\item 
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage_aa0398bdea8e3f485ed23297a8c14a271}{Set\+Page\+Type}} (\mbox{\hyperlink{namespacebustub_aa22b843a31f36c3abba2ac5410480497}{Index\+Page\+Type}} page\+\_\+type)
+\item 
+int \mbox{\hyperlink{classbustub_1_1BPlusTreePage_af799edfbc000dd931fc31eae2d15c2cf}{Get\+Size}} () const
+\item 
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage_a919ffad8f58f423e93af4549b501c53c}{Set\+Size}} (int size)
+\item 
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage_a07e60651c8afbefd77b6ab819cc2672e}{Increase\+Size}} (int amount)
+\item 
+int \mbox{\hyperlink{classbustub_1_1BPlusTreePage_a67cd3e87eaab8a6eba66130c6f6ad93d}{Get\+Max\+Size}} () const
+\item 
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage_af8c78f6e528b6126ffd3aaecec612b6d}{Set\+Max\+Size}} (int max\+\_\+size)
+\item 
+int \mbox{\hyperlink{classbustub_1_1BPlusTreePage_a2f164d0e916a94fcb5ec1d2e7b025bcf}{Get\+Min\+Size}} () const
+\item 
+\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1BPlusTreePage_a8704a9d1cd89eb7dd06e9993a30162f1}{Get\+Parent\+Page\+Id}} () const
+\item 
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage_a2ce23b7ad1ce558ddaed8c4edc81772a}{Set\+Parent\+Page\+Id}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} parent\+\_\+page\+\_\+id)
+\item 
+\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1BPlusTreePage_a7fb7ffc4f4ed246f98944d7a52c2acdb}{Get\+Page\+Id}} () const
+\item 
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage_a969d68a1cd60d43eb5738cc37616a083}{Set\+Page\+Id}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id)
+\item 
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage_a095cdfcc6b86120644b9b0a72b03cfb6}{Set\+L\+SN}} (\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} lsn=I\+N\+V\+A\+L\+I\+D\+\_\+\+L\+SN)
+\item 
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage_a641b6e1cf8acb2e231dde90ae9a4d366}{Get\+Info}} (\mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}} key, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} val)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename Key\+Type, typename Value\+Type$>$\newline
+class bustub\+::\+B\+Plus\+Tree\+Page$<$ Key\+Type, Value\+Type $>$}
+
+Both internal and leaf page are inherited from this page.
+
+It actually serves as a header part for each B+ tree page and contains information shared by both leaf page and internal page.\hypertarget{classbustub_1_1BPlusTreePage_autotoc_md443}{}\doxysubsubsection{Header format (size in byte, 24 bytes in total)\+:}\label{classbustub_1_1BPlusTreePage_autotoc_md443}
+\hypertarget{classbustub_1_1BPlusTreePage_autotoc_md444}{}\doxysubsubsection{$\vert$ Page\+Type (4) $\vert$ L\+S\+N (4) $\vert$ Current\+Size (4) $\vert$ Max\+Size (4) $\vert$}\label{classbustub_1_1BPlusTreePage_autotoc_md444}
+\hypertarget{classbustub_1_1BPlusTreePage_autotoc_md445}{}\doxysubsubsection{$\vert$ Parent\+Page\+Id (4) $\vert$ Page\+Id(4) $\vert$}\label{classbustub_1_1BPlusTreePage_autotoc_md445}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a641b6e1cf8acb2e231dde90ae9a4d366}\label{classbustub_1_1BPlusTreePage_a641b6e1cf8acb2e231dde90ae9a4d366}} 
+\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}!GetInfo@{GetInfo}}
+\index{GetInfo@{GetInfo}!bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{GetInfo()}{GetInfo()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type $>$ \\
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$\+::Get\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}}]{key,  }\item[{\mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}}}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a67cd3e87eaab8a6eba66130c6f6ad93d}\label{classbustub_1_1BPlusTreePage_a67cd3e87eaab8a6eba66130c6f6ad93d}} 
+\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}!GetMaxSize@{GetMaxSize}}
+\index{GetMaxSize@{GetMaxSize}!bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{GetMaxSize()}{GetMaxSize()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type $>$ \\
+int \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$\+::Get\+Max\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a2f164d0e916a94fcb5ec1d2e7b025bcf}\label{classbustub_1_1BPlusTreePage_a2f164d0e916a94fcb5ec1d2e7b025bcf}} 
+\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}!GetMinSize@{GetMinSize}}
+\index{GetMinSize@{GetMinSize}!bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{GetMinSize()}{GetMinSize()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type $>$ \\
+int \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$\+::Get\+Min\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a7fb7ffc4f4ed246f98944d7a52c2acdb}\label{classbustub_1_1BPlusTreePage_a7fb7ffc4f4ed246f98944d7a52c2acdb}} 
+\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}!GetPageId@{GetPageId}}
+\index{GetPageId@{GetPageId}!bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{GetPageId()}{GetPageId()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type $>$ \\
+\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$\+::Get\+Page\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a8704a9d1cd89eb7dd06e9993a30162f1}\label{classbustub_1_1BPlusTreePage_a8704a9d1cd89eb7dd06e9993a30162f1}} 
+\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}!GetParentPageId@{GetParentPageId}}
+\index{GetParentPageId@{GetParentPageId}!bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{GetParentPageId()}{GetParentPageId()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type $>$ \\
+\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$\+::Get\+Parent\+Page\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_af799edfbc000dd931fc31eae2d15c2cf}\label{classbustub_1_1BPlusTreePage_af799edfbc000dd931fc31eae2d15c2cf}} 
+\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type $>$ \\
+int \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$\+::Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a07e60651c8afbefd77b6ab819cc2672e}\label{classbustub_1_1BPlusTreePage_a07e60651c8afbefd77b6ab819cc2672e}} 
+\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}!IncreaseSize@{IncreaseSize}}
+\index{IncreaseSize@{IncreaseSize}!bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{IncreaseSize()}{IncreaseSize()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type $>$ \\
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$\+::Increase\+Size (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a129ccc80aad454529f6332e9801567fc}\label{classbustub_1_1BPlusTreePage_a129ccc80aad454529f6332e9801567fc}} 
+\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}!IsLeafPage@{IsLeafPage}}
+\index{IsLeafPage@{IsLeafPage}!bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{IsLeafPage()}{IsLeafPage()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type $>$ \\
+bool \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$\+::Is\+Leaf\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a85eac20f44afd763e2c063ca40d1e5f9}\label{classbustub_1_1BPlusTreePage_a85eac20f44afd763e2c063ca40d1e5f9}} 
+\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}!IsRootPage@{IsRootPage}}
+\index{IsRootPage@{IsRootPage}!bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{IsRootPage()}{IsRootPage()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type $>$ \\
+bool \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$\+::Is\+Root\+Page (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a095cdfcc6b86120644b9b0a72b03cfb6}\label{classbustub_1_1BPlusTreePage_a095cdfcc6b86120644b9b0a72b03cfb6}} 
+\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}!SetLSN@{SetLSN}}
+\index{SetLSN@{SetLSN}!bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{SetLSN()}{SetLSN()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type $>$ \\
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$\+::Set\+L\+SN (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}}}]{lsn = {\ttfamily INVALID\+\_\+LSN} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_af8c78f6e528b6126ffd3aaecec612b6d}\label{classbustub_1_1BPlusTreePage_af8c78f6e528b6126ffd3aaecec612b6d}} 
+\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}!SetMaxSize@{SetMaxSize}}
+\index{SetMaxSize@{SetMaxSize}!bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{SetMaxSize()}{SetMaxSize()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type $>$ \\
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$\+::Set\+Max\+Size (\begin{DoxyParamCaption}\item[{int}]{max\+\_\+size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a969d68a1cd60d43eb5738cc37616a083}\label{classbustub_1_1BPlusTreePage_a969d68a1cd60d43eb5738cc37616a083}} 
+\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}!SetPageId@{SetPageId}}
+\index{SetPageId@{SetPageId}!bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{SetPageId()}{SetPageId()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type $>$ \\
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$\+::Set\+Page\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_aa0398bdea8e3f485ed23297a8c14a271}\label{classbustub_1_1BPlusTreePage_aa0398bdea8e3f485ed23297a8c14a271}} 
+\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}!SetPageType@{SetPageType}}
+\index{SetPageType@{SetPageType}!bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{SetPageType()}{SetPageType()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type $>$ \\
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$\+::Set\+Page\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_aa22b843a31f36c3abba2ac5410480497}{Index\+Page\+Type}}}]{page\+\_\+type }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a2ce23b7ad1ce558ddaed8c4edc81772a}\label{classbustub_1_1BPlusTreePage_a2ce23b7ad1ce558ddaed8c4edc81772a}} 
+\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}!SetParentPageId@{SetParentPageId}}
+\index{SetParentPageId@{SetParentPageId}!bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{SetParentPageId()}{SetParentPageId()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type $>$ \\
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$\+::Set\+Parent\+Page\+Id (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{parent\+\_\+page\+\_\+id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1BPlusTreePage_a919ffad8f58f423e93af4549b501c53c}\label{classbustub_1_1BPlusTreePage_a919ffad8f58f423e93af4549b501c53c}} 
+\index{bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}!SetSize@{SetSize}}
+\index{SetSize@{SetSize}!bustub::BPlusTreePage$<$ KeyType, ValueType $>$@{bustub::BPlusTreePage$<$ KeyType, ValueType $>$}}
+\doxysubsubsection{\texorpdfstring{SetSize()}{SetSize()}}
+{\footnotesize\ttfamily template$<$typename Key\+Type , typename Value\+Type $>$ \\
+void \mbox{\hyperlink{classbustub_1_1BPlusTreePage}{bustub\+::\+B\+Plus\+Tree\+Page}}$<$ \mbox{\hyperlink{namespacebustub_add44325ec4449b8de633a7d030aac8b7}{Key\+Type}}, \mbox{\hyperlink{namespacebustub_a51b6068df817f3b2202490fe5844e181}{Value\+Type}} $>$\+::Set\+Size (\begin{DoxyParamCaption}\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/\mbox{\hyperlink{b__plus__tree__page_8h}{b\+\_\+plus\+\_\+tree\+\_\+page.\+h}}\item 
+test/type/\mbox{\hyperlink{type__test_8cpp}{type\+\_\+test.\+cpp}}\item 
+src/storage/page/\mbox{\hyperlink{b__plus__tree__page_8cpp}{b\+\_\+plus\+\_\+tree\+\_\+page.\+cpp}}\end{DoxyCompactItemize}

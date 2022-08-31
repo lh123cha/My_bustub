@@ -1,0 +1,225 @@
+\hypertarget{classbustub_1_1LogRecord}{}\doxysection{bustub\+::Log\+Record Class Reference}
+\label{classbustub_1_1LogRecord}\index{bustub::LogRecord@{bustub::LogRecord}}
+
+
+{\ttfamily \#include $<$log\+\_\+record.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Log\+Record\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{classbustub_1_1LogRecord__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1LogRecord_ac42f06f821c1e9ebb80a647e3d4a0d28}{Log\+Record}} ()=default
+\item 
+\mbox{\hyperlink{classbustub_1_1LogRecord_ad8571e9de7b2180e5b6a499e1734e14f}{Log\+Record}} (\mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}} txn\+\_\+id, \mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} prev\+\_\+lsn, \mbox{\hyperlink{namespacebustub_a43eda6cb555f74433d860efc5e45b9cc}{Log\+Record\+Type}} log\+\_\+record\+\_\+type)
+\item 
+\mbox{\hyperlink{classbustub_1_1LogRecord_a0928587b6dae9e6336e6ebd4534416a6}{Log\+Record}} (\mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}} txn\+\_\+id, \mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} prev\+\_\+lsn, \mbox{\hyperlink{namespacebustub_a43eda6cb555f74433d860efc5e45b9cc}{Log\+Record\+Type}} log\+\_\+record\+\_\+type, const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&rid, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple)
+\item 
+\mbox{\hyperlink{classbustub_1_1LogRecord_ae0a6385db4601054c2a9f688cc49010c}{Log\+Record}} (\mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}} txn\+\_\+id, \mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} prev\+\_\+lsn, \mbox{\hyperlink{namespacebustub_a43eda6cb555f74433d860efc5e45b9cc}{Log\+Record\+Type}} log\+\_\+record\+\_\+type, const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&update\+\_\+rid, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&old\+\_\+tuple, const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&new\+\_\+tuple)
+\item 
+\mbox{\hyperlink{classbustub_1_1LogRecord_a48c7b48c6c51d38516e205aa38b8b5a9}{Log\+Record}} (\mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}} txn\+\_\+id, \mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} prev\+\_\+lsn, \mbox{\hyperlink{namespacebustub_a43eda6cb555f74433d860efc5e45b9cc}{Log\+Record\+Type}} log\+\_\+record\+\_\+type, \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} prev\+\_\+page\+\_\+id, \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id)
+\item 
+\mbox{\hyperlink{classbustub_1_1LogRecord_a1a92d2d915cab58ec52ed7fbbd82803d}{$\sim$\+Log\+Record}} ()=default
+\item 
+\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \& \mbox{\hyperlink{classbustub_1_1LogRecord_a10537706c6f9e2b338c8b79e616f9a69}{Get\+Delete\+Tuple}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \& \mbox{\hyperlink{classbustub_1_1LogRecord_af86bb19dfc5aab8effddbc2adf8f5648}{Get\+Delete\+R\+ID}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \& \mbox{\hyperlink{classbustub_1_1LogRecord_a51a05859ce4197bca623cd9eb3ef38fa}{Get\+Insert\+Tuple}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \& \mbox{\hyperlink{classbustub_1_1LogRecord_a7244519178980979c09a69f9f27c39d6}{Get\+Insert\+R\+ID}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \& \mbox{\hyperlink{classbustub_1_1LogRecord_a25d8fad2414dabee1fa32b84807f9c49}{Get\+Original\+Tuple}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \& \mbox{\hyperlink{classbustub_1_1LogRecord_aa4664dc61676d6889bf616d3af3baee4}{Get\+Update\+Tuple}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \& \mbox{\hyperlink{classbustub_1_1LogRecord_a5d07582d69d380554ca6b966ef658be0}{Get\+Update\+R\+ID}} ()
+\item 
+\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1LogRecord_a21350012b32ba066e5bc2390651b49d0}{Get\+New\+Page\+Record}} ()
+\item 
+int32\+\_\+t \mbox{\hyperlink{classbustub_1_1LogRecord_a38b76788d331ccf95920c373f71651f0}{Get\+Size}} ()
+\item 
+\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} \mbox{\hyperlink{classbustub_1_1LogRecord_a9b340f91ea758fabd6b0cd6861a0d231}{Get\+L\+SN}} ()
+\item 
+\mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1LogRecord_a6958da2b944265e15b72000654507468}{Get\+Txn\+Id}} ()
+\item 
+\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} \mbox{\hyperlink{classbustub_1_1LogRecord_a1132f382e81a8cc35bfc5b82fe0c3021}{Get\+Prev\+L\+SN}} ()
+\item 
+\mbox{\hyperlink{namespacebustub_a43eda6cb555f74433d860efc5e45b9cc}{Log\+Record\+Type}} \& \mbox{\hyperlink{classbustub_1_1LogRecord_ab06be1b06610e7895cb345f4fdf05347}{Get\+Log\+Record\+Type}} ()
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1LogRecord_a35e0aaef68344367709f61caf2fb3b99}{To\+String}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classbustub_1_1LogRecord_a42122844816425e371e961638cdaf796}{Log\+Manager}}
+\item 
+class \mbox{\hyperlink{classbustub_1_1LogRecord_a0a38999bad446d23993955f77e0acce0}{Log\+Recovery}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+For every write operation on the table page, you should write ahead a corresponding log record.\hypertarget{classbustub_1_1LogRecord_autotoc_md426}{}\doxysubsubsection{For E\+A\+C\+H log record, H\+E\+A\+D\+E\+R is like (5 fields in common, 20 bytes in total).}\label{classbustub_1_1LogRecord_autotoc_md426}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md427}{}\doxysubsubsection{$\vert$ size $\vert$ L\+S\+N $\vert$ trans\+I\+D $\vert$ prev\+L\+S\+N $\vert$ Log\+Type $\vert$}\label{classbustub_1_1LogRecord_autotoc_md427}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md428}{}\doxysubsubsection{For insert type log record}\label{classbustub_1_1LogRecord_autotoc_md428}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md429}{}\doxysubsubsection{$\vert$ H\+E\+A\+D\+E\+R $\vert$ tuple\+\_\+rid $\vert$ tuple\+\_\+size $\vert$ tuple\+\_\+data(char\mbox{[}$\,$\mbox{]} array) $\vert$}\label{classbustub_1_1LogRecord_autotoc_md429}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md430}{}\doxysubsubsection{For delete type (including markdelete, rollbackdelete, applydelete)}\label{classbustub_1_1LogRecord_autotoc_md430}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md431}{}\doxysubsubsection{$\vert$ H\+E\+A\+D\+E\+R $\vert$ tuple\+\_\+rid $\vert$ tuple\+\_\+size $\vert$ tuple\+\_\+data(char\mbox{[}$\,$\mbox{]} array) $\vert$}\label{classbustub_1_1LogRecord_autotoc_md431}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md432}{}\doxysubsubsection{For update type log record}\label{classbustub_1_1LogRecord_autotoc_md432}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md433}{}\doxysubsubsection{$\vert$ H\+E\+A\+D\+E\+R $\vert$ tuple\+\_\+rid $\vert$ tuple\+\_\+size $\vert$ old\+\_\+tuple\+\_\+data $\vert$ tuple\+\_\+size $\vert$ new\+\_\+tuple\+\_\+data $\vert$}\label{classbustub_1_1LogRecord_autotoc_md433}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md434}{}\doxysubsubsection{For new page type log record}\label{classbustub_1_1LogRecord_autotoc_md434}
+\hypertarget{classbustub_1_1LogRecord_autotoc_md435}{}\doxysubsubsection{$\vert$ H\+E\+A\+D\+E\+R $\vert$ prev\+\_\+page\+\_\+id $\vert$}\label{classbustub_1_1LogRecord_autotoc_md435}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1LogRecord_ac42f06f821c1e9ebb80a647e3d4a0d28}\label{classbustub_1_1LogRecord_ac42f06f821c1e9ebb80a647e3d4a0d28}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!LogRecord@{LogRecord}}
+\index{LogRecord@{LogRecord}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{LogRecord()}{LogRecord()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily bustub\+::\+Log\+Record\+::\+Log\+Record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_ad8571e9de7b2180e5b6a499e1734e14f}\label{classbustub_1_1LogRecord_ad8571e9de7b2180e5b6a499e1734e14f}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!LogRecord@{LogRecord}}
+\index{LogRecord@{LogRecord}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{LogRecord()}{LogRecord()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily bustub\+::\+Log\+Record\+::\+Log\+Record (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}}}]{txn\+\_\+id,  }\item[{\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}}}]{prev\+\_\+lsn,  }\item[{\mbox{\hyperlink{namespacebustub_a43eda6cb555f74433d860efc5e45b9cc}{Log\+Record\+Type}}}]{log\+\_\+record\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a0928587b6dae9e6336e6ebd4534416a6}\label{classbustub_1_1LogRecord_a0928587b6dae9e6336e6ebd4534416a6}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!LogRecord@{LogRecord}}
+\index{LogRecord@{LogRecord}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{LogRecord()}{LogRecord()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily bustub\+::\+Log\+Record\+::\+Log\+Record (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}}}]{txn\+\_\+id,  }\item[{\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}}}]{prev\+\_\+lsn,  }\item[{\mbox{\hyperlink{namespacebustub_a43eda6cb555f74433d860efc5e45b9cc}{Log\+Record\+Type}}}]{log\+\_\+record\+\_\+type,  }\item[{const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&}]{rid,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{tuple }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_ae0a6385db4601054c2a9f688cc49010c}\label{classbustub_1_1LogRecord_ae0a6385db4601054c2a9f688cc49010c}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!LogRecord@{LogRecord}}
+\index{LogRecord@{LogRecord}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{LogRecord()}{LogRecord()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily bustub\+::\+Log\+Record\+::\+Log\+Record (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}}}]{txn\+\_\+id,  }\item[{\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}}}]{prev\+\_\+lsn,  }\item[{\mbox{\hyperlink{namespacebustub_a43eda6cb555f74433d860efc5e45b9cc}{Log\+Record\+Type}}}]{log\+\_\+record\+\_\+type,  }\item[{const \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} \&}]{update\+\_\+rid,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{old\+\_\+tuple,  }\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{new\+\_\+tuple }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a48c7b48c6c51d38516e205aa38b8b5a9}\label{classbustub_1_1LogRecord_a48c7b48c6c51d38516e205aa38b8b5a9}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!LogRecord@{LogRecord}}
+\index{LogRecord@{LogRecord}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{LogRecord()}{LogRecord()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily bustub\+::\+Log\+Record\+::\+Log\+Record (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}}}]{txn\+\_\+id,  }\item[{\mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}}}]{prev\+\_\+lsn,  }\item[{\mbox{\hyperlink{namespacebustub_a43eda6cb555f74433d860efc5e45b9cc}{Log\+Record\+Type}}}]{log\+\_\+record\+\_\+type,  }\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{prev\+\_\+page\+\_\+id,  }\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a1a92d2d915cab58ec52ed7fbbd82803d}\label{classbustub_1_1LogRecord_a1a92d2d915cab58ec52ed7fbbd82803d}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!````~LogRecord@{$\sim$LogRecord}}
+\index{````~LogRecord@{$\sim$LogRecord}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{$\sim$LogRecord()}{~LogRecord()}}
+{\footnotesize\ttfamily bustub\+::\+Log\+Record\+::$\sim$\+Log\+Record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1LogRecord_af86bb19dfc5aab8effddbc2adf8f5648}\label{classbustub_1_1LogRecord_af86bb19dfc5aab8effddbc2adf8f5648}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!GetDeleteRID@{GetDeleteRID}}
+\index{GetDeleteRID@{GetDeleteRID}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{GetDeleteRID()}{GetDeleteRID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}}\& bustub\+::\+Log\+Record\+::\+Get\+Delete\+R\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a10537706c6f9e2b338c8b79e616f9a69}\label{classbustub_1_1LogRecord_a10537706c6f9e2b338c8b79e616f9a69}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!GetDeleteTuple@{GetDeleteTuple}}
+\index{GetDeleteTuple@{GetDeleteTuple}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{GetDeleteTuple()}{GetDeleteTuple()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}}\& bustub\+::\+Log\+Record\+::\+Get\+Delete\+Tuple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a7244519178980979c09a69f9f27c39d6}\label{classbustub_1_1LogRecord_a7244519178980979c09a69f9f27c39d6}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!GetInsertRID@{GetInsertRID}}
+\index{GetInsertRID@{GetInsertRID}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{GetInsertRID()}{GetInsertRID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}}\& bustub\+::\+Log\+Record\+::\+Get\+Insert\+R\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a51a05859ce4197bca623cd9eb3ef38fa}\label{classbustub_1_1LogRecord_a51a05859ce4197bca623cd9eb3ef38fa}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!GetInsertTuple@{GetInsertTuple}}
+\index{GetInsertTuple@{GetInsertTuple}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{GetInsertTuple()}{GetInsertTuple()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}}\& bustub\+::\+Log\+Record\+::\+Get\+Insert\+Tuple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_ab06be1b06610e7895cb345f4fdf05347}\label{classbustub_1_1LogRecord_ab06be1b06610e7895cb345f4fdf05347}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!GetLogRecordType@{GetLogRecordType}}
+\index{GetLogRecordType@{GetLogRecordType}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{GetLogRecordType()}{GetLogRecordType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a43eda6cb555f74433d860efc5e45b9cc}{Log\+Record\+Type}}\& bustub\+::\+Log\+Record\+::\+Get\+Log\+Record\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a9b340f91ea758fabd6b0cd6861a0d231}\label{classbustub_1_1LogRecord_a9b340f91ea758fabd6b0cd6861a0d231}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!GetLSN@{GetLSN}}
+\index{GetLSN@{GetLSN}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{GetLSN()}{GetLSN()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} bustub\+::\+Log\+Record\+::\+Get\+L\+SN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a21350012b32ba066e5bc2390651b49d0}\label{classbustub_1_1LogRecord_a21350012b32ba066e5bc2390651b49d0}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!GetNewPageRecord@{GetNewPageRecord}}
+\index{GetNewPageRecord@{GetNewPageRecord}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{GetNewPageRecord()}{GetNewPageRecord()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} bustub\+::\+Log\+Record\+::\+Get\+New\+Page\+Record (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a25d8fad2414dabee1fa32b84807f9c49}\label{classbustub_1_1LogRecord_a25d8fad2414dabee1fa32b84807f9c49}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!GetOriginalTuple@{GetOriginalTuple}}
+\index{GetOriginalTuple@{GetOriginalTuple}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{GetOriginalTuple()}{GetOriginalTuple()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}}\& bustub\+::\+Log\+Record\+::\+Get\+Original\+Tuple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a1132f382e81a8cc35bfc5b82fe0c3021}\label{classbustub_1_1LogRecord_a1132f382e81a8cc35bfc5b82fe0c3021}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!GetPrevLSN@{GetPrevLSN}}
+\index{GetPrevLSN@{GetPrevLSN}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{GetPrevLSN()}{GetPrevLSN()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a8ceb3d9746c8621a11887b2754e385f2}{lsn\+\_\+t}} bustub\+::\+Log\+Record\+::\+Get\+Prev\+L\+SN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a38b76788d331ccf95920c373f71651f0}\label{classbustub_1_1LogRecord_a38b76788d331ccf95920c373f71651f0}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!GetSize@{GetSize}}
+\index{GetSize@{GetSize}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{GetSize()}{GetSize()}}
+{\footnotesize\ttfamily int32\+\_\+t bustub\+::\+Log\+Record\+::\+Get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a6958da2b944265e15b72000654507468}\label{classbustub_1_1LogRecord_a6958da2b944265e15b72000654507468}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!GetTxnId@{GetTxnId}}
+\index{GetTxnId@{GetTxnId}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{GetTxnId()}{GetTxnId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a029cba72d716950c85acc42eb4d3ec3e}{txn\+\_\+id\+\_\+t}} bustub\+::\+Log\+Record\+::\+Get\+Txn\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a5d07582d69d380554ca6b966ef658be0}\label{classbustub_1_1LogRecord_a5d07582d69d380554ca6b966ef658be0}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!GetUpdateRID@{GetUpdateRID}}
+\index{GetUpdateRID@{GetUpdateRID}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{GetUpdateRID()}{GetUpdateRID()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}}\& bustub\+::\+Log\+Record\+::\+Get\+Update\+R\+ID (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_aa4664dc61676d6889bf616d3af3baee4}\label{classbustub_1_1LogRecord_aa4664dc61676d6889bf616d3af3baee4}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!GetUpdateTuple@{GetUpdateTuple}}
+\index{GetUpdateTuple@{GetUpdateTuple}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{GetUpdateTuple()}{GetUpdateTuple()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}}\& bustub\+::\+Log\+Record\+::\+Get\+Update\+Tuple (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a35e0aaef68344367709f61caf2fb3b99}\label{classbustub_1_1LogRecord_a35e0aaef68344367709f61caf2fb3b99}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Log\+Record\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a42122844816425e371e961638cdaf796}\label{classbustub_1_1LogRecord_a42122844816425e371e961638cdaf796}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!LogManager@{LogManager}}
+\index{LogManager@{LogManager}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{LogManager}{LogManager}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classbustub_1_1LogManager}{Log\+Manager}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{classbustub_1_1LogRecord_a0a38999bad446d23993955f77e0acce0}\label{classbustub_1_1LogRecord_a0a38999bad446d23993955f77e0acce0}} 
+\index{bustub::LogRecord@{bustub::LogRecord}!LogRecovery@{LogRecovery}}
+\index{LogRecovery@{LogRecovery}!bustub::LogRecord@{bustub::LogRecord}}
+\doxysubsubsection{\texorpdfstring{LogRecovery}{LogRecovery}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{classbustub_1_1LogRecovery}{Log\+Recovery}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/recovery/\mbox{\hyperlink{log__record_8h}{log\+\_\+record.\+h}}\end{DoxyCompactItemize}

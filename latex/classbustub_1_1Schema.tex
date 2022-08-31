@@ -1,0 +1,164 @@
+\hypertarget{classbustub_1_1Schema}{}\doxysection{bustub\+::Schema Class Reference}
+\label{classbustub_1_1Schema}\index{bustub::Schema@{bustub::Schema}}
+
+
+{\ttfamily \#include $<$schema.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Schema\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{classbustub_1_1Schema__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1Schema_a19f218ba430d407d31665c2f2e60e621}{Schema}} (const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Column}{Column}} $>$ \&columns)
+\item 
+const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Column}{Column}} $>$ \& \mbox{\hyperlink{classbustub_1_1Schema_adaf8bbb01b2f5e6cf9faf0814f3d45ab}{Get\+Columns}} () const
+\item 
+const \mbox{\hyperlink{classbustub_1_1Column}{Column}} \& \mbox{\hyperlink{classbustub_1_1Schema_ae34f830ac8e59ab3364f4d561ad888cd}{Get\+Column}} (const uint32\+\_\+t col\+\_\+idx) const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1Schema_a6b46145372c04e422ae95584550eadda}{Get\+Col\+Idx}} (const std\+::string \&col\+\_\+name) const
+\item 
+const std\+::vector$<$ uint32\+\_\+t $>$ \& \mbox{\hyperlink{classbustub_1_1Schema_a6202be4074623ca078b9ea83f54cf7c9}{Get\+Unlined\+Columns}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1Schema_a204fc2589a38b56c36fb9fe81828a480}{Get\+Column\+Count}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1Schema_ac614976a6df1e629cca7cd322b6442c8}{Get\+Unlined\+Column\+Count}} () const
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classbustub_1_1Schema_ad52955d5e4647dba71916e8551fa88a5}{Get\+Length}} () const
+\item 
+bool \mbox{\hyperlink{classbustub_1_1Schema_a2f49a77dc6f61a77b19d01d449b87a0f}{Is\+Inlined}} () const
+\item 
+std\+::string \mbox{\hyperlink{classbustub_1_1Schema_a1e39738cd19d37840fc0eff31312040a}{To\+String}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$ \mbox{\hyperlink{classbustub_1_1Schema_a02a5bc68dc639053e88a7da6f85de59b}{Copy\+Schema}} (const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$from, const std\+::vector$<$ uint32\+\_\+t $>$ \&attrs)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1Schema_a19f218ba430d407d31665c2f2e60e621}\label{classbustub_1_1Schema_a19f218ba430d407d31665c2f2e60e621}} 
+\index{bustub::Schema@{bustub::Schema}!Schema@{Schema}}
+\index{Schema@{Schema}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{Schema()}{Schema()}}
+{\footnotesize\ttfamily bustub\+::\+Schema\+::\+Schema (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classbustub_1_1Column}{Column}} $>$ \&}]{columns }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+Constructs the schema corresponding to the vector of columns, read left-\/to-\/right. 
+\begin{DoxyParams}{Parameters}
+{\em columns} & columns that describe the schema\textquotesingle{}s individual columns \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Schema_a02a5bc68dc639053e88a7da6f85de59b}\label{classbustub_1_1Schema_a02a5bc68dc639053e88a7da6f85de59b}} 
+\index{bustub::Schema@{bustub::Schema}!CopySchema@{CopySchema}}
+\index{CopySchema@{CopySchema}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{CopySchema()}{CopySchema()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{classbustub_1_1Schema}{Schema}}$\ast$ bustub\+::\+Schema\+::\+Copy\+Schema (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{from,  }\item[{const std\+::vector$<$ uint32\+\_\+t $>$ \&}]{attrs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\mbox{\Hypertarget{classbustub_1_1Schema_a6b46145372c04e422ae95584550eadda}\label{classbustub_1_1Schema_a6b46145372c04e422ae95584550eadda}} 
+\index{bustub::Schema@{bustub::Schema}!GetColIdx@{GetColIdx}}
+\index{GetColIdx@{GetColIdx}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{GetColIdx()}{GetColIdx()}}
+{\footnotesize\ttfamily uint32\+\_\+t bustub\+::\+Schema\+::\+Get\+Col\+Idx (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{col\+\_\+name }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Looks up and returns the index of the first column in the schema with the specified name. If multiple columns have the same name, the first such index is returned. 
+\begin{DoxyParams}{Parameters}
+{\em col\+\_\+name} & name of column to look for \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the index of a column with the given name, throws an exception if it does not exist 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_ae34f830ac8e59ab3364f4d561ad888cd}\label{classbustub_1_1Schema_ae34f830ac8e59ab3364f4d561ad888cd}} 
+\index{bustub::Schema@{bustub::Schema}!GetColumn@{GetColumn}}
+\index{GetColumn@{GetColumn}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{GetColumn()}{GetColumn()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1Column}{Column}}\& bustub\+::\+Schema\+::\+Get\+Column (\begin{DoxyParamCaption}\item[{const uint32\+\_\+t}]{col\+\_\+idx }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+Returns a specific column from the schema. 
+\begin{DoxyParams}{Parameters}
+{\em col\+\_\+idx} & index of requested column \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+requested column 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_a204fc2589a38b56c36fb9fe81828a480}\label{classbustub_1_1Schema_a204fc2589a38b56c36fb9fe81828a480}} 
+\index{bustub::Schema@{bustub::Schema}!GetColumnCount@{GetColumnCount}}
+\index{GetColumnCount@{GetColumnCount}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{GetColumnCount()}{GetColumnCount()}}
+{\footnotesize\ttfamily uint32\+\_\+t bustub\+::\+Schema\+::\+Get\+Column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of columns in the schema for the tuple 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_adaf8bbb01b2f5e6cf9faf0814f3d45ab}\label{classbustub_1_1Schema_adaf8bbb01b2f5e6cf9faf0814f3d45ab}} 
+\index{bustub::Schema@{bustub::Schema}!GetColumns@{GetColumns}}
+\index{GetColumns@{GetColumns}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{GetColumns()}{GetColumns()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{classbustub_1_1Column}{Column}}$>$\& bustub\+::\+Schema\+::\+Get\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+all the columns in the schema 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_ad52955d5e4647dba71916e8551fa88a5}\label{classbustub_1_1Schema_ad52955d5e4647dba71916e8551fa88a5}} 
+\index{bustub::Schema@{bustub::Schema}!GetLength@{GetLength}}
+\index{GetLength@{GetLength}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{GetLength()}{GetLength()}}
+{\footnotesize\ttfamily uint32\+\_\+t bustub\+::\+Schema\+::\+Get\+Length (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of bytes used by one tuple 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_ac614976a6df1e629cca7cd322b6442c8}\label{classbustub_1_1Schema_ac614976a6df1e629cca7cd322b6442c8}} 
+\index{bustub::Schema@{bustub::Schema}!GetUnlinedColumnCount@{GetUnlinedColumnCount}}
+\index{GetUnlinedColumnCount@{GetUnlinedColumnCount}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{GetUnlinedColumnCount()}{GetUnlinedColumnCount()}}
+{\footnotesize\ttfamily uint32\+\_\+t bustub\+::\+Schema\+::\+Get\+Unlined\+Column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the number of non-\/inlined columns 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_a6202be4074623ca078b9ea83f54cf7c9}\label{classbustub_1_1Schema_a6202be4074623ca078b9ea83f54cf7c9}} 
+\index{bustub::Schema@{bustub::Schema}!GetUnlinedColumns@{GetUnlinedColumns}}
+\index{GetUnlinedColumns@{GetUnlinedColumns}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{GetUnlinedColumns()}{GetUnlinedColumns()}}
+{\footnotesize\ttfamily const std\+::vector$<$uint32\+\_\+t$>$\& bustub\+::\+Schema\+::\+Get\+Unlined\+Columns (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+the indices of non-\/inlined columns 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_a2f49a77dc6f61a77b19d01d449b87a0f}\label{classbustub_1_1Schema_a2f49a77dc6f61a77b19d01d449b87a0f}} 
+\index{bustub::Schema@{bustub::Schema}!IsInlined@{IsInlined}}
+\index{IsInlined@{IsInlined}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{IsInlined()}{IsInlined()}}
+{\footnotesize\ttfamily bool bustub\+::\+Schema\+::\+Is\+Inlined (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+true if all columns are inlined, false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1Schema_a1e39738cd19d37840fc0eff31312040a}\label{classbustub_1_1Schema_a1e39738cd19d37840fc0eff31312040a}} 
+\index{bustub::Schema@{bustub::Schema}!ToString@{ToString}}
+\index{ToString@{ToString}!bustub::Schema@{bustub::Schema}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily std\+::string bustub\+::\+Schema\+::\+To\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+string representation of this schema 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/catalog/\mbox{\hyperlink{schema_8h}{schema.\+h}}\item 
+src/catalog/\mbox{\hyperlink{schema_8cpp}{schema.\+cpp}}\end{DoxyCompactItemize}

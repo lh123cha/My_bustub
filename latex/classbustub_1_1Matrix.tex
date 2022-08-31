@@ -1,0 +1,231 @@
+\hypertarget{classbustub_1_1Matrix}{}\doxysection{bustub\+::Matrix$<$ T $>$ Class Template Reference}
+\label{classbustub_1_1Matrix}\index{bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}}
+
+
+{\ttfamily \#include $<$p0\+\_\+starter.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Matrix$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{classbustub_1_1Matrix__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Matrix$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classbustub_1_1Matrix__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual int \mbox{\hyperlink{classbustub_1_1Matrix_a0005bd416cde0ba18545896b1c822386}{Get\+Row\+Count}} () const =0
+\item 
+virtual int \mbox{\hyperlink{classbustub_1_1Matrix_a10e655a5dde7351c8f11916c462ca485}{Get\+Column\+Count}} () const =0
+\item 
+virtual T \mbox{\hyperlink{classbustub_1_1Matrix_a4786a04feec0fe5dc2d7da9d55315f61}{Get\+Element}} (int \mbox{\hyperlink{googletest-output-test-golden-lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}, int j) const =0
+\item 
+virtual void \mbox{\hyperlink{classbustub_1_1Matrix_ac5bb3b8283dd711b1cb4c8fe20adff8e}{Set\+Element}} (int \mbox{\hyperlink{googletest-output-test-golden-lin_8txt_a7e98b8a17c0aad30ba64d47b74e2a6c1}{i}}, int j, T val)=0
+\item 
+virtual void \mbox{\hyperlink{classbustub_1_1Matrix_a87d65a4e266282333947bf122818a34c}{Fill\+From}} (const std\+::vector$<$ T $>$ \&source)=0
+\item 
+virtual \mbox{\hyperlink{classbustub_1_1Matrix_a8a837d0e05e8d73815e6abac6116cc42}{$\sim$\+Matrix}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1Matrix_a53cfac4ef3d6e7bb04b9f769b6bda70c}{Matrix}} (int rows, int cols)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classbustub_1_1Matrix_a42644a0c97568198ab9c93618a5afce8}{rows\+\_\+}}
+\item 
+int \mbox{\hyperlink{classbustub_1_1Matrix_a5f0897360b4e392d17b4d7bf0f3b8673}{cols\+\_\+}}
+\item 
+T $\ast$ \mbox{\hyperlink{classbustub_1_1Matrix_a83502de5402eaea4593700065ce46e8f}{linear\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class bustub\+::\+Matrix$<$ T $>$}
+
+The \mbox{\hyperlink{classbustub_1_1Matrix}{Matrix}} type defines a common interface for matrix operations. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1Matrix_a53cfac4ef3d6e7bb04b9f769b6bda70c}\label{classbustub_1_1Matrix_a53cfac4ef3d6e7bb04b9f769b6bda70c}} 
+\index{bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}!Matrix@{Matrix}}
+\index{Matrix@{Matrix}!bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Matrix()}{Matrix()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classbustub_1_1Matrix}{bustub\+::\+Matrix}}$<$ T $>$\+::\mbox{\hyperlink{classbustub_1_1Matrix}{Matrix}} (\begin{DoxyParamCaption}\item[{int}]{rows,  }\item[{int}]{cols }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+T\+O\+D\+O(\+P0)\+: Add implementation
+
+Construct a new \mbox{\hyperlink{classbustub_1_1Matrix}{Matrix}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em rows} & The number of rows \\
+\hline
+{\em cols} & The number of columns \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1Matrix_a8a837d0e05e8d73815e6abac6116cc42}\label{classbustub_1_1Matrix_a8a837d0e05e8d73815e6abac6116cc42}} 
+\index{bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}!````~Matrix@{$\sim$Matrix}}
+\index{````~Matrix@{$\sim$Matrix}!bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$Matrix()}{~Matrix()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual \mbox{\hyperlink{classbustub_1_1Matrix}{bustub\+::\+Matrix}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{classbustub_1_1Matrix}{Matrix}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Destroy a matrix instance. T\+O\+D\+O(\+P0)\+: Add implementation 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1Matrix_a87d65a4e266282333947bf122818a34c}\label{classbustub_1_1Matrix_a87d65a4e266282333947bf122818a34c}} 
+\index{bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}!FillFrom@{FillFrom}}
+\index{FillFrom@{FillFrom}!bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{FillFrom()}{FillFrom()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classbustub_1_1Matrix}{bustub\+::\+Matrix}}$<$ T $>$\+::Fill\+From (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{source }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Fill the elements of the matrix from {\ttfamily source}.
+
+Throw O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE in the event that {\ttfamily source} does not contain the required number of elements.
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The source container \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE} & if {\ttfamily source} is incorrect size \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1RowMatrix_ab081c54856354d23da7f1270333b23a9}{bustub\+::\+Row\+Matrix$<$ T $>$}}.
+
+\mbox{\Hypertarget{classbustub_1_1Matrix_a10e655a5dde7351c8f11916c462ca485}\label{classbustub_1_1Matrix_a10e655a5dde7351c8f11916c462ca485}} 
+\index{bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}!GetColumnCount@{GetColumnCount}}
+\index{GetColumnCount@{GetColumnCount}!bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetColumnCount()}{GetColumnCount()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual int \mbox{\hyperlink{classbustub_1_1Matrix}{bustub\+::\+Matrix}}$<$ T $>$\+::Get\+Column\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The number of columns in the matrix 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1RowMatrix_adcac4369904a4514a1c351cafd51c370}{bustub\+::\+Row\+Matrix$<$ T $>$}}.
+
+\mbox{\Hypertarget{classbustub_1_1Matrix_a4786a04feec0fe5dc2d7da9d55315f61}\label{classbustub_1_1Matrix_a4786a04feec0fe5dc2d7da9d55315f61}} 
+\index{bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}!GetElement@{GetElement}}
+\index{GetElement@{GetElement}!bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetElement()}{GetElement()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual T \mbox{\hyperlink{classbustub_1_1Matrix}{bustub\+::\+Matrix}}$<$ T $>$\+::Get\+Element (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Get the (i,j)th matrix element.
+
+Throw O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE if either index is out of range.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The row index \\
+\hline
+{\em j} & The column index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The (i,j)th matrix element 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE} & if either index is out of range \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1RowMatrix_a1ea08c8a9195a6d5060f0f98dd29ac63}{bustub\+::\+Row\+Matrix$<$ T $>$}}.
+
+\mbox{\Hypertarget{classbustub_1_1Matrix_a0005bd416cde0ba18545896b1c822386}\label{classbustub_1_1Matrix_a0005bd416cde0ba18545896b1c822386}} 
+\index{bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}!GetRowCount@{GetRowCount}}
+\index{GetRowCount@{GetRowCount}!bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GetRowCount()}{GetRowCount()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual int \mbox{\hyperlink{classbustub_1_1Matrix}{bustub\+::\+Matrix}}$<$ T $>$\+::Get\+Row\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The number of rows in the matrix 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1RowMatrix_a137f08212ad58ef5f70010066474ab4e}{bustub\+::\+Row\+Matrix$<$ T $>$}}.
+
+\mbox{\Hypertarget{classbustub_1_1Matrix_ac5bb3b8283dd711b1cb4c8fe20adff8e}\label{classbustub_1_1Matrix_ac5bb3b8283dd711b1cb4c8fe20adff8e}} 
+\index{bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}!SetElement@{SetElement}}
+\index{SetElement@{SetElement}!bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{SetElement()}{SetElement()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+virtual void \mbox{\hyperlink{classbustub_1_1Matrix}{bustub\+::\+Matrix}}$<$ T $>$\+::Set\+Element (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{j,  }\item[{T}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Set the (i,j)th matrix element.
+
+Throw O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE if either index is out of range.
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & The row index \\
+\hline
+{\em j} & The column index \\
+\hline
+{\em val} & The value to insert \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em O\+U\+T\+\_\+\+O\+F\+\_\+\+R\+A\+N\+GE} & if either index is out of range \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1RowMatrix_af1a3ee8a91d62156af9ffc6abc05b770}{bustub\+::\+Row\+Matrix$<$ T $>$}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1Matrix_a5f0897360b4e392d17b4d7bf0f3b8673}\label{classbustub_1_1Matrix_a5f0897360b4e392d17b4d7bf0f3b8673}} 
+\index{bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}!cols\_@{cols\_}}
+\index{cols\_@{cols\_}!bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{cols\_}{cols\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classbustub_1_1Matrix}{bustub\+::\+Matrix}}$<$ T $>$\+::cols\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+The number of columns in the matrix \mbox{\Hypertarget{classbustub_1_1Matrix_a83502de5402eaea4593700065ce46e8f}\label{classbustub_1_1Matrix_a83502de5402eaea4593700065ce46e8f}} 
+\index{bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}!linear\_@{linear\_}}
+\index{linear\_@{linear\_}!bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{linear\_}{linear\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \mbox{\hyperlink{classbustub_1_1Matrix}{bustub\+::\+Matrix}}$<$ T $>$\+::linear\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+T\+O\+D\+O(\+P0)\+: Allocate the array in the constructor. T\+O\+D\+O(\+P0)\+: Deallocate the array in the destructor. A flattened array containing the elements of the matrix. \mbox{\Hypertarget{classbustub_1_1Matrix_a42644a0c97568198ab9c93618a5afce8}\label{classbustub_1_1Matrix_a42644a0c97568198ab9c93618a5afce8}} 
+\index{bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}!rows\_@{rows\_}}
+\index{rows\_@{rows\_}!bustub::Matrix$<$ T $>$@{bustub::Matrix$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{rows\_}{rows\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{classbustub_1_1Matrix}{bustub\+::\+Matrix}}$<$ T $>$\+::rows\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+The number of rows in the matrix 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/primer/\mbox{\hyperlink{p0__starter_8h}{p0\+\_\+starter.\+h}}\end{DoxyCompactItemize}

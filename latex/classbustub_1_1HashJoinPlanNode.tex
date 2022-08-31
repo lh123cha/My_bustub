@@ -1,0 +1,121 @@
+\hypertarget{classbustub_1_1HashJoinPlanNode}{}\doxysection{bustub\+::Hash\+Join\+Plan\+Node Class Reference}
+\label{classbustub_1_1HashJoinPlanNode}\index{bustub::HashJoinPlanNode@{bustub::HashJoinPlanNode}}
+
+
+{\ttfamily \#include $<$hash\+\_\+join\+\_\+plan.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Hash\+Join\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classbustub_1_1HashJoinPlanNode__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Hash\+Join\+Plan\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classbustub_1_1HashJoinPlanNode__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1HashJoinPlanNode_ac5e1e535ddff1dddaa25f1e889a33e21}{Hash\+Join\+Plan\+Node}} (const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$output\+\_\+schema, std\+::vector$<$ const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $\ast$ $>$ \&\&children, const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$left\+\_\+key\+\_\+expression, const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$right\+\_\+key\+\_\+expression)
+\item 
+\mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} \mbox{\hyperlink{classbustub_1_1HashJoinPlanNode_a9ca7e26d24137aedca95cbe5432bfae8}{Get\+Type}} () const override
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ \mbox{\hyperlink{classbustub_1_1HashJoinPlanNode_a34cb9f6467240a7d0a88859c0aea312b}{Left\+Join\+Key\+Expression}} () const
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ \mbox{\hyperlink{classbustub_1_1HashJoinPlanNode_ae858f5271926181ca5c58233e408c2a2}{Right\+Join\+Key\+Expression}} () const
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $\ast$ \mbox{\hyperlink{classbustub_1_1HashJoinPlanNode_a5dcf09976eb48d7298ebdc7d956c4e89}{Get\+Left\+Plan}} () const
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $\ast$ \mbox{\hyperlink{classbustub_1_1HashJoinPlanNode_a73c7a07d579c5e40059a5824bff7f8c3}{Get\+Right\+Plan}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Hash join performs a J\+O\+IN operation with a hash table. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1HashJoinPlanNode_ac5e1e535ddff1dddaa25f1e889a33e21}\label{classbustub_1_1HashJoinPlanNode_ac5e1e535ddff1dddaa25f1e889a33e21}} 
+\index{bustub::HashJoinPlanNode@{bustub::HashJoinPlanNode}!HashJoinPlanNode@{HashJoinPlanNode}}
+\index{HashJoinPlanNode@{HashJoinPlanNode}!bustub::HashJoinPlanNode@{bustub::HashJoinPlanNode}}
+\doxysubsubsection{\texorpdfstring{HashJoinPlanNode()}{HashJoinPlanNode()}}
+{\footnotesize\ttfamily bustub\+::\+Hash\+Join\+Plan\+Node\+::\+Hash\+Join\+Plan\+Node (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$}]{output\+\_\+schema,  }\item[{std\+::vector$<$ const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}} $\ast$ $>$ \&\&}]{children,  }\item[{const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$}]{left\+\_\+key\+\_\+expression,  }\item[{const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$}]{right\+\_\+key\+\_\+expression }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1HashJoinPlanNode}{Hash\+Join\+Plan\+Node}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em output\+\_\+schema} & The output schema for the J\+O\+IN \\
+\hline
+{\em children} & The child plans from which tuples are obtained \\
+\hline
+{\em left\+\_\+key\+\_\+expression} & The expression for the left J\+O\+IN key \\
+\hline
+{\em right\+\_\+key\+\_\+expression} & The expression for the right J\+O\+IN key \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1HashJoinPlanNode_a5dcf09976eb48d7298ebdc7d956c4e89}\label{classbustub_1_1HashJoinPlanNode_a5dcf09976eb48d7298ebdc7d956c4e89}} 
+\index{bustub::HashJoinPlanNode@{bustub::HashJoinPlanNode}!GetLeftPlan@{GetLeftPlan}}
+\index{GetLeftPlan@{GetLeftPlan}!bustub::HashJoinPlanNode@{bustub::HashJoinPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetLeftPlan()}{GetLeftPlan()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}}$\ast$ bustub\+::\+Hash\+Join\+Plan\+Node\+::\+Get\+Left\+Plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The left plan node of the hash join 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1HashJoinPlanNode_a73c7a07d579c5e40059a5824bff7f8c3}\label{classbustub_1_1HashJoinPlanNode_a73c7a07d579c5e40059a5824bff7f8c3}} 
+\index{bustub::HashJoinPlanNode@{bustub::HashJoinPlanNode}!GetRightPlan@{GetRightPlan}}
+\index{GetRightPlan@{GetRightPlan}!bustub::HashJoinPlanNode@{bustub::HashJoinPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetRightPlan()}{GetRightPlan()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractPlanNode}{Abstract\+Plan\+Node}}$\ast$ bustub\+::\+Hash\+Join\+Plan\+Node\+::\+Get\+Right\+Plan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The right plan node of the hash join 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1HashJoinPlanNode_a9ca7e26d24137aedca95cbe5432bfae8}\label{classbustub_1_1HashJoinPlanNode_a9ca7e26d24137aedca95cbe5432bfae8}} 
+\index{bustub::HashJoinPlanNode@{bustub::HashJoinPlanNode}!GetType@{GetType}}
+\index{GetType@{GetType}!bustub::HashJoinPlanNode@{bustub::HashJoinPlanNode}}
+\doxysubsubsection{\texorpdfstring{GetType()}{GetType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_ad7d821859993f0ecb02cde3b7a9f2ccf}{Plan\+Type}} bustub\+::\+Hash\+Join\+Plan\+Node\+::\+Get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The type of the plan node 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractPlanNode_a68b80a5e248dfb5dfe0858a4afd8bc93}{bustub\+::\+Abstract\+Plan\+Node}}.
+
+\mbox{\Hypertarget{classbustub_1_1HashJoinPlanNode_a34cb9f6467240a7d0a88859c0aea312b}\label{classbustub_1_1HashJoinPlanNode_a34cb9f6467240a7d0a88859c0aea312b}} 
+\index{bustub::HashJoinPlanNode@{bustub::HashJoinPlanNode}!LeftJoinKeyExpression@{LeftJoinKeyExpression}}
+\index{LeftJoinKeyExpression@{LeftJoinKeyExpression}!bustub::HashJoinPlanNode@{bustub::HashJoinPlanNode}}
+\doxysubsubsection{\texorpdfstring{LeftJoinKeyExpression()}{LeftJoinKeyExpression()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$\ast$ bustub\+::\+Hash\+Join\+Plan\+Node\+::\+Left\+Join\+Key\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The expression to compute the left join key 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1HashJoinPlanNode_ae858f5271926181ca5c58233e408c2a2}\label{classbustub_1_1HashJoinPlanNode_ae858f5271926181ca5c58233e408c2a2}} 
+\index{bustub::HashJoinPlanNode@{bustub::HashJoinPlanNode}!RightJoinKeyExpression@{RightJoinKeyExpression}}
+\index{RightJoinKeyExpression@{RightJoinKeyExpression}!bustub::HashJoinPlanNode@{bustub::HashJoinPlanNode}}
+\doxysubsubsection{\texorpdfstring{RightJoinKeyExpression()}{RightJoinKeyExpression()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$\ast$ bustub\+::\+Hash\+Join\+Plan\+Node\+::\+Right\+Join\+Key\+Expression (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The expression to compute the right join key 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/plans/\mbox{\hyperlink{hash__join__plan_8h}{hash\+\_\+join\+\_\+plan.\+h}}\end{DoxyCompactItemize}

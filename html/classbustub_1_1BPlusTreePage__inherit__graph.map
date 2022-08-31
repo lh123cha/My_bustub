@@ -1,0 +1,5 @@
+<map id="bustub::BPlusTreePage&lt; KeyType, ValueType &gt;" name="bustub::BPlusTreePage&lt; KeyType, ValueType &gt;">
+<area shape="rect" id="node1" title=" " alt="" coords="155,5,335,303"/>
+<area shape="rect" id="node2" href="$classbustub_1_1BPlusTreeInternalPage.html" title=" " alt="" coords="5,351,237,619"/>
+<area shape="rect" id="node3" href="$classbustub_1_1BPlusTreeLeafPage.html" title=" " alt="" coords="262,358,477,611"/>
+</map>

@@ -1,0 +1,46 @@
+\hypertarget{b__plus__tree__concurrent__test_8cpp}{}\doxysection{test/storage/b\+\_\+plus\+\_\+tree\+\_\+concurrent\+\_\+test.cpp File Reference}
+\label{b__plus__tree__concurrent__test_8cpp}\index{test/storage/b\_plus\_tree\_concurrent\_test.cpp@{test/storage/b\_plus\_tree\_concurrent\_test.cpp}}
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include \char`\"{}buffer/buffer\+\_\+pool\+\_\+manager\+\_\+instance.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}storage/index/b\+\_\+plus\+\_\+tree.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}test\+\_\+util.\+h\char`\"{}}\newline
+Include dependency graph for b\+\_\+plus\+\_\+tree\+\_\+concurrent\+\_\+test.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{b__plus__tree__concurrent__test_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacebustub}{bustub}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename... Args$>$ }\\void \mbox{\hyperlink{namespacebustub_a9bb920e94c0e2cab3eb7afbed4efc5cd}{bustub\+::\+Launch\+Parallel\+Test}} (uint64\+\_\+t num\+\_\+threads, Args \&\&... args)
+\item 
+void \mbox{\hyperlink{namespacebustub_af213bd239a832df26f846bf914be296f}{bustub\+::\+Insert\+Helper}} (B\+Plus\+Tree$<$ Generic\+Key$<$ 8 $>$, R\+ID, Generic\+Comparator$<$ 8 $>$$>$ $\ast$tree, const std\+::vector$<$ int64\+\_\+t $>$ \&keys, \+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)) uint64\+\_\+t thread\+\_\+itr=0)
+\item 
+void \mbox{\hyperlink{namespacebustub_a1784edab45d51dd395fdc405a38abcb7}{bustub\+::\+Insert\+Helper\+Split}} (B\+Plus\+Tree$<$ Generic\+Key$<$ 8 $>$, R\+ID, Generic\+Comparator$<$ 8 $>$$>$ $\ast$tree, const std\+::vector$<$ int64\+\_\+t $>$ \&keys, int total\+\_\+threads, \+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)) uint64\+\_\+t thread\+\_\+itr)
+\item 
+void \mbox{\hyperlink{namespacebustub_a29368f8381c76812675500eede1abcf4}{bustub\+::\+Delete\+Helper}} (B\+Plus\+Tree$<$ Generic\+Key$<$ 8 $>$, R\+ID, Generic\+Comparator$<$ 8 $>$$>$ $\ast$tree, const std\+::vector$<$ int64\+\_\+t $>$ \&remove\+\_\+keys, \+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)) uint64\+\_\+t thread\+\_\+itr=0)
+\item 
+void \mbox{\hyperlink{namespacebustub_a3c93a9ef880dbdecb8c2513e3be60e94}{bustub\+::\+Delete\+Helper\+Split}} (B\+Plus\+Tree$<$ Generic\+Key$<$ 8 $>$, R\+ID, Generic\+Comparator$<$ 8 $>$$>$ $\ast$tree, const std\+::vector$<$ int64\+\_\+t $>$ \&remove\+\_\+keys, int total\+\_\+threads, \+\_\+\+\_\+attribute\+\_\+\+\_\+((unused)) uint64\+\_\+t thread\+\_\+itr)
+\item 
+\mbox{\hyperlink{namespacebustub_a9bcf2cf4b50bec8e287e37f30f2cf8cb}{bustub\+::\+T\+E\+ST}} (B\+Plus\+Tree\+Concurrent\+Test, D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+Insert\+Test1)
+\item 
+\mbox{\hyperlink{namespacebustub_a4bc21f345b5b20d7c4d264474fe1916e}{bustub\+::\+T\+E\+ST}} (B\+Plus\+Tree\+Concurrent\+Test, D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+Insert\+Test2)
+\item 
+\mbox{\hyperlink{namespacebustub_a62f3bb6eb0d5b6e539e21c284a8f5f0f}{bustub\+::\+T\+E\+ST}} (B\+Plus\+Tree\+Concurrent\+Test, D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+Delete\+Test1)
+\item 
+\mbox{\hyperlink{namespacebustub_aa1f05ef294ec55ae691ad8561dee7688}{bustub\+::\+T\+E\+ST}} (B\+Plus\+Tree\+Concurrent\+Test, D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+Delete\+Test2)
+\item 
+\mbox{\hyperlink{namespacebustub_af22ab558ab5daacc085467224a4e93f8}{bustub\+::\+T\+E\+ST}} (B\+Plus\+Tree\+Concurrent\+Test, D\+I\+S\+A\+B\+L\+E\+D\+\_\+\+Mix\+Test)
+\end{DoxyCompactItemize}

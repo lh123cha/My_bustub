@@ -1,0 +1,141 @@
+\hypertarget{classbustub_1_1AbstractExecutor}{}\doxysection{bustub\+::Abstract\+Executor Class Reference}
+\label{classbustub_1_1AbstractExecutor}\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+
+
+{\ttfamily \#include $<$abstract\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Abstract\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classbustub_1_1AbstractExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Abstract\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classbustub_1_1AbstractExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1AbstractExecutor_a77aac90325e53499c7dc96fea4a0f6c9}{Abstract\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx)
+\item 
+virtual \mbox{\hyperlink{classbustub_1_1AbstractExecutor_ab28201d3024a7b09e8c41af42a8def68}{$\sim$\+Abstract\+Executor}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{Init}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a5baf2d49aa23901553398d6c309d2afe}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$rid)=0
+\item 
+virtual const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a4dd2f1bb76d58cfc5c7b6abd9ed64017}{Get\+Output\+Schema}} ()=0
+\item 
+\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a79223d022ad9ea2de20bcbe93eb64bb9}{Get\+Executor\+Context}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a5591a244cd884bbae01ebbc58b3b2769}{exec\+\_\+ctx\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} implements the Volcano tuple-\/at-\/a-\/time iterator model. This is the base class from which all executors in the Bust\+Tub execution engine inherit, and defines the minimal interface that all executors support. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractExecutor_a77aac90325e53499c7dc96fea4a0f6c9}\label{classbustub_1_1AbstractExecutor_a77aac90325e53499c7dc96fea4a0f6c9}} 
+\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}!AbstractExecutor@{AbstractExecutor}}
+\index{AbstractExecutor@{AbstractExecutor}!bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+\doxysubsubsection{\texorpdfstring{AbstractExecutor()}{AbstractExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Abstract\+Executor\+::\+Abstract\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & the executor context that the executor runs with \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classbustub_1_1AbstractExecutor_ab28201d3024a7b09e8c41af42a8def68}\label{classbustub_1_1AbstractExecutor_ab28201d3024a7b09e8c41af42a8def68}} 
+\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}!````~AbstractExecutor@{$\sim$AbstractExecutor}}
+\index{````~AbstractExecutor@{$\sim$AbstractExecutor}!bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+\doxysubsubsection{\texorpdfstring{$\sim$AbstractExecutor()}{~AbstractExecutor()}}
+{\footnotesize\ttfamily virtual bustub\+::\+Abstract\+Executor\+::$\sim$\+Abstract\+Executor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+Virtual destructor. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractExecutor_a79223d022ad9ea2de20bcbe93eb64bb9}\label{classbustub_1_1AbstractExecutor_a79223d022ad9ea2de20bcbe93eb64bb9}} 
+\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}!GetExecutorContext@{GetExecutorContext}}
+\index{GetExecutorContext@{GetExecutorContext}!bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+\doxysubsubsection{\texorpdfstring{GetExecutorContext()}{GetExecutorContext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}}$\ast$ bustub\+::\+Abstract\+Executor\+::\+Get\+Executor\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The executor context in which this executor runs 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1AbstractExecutor_a4dd2f1bb76d58cfc5c7b6abd9ed64017}\label{classbustub_1_1AbstractExecutor_a4dd2f1bb76d58cfc5c7b6abd9ed64017}} 
+\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily virtual const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}}$\ast$ bustub\+::\+Abstract\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The schema of the tuples that this executor produces 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1AggregationExecutor_a01c7413f756771be7f3c11f9b3fed59c}{bustub\+::\+Aggregation\+Executor}}, \mbox{\hyperlink{classbustub_1_1UpdateExecutor_aaa2d075284e7ad538003b06d572309f9}{bustub\+::\+Update\+Executor}}, \mbox{\hyperlink{classbustub_1_1InsertExecutor_a324599594024c5b9e7545476f2a94bff}{bustub\+::\+Insert\+Executor}}, \mbox{\hyperlink{classbustub_1_1DeleteExecutor_a8cc802b4aaea5f20f9bda6035669ac83}{bustub\+::\+Delete\+Executor}}, \mbox{\hyperlink{classbustub_1_1NestedLoopJoinExecutor_a89f534c938c77387d573b345438369d3}{bustub\+::\+Nested\+Loop\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1HashJoinExecutor_a7accc118c616bf79c06ac97089da1a11}{bustub\+::\+Hash\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1DistinctExecutor_a52a747c964a59c4592645e0c3c7af235}{bustub\+::\+Distinct\+Executor}}, \mbox{\hyperlink{classbustub_1_1LimitExecutor_af42a2c56bdd74eb9a68218442f65b326}{bustub\+::\+Limit\+Executor}}, \mbox{\hyperlink{classbustub_1_1SeqScanExecutor_a9a941400bf998aaed7b727a94baed353}{bustub\+::\+Seq\+Scan\+Executor}}, \mbox{\hyperlink{classbustub_1_1NestIndexJoinExecutor_a5a8576051ac49530fe73e1d9e941e989}{bustub\+::\+Nest\+Index\+Join\+Executor}}, and \mbox{\hyperlink{classbustub_1_1IndexScanExecutor_adb440532d3574e88389e2fc2916cae00}{bustub\+::\+Index\+Scan\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}\label{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}} 
+\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily virtual void bustub\+::\+Abstract\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Initialize the executor. \begin{DoxyWarning}{Warning}
+This function must be called before \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a5baf2d49aa23901553398d6c309d2afe}{Next()}} is called! 
+\end{DoxyWarning}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1AggregationExecutor_a6a78d10b7c70db1dba1965e53e9c6d2f}{bustub\+::\+Aggregation\+Executor}}, \mbox{\hyperlink{classbustub_1_1NestIndexJoinExecutor_a1a4839e1f6a5cbdaf87a81944698dc51}{bustub\+::\+Nest\+Index\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1UpdateExecutor_a1657b8c95163dd8f8803bb5d4faa38e7}{bustub\+::\+Update\+Executor}}, \mbox{\hyperlink{classbustub_1_1InsertExecutor_a61e8a5d3523537775914475ed527f6ca}{bustub\+::\+Insert\+Executor}}, \mbox{\hyperlink{classbustub_1_1DeleteExecutor_a7fb4b4300c1e51a59884c90ce31bd411}{bustub\+::\+Delete\+Executor}}, \mbox{\hyperlink{classbustub_1_1NestedLoopJoinExecutor_a66ff12e840ec50fe3d3dfef770f839d5}{bustub\+::\+Nested\+Loop\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1HashJoinExecutor_a2132bb9fbf68beca485f739186e7a738}{bustub\+::\+Hash\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1IndexScanExecutor_a286511d06856e7f38b2dc62794004a5f}{bustub\+::\+Index\+Scan\+Executor}}, \mbox{\hyperlink{classbustub_1_1DistinctExecutor_a23e05618e999018ed7cc1903139559a5}{bustub\+::\+Distinct\+Executor}}, \mbox{\hyperlink{classbustub_1_1LimitExecutor_a7d44cb9ffec09e0bc897be5cc051370b}{bustub\+::\+Limit\+Executor}}, and \mbox{\hyperlink{classbustub_1_1SeqScanExecutor_ac24b874b7d6679bfe5bcf7b32700c468}{bustub\+::\+Seq\+Scan\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1AbstractExecutor_a5baf2d49aa23901553398d6c309d2afe}\label{classbustub_1_1AbstractExecutor_a5baf2d49aa23901553398d6c309d2afe}} 
+\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily virtual bool bustub\+::\+Abstract\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$}]{rid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Yield the next tuple from this executor. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by this executor \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} produced by this executor \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classbustub_1_1AggregationExecutor_a7b2eec656f3858ce7815893b7ecef80b}{bustub\+::\+Aggregation\+Executor}}, \mbox{\hyperlink{classbustub_1_1NestedLoopJoinExecutor_ad1aa6ecd884258b17968a4d3711af14e}{bustub\+::\+Nested\+Loop\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1HashJoinExecutor_a0a86eb24ff44d7922285758491797365}{bustub\+::\+Hash\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1NestIndexJoinExecutor_ad0633f58d00ec9df1a9851c337ab5955}{bustub\+::\+Nest\+Index\+Join\+Executor}}, \mbox{\hyperlink{classbustub_1_1DistinctExecutor_a50f1f1d03cb18b68e2463ede1ad69583}{bustub\+::\+Distinct\+Executor}}, \mbox{\hyperlink{classbustub_1_1LimitExecutor_a53da82b52319b8711d14b142e81e4307}{bustub\+::\+Limit\+Executor}}, \mbox{\hyperlink{classbustub_1_1SeqScanExecutor_abfdff19f7469b4ea33c2e29355bb1378}{bustub\+::\+Seq\+Scan\+Executor}}, and \mbox{\hyperlink{classbustub_1_1IndexScanExecutor_a90279c688f8c0b2980191ee154f6dc9d}{bustub\+::\+Index\+Scan\+Executor}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classbustub_1_1AbstractExecutor_a5591a244cd884bbae01ebbc58b3b2769}\label{classbustub_1_1AbstractExecutor_a5591a244cd884bbae01ebbc58b3b2769}} 
+\index{bustub::AbstractExecutor@{bustub::AbstractExecutor}!exec\_ctx\_@{exec\_ctx\_}}
+\index{exec\_ctx\_@{exec\_ctx\_}!bustub::AbstractExecutor@{bustub::AbstractExecutor}}
+\doxysubsubsection{\texorpdfstring{exec\_ctx\_}{exec\_ctx\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}}$\ast$ bustub\+::\+Abstract\+Executor\+::exec\+\_\+ctx\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+The executor context in which the executor runs 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/\mbox{\hyperlink{abstract__executor_8h}{abstract\+\_\+executor.\+h}}\end{DoxyCompactItemize}

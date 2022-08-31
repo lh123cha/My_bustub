@@ -1,0 +1,67 @@
+\hypertarget{gmock-internal-utils_8cc}{}\doxysection{build/googletest-\/src/googlemock/src/gmock-\/internal-\/utils.cc File Reference}
+\label{gmock-internal-utils_8cc}\index{build/googletest-\/src/googlemock/src/gmock-\/internal-\/utils.cc@{build/googletest-\/src/googlemock/src/gmock-\/internal-\/utils.cc}}
+{\ttfamily \#include \char`\"{}gmock/internal/gmock-\/internal-\/utils.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$cctype$>$}\newline
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$ostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}gmock/gmock.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gmock/internal/gmock-\/port.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gtest/gtest.\+h\char`\"{}}\newline
+Include dependency graph for gmock-\/internal-\/utils.cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gmock-internal-utils_8cc__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=213pt]{gmock-internal-utils_8cc__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classtesting_1_1internal_1_1GoogleTestFailureReporter}{testing\+::internal\+::\+Google\+Test\+Failure\+Reporter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespacetesting}{testing}}
+\item 
+ \mbox{\hyperlink{namespacetesting_1_1internal}{testing\+::internal}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+}} std\+::string \mbox{\hyperlink{namespacetesting_1_1internal_ac75a9353286d1b50c872ea2b195f3b4a}{testing\+::internal\+::\+Join\+As\+Key\+Value\+Tuple}} (const std\+::vector$<$ const char $\ast$ $>$ \&names, const Strings \&values)
+\item 
+\mbox{\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+}} std\+::string \mbox{\hyperlink{namespacetesting_1_1internal_a0b375abcf3081393e6c420194a541b29}{testing\+::internal\+::\+Convert\+Identifier\+Name\+To\+Words}} (const char $\ast$id\+\_\+name)
+\item 
+\mbox{\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+}} Failure\+Reporter\+Interface $\ast$ \mbox{\hyperlink{namespacetesting_1_1internal_a93a00bf550dcc6b1de870d24c624869c}{testing\+::internal\+::\+Get\+Failure\+Reporter}} ()
+\item 
+\mbox{\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+}} bool \mbox{\hyperlink{namespacetesting_1_1internal_a69ffdba5ee36743e88d8f89b79e566ff}{testing\+::internal\+::\+Log\+Is\+Visible}} (Log\+Severity severity)
+\item 
+\mbox{\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+}} void \mbox{\hyperlink{namespacetesting_1_1internal_a8a57ce0412334a3f487bbaa8321febbe}{testing\+::internal\+::\+Log}} (Log\+Severity severity, const std\+::string \&\mbox{\hyperlink{test_2CMakeLists_8txt_a4a19bb428010e205054cfb5e70b1bfbe}{message}}, int stack\+\_\+frames\+\_\+to\+\_\+skip)
+\item 
+\mbox{\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+}} Without\+Matchers \mbox{\hyperlink{namespacetesting_1_1internal_ad4e02ea077a717f95a10a03c10272f1c}{testing\+::internal\+::\+Get\+Without\+Matchers}} ()
+\item 
+\mbox{\hyperlink{gtest-port_8h_aa73be6f0ba4a7456180a94904ce17790}{G\+T\+E\+S\+T\+\_\+\+A\+P\+I\+\_\+}} void \mbox{\hyperlink{namespacetesting_1_1internal_aa67e1e9d28122eedffbb7b6636824f2d}{testing\+::internal\+::\+Illegal\+Do\+Default}} (const char $\ast$\mbox{\hyperlink{test_2CMakeLists_8txt_ad7b9e19e176051d4072c7d2d404d2c41}{file}}, int line)
+\item 
+constexpr char \mbox{\hyperlink{namespacetesting_1_1internal_adfca7fa821221defcd7dae3868372da2}{testing\+::internal\+::\+Un\+Base64\+Impl}} (char c, const char $\ast$const base64, char carry)
+\item 
+{\footnotesize template$<$size\+\_\+t... I$>$ }\\constexpr std\+::array$<$ char, 256 $>$ \mbox{\hyperlink{namespacetesting_1_1internal_a622356adaaf39de3dc4e3a9d64a8ea11}{testing\+::internal\+::\+Un\+Base64\+Impl}} (Index\+Sequence$<$ I... $>$, const char $\ast$const base64)
+\item 
+constexpr std\+::array$<$ char, 256 $>$ \mbox{\hyperlink{namespacetesting_1_1internal_a1d6f1fbfe2712860206b51bc7d31a71f}{testing\+::internal\+::\+Un\+Base64}} (const char $\ast$const base64)
+\item 
+bool \mbox{\hyperlink{namespacetesting_1_1internal_a7ebfee596839f25b8aec40192af1dcdc}{testing\+::internal\+::\+Base64\+Unescape}} (const std\+::string \&encoded, std\+::string $\ast$decoded)
+\end{DoxyCompactItemize}

@@ -1,0 +1,322 @@
+\hypertarget{classbustub_1_1ExecutorTest}{}\doxysection{bustub\+::Executor\+Test Class Reference}
+\label{classbustub_1_1ExecutorTest}\index{bustub::ExecutorTest@{bustub::ExecutorTest}}
+
+
+{\ttfamily \#include $<$executor\+\_\+test\+\_\+util.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Executor\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classbustub_1_1ExecutorTest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Executor\+Test\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classbustub_1_1ExecutorTest__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExecutorTest_adba72c630bd012734305fda1e5a81be6}{Set\+Up}} () override
+\item 
+void \mbox{\hyperlink{classbustub_1_1ExecutorTest_a34be0982f58506b1149efbac0461f8ea}{Tear\+Down}} () override
+\item 
+\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_a953e331c90cff5bcd1f822f04e665c36}{Get\+Executor\+Context}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1ExecutionEngine}{Execution\+Engine}} $\ast$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_a666034209dcdf3bd0387b5a3bbf05d74}{Get\+Execution\+Engine}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}} $\ast$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_a12ea4e0ccbafc6605bd6f8a01f5b53db}{Get\+Txn}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1TransactionManager}{Transaction\+Manager}} $\ast$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_a9d36d4c06269a8b7afed0fd8191c6696}{Get\+Txn\+Manager}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1Catalog}{Catalog}} $\ast$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_ae506db89fabba850a3afc19474a105e0}{Get\+Catalog}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}} $\ast$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_a8da0bc80a9cc1d101efc3b6921ceb7cb}{Get\+B\+PM}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}} $\ast$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_a65b3521be657690e1c6a6e13f7126ad6}{Get\+Lock\+Manager}} ()
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_a4559864ef15645b5e3a46de4973b981b}{Make\+Column\+Value\+Expression}} (const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&schema, uint32\+\_\+t tuple\+\_\+idx, const std\+::string \&col\+\_\+name)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $>$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_aded1085f8f91af8456366b0455f882e1}{Allocate\+Column\+Value\+Expression}} (const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&schema, uint32\+\_\+t tuple\+\_\+idx, const std\+::string \&col\+\_\+name)
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_a378e69decc0283aac61ff759385a1553}{Make\+Constant\+Value\+Expression}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&val)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $>$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_acdc15843d6b31f8fae633d26ee9c21d3}{Allocate\+Constant\+Value\+Expression}} (const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&val)
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_a05566c3ce88c192da27db7b9380a23d2}{Make\+Comparison\+Expression}} (const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$lhs, const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$rhs, \mbox{\hyperlink{namespacebustub_a314657f14ab5ad66e4a32d3e91cd3a9b}{Comparison\+Type}} comp\+\_\+type)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $>$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_a9e8dbcf99639e9e5de54c76e41159d60}{Allocate\+Comparison\+Expression}} (const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$lhs, const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$rhs, \mbox{\hyperlink{namespacebustub_a314657f14ab5ad66e4a32d3e91cd3a9b}{Comparison\+Type}} comp\+\_\+type)
+\item 
+const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_a86081ccea05fe1b48d203d72b0f8503b}{Make\+Aggregate\+Value\+Expression}} (bool is\+\_\+group\+\_\+by\+\_\+term, uint32\+\_\+t term\+\_\+idx)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $>$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_ad7eaf8b95e9d27f85338a6d815a6f2ab}{Allocate\+Aggregate\+Value\+Expression}} (bool is\+\_\+group\+\_\+by\+\_\+term, uint32\+\_\+t term\+\_\+idx)
+\item 
+const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_ac527d9676a669eb583987d547a4cdcb8}{Make\+Output\+Schema}} (const std\+::vector$<$ std\+::pair$<$ std\+::string, const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ $>$$>$ \&exprs)
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $>$ \mbox{\hyperlink{classbustub_1_1ExecutorTest_ab0a0d7bd266d2b4dbba42bc8e4ee4d69}{Allocate\+Output\+Schema}} (const std\+::vector$<$ std\+::pair$<$ std\+::string, const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ $>$$>$ \&exprs)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{classbustub_1_1ExecutorTest}{Executor\+Test}} class defines a test fixture for executor tests. Any test that is defined as part of the {\ttfamily \mbox{\hyperlink{classbustub_1_1ExecutorTest}{Executor\+Test}}} fixture will have access to the helper functions defined below. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_ad7eaf8b95e9d27f85338a6d815a6f2ab}\label{classbustub_1_1ExecutorTest_ad7eaf8b95e9d27f85338a6d815a6f2ab}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!AllocateAggregateValueExpression@{AllocateAggregateValueExpression}}
+\index{AllocateAggregateValueExpression@{AllocateAggregateValueExpression}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{AllocateAggregateValueExpression()}{AllocateAggregateValueExpression()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$>$ bustub\+::\+Executor\+Test\+::\+Allocate\+Aggregate\+Value\+Expression (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+group\+\_\+by\+\_\+term,  }\item[{uint32\+\_\+t}]{term\+\_\+idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allocate an aggregate value expression and return it to the caller. 
+\begin{DoxyParams}{Parameters}
+{\em is\+\_\+group\+\_\+by\+\_\+term} & {\ttfamily true} if the expression is a group-\/by term, {\ttfamily false} otherwise \\
+\hline
+{\em term\+\_\+idx} & The index of the term in the aggregates or group-\/bys \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An owning pointer to the \mbox{\hyperlink{classbustub_1_1AggregateValueExpression}{Aggregate\+Value\+Expression}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_aded1085f8f91af8456366b0455f882e1}\label{classbustub_1_1ExecutorTest_aded1085f8f91af8456366b0455f882e1}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!AllocateColumnValueExpression@{AllocateColumnValueExpression}}
+\index{AllocateColumnValueExpression@{AllocateColumnValueExpression}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{AllocateColumnValueExpression()}{AllocateColumnValueExpression()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$>$ bustub\+::\+Executor\+Test\+::\+Allocate\+Column\+Value\+Expression (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{schema,  }\item[{uint32\+\_\+t}]{tuple\+\_\+idx,  }\item[{const std\+::string \&}]{col\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allocate a column value expression and return it to the caller. 
+\begin{DoxyParams}{Parameters}
+{\em schema} & The schema for the expression \\
+\hline
+{\em tuple\+\_\+idx} & The tuple index in a J\+O\+IN operation (0 for non-\/\+J\+O\+I\+Ns) \\
+\hline
+{\em col\+\_\+name} & The name of the column in the schema that is referenced \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An owning-\/pointer to the \mbox{\hyperlink{classbustub_1_1ColumnValueExpression}{Column\+Value\+Expression}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_a9e8dbcf99639e9e5de54c76e41159d60}\label{classbustub_1_1ExecutorTest_a9e8dbcf99639e9e5de54c76e41159d60}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!AllocateComparisonExpression@{AllocateComparisonExpression}}
+\index{AllocateComparisonExpression@{AllocateComparisonExpression}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{AllocateComparisonExpression()}{AllocateComparisonExpression()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$>$ bustub\+::\+Executor\+Test\+::\+Allocate\+Comparison\+Expression (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$}]{lhs,  }\item[{const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$}]{rhs,  }\item[{\mbox{\hyperlink{namespacebustub_a314657f14ab5ad66e4a32d3e91cd3a9b}{Comparison\+Type}}}]{comp\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allocate a comparison expression and return it to the caller. 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The abstract expression for the left-\/hand side of the comparison \\
+\hline
+{\em rhs} & The abstract expression for the right-\/hand side of the comparison \\
+\hline
+{\em comp\+\_\+type} & The type of the comparison operation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An owning pointer to the \mbox{\hyperlink{classbustub_1_1ComparisonExpression}{Comparison\+Expression}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_acdc15843d6b31f8fae633d26ee9c21d3}\label{classbustub_1_1ExecutorTest_acdc15843d6b31f8fae633d26ee9c21d3}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!AllocateConstantValueExpression@{AllocateConstantValueExpression}}
+\index{AllocateConstantValueExpression@{AllocateConstantValueExpression}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{AllocateConstantValueExpression()}{AllocateConstantValueExpression()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$>$ bustub\+::\+Executor\+Test\+::\+Allocate\+Constant\+Value\+Expression (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allocate a constant value expression and return it to the caller. 
+\begin{DoxyParams}{Parameters}
+{\em val} & The constant value of the expression \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An owning pointer to the \mbox{\hyperlink{classbustub_1_1ConstantValueExpression}{Constant\+Value\+Expression}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_ab0a0d7bd266d2b4dbba42bc8e4ee4d69}\label{classbustub_1_1ExecutorTest_ab0a0d7bd266d2b4dbba42bc8e4ee4d69}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!AllocateOutputSchema@{AllocateOutputSchema}}
+\index{AllocateOutputSchema@{AllocateOutputSchema}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{AllocateOutputSchema()}{AllocateOutputSchema()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classbustub_1_1Schema}{Schema}}$>$ bustub\+::\+Executor\+Test\+::\+Allocate\+Output\+Schema (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ $>$$>$ \&}]{exprs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Allocate an output schema and return it to the caller. 
+\begin{DoxyParams}{Parameters}
+{\em exprs} & The expressions that define the columns of the output schema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An owning pointer to the \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_a8da0bc80a9cc1d101efc3b6921ceb7cb}\label{classbustub_1_1ExecutorTest_a8da0bc80a9cc1d101efc3b6921ceb7cb}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!GetBPM@{GetBPM}}
+\index{GetBPM@{GetBPM}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{GetBPM()}{GetBPM()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1BufferPoolManager}{Buffer\+Pool\+Manager}}$\ast$ bustub\+::\+Executor\+Test\+::\+Get\+B\+PM (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The buffer pool manager for our test instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_ae506db89fabba850a3afc19474a105e0}\label{classbustub_1_1ExecutorTest_ae506db89fabba850a3afc19474a105e0}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!GetCatalog@{GetCatalog}}
+\index{GetCatalog@{GetCatalog}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{GetCatalog()}{GetCatalog()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Catalog}{Catalog}}$\ast$ bustub\+::\+Executor\+Test\+::\+Get\+Catalog (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The catalog for our test instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_a666034209dcdf3bd0387b5a3bbf05d74}\label{classbustub_1_1ExecutorTest_a666034209dcdf3bd0387b5a3bbf05d74}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!GetExecutionEngine@{GetExecutionEngine}}
+\index{GetExecutionEngine@{GetExecutionEngine}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{GetExecutionEngine()}{GetExecutionEngine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1ExecutionEngine}{Execution\+Engine}}$\ast$ bustub\+::\+Executor\+Test\+::\+Get\+Execution\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The execution engine for our test instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_a953e331c90cff5bcd1f822f04e665c36}\label{classbustub_1_1ExecutorTest_a953e331c90cff5bcd1f822f04e665c36}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!GetExecutorContext@{GetExecutorContext}}
+\index{GetExecutorContext@{GetExecutorContext}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{GetExecutorContext()}{GetExecutorContext()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}}$\ast$ bustub\+::\+Executor\+Test\+::\+Get\+Executor\+Context (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The executor context for our test instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_a65b3521be657690e1c6a6e13f7126ad6}\label{classbustub_1_1ExecutorTest_a65b3521be657690e1c6a6e13f7126ad6}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!GetLockManager@{GetLockManager}}
+\index{GetLockManager@{GetLockManager}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{GetLockManager()}{GetLockManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1LockManager}{Lock\+Manager}}$\ast$ bustub\+::\+Executor\+Test\+::\+Get\+Lock\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The lock manager for our test instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_a12ea4e0ccbafc6605bd6f8a01f5b53db}\label{classbustub_1_1ExecutorTest_a12ea4e0ccbafc6605bd6f8a01f5b53db}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!GetTxn@{GetTxn}}
+\index{GetTxn@{GetTxn}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{GetTxn()}{GetTxn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1Transaction}{Transaction}}$\ast$ bustub\+::\+Executor\+Test\+::\+Get\+Txn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+Get the transaction for our test instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_a9d36d4c06269a8b7afed0fd8191c6696}\label{classbustub_1_1ExecutorTest_a9d36d4c06269a8b7afed0fd8191c6696}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!GetTxnManager@{GetTxnManager}}
+\index{GetTxnManager@{GetTxnManager}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{GetTxnManager()}{GetTxnManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classbustub_1_1TransactionManager}{Transaction\+Manager}}$\ast$ bustub\+::\+Executor\+Test\+::\+Get\+Txn\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{DoxyReturn}{Returns}
+The transaction manager for our test instance. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_a86081ccea05fe1b48d203d72b0f8503b}\label{classbustub_1_1ExecutorTest_a86081ccea05fe1b48d203d72b0f8503b}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!MakeAggregateValueExpression@{MakeAggregateValueExpression}}
+\index{MakeAggregateValueExpression@{MakeAggregateValueExpression}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{MakeAggregateValueExpression()}{MakeAggregateValueExpression()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$\ast$ bustub\+::\+Executor\+Test\+::\+Make\+Aggregate\+Value\+Expression (\begin{DoxyParamCaption}\item[{bool}]{is\+\_\+group\+\_\+by\+\_\+term,  }\item[{uint32\+\_\+t}]{term\+\_\+idx }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Make an aggregate value expression. 
+\begin{DoxyParams}{Parameters}
+{\em is\+\_\+group\+\_\+by\+\_\+term} & {\ttfamily true} if the expression is a group-\/by term, {\ttfamily false} otherwise \\
+\hline
+{\em term\+\_\+idx} & The index of the term in the aggregates or group-\/bys \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A non-\/owning pointer to the \mbox{\hyperlink{classbustub_1_1AggregateValueExpression}{Aggregate\+Value\+Expression}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_a4559864ef15645b5e3a46de4973b981b}\label{classbustub_1_1ExecutorTest_a4559864ef15645b5e3a46de4973b981b}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!MakeColumnValueExpression@{MakeColumnValueExpression}}
+\index{MakeColumnValueExpression@{MakeColumnValueExpression}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{MakeColumnValueExpression()}{MakeColumnValueExpression()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$\ast$ bustub\+::\+Executor\+Test\+::\+Make\+Column\+Value\+Expression (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} \&}]{schema,  }\item[{uint32\+\_\+t}]{tuple\+\_\+idx,  }\item[{const std\+::string \&}]{col\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Make a column value expression. 
+\begin{DoxyParams}{Parameters}
+{\em schema} & The schema for the expression \\
+\hline
+{\em tuple\+\_\+idx} & The tuple index in a J\+O\+IN operation (0 for non-\/\+J\+O\+I\+Ns) \\
+\hline
+{\em col\+\_\+name} & The name of the column in the schema that is referenced \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A non-\/owning pointer to the \mbox{\hyperlink{classbustub_1_1ColumnValueExpression}{Column\+Value\+Expression}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_a05566c3ce88c192da27db7b9380a23d2}\label{classbustub_1_1ExecutorTest_a05566c3ce88c192da27db7b9380a23d2}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!MakeComparisonExpression@{MakeComparisonExpression}}
+\index{MakeComparisonExpression@{MakeComparisonExpression}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{MakeComparisonExpression()}{MakeComparisonExpression()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$\ast$ bustub\+::\+Executor\+Test\+::\+Make\+Comparison\+Expression (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$}]{lhs,  }\item[{const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$}]{rhs,  }\item[{\mbox{\hyperlink{namespacebustub_a314657f14ab5ad66e4a32d3e91cd3a9b}{Comparison\+Type}}}]{comp\+\_\+type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Make a comparison expression. 
+\begin{DoxyParams}{Parameters}
+{\em lhs} & The abstract expression for the left-\/hand side of the comparison \\
+\hline
+{\em rhs} & The abstract expression for the right-\/hand side of the comparison \\
+\hline
+{\em comp\+\_\+type} & The type of the comparison operation \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A non-\/owning pointer to the \mbox{\hyperlink{classbustub_1_1ComparisonExpression}{Comparison\+Expression}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_a378e69decc0283aac61ff759385a1553}\label{classbustub_1_1ExecutorTest_a378e69decc0283aac61ff759385a1553}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!MakeConstantValueExpression@{MakeConstantValueExpression}}
+\index{MakeConstantValueExpression@{MakeConstantValueExpression}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{MakeConstantValueExpression()}{MakeConstantValueExpression()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}}$\ast$ bustub\+::\+Executor\+Test\+::\+Make\+Constant\+Value\+Expression (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Value}{Value}} \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Make a constant value expression. 
+\begin{DoxyParams}{Parameters}
+{\em val} & The constant value of the expression \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A non-\/owning pointer to the \mbox{\hyperlink{classbustub_1_1ConstantValueExpression}{Constant\+Value\+Expression}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_ac527d9676a669eb583987d547a4cdcb8}\label{classbustub_1_1ExecutorTest_ac527d9676a669eb583987d547a4cdcb8}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!MakeOutputSchema@{MakeOutputSchema}}
+\index{MakeOutputSchema@{MakeOutputSchema}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{MakeOutputSchema()}{MakeOutputSchema()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}}$\ast$ bustub\+::\+Executor\+Test\+::\+Make\+Output\+Schema (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, const \mbox{\hyperlink{classbustub_1_1AbstractExpression}{Abstract\+Expression}} $\ast$ $>$$>$ \&}]{exprs }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Make an output schema. 
+\begin{DoxyParams}{Parameters}
+{\em exprs} & The expressions that define the columns of the output schema \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A non-\/owning pointer to the \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_adba72c630bd012734305fda1e5a81be6}\label{classbustub_1_1ExecutorTest_adba72c630bd012734305fda1e5a81be6}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!SetUp@{SetUp}}
+\index{SetUp@{SetUp}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{SetUp()}{SetUp()}}
+{\footnotesize\ttfamily void bustub\+::\+Executor\+Test\+::\+Set\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called before every executor test. 
+
+Reimplemented from \mbox{\hyperlink{classtesting_1_1Test_a190315150c303ddf801313fd1a777733}{testing\+::\+Test}}.
+
+\mbox{\Hypertarget{classbustub_1_1ExecutorTest_a34be0982f58506b1149efbac0461f8ea}\label{classbustub_1_1ExecutorTest_a34be0982f58506b1149efbac0461f8ea}} 
+\index{bustub::ExecutorTest@{bustub::ExecutorTest}!TearDown@{TearDown}}
+\index{TearDown@{TearDown}!bustub::ExecutorTest@{bustub::ExecutorTest}}
+\doxysubsubsection{\texorpdfstring{TearDown()}{TearDown()}}
+{\footnotesize\ttfamily void bustub\+::\+Executor\+Test\+::\+Tear\+Down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Called after every executor test. 
+
+Reimplemented from \mbox{\hyperlink{classtesting_1_1Test_a5f0ab439802cbe0ef7552f1a9f791923}{testing\+::\+Test}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+test/execution/\mbox{\hyperlink{executor__test__util_8h}{executor\+\_\+test\+\_\+util.\+h}}\end{DoxyCompactItemize}

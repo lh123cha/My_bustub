@@ -1,0 +1,69 @@
+\hypertarget{classbustub_1_1TmpTuplePage}{}\doxysection{bustub\+::Tmp\+Tuple\+Page Class Reference}
+\label{classbustub_1_1TmpTuplePage}\index{bustub::TmpTuplePage@{bustub::TmpTuplePage}}
+
+
+{\ttfamily \#include $<$tmp\+\_\+tuple\+\_\+page.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Tmp\+Tuple\+Page\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classbustub_1_1TmpTuplePage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Tmp\+Tuple\+Page\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=211pt]{classbustub_1_1TmpTuplePage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classbustub_1_1TmpTuplePage_af60711b753ceadf4c12b6a31b0981b75}{Init}} (\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} page\+\_\+id, uint32\+\_\+t page\+\_\+size)
+\item 
+\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} \mbox{\hyperlink{classbustub_1_1TmpTuplePage_a6575e8df79130a7815218c51bbca52ab}{Get\+Table\+Page\+Id}} ()
+\item 
+bool \mbox{\hyperlink{classbustub_1_1TmpTuplePage_a4535ae880637a62357603e400621940f}{Insert}} (const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&tuple, \mbox{\hyperlink{classbustub_1_1TmpTuple}{Tmp\+Tuple}} $\ast$out)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1TmpTuplePage}{Tmp\+Tuple\+Page}} format\+:
+
+Sizes are in bytes. $\vert$ Page\+Id (4) $\vert$ L\+SN (4) $\vert$ Free\+Space (4) $\vert$ (free space) $\vert$ Tuple\+Size2 $\vert$ Tuple\+Data2 $\vert$ Tuple\+Size1 $\vert$ Tuple\+Data1 $\vert$
+
+We choose this format because Deserialize\+Expression expects to read Size followed by Data. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1TmpTuplePage_a6575e8df79130a7815218c51bbca52ab}\label{classbustub_1_1TmpTuplePage_a6575e8df79130a7815218c51bbca52ab}} 
+\index{bustub::TmpTuplePage@{bustub::TmpTuplePage}!GetTablePageId@{GetTablePageId}}
+\index{GetTablePageId@{GetTablePageId}!bustub::TmpTuplePage@{bustub::TmpTuplePage}}
+\doxysubsubsection{\texorpdfstring{GetTablePageId()}{GetTablePageId()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}} bustub\+::\+Tmp\+Tuple\+Page\+::\+Get\+Table\+Page\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1TmpTuplePage_af60711b753ceadf4c12b6a31b0981b75}\label{classbustub_1_1TmpTuplePage_af60711b753ceadf4c12b6a31b0981b75}} 
+\index{bustub::TmpTuplePage@{bustub::TmpTuplePage}!Init@{Init}}
+\index{Init@{Init}!bustub::TmpTuplePage@{bustub::TmpTuplePage}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Tmp\+Tuple\+Page\+::\+Init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{namespacebustub_a8de4ac099b23d712481109bb846decde}{page\+\_\+id\+\_\+t}}}]{page\+\_\+id,  }\item[{uint32\+\_\+t}]{page\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classbustub_1_1TmpTuplePage_a4535ae880637a62357603e400621940f}\label{classbustub_1_1TmpTuplePage_a4535ae880637a62357603e400621940f}} 
+\index{bustub::TmpTuplePage@{bustub::TmpTuplePage}!Insert@{Insert}}
+\index{Insert@{Insert}!bustub::TmpTuplePage@{bustub::TmpTuplePage}}
+\doxysubsubsection{\texorpdfstring{Insert()}{Insert()}}
+{\footnotesize\ttfamily bool bustub\+::\+Tmp\+Tuple\+Page\+::\+Insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} \&}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1TmpTuple}{Tmp\+Tuple}} $\ast$}]{out }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/storage/page/\mbox{\hyperlink{tmp__tuple__page_8h}{tmp\+\_\+tuple\+\_\+page.\+h}}\end{DoxyCompactItemize}

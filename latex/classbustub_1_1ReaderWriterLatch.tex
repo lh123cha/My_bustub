@@ -1,0 +1,89 @@
+\hypertarget{classbustub_1_1ReaderWriterLatch}{}\doxysection{bustub\+::Reader\+Writer\+Latch Class Reference}
+\label{classbustub_1_1ReaderWriterLatch}\index{bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}}
+
+
+{\ttfamily \#include $<$rwlatch.\+h$>$}
+
+
+
+Collaboration diagram for bustub\+::Reader\+Writer\+Latch\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{classbustub_1_1ReaderWriterLatch__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1ReaderWriterLatch_a3f667dc804e9b8d3b762c4bfad54391e}{Reader\+Writer\+Latch}} ()=default
+\item 
+\mbox{\hyperlink{classbustub_1_1ReaderWriterLatch_a121a78576966c7d2d7494ba3afdebc2f}{$\sim$\+Reader\+Writer\+Latch}} ()
+\item 
+\mbox{\hyperlink{classbustub_1_1ReaderWriterLatch_ac408f5aac3423a696c1b657447cf9aa1}{D\+I\+S\+A\+L\+L\+O\+W\+\_\+\+C\+O\+PY}} (\mbox{\hyperlink{classbustub_1_1ReaderWriterLatch}{Reader\+Writer\+Latch}})
+\item 
+void \mbox{\hyperlink{classbustub_1_1ReaderWriterLatch_ac448ed1f4f6761130587f1d2c656aae1}{W\+Lock}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1ReaderWriterLatch_a7fb327d2cdb564f15385c185d78db90a}{W\+Unlock}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1ReaderWriterLatch_a70e2c9d8e4c30cb2a5f1880044f42d7c}{R\+Lock}} ()
+\item 
+void \mbox{\hyperlink{classbustub_1_1ReaderWriterLatch_a5d1151994e4ab33467d761340fa2c1e4}{R\+Unlock}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Reader-\/\+Writer latch backed by std\+::mutex. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1ReaderWriterLatch_a3f667dc804e9b8d3b762c4bfad54391e}\label{classbustub_1_1ReaderWriterLatch_a3f667dc804e9b8d3b762c4bfad54391e}} 
+\index{bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}!ReaderWriterLatch@{ReaderWriterLatch}}
+\index{ReaderWriterLatch@{ReaderWriterLatch}!bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}}
+\doxysubsubsection{\texorpdfstring{ReaderWriterLatch()}{ReaderWriterLatch()}}
+{\footnotesize\ttfamily bustub\+::\+Reader\+Writer\+Latch\+::\+Reader\+Writer\+Latch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{classbustub_1_1ReaderWriterLatch_a121a78576966c7d2d7494ba3afdebc2f}\label{classbustub_1_1ReaderWriterLatch_a121a78576966c7d2d7494ba3afdebc2f}} 
+\index{bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}!````~ReaderWriterLatch@{$\sim$ReaderWriterLatch}}
+\index{````~ReaderWriterLatch@{$\sim$ReaderWriterLatch}!bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}}
+\doxysubsubsection{\texorpdfstring{$\sim$ReaderWriterLatch()}{~ReaderWriterLatch()}}
+{\footnotesize\ttfamily bustub\+::\+Reader\+Writer\+Latch\+::$\sim$\+Reader\+Writer\+Latch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1ReaderWriterLatch_ac408f5aac3423a696c1b657447cf9aa1}\label{classbustub_1_1ReaderWriterLatch_ac408f5aac3423a696c1b657447cf9aa1}} 
+\index{bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}!DISALLOW\_COPY@{DISALLOW\_COPY}}
+\index{DISALLOW\_COPY@{DISALLOW\_COPY}!bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}}
+\doxysubsubsection{\texorpdfstring{DISALLOW\_COPY()}{DISALLOW\_COPY()}}
+{\footnotesize\ttfamily bustub\+::\+Reader\+Writer\+Latch\+::\+D\+I\+S\+A\+L\+L\+O\+W\+\_\+\+C\+O\+PY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ReaderWriterLatch}{Reader\+Writer\+Latch}}}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classbustub_1_1ReaderWriterLatch_a70e2c9d8e4c30cb2a5f1880044f42d7c}\label{classbustub_1_1ReaderWriterLatch_a70e2c9d8e4c30cb2a5f1880044f42d7c}} 
+\index{bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}!RLock@{RLock}}
+\index{RLock@{RLock}!bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}}
+\doxysubsubsection{\texorpdfstring{RLock()}{RLock()}}
+{\footnotesize\ttfamily void bustub\+::\+Reader\+Writer\+Latch\+::\+R\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Acquire a read latch. \mbox{\Hypertarget{classbustub_1_1ReaderWriterLatch_a5d1151994e4ab33467d761340fa2c1e4}\label{classbustub_1_1ReaderWriterLatch_a5d1151994e4ab33467d761340fa2c1e4}} 
+\index{bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}!RUnlock@{RUnlock}}
+\index{RUnlock@{RUnlock}!bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}}
+\doxysubsubsection{\texorpdfstring{RUnlock()}{RUnlock()}}
+{\footnotesize\ttfamily void bustub\+::\+Reader\+Writer\+Latch\+::\+R\+Unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Release a read latch. \mbox{\Hypertarget{classbustub_1_1ReaderWriterLatch_ac448ed1f4f6761130587f1d2c656aae1}\label{classbustub_1_1ReaderWriterLatch_ac448ed1f4f6761130587f1d2c656aae1}} 
+\index{bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}!WLock@{WLock}}
+\index{WLock@{WLock}!bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}}
+\doxysubsubsection{\texorpdfstring{WLock()}{WLock()}}
+{\footnotesize\ttfamily void bustub\+::\+Reader\+Writer\+Latch\+::\+W\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Acquire a write latch. \mbox{\Hypertarget{classbustub_1_1ReaderWriterLatch_a7fb327d2cdb564f15385c185d78db90a}\label{classbustub_1_1ReaderWriterLatch_a7fb327d2cdb564f15385c185d78db90a}} 
+\index{bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}!WUnlock@{WUnlock}}
+\index{WUnlock@{WUnlock}!bustub::ReaderWriterLatch@{bustub::ReaderWriterLatch}}
+\doxysubsubsection{\texorpdfstring{WUnlock()}{WUnlock()}}
+{\footnotesize\ttfamily void bustub\+::\+Reader\+Writer\+Latch\+::\+W\+Unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Release a write latch. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/include/common/\mbox{\hyperlink{rwlatch_8h}{rwlatch.\+h}}\end{DoxyCompactItemize}

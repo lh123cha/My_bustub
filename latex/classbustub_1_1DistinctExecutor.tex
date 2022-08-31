@@ -1,0 +1,111 @@
+\hypertarget{classbustub_1_1DistinctExecutor}{}\doxysection{bustub\+::Distinct\+Executor Class Reference}
+\label{classbustub_1_1DistinctExecutor}\index{bustub::DistinctExecutor@{bustub::DistinctExecutor}}
+
+
+{\ttfamily \#include $<$distinct\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Distinct\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=218pt]{classbustub_1_1DistinctExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Distinct\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classbustub_1_1DistinctExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1DistinctExecutor_ae14c619c226cfa3acb2244bfbcafe470}{Distinct\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1DistinctPlanNode}{Distinct\+Plan\+Node}} $\ast$plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&child\+\_\+executor)
+\item 
+void \mbox{\hyperlink{classbustub_1_1DistinctExecutor_a23e05618e999018ed7cc1903139559a5}{Init}} () override
+\item 
+bool \mbox{\hyperlink{classbustub_1_1DistinctExecutor_a50f1f1d03cb18b68e2463ede1ad69583}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$rid) override
+\item 
+const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$ \mbox{\hyperlink{classbustub_1_1DistinctExecutor_a52a747c964a59c4592645e0c3c7af235}{Get\+Output\+Schema}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1DistinctExecutor}{Distinct\+Executor}} removes duplicate rows from child ouput. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1DistinctExecutor_ae14c619c226cfa3acb2244bfbcafe470}\label{classbustub_1_1DistinctExecutor_ae14c619c226cfa3acb2244bfbcafe470}} 
+\index{bustub::DistinctExecutor@{bustub::DistinctExecutor}!DistinctExecutor@{DistinctExecutor}}
+\index{DistinctExecutor@{DistinctExecutor}!bustub::DistinctExecutor@{bustub::DistinctExecutor}}
+\doxysubsubsection{\texorpdfstring{DistinctExecutor()}{DistinctExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Distinct\+Executor\+::\+Distinct\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1DistinctPlanNode}{Distinct\+Plan\+Node}} $\ast$}]{plan,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{child\+\_\+executor }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1DistinctExecutor}{Distinct\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The limit plan to be executed \\
+\hline
+{\em child\+\_\+executor} & The child executor from which tuples are pulled \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1DistinctExecutor_a52a747c964a59c4592645e0c3c7af235}\label{classbustub_1_1DistinctExecutor_a52a747c964a59c4592645e0c3c7af235}} 
+\index{bustub::DistinctExecutor@{bustub::DistinctExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::DistinctExecutor@{bustub::DistinctExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}}$\ast$ bustub\+::\+Distinct\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the distinct 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a4dd2f1bb76d58cfc5c7b6abd9ed64017}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1DistinctExecutor_a23e05618e999018ed7cc1903139559a5}\label{classbustub_1_1DistinctExecutor_a23e05618e999018ed7cc1903139559a5}} 
+\index{bustub::DistinctExecutor@{bustub::DistinctExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::DistinctExecutor@{bustub::DistinctExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Distinct\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the distinct 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1DistinctExecutor_a50f1f1d03cb18b68e2463ede1ad69583}\label{classbustub_1_1DistinctExecutor_a50f1f1d03cb18b68e2463ede1ad69583}} 
+\index{bustub::DistinctExecutor@{bustub::DistinctExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::DistinctExecutor@{bustub::DistinctExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily bool bustub\+::\+Distinct\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$}]{rid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from the distinct. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the distinct \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} produced by the distinct \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a5baf2d49aa23901553398d6c309d2afe}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/\mbox{\hyperlink{distinct__executor_8h}{distinct\+\_\+executor.\+h}}\item 
+src/execution/\mbox{\hyperlink{distinct__executor_8cpp}{distinct\+\_\+executor.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,113 @@
+\hypertarget{classbustub_1_1NestedLoopJoinExecutor}{}\doxysection{bustub\+::Nested\+Loop\+Join\+Executor Class Reference}
+\label{classbustub_1_1NestedLoopJoinExecutor}\index{bustub::NestedLoopJoinExecutor@{bustub::NestedLoopJoinExecutor}}
+
+
+{\ttfamily \#include $<$nested\+\_\+loop\+\_\+join\+\_\+executor.\+h$>$}
+
+
+
+Inheritance diagram for bustub\+::Nested\+Loop\+Join\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{classbustub_1_1NestedLoopJoinExecutor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for bustub\+::Nested\+Loop\+Join\+Executor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{classbustub_1_1NestedLoopJoinExecutor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbustub_1_1NestedLoopJoinExecutor_a9344b3eb951a7e596ab95a05fef27f5b}{Nested\+Loop\+Join\+Executor}} (\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$exec\+\_\+ctx, const \mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode}{Nested\+Loop\+Join\+Plan\+Node}} $\ast$plan, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&left\+\_\+executor, std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&right\+\_\+executor)
+\item 
+void \mbox{\hyperlink{classbustub_1_1NestedLoopJoinExecutor_a66ff12e840ec50fe3d3dfef770f839d5}{Init}} () override
+\item 
+bool \mbox{\hyperlink{classbustub_1_1NestedLoopJoinExecutor_ad1aa6ecd884258b17968a4d3711af14e}{Next}} (\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$tuple, \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$rid) override
+\item 
+const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}} $\ast$ \mbox{\hyperlink{classbustub_1_1NestedLoopJoinExecutor_a89f534c938c77387d573b345438369d3}{Get\+Output\+Schema}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classbustub_1_1NestedLoopJoinExecutor}{Nested\+Loop\+Join\+Executor}} executes a nested-\/loop J\+O\+IN on two tables. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbustub_1_1NestedLoopJoinExecutor_a9344b3eb951a7e596ab95a05fef27f5b}\label{classbustub_1_1NestedLoopJoinExecutor_a9344b3eb951a7e596ab95a05fef27f5b}} 
+\index{bustub::NestedLoopJoinExecutor@{bustub::NestedLoopJoinExecutor}!NestedLoopJoinExecutor@{NestedLoopJoinExecutor}}
+\index{NestedLoopJoinExecutor@{NestedLoopJoinExecutor}!bustub::NestedLoopJoinExecutor@{bustub::NestedLoopJoinExecutor}}
+\doxysubsubsection{\texorpdfstring{NestedLoopJoinExecutor()}{NestedLoopJoinExecutor()}}
+{\footnotesize\ttfamily bustub\+::\+Nested\+Loop\+Join\+Executor\+::\+Nested\+Loop\+Join\+Executor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1ExecutorContext}{Executor\+Context}} $\ast$}]{exec\+\_\+ctx,  }\item[{const \mbox{\hyperlink{classbustub_1_1NestedLoopJoinPlanNode}{Nested\+Loop\+Join\+Plan\+Node}} $\ast$}]{plan,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{left\+\_\+executor,  }\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classbustub_1_1AbstractExecutor}{Abstract\+Executor}} $>$ \&\&}]{right\+\_\+executor }\end{DoxyParamCaption})}
+
+Construct a new \mbox{\hyperlink{classbustub_1_1NestedLoopJoinExecutor}{Nested\+Loop\+Join\+Executor}} instance. 
+\begin{DoxyParams}{Parameters}
+{\em exec\+\_\+ctx} & The executor context \\
+\hline
+{\em plan} & The Nested\+Loop join plan to be executed \\
+\hline
+{\em left\+\_\+executor} & The child executor that produces tuple for the left side of join \\
+\hline
+{\em right\+\_\+executor} & The child executor that produces tuple for the right side of join \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbustub_1_1NestedLoopJoinExecutor_a89f534c938c77387d573b345438369d3}\label{classbustub_1_1NestedLoopJoinExecutor_a89f534c938c77387d573b345438369d3}} 
+\index{bustub::NestedLoopJoinExecutor@{bustub::NestedLoopJoinExecutor}!GetOutputSchema@{GetOutputSchema}}
+\index{GetOutputSchema@{GetOutputSchema}!bustub::NestedLoopJoinExecutor@{bustub::NestedLoopJoinExecutor}}
+\doxysubsubsection{\texorpdfstring{GetOutputSchema()}{GetOutputSchema()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classbustub_1_1Schema}{Schema}}$\ast$ bustub\+::\+Nested\+Loop\+Join\+Executor\+::\+Get\+Output\+Schema (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+\begin{DoxyReturn}{Returns}
+The output schema for the insert 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a4dd2f1bb76d58cfc5c7b6abd9ed64017}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1NestedLoopJoinExecutor_a66ff12e840ec50fe3d3dfef770f839d5}\label{classbustub_1_1NestedLoopJoinExecutor_a66ff12e840ec50fe3d3dfef770f839d5}} 
+\index{bustub::NestedLoopJoinExecutor@{bustub::NestedLoopJoinExecutor}!Init@{Init}}
+\index{Init@{Init}!bustub::NestedLoopJoinExecutor@{bustub::NestedLoopJoinExecutor}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily void bustub\+::\+Nested\+Loop\+Join\+Executor\+::\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Initialize the join 
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a8de18536ea3222d01514b14387082ec8}{bustub\+::\+Abstract\+Executor}}.
+
+\mbox{\Hypertarget{classbustub_1_1NestedLoopJoinExecutor_ad1aa6ecd884258b17968a4d3711af14e}\label{classbustub_1_1NestedLoopJoinExecutor_ad1aa6ecd884258b17968a4d3711af14e}} 
+\index{bustub::NestedLoopJoinExecutor@{bustub::NestedLoopJoinExecutor}!Next@{Next}}
+\index{Next@{Next}!bustub::NestedLoopJoinExecutor@{bustub::NestedLoopJoinExecutor}}
+\doxysubsubsection{\texorpdfstring{Next()}{Next()}}
+{\footnotesize\ttfamily bool bustub\+::\+Nested\+Loop\+Join\+Executor\+::\+Next (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classbustub_1_1Tuple}{Tuple}} $\ast$}]{tuple,  }\item[{\mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} $\ast$}]{rid }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Yield the next tuple from the join. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em tuple} & The next tuple produced by the join \\
+\hline
+\mbox{\texttt{ out}}  & {\em rid} & The next tuple \mbox{\hyperlink{classbustub_1_1RID}{R\+ID}} produced by the join \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if a tuple was produced, {\ttfamily false} if there are no more tuples 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classbustub_1_1AbstractExecutor_a5baf2d49aa23901553398d6c309d2afe}{bustub\+::\+Abstract\+Executor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/include/execution/executors/\mbox{\hyperlink{nested__loop__join__executor_8h}{nested\+\_\+loop\+\_\+join\+\_\+executor.\+h}}\item 
+src/execution/\mbox{\hyperlink{nested__loop__join__executor_8cpp}{nested\+\_\+loop\+\_\+join\+\_\+executor.\+cpp}}\end{DoxyCompactItemize}
