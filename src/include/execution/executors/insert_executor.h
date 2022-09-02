@@ -57,8 +57,21 @@ class InsertExecutor : public AbstractExecutor {
   const Schema *GetOutputSchema() override { return plan_->OutputSchema(); };
 
  private:
+  void InsertRawTupleWithIndex(Tuple* cur_tuple);
   /** The insert plan node to be executed*/
   const InsertPlanNode *plan_;
+  // 要插入的表的信息
+  TableInfo* tableinfo_;
+  // 所有的子查询的子执行器
+  std::unique_ptr<AbstractExecutor> child_executor_;
+  // 与该表有关的所有索引
+  std::vector<IndexInfo*> indexs_;
+  // row insert插入的行数据
+  std::vector<std::vector<Value>>::const_iterator raw_iter_;
+
+
+
+  TableIterator *iter_;
 };
 
 }  // namespace bustub
