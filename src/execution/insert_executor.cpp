@@ -22,7 +22,7 @@ InsertExecutor::InsertExecutor(ExecutorContext *exec_ctx, const InsertPlanNode *
 
 void InsertExecutor::Init() {
   tableinfo_ = exec_ctx_->GetCatalog()->GetTable(plan_->TableOid());
-  indexs_ = exec_ctx_->GetCatalog()->GetIndex(tableinfo_->name_);
+  indexs_ = exec_ctx_->GetCatalog()->GetTableIndexes(tableinfo_->name_);
   if(child_executor_== nullptr){
     raw_iter_=plan_->RawValues().begin();
   }else{
